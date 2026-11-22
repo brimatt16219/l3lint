@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-76053",
+  "amount": 836.88,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "corporate",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-64037"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-64037",
+    "invoiceNumber": "INV-76053"
+  },
+  "tax": {
+    "amount": 37.27,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "commodityScheme": "unspsc",
+      "quantity": 11,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 7.84,
+      "taxAmount": 7.07,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 148.91,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "commodityScheme": "unspsc",
+      "quantity": 13,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 0.00,
+      "taxAmount": 30.20,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 635.70,
+      "detailIndicator": "Y"
+    }
+  ]
+}

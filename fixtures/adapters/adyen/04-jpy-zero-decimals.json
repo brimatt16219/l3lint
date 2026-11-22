@@ -1,0 +1,20 @@
+{
+  "amount": { "currency": "JPY", "value": 27500 },
+  "reference": "INV-JP-0918",
+  "paymentMethod": { "type": "scheme", "storedPaymentMethodId": "PM-STORED-5J1P" },
+  "merchantAccount": "ExampleMerchantJP",
+  "enhancedSchemeData": {
+    "levelTwoThree": {
+      "customerReferenceNumber": "PO-JP-2210",
+      "totalTaxAmount": 2400,
+      "freightAmount": 1100,
+      "dutyAmount": 0,
+      "shipFromPostalCode": "150-0002",
+      "destination": { "postalCode": "530-0001", "countryCode": "JP" },
+      "itemDetailLines": [
+        { "description": "Safety goggles clear", "productCode": "SFG-CLR-01", "commodityCode": "46181804", "quantity": 12, "unitOfMeasure": "EA", "unitPrice": 1250, "discountAmount": 0, "totalAmount": 15000 },
+        { "description": "Work gloves cotton pair", "productCode": "WGL-CTN-02", "commodityCode": "46181504", "quantity": 20, "unitOfMeasure": "PR", "unitPrice": 480, "discountAmount": 600, "totalAmount": 9000 }
+      ]
+    }
+  }
+}

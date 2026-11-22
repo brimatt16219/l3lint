@@ -1,0 +1,32 @@
+{
+  "amount": 31345,
+  "currency": "usd",
+  "payment_method": "pm_card_visa",
+  "payment_details": {
+    "customer_reference": "PO-29011",
+    "order_reference": "INV-62040"
+  },
+  "amount_details": {
+    "discount_amount": 2000,
+    "tax": { "total_tax_amount": 1645 },
+    "shipping": { "amount": 1200, "from_postal_code": "97201", "to_postal_code": "98101" },
+    "line_items": [
+      {
+        "product_code": "LBL-PR-TH4",
+        "product_name": "Label printer thermal",
+        "unit_cost": 18900,
+        "quantity": 1,
+        "unit_of_measure": "EA",
+        "payment_method_options": { "card": { "commodity_code": "43212105" } }
+      },
+      {
+        "product_code": "LBL-RL-4X6",
+        "product_name": "Thermal labels roll",
+        "unit_cost": 1450,
+        "quantity": 8,
+        "unit_of_measure": "RL",
+        "payment_method_options": { "card": { "commodity_code": "14111530" } }
+      }
+    ]
+  }
+}

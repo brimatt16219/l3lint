@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-82890",
+  "amount": 3552.88,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "corporate",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-68810"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-68810",
+    "invoiceNumber": "INV-82890"
+  },
+  "tax": {
+    "amount": 200.54,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "commodityScheme": "unspsc",
+      "quantity": 18,
+      "unitOfMeasure": "PCE",
+      "unitCost": 48.90,
+      "discountAmount": 44.01,
+      "discountIndicator": true,
+      "taxAmount": 50.17,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 836.19,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "commodityScheme": "unspsc",
+      "quantity": 16,
+      "unitOfMeasure": "PCE",
+      "unitCost": 38.40,
+      "discountAmount": 61.44,
+      "discountIndicator": true,
+      "taxAmount": 33.18,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 552.96,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "EAC",
+      "unitCost": 89.00,
+      "discountAmount": 124.60,
+      "discountIndicator": true,
+      "taxAmount": 67.28,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 1121.40,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 4,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 23,
+      "unitOfMeasure": "EAC",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 17.25,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 287.50,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 5,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "PCE",
+      "unitCost": 26.00,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 10.92,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 182.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 6,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 22,
+      "unitOfMeasure": "PCE",
+      "unitCost": 18.30,
+      "discountAmount": 40.26,
+      "discountIndicator": true,
+      "taxAmount": 21.74,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 362.34,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

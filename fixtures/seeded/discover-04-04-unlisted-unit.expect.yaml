@@ -1,0 +1,6 @@
+description: "Line 2 unit QQQ; discover keeps no unit list, so no rule may fire for it."
+operator: unlisted-unit
+context: { brand: discover, cardProduct: corporate, mcc: "5047", asOf: 2026-10-19 }
+expect:
+  findings: []
+  absent: [MC-L3-005, AMEX-L3-001, GEN-FMT-001]

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83000",
+  "amount": 1862.54,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "purchasing",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Harborview Facility Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77000"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77000",
+    "invoiceNumber": "INV-83000"
+  },
+  "tax": {
+    "amount": 84.00,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "commodityScheme": "unspsc",
+      "quantity": 5,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 6.50,
+      "taxAmount": 5.87,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 123.50,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "commodityScheme": "unspsc",
+      "quantity": 8,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 30.72,
+      "taxAmount": 13.13,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 276.48,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 9,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "taxAmount": 7.82,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 164.70,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "commodityScheme": "unspsc",
+      "quantity": 21,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 24.99,
+      "taxAmount": 10.68,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 224.91,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "quantity": 11,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "taxAmount": 46.50,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 979.00,
+      "detailIndicator": "Y"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Security tests (T-45, NFR-005, NFR-006, NFR-007): log privacy, card numbers in outputs, input hardening, path traversal, no network. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>L3Lint.Security.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="Shouldly" />
+    <PackageReference Include="coverlet.MTP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\L3Lint.Cli\L3Lint.Cli.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\L3Lint.Core.Tests\SpecExamples\canonical-example.json" Link="SpecExamples\canonical-example.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

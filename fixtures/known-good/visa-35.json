@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-77802",
+  "amount": 1703.97,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "fleet",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-65258"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-65258",
+    "invoiceNumber": "INV-77802"
+  },
+  "tax": {
+    "amount": 95.60,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "commodityScheme": "unspsc",
+      "quantity": 15,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 8.93,
+      "taxAmount": 10.17,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 169.57,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 5,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "taxAmount": 3.75,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 62.50,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "commodityScheme": "unspsc",
+      "quantity": 5,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 0.00,
+      "taxAmount": 14.67,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 244.50,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "commodityScheme": "unspsc",
+      "quantity": 19,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 0.00,
+      "taxAmount": 10.83,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 180.50,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "commodityScheme": "unspsc",
+      "quantity": 11,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 0.00,
+      "taxAmount": 2.77,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 46.20,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 6,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 11,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 10.30,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 171.60,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 7,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 0.00,
+      "taxAmount": 5.67,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 94.50,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 8,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 0.00,
+      "taxAmount": 37.44,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 624.00,
+      "detailIndicator": "Y"
+    }
+  ]
+}

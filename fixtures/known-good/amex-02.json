@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-86653",
+  "amount": 226.61,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "business",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-71437"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-71437",
+    "invoiceNumber": "INV-86653"
+  },
+  "tax": {
+    "amount": 10.27,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "amex": {
+    "requestorName": "Lee Park",
+    "adviceText": [
+      "PO-71437 supplies order",
+      "Requested by Lee Park"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 9,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 1.78,
+      "taxAmount": 1.60,
+      "total": 33.77
+    },
+    {
+      "sequence": 2,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "quantity": 13,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 8.78,
+      "taxAmount": 3.75,
+      "total": 78.97
+    },
+    {
+      "sequence": 3,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "quantity": 14,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 0.00,
+      "taxAmount": 4.92,
+      "total": 103.60
+    }
+  ]
+}

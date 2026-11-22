@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-89091",
+  "amount": 145749,
+  "currency": "JPY",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "business",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Summit Lab Products",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-73139"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-73139",
+    "invoiceNumber": "INV-89091"
+  },
+  "tax": {
+    "amount": 6541,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0,
+    "freight": 1500,
+    "duty": 0
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "amex": {
+    "requestorName": "Sam Rivera",
+    "adviceText": [
+      "PO-73139 supplies order",
+      "Requested by Sam Rivera"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "quantity": 8,
+      "unitOfMeasure": "BX",
+      "unitCost": 1560,
+      "discountAmount": 624,
+      "taxAmount": 563,
+      "total": 11856
+    },
+    {
+      "sequence": 2,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 19,
+      "unitOfMeasure": "CA",
+      "unitCost": 6400,
+      "discountAmount": 0,
+      "taxAmount": 5776,
+      "total": 121600
+    },
+    {
+      "sequence": 3,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "quantity": 7,
+      "unitOfMeasure": "DZ",
+      "unitCost": 675,
+      "discountAmount": 473,
+      "taxAmount": 202,
+      "total": 4252
+    }
+  ]
+}

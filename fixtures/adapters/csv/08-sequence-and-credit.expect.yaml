@@ -1,0 +1,7 @@
+description: The map names a line number column and a line type column, where C maps to credit. The returned item subtracts in the transaction total.
+format: csv
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 08-sequence-and-credit.canonical.json
+expect:
+  findings:
+    - { transaction: 0, ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

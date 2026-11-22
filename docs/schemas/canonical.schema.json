@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://brimatt16219.github.io/l3lint/schemas/canonical.schema.json",
+  "title": "l3lint canonical payload",
+  "description": "A commercial card transaction with Level 2 and Level 3 data in l3lint's gateway-neutral shape. Absent and null both mean the value was not sent. Business constraints that a rule checks (positive amount, currency code, field lengths by brand, line-item counts, sequence order) are left to those rules so each problem is reported once.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion"],
+  "properties": {
+    "schemaVersion": { "const": "1.0", "description": "Canonical schema version." },
+    "id": { "type": ["string", "null"], "minLength": 1, "maxLength": 64, "description": "The merchant's own reference for the transaction." },
+    "amount": { "$ref": "#/$defs/decimal", "description": "Transaction amount in major units." },
+    "currency": { "type": ["string", "null"], "description": "ISO 4217 alpha-3 currency code." },
+    "transactionDate": { "$ref": "#/$defs/date", "description": "Date of the transaction; drives rule effective dates." },
+    "channel": { "enum": ["cardPresent", "cardNotPresent", null], "description": "Whether the card was present. Visa asks for a billing postal code when it was not." },
+    "card": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "description": "What l3lint knows about the card. Gateways rarely send brand and product, so pass them with --brand and --card-product when they are missing.",
+      "properties": {
+        "brand": { "enum": ["visa", "mastercard", "amex", "discover", "unknown", null], "description": "Card brand. It decides which brand rule packs run." },
+        "product": { "enum": ["consumer", "business", "corporate", "purchasing", "fleet", "commercialPrepaid", "unknown", null], "description": "Card product. It decides eligibility for enhanced-data rates." },
+        "productCode": { "type": ["string", "null"], "description": "Brand product code such as MBS or MEF." },
+        "isFederalGovernment": { "type": ["boolean", "null"], "description": "True for a US federal government card, which Visa excludes from Product 3 at some medical MCCs." },
+        "last4": { "type": ["string", "null"], "pattern": "^[0-9]{4}$", "description": "Last four digits of the card number. Never a full card number." }
+      }
+    },
+    "merchant": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "description": "The merchant.",
+      "properties": {
+        "mcc": { "type": ["string", "null"], "pattern": "^[0-9]{4}$", "description": "Merchant category code, 4 digits. Some MCCs are excluded from enhanced-data rates." },
+        "name": { "type": ["string", "null"], "description": "Merchant name. The data quality rules flag line descriptions that repeat it." },
+        "country": { "$ref": "#/$defs/country", "description": "Merchant country, ISO 3166-1 alpha-2." },
+        "taxId": { "type": ["string", "null"], "description": "Merchant tax ID. One processor lists it as required for Mastercard Level 2." }
+      }
+    },
+    "customer": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "description": "The buyer.",
+      "properties": {
+        "reference": { "type": ["string", "null"], "description": "Customer code, often the buyer's purchase order number." }
+      }
+    },
+    "order": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "description": "Order references.",
+      "properties": {
+        "purchaseOrderNumber": { "type": ["string", "null"], "description": "The buyer's purchase order number." },
+        "invoiceNumber": { "type": ["string", "null"], "description": "The merchant's invoice number." },
+        "orderDate": { "$ref": "#/$defs/date", "description": "Date of the order." }
+      }
+    },
+    "tax": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "description": "Transaction-level tax.",
+      "properties": {
+        "amount": { "$ref": "#/$defs/nonNegativeDecimal", "description": "Total tax in major units." },
+        "indicator": { "enum": ["taxable", "exempt", "notProvided", null], "description": "Whether the sale is taxable or exempt. Visa wants an explicit exempt flag, not a bare zero tax amount." },
+        "rate": { "$ref": "#/$defs/rate", "description": "Tax rate as a fraction: 0.07 means 7%." },
+        "exemptionId": { "type": ["string", "null"], "description": "Tax registration or exemption ID. Amex asks for it when the sale is exempt." }
+      }
+    },
+    "amounts": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "description": "Summary amounts, in major units.",
+      "properties": {
+        "discount": { "$ref": "#/$defs/nonNegativeDecimal", "description": "Header-level discount. Visa wants 0 when there is none." },
+        "freight": { "$ref": "#/$defs/nonNegativeDecimal", "description": "Freight or shipping amount. Visa wants 0 when nothing ships." },
+        "duty": { "$ref": "#/$defs/nonNegativeDecimal", "description": "Duty amount. Visa wants 0 when there is none." },
+        "shippingTax": { "$ref": "#/$defs/nonNegativeDecimal", "description": "Tax on shipping." },
+        "handling": { "$ref": "#/$defs/nonNegativeDecimal", "description": "Handling amount. Not part of the transaction total formula; the total check says so when it is above 0." }
+      }
+    },
+    "shipping": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "description": "Where the goods ship from and to.",
+      "properties": {
+        "fromPostalCode": { "type": ["string", "null"], "description": "Ship-from postal code." },
+        "toPostalCode": { "type": ["string", "null"], "description": "Ship-to postal code." },
+        "toCountry": { "$ref": "#/$defs/country", "description": "Destination country, ISO 3166-1 alpha-2." }
+      }
+    },
+    "billing": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "description": "The card's billing address.",
+      "properties": {
+        "postalCode": { "type": ["string", "null"], "description": "Billing postal code, used for address verification." }
+      }
+    },
+    "amex": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "description": "Data only American Express uses.",
+      "properties": {
+        "requestorName": { "type": ["string", "null"], "description": "Name of the person who placed the order. Amex Level 3 asks for it under structured acquirer profiles." },
+        "adviceText": { "type": ["array", "null"], "items": { "type": "string" }, "description": "Transaction advice text lines. Some processors send at most 4 lines of 40 characters." }
+      }
+    },
+    "lineItems": {
+      "type": ["array", "null"],
+      "items": { "$ref": "#/$defs/lineItem" },
+      "description": "The invoice lines (Level 3 data)."
+    }
+  },
+  "$defs": {
+    "decimal": { "type": ["number", "null"] },
+    "nonNegativeDecimal": { "type": ["number", "null"], "minimum": 0 },
+    "rate": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+    "date": { "type": ["string", "null"], "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "country": { "type": ["string", "null"], "pattern": "^[A-Z]{2}$" },
+    "lineItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "One invoice line.",
+      "properties": {
+        "sequence": { "type": ["integer", "null"], "minimum": 1, "description": "1-based line number. Adapters fill it from array order." },
+        "description": { "type": ["string", "null"], "description": "Item descriptor: the real product or service name." },
+        "productCode": { "type": ["string", "null"], "description": "SKU or part number." },
+        "commodityCode": { "type": ["string", "null"], "description": "Commodity code, usually an 8-digit UNSPSC code." },
+        "commodityScheme": { "enum": ["unspsc", "nigp", "hs", "naics", "other", "unknown", null], "description": "The code system of commodityCode." },
+        "quantity": { "$ref": "#/$defs/decimal", "description": "Quantity, greater than 0." },
+        "unitOfMeasure": { "type": ["string", "null"], "description": "Unit of measure, such as EA or BX. Mastercard and Amex accept only codes from their lists." },
+        "unitCost": { "type": ["number", "null"], "multipleOf": 0.000001, "description": "Unit price before discount. At most 6 decimal places." },
+        "discountAmount": { "$ref": "#/$defs/nonNegativeDecimal", "description": "Discount on this line. Visa wants 0 when there is none." },
+        "discountIndicator": { "type": ["boolean", "null"], "description": "True when a discount applies to this line." },
+        "taxAmount": { "$ref": "#/$defs/nonNegativeDecimal", "description": "Tax on this line." },
+        "taxRate": { "$ref": "#/$defs/rate", "description": "Tax rate on this line as a fraction: 0.07 means 7%." },
+        "taxable": { "type": ["boolean", "null"], "description": "Line tax indicator: true when the line is taxable." },
+        "taxTypeCode": { "type": ["string", "null"], "description": "Processor tax type code for the line." },
+        "amountIncludesTax": { "type": ["boolean", "null"], "description": "True when total includes the line tax. Absent means false. It changes the arithmetic." },
+        "total": { "$ref": "#/$defs/decimal", "description": "Line total (extended amount): quantity times unit cost, less the line discount, plus the line tax when amountIncludesTax is true." },
+        "debitCreditIndicator": { "enum": ["debit", "credit", null], "description": "debit adds to the total, credit (a return) subtracts from it. Absent means debit." },
+        "detailIndicator": { "type": ["string", "null"], "maxLength": 1, "description": "Visa line-item detail indicator, 1 character. Often set by the processor." }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+  "name": "io.github.brimatt16219/l3lint",
+  "version": "1.0.0",
+  "description": "Lint commercial card Level 2 and Level 3 payloads against Visa, Mastercard, Amex and Discover rules.",
+  "title": "l3lint",
+  "websiteUrl": "https://brimatt16219.github.io/l3lint/",
+  "packages": [
+    {
+      "registryType": "nuget",
+      "identifier": "L3Lint.Mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "packageArguments": [],
+      "environmentVariables": []
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/brimatt16219/l3lint",
+    "source": "github"
+  }
+}

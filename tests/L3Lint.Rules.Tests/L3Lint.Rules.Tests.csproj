@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>L3Lint.Rules.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="Shouldly" />
+    <PackageReference Include="coverlet.MTP" />
+    <PackageReference Include="FsCheck.Xunit.v3" />
+    <PackageReference Include="Microsoft.Extensions.TimeProvider.Testing" />
+    <PackageReference Include="YamlDotNet" />
+  </ItemGroup>
+
+  <!-- The packs and Core are also referenced directly, so Stryker in project mode can mutate each of them from here (docs/dev/mutation-testing.md). -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\L3Lint.Hosting\L3Lint.Hosting.csproj" />
+    <ProjectReference Include="..\..\src\L3Lint.Core\L3Lint.Core.csproj" />
+    <ProjectReference Include="..\..\src\L3Lint.Rules.General\L3Lint.Rules.General.csproj" />
+    <ProjectReference Include="..\..\src\L3Lint.Rules.Visa\L3Lint.Rules.Visa.csproj" />
+    <ProjectReference Include="..\..\src\L3Lint.Rules.Mastercard\L3Lint.Rules.Mastercard.csproj" />
+    <ProjectReference Include="..\..\src\L3Lint.Rules.Amex\L3Lint.Rules.Amex.csproj" />
+    <ProjectReference Include="..\..\src\L3Lint.Rules.Discover\L3Lint.Rules.Discover.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\L3Lint.Core.Tests\SpecExamples\**" Link="SpecExamples\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

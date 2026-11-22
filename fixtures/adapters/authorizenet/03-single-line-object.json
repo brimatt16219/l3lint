@@ -1,0 +1,39 @@
+{
+  "createTransactionRequest": {
+    "merchantAuthentication": { "name": "test-api-login", "transactionKey": "test-transaction-key" },
+    "refId": "ref-71840",
+    "transactionRequest": {
+      "transactionType": "authCaptureTransaction",
+      "amount": "113.43",
+      "currencyCode": "USD",
+      "payment": {
+        "opaqueData": { "dataDescriptor": "COMMON.ACCEPT.INAPP.PAYMENT", "dataValue": "test-opaque-payment-token" }
+      },
+      "order": { "invoiceNumber": "INV-71840" },
+      "lineItems": {
+        "lineItem": {
+          "itemId": "1",
+          "name": "Exam table paper roll",
+          "description": "Crepe exam table paper",
+          "quantity": "12",
+          "unitPrice": "8.25",
+          "taxable": "true",
+          "unitOfMeasure": "RL",
+          "taxAmount": "6.93",
+          "totalAmount": "99.00",
+          "commodityCode": "42131701",
+          "productCode": "ETP-RL-21",
+          "discountAmount": "0.00"
+        }
+      },
+      "tax": { "amount": "6.93" },
+      "duty": { "amount": "0.00" },
+      "shipping": { "amount": "7.50" },
+      "taxExempt": "false",
+      "poNumber": "PO71840",
+      "shipTo": { "zip": "80202", "country": "US" },
+      "shipFrom": { "zip": "80014", "country": "US" },
+      "discount": { "amount": "0.00" }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+description: "A valid discover business payload with 3 lines in JPY: no error or warning may fire."
+context: { brand: discover, cardProduct: business, mcc: "5047", asOf: 2026-10-19 }
+expect:
+  exitCode: 0
+  findings: []
+  likelyTier: { brand: discover, status: noBenefit }

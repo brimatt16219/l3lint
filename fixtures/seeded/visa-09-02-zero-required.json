@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83424",
+  "amount": 2229.76,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "purchasing",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5047",
+    "name": "Northbay Office Works",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77296"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77296",
+    "invoiceNumber": "INV-83424"
+  },
+  "tax": {
+    "amount": 144.40,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "commodityScheme": "unspsc",
+      "quantity": 20,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 6.75,
+      "taxAmount": 8.98,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 128.25,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "commodityScheme": "unspsc",
+      "quantity": 19,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 72.96,
+      "taxAmount": 45.96,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 656.64,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 9.48,
+      "taxAmount": 5.97,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 85.32,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "commodityScheme": "unspsc",
+      "quantity": 5,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 0.00,
+      "taxAmount": 4.99,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 71.25,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 0,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 124.60,
+      "taxAmount": 78.50,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 1121.40,
+      "detailIndicator": "Y"
+    }
+  ]
+}

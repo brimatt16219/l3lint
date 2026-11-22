@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83318",
+  "amount": 592.46,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "purchasing",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Summit Lab Products",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77222"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77222",
+    "invoiceNumber": "INV-83318"
+  },
+  "tax": {
+    "amount": 43.44,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "commodityScheme": "unspsc",
+      "quantity": 13,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 2.73,
+      "taxAmount": 4.28,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 51.87,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 8,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 10.30,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 124.80,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Shop towels roll blue",
+      "productCode": "PRD-OVERFLOW-3799",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 2.28,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 27.65,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 9,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "taxAmount": 13.59,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 164.70,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 17.50,
+      "taxAmount": 12.99,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 157.50,
+      "detailIndicator": "Y"
+    }
+  ]
+}

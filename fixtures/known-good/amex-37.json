@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-88508",
+  "amount": 720.57,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "purchasing",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Northbay Office Works",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-72732"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-72732",
+    "invoiceNumber": "INV-88508"
+  },
+  "tax": {
+    "amount": 32.22,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "amex": {
+    "requestorName": "Sam Rivera",
+    "adviceText": [
+      "PO-72732 supplies order",
+      "Requested by Sam Rivera"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "quantity": 22,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 28.60,
+      "taxAmount": 25.81,
+      "total": 543.40
+    },
+    {
+      "sequence": 2,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "quantity": 20,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 0.00,
+      "taxAmount": 6.41,
+      "total": 135.00
+    }
+  ]
+}

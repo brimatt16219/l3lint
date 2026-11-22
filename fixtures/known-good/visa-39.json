@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-78014",
+  "amount": 255.47,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "business",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-65406"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-65406",
+    "invoiceNumber": "INV-78014"
+  },
+  "tax": {
+    "amount": 15.73,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "commodityScheme": "unspsc",
+      "quantity": 5,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 2.38,
+      "taxAmount": 3.16,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 45.12,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "commodityScheme": "unspsc",
+      "quantity": 1,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 2.18,
+      "taxAmount": 1.37,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 19.62,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "commodityScheme": "unspsc",
+      "quantity": 2,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 0.00,
+      "taxAmount": 5.38,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 76.80,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "commodityScheme": "unspsc",
+      "quantity": 5,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 0.00,
+      "taxAmount": 2.59,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 37.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "commodityScheme": "unspsc",
+      "quantity": 11,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 0.00,
+      "taxAmount": 3.23,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 46.20,
+      "detailIndicator": "Y"
+    }
+  ]
+}

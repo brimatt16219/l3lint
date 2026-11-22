@@ -1,0 +1,4 @@
+invoice,total,customer_ref,tax,tax_status,freight,ship_to,item,sku,unspsc,qty,uom,unit_price,line_discount,line_total
+INV-65109,324.20,PO-27730,,E,18.00,66101,Bulk rice long grain,RCE-LG-25,50221101,8,BG,21.40,,171.20
+INV-65109,324.20,PO-27730,,E,18.00,66101,Dry black beans case,BNS-BK-12,50221106,4,CA,33.75,,135.00
+INV-65110,64.20,PO-27731,4.20,,,66101,Can opener manual,CNO-MN-01,52151703,2,,30.00,,60.00

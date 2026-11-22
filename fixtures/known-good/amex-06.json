@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-86865",
+  "amount": 936.84,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "business",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-71585"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-71585",
+    "invoiceNumber": "INV-86865"
+  },
+  "tax": {
+    "amount": 71.39,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "amex": {
+    "requestorName": "Sam Rivera",
+    "adviceText": [
+      "PO-71585 supplies order",
+      "Requested by Sam Rivera"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 6,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 11.52,
+      "taxAmount": 18.06,
+      "total": 218.88
+    },
+    {
+      "sequence": 2,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "quantity": 2,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 0.00,
+      "taxAmount": 1.22,
+      "total": 14.80
+    },
+    {
+      "sequence": 3,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 7,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 44.80,
+      "taxAmount": 33.26,
+      "total": 403.20
+    },
+    {
+      "sequence": 4,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "quantity": 2,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 0.00,
+      "taxAmount": 2.35,
+      "total": 28.50
+    },
+    {
+      "sequence": 5,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 6,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 10.98,
+      "taxAmount": 8.15,
+      "total": 98.82
+    },
+    {
+      "sequence": 6,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "quantity": 15,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 0.00,
+      "taxAmount": 8.35,
+      "total": 101.25
+    }
+  ]
+}

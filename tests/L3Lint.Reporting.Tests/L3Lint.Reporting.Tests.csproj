@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>L3Lint.Reporting.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <!-- Snapshot tests compare with checked-in files under Expected/ instead of Verify (ADR-0053). -->
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="Shouldly" />
+    <PackageReference Include="coverlet.MTP" />
+    <PackageReference Include="JsonSchema.Net" />
+    <PackageReference Include="Microsoft.Extensions.TimeProvider.Testing" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\L3Lint.Reporting\L3Lint.Reporting.csproj" />
+    <ProjectReference Include="..\..\src\L3Lint.Hosting\L3Lint.Hosting.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Vendored output schemas (Schemas/README.md) and the results schema the JSON writer must meet. -->
+    <None Include="Schemas\sarif-schema-2.1.0.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Schemas\junit-10.xsd" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\schemas\results.schema.json" Link="Schemas\results.schema.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\L3Lint.Core.Tests\SpecExamples\canonical-example.json" Link="SpecExamples\canonical-example.json" CopyToOutputDirectory="PreserveNewest" />
+    <!-- Expected writer output, written by hand from the spec and TestReports.Small(). -->
+    <None Include="Expected\*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

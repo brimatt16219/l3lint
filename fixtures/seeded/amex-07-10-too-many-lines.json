@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-84378",
+  "amount": 597.79,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "business",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Harborview Facility Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77962"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77962",
+    "invoiceNumber": "INV-84378"
+  },
+  "tax": {
+    "amount": 27.11,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "amex": {
+    "requestorName": "Dana Ortiz",
+    "adviceText": [
+      "PO-77962 supplies order",
+      "Requested by Dana Ortiz"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 6,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 14.67,
+      "taxAmount": 13.24,
+      "total": 278.73
+    },
+    {
+      "sequence": 2,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "quantity": 7,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 0.00,
+      "taxAmount": 2.46,
+      "total": 51.80
+    },
+    {
+      "sequence": 3,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 4,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 0.00,
+      "taxAmount": 9.29,
+      "total": 195.60
+    },
+    {
+      "sequence": 4,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "quantity": 1,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 0.00,
+      "taxAmount": 0.32,
+      "total": 6.75
+    },
+    {
+      "sequence": 5,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "quantity": 9,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 0.00,
+      "taxAmount": 1.80,
+      "total": 37.80
+    }
+  ]
+}

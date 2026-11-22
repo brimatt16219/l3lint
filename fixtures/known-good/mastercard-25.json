@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-82572",
+  "amount": 563.74,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "corporate",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5047",
+    "name": "Harborview Facility Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-68588"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-68588",
+    "invoiceNumber": "INV-82572"
+  },
+  "tax": {
+    "amount": 25.56,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "commodityScheme": "unspsc",
+      "quantity": 2,
+      "unitOfMeasure": "PCE",
+      "unitCost": 38.40,
+      "discountAmount": 3.84,
+      "discountIndicator": true,
+      "taxAmount": 3.47,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 72.96,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 17,
+      "unitOfMeasure": "EAC",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 10.09,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 212.50,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 18,
+      "unitOfMeasure": "PCE",
+      "unitCost": 15.60,
+      "discountAmount": 28.08,
+      "discountIndicator": true,
+      "taxAmount": 12.00,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 252.72,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

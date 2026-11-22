@@ -1,0 +1,7 @@
+description: "The header discount 21.80 repeats the line discounts and the amount subtracts it twice."
+operator: double-discount
+context: { brand: visa, cardProduct: corporate, mcc: "5198", asOf: 2026-10-19 }
+expect:
+  findings:
+    - { ruleId: GEN-ARITH-005, path: /amounts/discount, severity: warning }
+  absent: [GEN-ARITH-002]

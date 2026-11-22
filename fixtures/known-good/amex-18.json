@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-87501",
+  "amount": 99562,
+  "currency": "JPY",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "purchasing",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Harborview Facility Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-72029"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-72029",
+    "invoiceNumber": "INV-87501"
+  },
+  "tax": {
+    "amount": 6367,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0,
+    "freight": 2250,
+    "duty": 0
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "amex": {
+    "requestorName": "Dana Ortiz",
+    "adviceText": [
+      "PO-72029 supplies order",
+      "Requested by Dana Ortiz"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "quantity": 4,
+      "unitOfMeasure": "EA",
+      "unitCost": 950,
+      "discountAmount": 190,
+      "taxAmount": 253,
+      "total": 3610
+    },
+    {
+      "sequence": 2,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "quantity": 24,
+      "unitOfMeasure": "PK",
+      "unitCost": 740,
+      "discountAmount": 0,
+      "taxAmount": 1243,
+      "total": 17760
+    },
+    {
+      "sequence": 3,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 5,
+      "unitOfMeasure": "GL",
+      "unitCost": 2180,
+      "discountAmount": 0,
+      "taxAmount": 763,
+      "total": 10900
+    },
+    {
+      "sequence": 4,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "quantity": 3,
+      "unitOfMeasure": "EA",
+      "unitCost": 8900,
+      "discountAmount": 0,
+      "taxAmount": 1869,
+      "total": 26700
+    },
+    {
+      "sequence": 5,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 9,
+      "unitOfMeasure": "BX",
+      "unitCost": 1250,
+      "discountAmount": 0,
+      "taxAmount": 788,
+      "total": 11250
+    },
+    {
+      "sequence": 6,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "quantity": 7,
+      "unitOfMeasure": "BX",
+      "unitCost": 2600,
+      "discountAmount": 1820,
+      "taxAmount": 1147,
+      "total": 16380
+    },
+    {
+      "sequence": 7,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 11,
+      "unitOfMeasure": "RL",
+      "unitCost": 395,
+      "discountAmount": 0,
+      "taxAmount": 304,
+      "total": 4345
+    }
+  ]
+}

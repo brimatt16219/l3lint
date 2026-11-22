@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AdapterDuplicate" xml:space="preserve">
+    <value>Two adapters are named "{0}". Each adapter needs a unique name.</value>
+  </data>
+  <data name="CanonicalFieldMustBe" xml:space="preserve">
+    <value>{0} must be {1}.</value>
+  </data>
+  <data name="CanonicalSchemaVersionRequired" xml:space="preserve">
+    <value>schemaVersion is required. Send "1.0".</value>
+  </data>
+  <data name="CanonicalUnknownField" xml:space="preserve">
+    <value>{0} is not a canonical field. Check the spelling against the canonical field dictionary.</value>
+  </data>
+  <data name="CommodityAllZeros" xml:space="preserve">
+    <value>the code is all zeros</value>
+  </data>
+  <data name="CommodityNotEightDigits" xml:space="preserve">
+    <value>a UNSPSC code has exactly 8 digits</value>
+  </data>
+  <data name="CommoditySegmentRange" xml:space="preserve">
+    <value>the UNSPSC segment (first two digits) must be between 10 and 95</value>
+  </data>
+  <data name="CommodityTooGeneric" xml:space="preserve">
+    <value>the code names a whole segment or family, not a specific commodity</value>
+  </data>
+  <data name="ConstraintCountry" xml:space="preserve">
+    <value>a 2-letter uppercase country code such as US</value>
+  </data>
+  <data name="ConstraintDate" xml:space="preserve">
+    <value>a date as YYYY-MM-DD</value>
+  </data>
+  <data name="ConstraintDetailIndicator" xml:space="preserve">
+    <value>1 character</value>
+  </data>
+  <data name="ConstraintId" xml:space="preserve">
+    <value>1 to 64 characters</value>
+  </data>
+  <data name="ConstraintMcc" xml:space="preserve">
+    <value>4 digits</value>
+  </data>
+  <data name="ConstraintNonNegative" xml:space="preserve">
+    <value>0 or more</value>
+  </data>
+  <data name="ConstraintRate" xml:space="preserve">
+    <value>between 0 and 1</value>
+  </data>
+  <data name="ConstraintSchemaVersion" xml:space="preserve">
+    <value>"1.0"</value>
+  </data>
+  <data name="ConstraintSequence" xml:space="preserve">
+    <value>a whole number from 1</value>
+  </data>
+  <data name="ConstraintUnitCost" xml:space="preserve">
+    <value>a number with at most 6 decimal places</value>
+  </data>
+  <data name="DiagBrandUnknownFix" xml:space="preserve">
+    <value>Pass --brand, or send card.brand in the payload.</value>
+  </data>
+  <data name="DiagBrandUnknownMessage" xml:space="preserve">
+    <value>The card brand is unknown, so only the general rules ran.</value>
+  </data>
+  <data name="DiagBrandUnknownTitle" xml:space="preserve">
+    <value>Card brand unknown</value>
+  </data>
+  <data name="DiagRuleFailedFix" xml:space="preserve">
+    <value>Report this as a bug in l3lint. The other rules still ran.</value>
+  </data>
+  <data name="DiagRuleFailedMessage" xml:space="preserve">
+    <value>Rule {detail} failed internally on this transaction.</value>
+  </data>
+  <data name="DiagRuleFailedTitle" xml:space="preserve">
+    <value>A rule failed internally</value>
+  </data>
+  <data name="ExamplesBothWrong" xml:space="preserve">
+    <value>The passing example raised the rule and the failing example did not.</value>
+  </data>
+  <data name="ExamplesFailSilent" xml:space="preserve">
+    <value>The failing example did not raise the rule.</value>
+  </data>
+  <data name="ExamplesMissing" xml:space="preserve">
+    <value>The rule ships no pass and fail examples.</value>
+  </data>
+  <data name="ExamplesPassFired" xml:space="preserve">
+    <value>The passing example raised the rule.</value>
+  </data>
+  <data name="ExamplesUnreadable" xml:space="preserve">
+    <value>An example could not be read: {0}</value>
+  </data>
+  <data name="ExpectedBatchShare" xml:space="preserve">
+    <value>under {0} of transactions</value>
+  </data>
+  <data name="ExpectedIsoCurrency" xml:space="preserve">
+    <value>an ISO 4217 alpha-3 code</value>
+  </data>
+  <data name="ExpectedMaxCount" xml:space="preserve">
+    <value>{0} or fewer</value>
+  </data>
+  <data name="ExpectedMaxLength" xml:space="preserve">
+    <value>{0} characters or fewer</value>
+  </data>
+  <data name="ExpectedNonNegative" xml:space="preserve">
+    <value>0 or more</value>
+  </data>
+  <data name="ExpectedPositive" xml:space="preserve">
+    <value>above 0</value>
+  </data>
+  <data name="ExpectedRatio" xml:space="preserve">
+    <value>between {0} and {1}</value>
+  </data>
+  <data name="FixProposalUnit" xml:space="preserve">
+    <value>"{0}" has no exact code. {1} is a proposal; confirm it before you apply it.</value>
+  </data>
+  <data name="FormatKindMismatch" xml:space="preserve">
+    <value>Format {0} cannot read {1} input. Choose a matching --format.</value>
+  </data>
+  <data name="FormatNotDetected" xml:space="preserve">
+    <value>No input format was recognized. Pass --format with one of the listed formats.</value>
+  </data>
+  <data name="FormatTie" xml:space="preserve">
+    <value>Two or more formats match this input equally well. Pass --format to choose one.</value>
+  </data>
+  <data name="FormatUnknown" xml:space="preserve">
+    <value>Unknown format "{0}". Use one of: {1}.</value>
+  </data>
+  <data name="InputDuplicateProperty" xml:space="preserve">
+    <value>A JSON object repeats a property name, so its value is ambiguous. Remove the duplicate.</value>
+  </data>
+  <data name="InputMalformedJson" xml:space="preserve">
+    <value>The input is not well-formed JSON. Fix the syntax at the position shown.</value>
+  </data>
+  <data name="InputInvalidUtf8" xml:space="preserve">
+    <value>The input is not valid UTF-8. Save the file as UTF-8 and fix the bytes at the position shown.</value>
+  </data>
+  <data name="InputNotAnObject" xml:space="preserve">
+    <value>The payload must be a JSON object.</value>
+  </data>
+  <data name="InputTooDeep" xml:space="preserve">
+    <value>The JSON is nested deeper than {0} levels. Flatten it or raise inputs.limits.maxJsonDepth.</value>
+  </data>
+  <data name="InputTooLarge" xml:space="preserve">
+    <value>The input is {0} bytes, over the limit of {1} bytes. Split the file or raise inputs.limits.maxFileBytes.</value>
+  </data>
+  <data name="InputTooManyLines" xml:space="preserve">
+    <value>The transaction has {0} line items, over the limit of {1}. Split it or raise inputs.limits.maxLineItems.</value>
+  </data>
+  <data name="KindBoolean" xml:space="preserve">
+    <value>true or false</value>
+  </data>
+  <data name="KindCollection" xml:space="preserve">
+    <value>a list</value>
+  </data>
+  <data name="KindDate" xml:space="preserve">
+    <value>a date as YYYY-MM-DD</value>
+  </data>
+  <data name="KindDecimal" xml:space="preserve">
+    <value>a number</value>
+  </data>
+  <data name="KindEnum" xml:space="preserve">
+    <value>one of: {0}</value>
+  </data>
+  <data name="KindInteger" xml:space="preserve">
+    <value>a whole number</value>
+  </data>
+  <data name="KindText" xml:space="preserve">
+    <value>text</value>
+  </data>
+  <data name="KindTextList" xml:space="preserve">
+    <value>a list of text lines</value>
+  </data>
+  <data name="LockMismatch" xml:space="preserve">
+    <value>The lock file requires {0} {1}, but {2} is loaded. Update .l3lint.lock or install the locked pack version.</value>
+  </data>
+  <data name="LockNotLoaded" xml:space="preserve">
+    <value>no such pack</value>
+  </data>
+  <data name="NoteBrandOverride" xml:space="preserve">
+    <value>Card brand set to {0} by option; the payload said {1}.</value>
+  </data>
+  <data name="NoteCountryOverride" xml:space="preserve">
+    <value>Merchant country set to {0} by option; the payload said {1}.</value>
+  </data>
+  <data name="NoteMccOverride" xml:space="preserve">
+    <value>MCC set to {0} by option; the payload said {1}.</value>
+  </data>
+  <data name="NoteProductOverride" xml:space="preserve">
+    <value>Card product set to {0} by option; the payload said {1}.</value>
+  </data>
+  <data name="NoteStrictPciStopped" xml:space="preserve">
+    <value>Stopped because --strict-pci is set and a card number was found. Remove the card number and lint again.</value>
+  </data>
+  <data name="PackBadCollection" xml:space="preserve">
+    <value>maxCount can only count /lineItems or /amex/adviceText, not {0}.</value>
+  </data>
+  <data name="PackBadCondition" xml:space="preserve">
+    <value>The condition on {0} has no operator.</value>
+  </data>
+  <data name="PackBadManifest" xml:space="preserve">
+    <value>The manifest of pack {0} cannot be read: {1}</value>
+  </data>
+  <data name="PackBadRegex" xml:space="preserve">
+    <value>The pattern {0} is not a valid regular expression: {1}</value>
+  </data>
+  <data name="PackChecksumMismatch" xml:space="preserve">
+    <value>{0} does not match its SHA-256 in manifest.json. Regenerate the manifest with L3Lint.PackManifest.</value>
+  </data>
+  <data name="PackConditionWildcard" xml:space="preserve">
+    <value>Conditions apply to one value; {0} has a wildcard.</value>
+  </data>
+  <data name="PackDuplicateCheck" xml:space="preserve">
+    <value>Two checks are named "{0}". Each check needs a unique name.</value>
+  </data>
+  <data name="PackDuplicateList" xml:space="preserve">
+    <value>Two packs define a list named "{0}". List names must be unique.</value>
+  </data>
+  <data name="PackDuplicateRule" xml:space="preserve">
+    <value>Rule {0} is defined twice.</value>
+  </data>
+  <data name="PackManifestExtraFile" xml:space="preserve">
+    <value>{0} is not listed in manifest.json. Regenerate the manifest with L3Lint.PackManifest.</value>
+  </data>
+  <data name="PackManifestMismatch" xml:space="preserve">
+    <value>manifest.json is for {0} {1}, but the rules file says {2} {3}.</value>
+  </data>
+  <data name="PackManifestMissingFile" xml:space="preserve">
+    <value>manifest.json lists {0}, but the pack does not contain it.</value>
+  </data>
+  <data name="PackMissingFile" xml:space="preserve">
+    <value>The pack refers to {0}, which it does not contain.</value>
+  </data>
+  <data name="PackNoManifest" xml:space="preserve">
+    <value>Pack {0} has no manifest.json. Create one with L3Lint.PackManifest.</value>
+  </data>
+  <data name="PackRuleError" xml:space="preserve">
+    <value>{0} at {1}: {2}</value>
+  </data>
+  <data name="PackRuleScope" xml:space="preserve">
+    <value>Rule {0} does not belong in pack {1}; its ID must start with {2}-.</value>
+  </data>
+  <data name="PackRulesFileCount" xml:space="preserve">
+    <value>A pack must hold exactly one *.rules.yaml file at its root.</value>
+  </data>
+  <data name="PackSchemaError" xml:space="preserve">
+    <value>{0} does not match the rule pack schema at {1}: {2}</value>
+  </data>
+  <data name="PackUnknownCheck" xml:space="preserve">
+    <value>No compiled check is named "{0}". Packs can only name checks built into l3lint.</value>
+  </data>
+  <data name="PackUnknownField" xml:space="preserve">
+    <value>{0} is not a canonical field.</value>
+  </data>
+  <data name="PackUnknownKind" xml:space="preserve">
+    <value>Unknown check kind "{0}".</value>
+  </data>
+  <data name="PackUnknownList" xml:space="preserve">
+    <value>No loaded pack defines a list named "{0}".</value>
+  </data>
+  <data name="PackUnknownPlaceholder" xml:space="preserve">
+    <value>The message uses an unknown placeholder {{{0}}}.</value>
+  </data>
+  <data name="PackYamlError" xml:space="preserve">
+    <value>{0} is not valid YAML at line {1}, column {2}: {3}</value>
+  </data>
+  <data name="PatchCannotApply" xml:space="preserve">
+    <value>The patch operation {0} at {1} cannot be applied to this document.</value>
+  </data>
+  <data name="ProfileInvalid" xml:space="preserve">
+    <value>Profile {0} does not match the profile schema at {1}: {2}</value>
+  </data>
+  <data name="ProfileUnknown" xml:space="preserve">
+    <value>Unknown processor profile "{0}". Use one of: {1}, or a path to a profile file.</value>
+  </data>
+  <data name="RatesInvalid" xml:space="preserve">
+    <value>Rate table {0} does not match the rate table schema at {1}: {2}</value>
+  </data>
+  <data name="RuleUnknown" xml:space="preserve">
+    <value>No rule has the ID {0}. Run l3lint rules list to see every rule.</value>
+  </data>
+  <data name="SchemaMismatch" xml:space="preserve">
+    <value>{0} does not match the schema.</value>
+  </data>
+  <data name="SchemaMissingKey" xml:space="preserve">
+    <value>A required key is missing at {0}.</value>
+  </data>
+  <data name="SchemaNotAllowedValue" xml:space="preserve">
+    <value>{0} is not one of the allowed values.</value>
+  </data>
+  <data name="SchemaOutOfRange" xml:space="preserve">
+    <value>{0} is out of range.</value>
+  </data>
+  <data name="SchemaTooManyDecimals" xml:space="preserve">
+    <value>{0} has too many decimal places.</value>
+  </data>
+  <data name="SchemaUnknown" xml:space="preserve">
+    <value>Unknown schema "{0}". Use one of: {1}.</value>
+  </data>
+  <data name="SchemaUnknownKey" xml:space="preserve">
+    <value>{0} is not a known key. Check the spelling.</value>
+  </data>
+  <data name="SchemaWrongCount" xml:space="preserve">
+    <value>{0} has the wrong number of items.</value>
+  </data>
+  <data name="SchemaWrongFormat" xml:space="preserve">
+    <value>{0} does not have the expected format.</value>
+  </data>
+  <data name="SchemaWrongLength" xml:space="preserve">
+    <value>{0} has the wrong length.</value>
+  </data>
+  <data name="SchemaWrongType" xml:space="preserve">
+    <value>{0} has the wrong type.</value>
+  </data>
+  <data name="SessionCompleted" xml:space="preserve">
+    <value>The session is already complete.</value>
+  </data>
+  <data name="ValueAbsent" xml:space="preserve">
+    <value>absent</value>
+  </data>
+  <data name="YamlDuplicateKey" xml:space="preserve">
+    <value>The key "{0}" appears twice in the same mapping. Keep one.</value>
+  </data>
+  <data name="YamlSingleDocument" xml:space="preserve">
+    <value>The file must hold exactly one YAML document.</value>
+  </data>
+  <data name="YamlTagRefused" xml:space="preserve">
+    <value>The YAML type tag {0} is not allowed. Remove the tag.</value>
+  </data>
+  <data name="YamlTooLarge" xml:space="preserve">
+    <value>The YAML expands to too many values. Remove repeated aliases.</value>
+  </data>
+  <data name="YamlTooDeep" xml:space="preserve">
+    <value>The YAML nests mappings and lists more than {0} levels deep. Flatten it.</value>
+  </data>
+</root>

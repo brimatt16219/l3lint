@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83791",
+  "amount": 2254.13,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "purchasing",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-69439"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-69439",
+    "invoiceNumber": "INV-83791"
+  },
+  "tax": {
+    "amount": 102.21,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "commodityScheme": "unspsc",
+      "quantity": 18,
+      "unitOfMeasure": "PCE",
+      "unitCost": 48.90,
+      "discountAmount": 44.01,
+      "discountIndicator": true,
+      "taxAmount": 39.72,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 836.19,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "EAC",
+      "unitCost": 3.95,
+      "discountAmount": 2.77,
+      "discountIndicator": true,
+      "taxAmount": 1.18,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 24.88,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "GLI",
+      "unitCost": 21.80,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 14.50,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 305.20,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 4,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 10,
+      "unitOfMeasure": "PCE",
+      "unitCost": 64.00,
+      "discountAmount": 64.00,
+      "discountIndicator": true,
+      "taxAmount": 27.36,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 576.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 5,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 17,
+      "unitOfMeasure": "EAC",
+      "unitCost": 12.50,
+      "discountAmount": 21.25,
+      "discountIndicator": true,
+      "taxAmount": 9.08,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 191.25,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 6,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "PCE",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 10.37,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 218.40,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

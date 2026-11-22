@@ -1,0 +1,7 @@
+description: "31 line items under the authorizenet profile, one more than it accepts."
+operator: too-many-lines
+context: { brand: visa, cardProduct: purchasing, mcc: "5111", asOf: 2026-10-19, processor: authorizenet }
+expect:
+  exitCode: 1
+  findings:
+    - { ruleId: GEN-FMT-005, path: /lineItems, severity: error }

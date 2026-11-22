@@ -1,0 +1,31 @@
+[
+  {
+    "schemaVersion": "1.0",
+    "id": "INV-50311",
+    "amount": 280.36,
+    "currency": "USD",
+    "card": { "brand": "visa", "product": "purchasing" },
+    "merchant": { "mcc": "5047", "name": "Example Medical Supply" },
+    "customer": { "reference": "PO-48820" },
+    "tax": { "amount": 17.36, "indicator": "taxable" },
+    "amounts": { "freight": 15.00 },
+    "lineItems": [
+      { "sequence": 1, "description": "Nitrile gloves L box", "productCode": "GLV-NL-100", "commodityCode": "42132203", "quantity": 10, "unitOfMeasure": "BX", "unitCost": 12.50, "discountAmount": 5.00, "total": 120.00 },
+      { "sequence": 2, "description": "Isolation gown blue case", "productCode": "GWN-IS-B50", "commodityCode": "42131606", "quantity": 2, "unitOfMeasure": "CA", "unitCost": 64.00, "discountAmount": 0, "total": 128.00 }
+    ]
+  },
+  {
+    "schemaVersion": "1.0",
+    "id": "INV-50312",
+    "amount": 94.16,
+    "currency": "USD",
+    "card": { "brand": "visa", "product": "purchasing" },
+    "merchant": { "mcc": "5047", "name": "Example Medical Supply" },
+    "customer": { "reference": "PO-48821" },
+    "tax": { "amount": 6.16, "indicator": "taxable" },
+    "amounts": { "freight": 0 },
+    "lineItems": [
+      { "sequence": 1, "description": "Surgical masks box", "productCode": "MSK-SG-050", "commodityCode": "42131713", "quantity": 4, "unitOfMeasure": "BX", "unitCost": 22.00, "discountAmount": 0, "total": 88.00 }
+    ]
+  }
+]

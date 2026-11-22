@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83314",
+  "amount": 562.12,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "corporate",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-69106"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-69106",
+    "invoiceNumber": "INV-83314"
+  },
+  "tax": {
+    "amount": 31.82,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 20,
+      "unitOfMeasure": "EAC",
+      "unitCost": 12.50,
+      "discountAmount": 12.50,
+      "discountIndicator": true,
+      "taxAmount": 14.25,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 237.50,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 16,
+      "unitOfMeasure": "PCE",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 17.57,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 292.80,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

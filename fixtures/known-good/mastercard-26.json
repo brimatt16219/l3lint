@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-82625",
+  "amount": 391.27,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "purchasing",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Summit Lab Products",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-68625"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-68625",
+    "invoiceNumber": "INV-82625"
+  },
+  "tax": {
+    "amount": 21.58,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "commodityScheme": "unspsc",
+      "quantity": 9,
+      "unitOfMeasure": "PCE",
+      "unitCost": 14.25,
+      "discountAmount": 6.41,
+      "discountIndicator": true,
+      "taxAmount": 7.31,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 121.84,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 13,
+      "unitOfMeasure": "PCE",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 14.27,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 237.90,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

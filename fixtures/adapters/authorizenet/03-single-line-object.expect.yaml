@@ -1,0 +1,7 @@
+description: One line item sent as a single lineItem object, as in the published JSON example, rather than an array.
+format: authorizenet
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 03-single-line-object.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

@@ -1,0 +1,12 @@
+description: The payment amount is 10.00 more than the lines, tax and shipping add up to. Line totals are derived, so only the transaction total check reports it.
+format: stripe
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 10-amount-mismatch.canonical.json
+expect:
+  findings:
+    - { ruleId: GEN-ARITH-002, path: /amount }
+    - { ruleId: VISA-L3-009, path: /lineItems/1/discountAmount }
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/discount }
+    - { ruleId: VISA-L3-011, path: /amounts/duty }
+    - { ruleId: VISA-L3-013, path: /shipping/toCountry }

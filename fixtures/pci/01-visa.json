@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-69000",
+  "amount": 949.76,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "fleet",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5047",
+    "name": "Harborview Facility Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-51000"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-51000",
+    "invoiceNumber": "INV-69000"
+  },
+  "tax": {
+    "amount": 52.49,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "4111 1111 1111 1111",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "commodityScheme": "unspsc",
+      "quantity": 3,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 0.63,
+      "taxAmount": 0.72,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 11.97,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "commodityScheme": "unspsc",
+      "quantity": 11,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 0.00,
+      "taxAmount": 14.39,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 239.80,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "taxAmount": 37.38,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 623.00,
+      "detailIndicator": "Y"
+    }
+  ]
+}

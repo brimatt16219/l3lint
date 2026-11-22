@@ -1,0 +1,9 @@
+{
+  "clientReferenceInformation": { "code": "INV-81007" },
+  "processingInformation": { "capture": true, "purchaseLevel": "2" },
+  "orderInformation": {
+    "shipTo": { "postalCode": "85004", "country": "US" },
+    "invoiceDetails": { "purchaseOrderNumber": "PO-66130", "taxable": true },
+    "amountDetails": { "totalAmount": "189.90", "currency": "USD", "taxAmount": "12.43" }
+  }
+}

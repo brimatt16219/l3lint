@@ -1,0 +1,14 @@
+description: The complete Level 3 sale linted as a Mastercard purchasing card. Braintree carries the debit indicator in kind, but not the merchant tax ID, the line tax indicator or the tax type code.
+format: braintree
+context: { brand: mastercard, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19, defaultCurrency: USD }
+canonical: 09-mastercard-context.canonical.json
+expect:
+  findings:
+    - { ruleId: MC-L2-004, path: /merchant/taxId }
+    - { ruleId: MC-L3-005, path: /lineItems/0/unitOfMeasure }
+    - { ruleId: MC-L3-005, path: /lineItems/1/unitOfMeasure }
+    - { ruleId: MC-L3-008, path: /lineItems/0/taxable }
+    - { ruleId: MC-L3-008, path: /lineItems/0/discountIndicator }
+    - { ruleId: MC-L3-008, path: /lineItems/0/taxTypeCode }
+    - { ruleId: MC-L3-008, path: /lineItems/1/taxable }
+    - { ruleId: MC-L3-008, path: /lineItems/1/taxTypeCode }

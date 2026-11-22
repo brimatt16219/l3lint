@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-69424",
+  "amount": 347.33,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "business",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "4012 8888 8888 1881",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-51296"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-51296",
+    "invoiceNumber": "INV-69424"
+  },
+  "tax": {
+    "amount": 18.81,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "commodityScheme": "unspsc",
+      "quantity": 8,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 1.68,
+      "taxAmount": 1.92,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 31.92,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 13.10,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 218.40,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 16,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 3.79,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 63.20,
+      "detailIndicator": "Y"
+    }
+  ]
+}

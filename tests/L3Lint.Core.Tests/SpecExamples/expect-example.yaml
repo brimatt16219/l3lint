@@ -1,0 +1,8 @@
+description: Line 2 is missing its commodity code
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+expect:
+  exitCode: 1
+  findings:
+    - { ruleId: VISA-L3-004, path: /lineItems/1/commodityCode, severity: error }
+  absent: [GEN-ARITH-001, GEN-ARITH-002]   # must not fire
+  likelyTier: { brand: visa, status: blocked }

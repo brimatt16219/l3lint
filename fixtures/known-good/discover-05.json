@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-62112",
+  "amount": 913.84,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "purchasing",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Harborview Facility Supply",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-75248"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-75248",
+    "invoiceNumber": "INV-62112"
+  },
+  "tax": {
+    "amount": 67.93,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "quantity": 3,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 2.34,
+      "taxAmount": 3.67,
+      "total": 44.46
+    },
+    {
+      "sequence": 2,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "quantity": 18,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 7.56,
+      "taxAmount": 5.61,
+      "total": 68.04
+    },
+    {
+      "sequence": 3,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 16,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 78.24,
+      "taxAmount": 58.09,
+      "total": 704.16
+    },
+    {
+      "sequence": 4,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "quantity": 1,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 0.00,
+      "taxAmount": 0.56,
+      "total": 6.75
+    }
+  ]
+}

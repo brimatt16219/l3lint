@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-88561",
+  "amount": 359396,
+  "currency": "JPY",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "purchasing",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-72769"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-72769",
+    "invoiceNumber": "INV-88561"
+  },
+  "tax": {
+    "amount": 23447,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0,
+    "freight": 995,
+    "duty": 0
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "amex": {
+    "requestorName": "Jordan Ellis",
+    "adviceText": [
+      "PO-72769 supplies order",
+      "Requested by Jordan Ellis"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "quantity": 9,
+      "unitOfMeasure": "PK",
+      "unitCost": 1425,
+      "discountAmount": 641,
+      "taxAmount": 853,
+      "total": 12184
+    },
+    {
+      "sequence": 2,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 24,
+      "unitOfMeasure": "GL",
+      "unitCost": 2180,
+      "discountAmount": 5232,
+      "taxAmount": 3296,
+      "total": 47088
+    },
+    {
+      "sequence": 3,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 6,
+      "unitOfMeasure": "CA",
+      "unitCost": 6400,
+      "discountAmount": 3840,
+      "taxAmount": 2419,
+      "total": 34560
+    },
+    {
+      "sequence": 4,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "quantity": 19,
+      "unitOfMeasure": "EA",
+      "unitCost": 1190,
+      "discountAmount": 2261,
+      "taxAmount": 1424,
+      "total": 20349
+    },
+    {
+      "sequence": 5,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 1,
+      "unitOfMeasure": "BX",
+      "unitCost": 1250,
+      "discountAmount": 0,
+      "taxAmount": 88,
+      "total": 1250
+    },
+    {
+      "sequence": 6,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "quantity": 23,
+      "unitOfMeasure": "EA",
+      "unitCost": 8900,
+      "discountAmount": 0,
+      "taxAmount": 14329,
+      "total": 204700
+    },
+    {
+      "sequence": 7,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 9,
+      "unitOfMeasure": "BX",
+      "unitCost": 1830,
+      "discountAmount": 1647,
+      "taxAmount": 1038,
+      "total": 14823
+    }
+  ]
+}

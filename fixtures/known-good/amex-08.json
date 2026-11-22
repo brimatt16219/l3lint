@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-86971",
+  "amount": 252077,
+  "currency": "JPY",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "purchasing",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-71659"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-71659",
+    "invoiceNumber": "INV-86971"
+  },
+  "tax": {
+    "amount": 16393,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0,
+    "freight": 1500,
+    "duty": 0
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "amex": {
+    "requestorName": "Sam Rivera",
+    "adviceText": [
+      "PO-71659 supplies order",
+      "Requested by Sam Rivera"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 20,
+      "unitOfMeasure": "BX",
+      "unitCost": 1250,
+      "discountAmount": 1250,
+      "taxAmount": 1663,
+      "total": 23750
+    },
+    {
+      "sequence": 2,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 8,
+      "unitOfMeasure": "BX",
+      "unitCost": 1830,
+      "discountAmount": 0,
+      "taxAmount": 1025,
+      "total": 14640
+    },
+    {
+      "sequence": 3,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "quantity": 2,
+      "unitOfMeasure": "EA",
+      "unitCost": 950,
+      "discountAmount": 190,
+      "taxAmount": 120,
+      "total": 1710
+    },
+    {
+      "sequence": 4,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 11,
+      "unitOfMeasure": "CA",
+      "unitCost": 3840,
+      "discountAmount": 4224,
+      "taxAmount": 2661,
+      "total": 38016
+    },
+    {
+      "sequence": 5,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 15,
+      "unitOfMeasure": "CA",
+      "unitCost": 6400,
+      "discountAmount": 0,
+      "taxAmount": 6720,
+      "total": 96000
+    },
+    {
+      "sequence": 6,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 24,
+      "unitOfMeasure": "GL",
+      "unitCost": 2180,
+      "discountAmount": 5232,
+      "taxAmount": 3296,
+      "total": 47088
+    },
+    {
+      "sequence": 7,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 16,
+      "unitOfMeasure": "RL",
+      "unitCost": 395,
+      "discountAmount": 0,
+      "taxAmount": 442,
+      "total": 6320
+    },
+    {
+      "sequence": 8,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "quantity": 9,
+      "unitOfMeasure": "PK",
+      "unitCost": 740,
+      "discountAmount": 0,
+      "taxAmount": 466,
+      "total": 6660
+    }
+  ]
+}

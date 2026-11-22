@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83632",
+  "amount": 1344.05,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "purchasing",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-69328"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-69328",
+    "invoiceNumber": "INV-83632"
+  },
+  "tax": {
+    "amount": 59.93,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "commodityScheme": "unspsc",
+      "quantity": 18,
+      "unitOfMeasure": "GLI",
+      "unitCost": 21.80,
+      "discountAmount": 19.62,
+      "discountIndicator": true,
+      "taxAmount": 17.71,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 372.78,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 3,
+      "unitOfMeasure": "EAC",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 12.68,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 267.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "PCE",
+      "unitCost": 38.40,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 25.54,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 537.60,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 4,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 6,
+      "unitOfMeasure": "PCE",
+      "unitCost": 15.60,
+      "discountAmount": 9.36,
+      "discountIndicator": true,
+      "taxAmount": 4.00,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 84.24,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

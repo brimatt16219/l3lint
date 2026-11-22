@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-62218",
+  "amount": 1732.57,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "purchasing",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5047",
+    "name": "Gulfside Medical Supply",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-75322"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-75322",
+    "invoiceNumber": "INV-62218"
+  },
+  "tax": {
+    "amount": 112.36,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 22,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 53.79,
+      "taxAmount": 71.54,
+      "total": 1022.01
+    },
+    {
+      "sequence": 2,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "quantity": 14,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 0.00,
+      "taxAmount": 7.25,
+      "total": 103.60
+    },
+    {
+      "sequence": 3,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 22,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 0.00,
+      "taxAmount": 33.57,
+      "total": 479.60
+    }
+  ]
+}

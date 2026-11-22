@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>L3Lint.Rules.General</RootNamespace>
+    <PackageId>L3Lint.Rules.General</PackageId>
+    <Description>The l3lint general (all brands) rule pack (l3lint.rules.general): versioned, sourced rules as YAML data plus the checks they name. Every rule cites public sources.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\L3Lint.Core\L3Lint.Core.csproj" />
+  </ItemGroup>
+
+  <!-- The pack files are embedded for the engine and also shipped as package content for rule authors. -->
+  <ItemGroup>
+    <EmbeddedResource Include="Pack\**\*" LogicalName="L3Lint.Pack.general/%(RecursiveDir)%(Filename)%(Extension)" />
+    <None Include="Pack\**\*" Pack="true" PackagePath="content\l3lint\packs\general\%(RecursiveDir)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="L3Lint.Rules.Tests" />
+    <InternalsVisibleTo Include="L3Lint.FixtureGen" />
+    <InternalsVisibleTo Include="L3Lint.DocsGen" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,5 @@
+description: "AMEX-L3-002 pass example: the rule must not fire."
+context: { brand: amex, cardProduct: corporate, mcc: "5047", asOf: 2026-10-19, only: AMEX-L3-002 }
+expect:
+  findings: []
+  absent: [AMEX-L3-002]

@@ -1,0 +1,6 @@
+description: A CSV map that supplies everything Mastercard Data Rate III asks for, including the merchant tax ID, Mastercard unit codes (PCE, EAC) and every line indicator, so a Mastercard purchasing card gets no findings.
+format: csv
+context: { brand: mastercard, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 09-mastercard-complete.canonical.json
+expect:
+  findings: []

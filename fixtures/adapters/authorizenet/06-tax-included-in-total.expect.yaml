@@ -1,0 +1,7 @@
+description: Line totals include line tax, flagged with the schema-only taxIncludedInTotal field (a boolean on one line, quoted on the other), and amounts are JSON numbers. The arithmetic takes the included tax out before adding the header tax, so nothing is counted twice.
+format: authorizenet
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 06-tax-included-in-total.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

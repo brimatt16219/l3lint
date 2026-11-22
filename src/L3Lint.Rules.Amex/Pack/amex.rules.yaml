@@ -1,0 +1,210 @@
+# l3lint American Express rule pack. Amex has no public Level 3 rate program and Level 2 pricing needs a direct
+# agreement, so these rules check format and completeness so nothing is truncated or rejected. Source of truth for
+# the 9 AMEX rules in the spec's rule catalog (Card brand rules tab); design notes are in docs/dev/RULE-DESIGN.md.
+pack:
+  id: l3lint.rules.amex
+  version: 1.0.0
+  brand: amex
+  publishedOn: 2026-10-25
+  title: American Express
+  description: American Express Level 2 and Level 3 format and completeness checks.
+  lists:
+    amexUom:
+      path: lists/amex-uom.csv
+      status: complete
+
+rules:
+  - id: AMEX-ELIG-001
+    title: No public Amex Level 3 rate
+    requirement: American Express publishes no Level 3 rate program; Level 2 pricing needs a direct agreement with Amex.
+    rationale: Amex data still matters for the buyer's reconciliation, but no rate benefit should be expected without an agreement.
+    level: general
+    severity: information
+    confidence: processor-doc
+    check: { kind: custom, check: NoRateProgram }
+    message: American Express has no public Level 3 rate, and Level 2 pricing needs an Amex agreement.
+    fix: None; no public Level 3 rate, Level 2 pricing needs an Amex agreement.
+    impact: noBenefit
+    sources:
+      - https://docs.stripe.com/payments/payment-line-items
+      - https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/online-payments/payment-methods/cards/commercialcards
+      - https://www.paypal.com/us/cshelp/article/paypal-advanced-checkout---what-are-level-2-and-3-card-payment-transactions-help984
+      - https://developer.cybersource.com/docs/cybs/en-us/level-2-3/developer/ctv/rest/level-2-3/l23-intro-overview.md
+    examples:
+      pass: examples/AMEX-ELIG-001.pass.json
+      fail: examples/AMEX-ELIG-001.fail.json
+      passNote: A Visa transaction, so the Amex pack does not run.
+      failNote: Any Amex transaction reports this note.
+
+  - id: AMEX-FMT-001
+    title: Advice text over 4 lines or 40 characters a line
+    requirement: Amex transaction advice text holds at most 4 lines of 40 characters each.
+    rationale: Text beyond the format is cut off when the processor builds the Amex record.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    profiles: [jpmorgan, amex-advice-text]
+    check: { kind: custom, check: AdviceText }
+    message: "Advice text has {count} lines; Amex accepts at most {max}."
+    messages:
+      lineTooLong: "Advice text line {index} is {length} characters; Amex accepts at most {max}."
+    fix: Condense the text.
+    impact: truncation
+    sources:
+      - https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/online-payments/payment-methods/cards/commercialcards
+    examples:
+      pass: examples/AMEX-FMT-001.pass.json
+      fail: examples/AMEX-FMT-001.fail.json
+      passNote: Two advice lines, both under 40 characters.
+      failNote: Five advice lines.
+
+  - id: AMEX-FMT-002
+    title: More line items than the gateway forwards to Amex
+    requirement: Under profiles that forward only the first 4 line items to Amex, put the most important lines first.
+    rationale: One gateway forwards only the first 4 line items to Amex; later lines are dropped.
+    level: L3
+    severity: warning
+    confidence: processor-doc
+    check: { kind: maxCount, collection: /lineItems, profileKey: amexForwardedLineItems }
+    message: "The transaction has {count} line items; this processor forwards only the first {max} to Amex."
+    fix: Put the most important lines first.
+    impact: truncation
+    sources:
+      - https://docs.stripe.com/payments/payment-line-items
+    examples:
+      pass: examples/AMEX-FMT-002.pass.json
+      fail: examples/AMEX-FMT-002.fail.json
+      passNote: Two line items, within the 4 Stripe forwards.
+      failNote: Five line items under the Stripe profile.
+      context: { processor: stripe }
+
+  - id: AMEX-L2-001
+    title: Ship-to postal code missing
+    requirement: Amex Level 2 needs the ship-to postal code. Level 2 is sent only for merchants in the US, Canada and US territories.
+    rationale: Required by the Amex acquirer integration of one public gateway.
+    level: L2
+    severity: error
+    confidence: processor-doc
+    profiles: [mastercard-gateway-amex]
+    appliesTo:
+      when:
+        - { field: /merchant/country, in: [US, CA, AS, GU, MP, PR, VI] }
+    check: { kind: required, field: /shipping/toPostalCode }
+    message: The ship-to postal code is missing; Amex Level 2 needs it.
+    fix: Send it.
+    impact: blocksLevel2
+    supersedes: [AMEX-L3-002]
+    sources:
+      - https://developer.mastercard.com/mastercard-gateway/documentation/gateway-features/trans-enrich-data/order-and-line-item-data/level-2-and-3/level2-3-data-for-amex-acq/
+    examples:
+      pass: examples/AMEX-L2-001.pass.json
+      fail: examples/AMEX-L2-001.fail.json
+      passNote: The ship-to postal code is 33431.
+      failNote: The ship-to postal code is missing.
+
+  - id: AMEX-L2-002
+    title: PO number over 22 characters
+    requirement: The Amex purchase order number holds at most 22 characters.
+    rationale: Longer PO numbers are truncated in the Amex record.
+    level: L2
+    severity: warning
+    confidence: processor-doc
+    check: { kind: maxLength, field: /order/purchaseOrderNumber, max: 22 }
+    message: "The PO number is {length} characters; Amex keeps {max}."
+    fix: Shorten it.
+    impact: truncation
+    supersedes: [GEN-FMT-006]
+    sources:
+      - https://developer.mastercard.com/mastercard-gateway/documentation/gateway-features/trans-enrich-data/order-and-line-item-data/level-2-and-3/level2-3-data-for-amex-acq/
+    examples:
+      pass: examples/AMEX-L2-002.pass.json
+      fail: examples/AMEX-L2-002.fail.json
+      passNote: The PO number is 8 characters.
+      failNote: The PO number is 23 characters.
+
+  - id: AMEX-L2-003
+    title: Customer reference over 20 characters
+    requirement: The Amex customer reference is truncated to 20 characters, or 17 in some settlement files.
+    rationale: Longer references are cut, so the buyer may not recognize the charge.
+    level: L2
+    severity: warning
+    confidence: processor-doc
+    check: { kind: maxLength, field: /customer/reference, max: 20 }
+    message: "The customer reference is {length} characters; Amex keeps {max}, and some files only 17."
+    fix: Shorten it; some files keep only 17.
+    impact: truncation
+    supersedes: [GEN-FMT-006]
+    sources:
+      - https://developer.mastercard.com/mastercard-gateway/documentation/gateway-features/trans-enrich-data/order-and-line-item-data/level-2-and-3/level2-3-data-for-amex-acq/
+    examples:
+      pass: examples/AMEX-L2-003.pass.json
+      fail: examples/AMEX-L2-003.fail.json
+      passNote: The customer reference is 8 characters.
+      failNote: The customer reference is 21 characters.
+
+  - id: AMEX-L2-004
+    title: Tax exempt without a tax registration ID
+    requirement: When the sale is tax exempt, Amex needs the tax registration ID in tax.exemptionId.
+    rationale: Required by the Amex acquirer integration of one public gateway.
+    level: L2
+    severity: error
+    confidence: processor-doc
+    profiles: [mastercard-gateway-amex]
+    appliesTo:
+      when:
+        - { field: /tax/indicator, equals: exempt }
+    check: { kind: required, field: /tax/exemptionId }
+    message: The sale is tax exempt but has no tax registration ID.
+    fix: Send the tax registration ID.
+    impact: blocksLevel2
+    sources:
+      - https://developer.mastercard.com/mastercard-gateway/documentation/gateway-features/trans-enrich-data/order-and-line-item-data/level-2-and-3/level2-3-data-for-amex-acq/
+    examples:
+      pass: examples/AMEX-L2-004.pass.json
+      fail: examples/AMEX-L2-004.fail.json
+      passNote: The sale is taxable.
+      failNote: The sale is exempt with no registration ID.
+
+  - id: AMEX-L3-001
+    title: Unit of measure not an ANSI X12 code
+    requirement: Amex units of measure are 2-character codes from the ANSI X12 unit list, for example EA, BX, HR or CA.
+    rationale: Units outside the list are rejected or dropped by acquirers that send structured Amex Level 3 data.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    check: { kind: inList, field: /lineItems/*/unitOfMeasure, list: amexUom }
+    message: "Line {index} unit of measure {actual} is not an ANSI X12 code."
+    fix: Map to a code such as EA.
+    impact: blocksLevel3
+    supersedes: [GEN-FMT-006]
+    sources:
+      - https://developer.mastercard.com/mastercard-gateway/documentation/gateway-features/trans-enrich-data/order-and-line-item-data/level-2-and-3/level2-3-data-for-amex-acq/
+      - https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/so/api-fields/item-no-unit-of-measure.html
+    examples:
+      pass: examples/AMEX-L3-001.pass.json
+      fail: examples/AMEX-L3-001.fail.json
+      passNote: Units are BX and CA.
+      failNote: Line 1 unit is EACH, which is not a 2-character code.
+
+  - id: AMEX-L3-002
+    title: Level 3 prerequisites missing
+    requirement: Amex Level 3 needs the requestor name, customer reference, transaction tax amount and ship-to postal code.
+    rationale: Acquirers that send structured Amex Level 3 data drop it when a prerequisite is missing.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    profiles: [mastercard-gateway-amex]
+    appliesTo:
+      when:
+        - { field: /lineItems, greaterThan: 0 }
+    check: { kind: required, fields: [/amex/requestorName, /customer/reference, /tax/amount, /shipping/toPostalCode], allowZero: true }
+    message: "{field} is missing; Amex Level 3 needs it."
+    fix: Send the missing fields.
+    impact: blocksLevel3
+    sources:
+      - https://developer.mastercard.com/mastercard-gateway/documentation/gateway-features/trans-enrich-data/order-and-line-item-data/level-2-and-3/level2-3-data-for-amex-acq/
+    examples:
+      pass: examples/AMEX-L3-002.pass.json
+      fail: examples/AMEX-L3-002.fail.json
+      passNote: Requestor name, customer reference, tax and ship-to are all sent.
+      failNote: The requestor name is missing.

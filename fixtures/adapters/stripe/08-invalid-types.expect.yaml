@@ -1,0 +1,14 @@
+description: The amount is a string, line 1 has a fractional quantity and line 2 sends its unit cost as a string. Each becomes one GEN-FMT-001 finding; the line totals that would depend on them are left out without a second finding.
+format: stripe
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 08-invalid-types.canonical.json
+expect:
+  findings:
+    - { ruleId: GEN-FMT-001, path: /amount }
+    - { ruleId: GEN-FMT-001, path: /lineItems/0/quantity }
+    - { ruleId: GEN-FMT-001, path: /lineItems/1/unitCost }
+    - { ruleId: VISA-L3-009, path: /lineItems/1/discountAmount }
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/discount }
+    - { ruleId: VISA-L3-011, path: /amounts/duty }
+    - { ruleId: VISA-L3-013, path: /shipping/toCountry }

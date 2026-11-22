@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-87766",
+  "amount": 2473.32,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "purchasing",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Summit Lab Products",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-72214"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-72214",
+    "invoiceNumber": "INV-87766"
+  },
+  "tax": {
+    "amount": 187.36,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "amex": {
+    "requestorName": "Dana Ortiz",
+    "adviceText": [
+      "PO-72214 supplies order",
+      "Requested by Dana Ortiz"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 16,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 51.20,
+      "taxAmount": 80.26,
+      "total": 972.80
+    },
+    {
+      "sequence": 2,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "quantity": 4,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 2.96,
+      "taxAmount": 2.20,
+      "total": 26.64
+    },
+    {
+      "sequence": 3,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 4,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 1.58,
+      "taxAmount": 1.17,
+      "total": 14.22
+    },
+    {
+      "sequence": 4,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "quantity": 7,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 0.00,
+      "taxAmount": 3.90,
+      "total": 47.25
+    },
+    {
+      "sequence": 5,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 13,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 0.00,
+      "taxAmount": 52.45,
+      "total": 635.70
+    },
+    {
+      "sequence": 6,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "quantity": 15,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 0.00,
+      "taxAmount": 17.63,
+      "total": 213.75
+    },
+    {
+      "sequence": 7,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "quantity": 6,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 7.72,
+      "total": 93.60
+    },
+    {
+      "sequence": 8,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "quantity": 3,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "taxAmount": 22.03,
+      "total": 267.00
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+invoice,total,customer_ref,tax,line_no,item,sku,unspsc,qty,uom,unit_price,line_tax,line_total,line_type
+INV-63180,331.62,PO-40917,25.62,1,Toner cartridge black,TNR-BK-26A,44103103,3,EA,89.00,18.69,267.00,D
+INV-63180,331.62,PO-40917,25.62,2,Toner cartridge cyan,TNR-CY-26A,44103103,1,EA,99.00,6.93,99.00,D
+INV-63180,331.62,PO-40917,25.62,3,Returned drum unit,DRM-UN-32A,44103105,1,EA,60.00,0.00,60.00,C

@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-88455",
+  "amount": 2823.55,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "corporate",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-72695"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-72695",
+    "invoiceNumber": "INV-88455"
+  },
+  "tax": {
+    "amount": 127.60,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "amex": {
+    "requestorName": "Sam Rivera",
+    "adviceText": [
+      "PO-72695 supplies order",
+      "Requested by Sam Rivera"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 7,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 17.12,
+      "taxAmount": 15.45,
+      "total": 325.18
+    },
+    {
+      "sequence": 2,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 17,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 108.80,
+      "taxAmount": 46.51,
+      "total": 979.20
+    },
+    {
+      "sequence": 3,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "quantity": 2,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "taxAmount": 8.46,
+      "total": 178.00
+    },
+    {
+      "sequence": 4,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 23,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "taxAmount": 13.66,
+      "total": 287.50
+    },
+    {
+      "sequence": 5,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "quantity": 23,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "taxAmount": 13.00,
+      "total": 273.70
+    },
+    {
+      "sequence": 6,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 3,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "taxAmount": 2.61,
+      "total": 54.90
+    },
+    {
+      "sequence": 7,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 17,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 65.28,
+      "taxAmount": 27.91,
+      "total": 587.52
+    }
+  ]
+}

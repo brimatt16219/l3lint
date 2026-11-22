@@ -1,0 +1,5 @@
+description: "VISA-ELIG-002 fail example: the rule must fire."
+context: { brand: visa, cardProduct: purchasing, mcc: "5812", asOf: 2026-10-19, only: VISA-ELIG-002 }
+expect:
+  findings:
+    - { ruleId: VISA-ELIG-002, path: "*" }

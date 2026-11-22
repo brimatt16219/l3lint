@@ -1,0 +1,5 @@
+description: "VISA-DQ-001 fail example: the rule must fire."
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19, only: VISA-DQ-001 }
+expect:
+  findings:
+    - { ruleId: VISA-DQ-001, path: "*" }

@@ -1,0 +1,16 @@
+description: The complete Level 3 sample linted as a Mastercard purchasing card. BX and CA are not Mastercard unit codes, and Stripe cannot carry the merchant tax ID, the debit indicator or the line tax indicators.
+format: stripe
+context: { brand: mastercard, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 09-mastercard-context.canonical.json
+expect:
+  findings:
+    - { ruleId: MC-L2-004, path: /merchant/taxId }
+    - { ruleId: MC-L3-005, path: /lineItems/0/unitOfMeasure }
+    - { ruleId: MC-L3-005, path: /lineItems/1/unitOfMeasure }
+    - { ruleId: MC-L3-007, path: /lineItems/0/debitCreditIndicator }
+    - { ruleId: MC-L3-007, path: /lineItems/1/debitCreditIndicator }
+    - { ruleId: MC-L3-008, path: /lineItems/0/taxable }
+    - { ruleId: MC-L3-008, path: /lineItems/0/discountIndicator }
+    - { ruleId: MC-L3-008, path: /lineItems/0/taxTypeCode }
+    - { ruleId: MC-L3-008, path: /lineItems/1/taxable }
+    - { ruleId: MC-L3-008, path: /lineItems/1/taxTypeCode }

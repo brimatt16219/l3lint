@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-81883",
+  "amount": 2824.35,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "purchasing",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Harborview Facility Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-68107"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-68107",
+    "invoiceNumber": "INV-81883"
+  },
+  "tax": {
+    "amount": 215.25,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 20,
+      "unitOfMeasure": "PCE",
+      "unitCost": 64.00,
+      "discountAmount": 64.00,
+      "discountIndicator": true,
+      "taxAmount": 100.32,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 1216.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 13,
+      "unitOfMeasure": "PCE",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 19.63,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 237.90,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 12,
+      "unitOfMeasure": "EAC",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 88.11,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 1068.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 4,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "commodityScheme": "unspsc",
+      "quantity": 4,
+      "unitOfMeasure": "GLI",
+      "unitCost": 21.80,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 7.19,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 87.20,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

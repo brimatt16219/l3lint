@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-69106",
+  "amount": 911.99,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "corporate",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Northbay Office Works",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-51074"
+  },
+  "order": {
+    "purchaseOrderNumber": "378282246310005",
+    "invoiceNumber": "INV-69106"
+  },
+  "tax": {
+    "amount": 59.02,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "amex": {
+    "requestorName": "Dana Ortiz",
+    "adviceText": [
+      "PO-51074 supplies order",
+      "Requested by Dana Ortiz"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 14,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 26.88,
+      "taxAmount": 35.75,
+      "total": 510.72
+    },
+    {
+      "sequence": 2,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 24,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 6.64,
+      "total": 94.80
+    },
+    {
+      "sequence": 3,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 19,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "taxAmount": 16.63,
+      "total": 237.50
+    }
+  ]
+}

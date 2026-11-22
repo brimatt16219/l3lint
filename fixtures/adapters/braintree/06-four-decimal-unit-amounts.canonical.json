@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "amount": 32.26,
+  "currency": "USD",
+  "customer": { "reference": "PO-38264" },
+  "order": { "invoiceNumber": "INV-64012" },
+  "tax": { "amount": 2.01, "indicator": "taxable" },
+  "amounts": { "discount": 0.00, "freight": 6.00 },
+  "shipping": { "fromPostalCode": "46204", "toPostalCode": "46220", "toCountry": "US" },
+  "lineItems": [
+    { "sequence": 1, "description": "Hex bolts zinc 50 pack", "productCode": "HXB-ZN-050", "commodityCode": "31161501", "quantity": 3, "unitOfMeasure": "PK", "unitCost": 3.3333, "discountAmount": 0.00, "taxAmount": 0.83, "total": 10.00, "debitCreditIndicator": "debit" },
+    { "sequence": 2, "description": "Lock washers zinc", "productCode": "LKW-ZN-100", "commodityCode": "31161801", "quantity": 2, "unitOfMeasure": "BX", "unitCost": 7.125, "discountAmount": 0.00, "taxAmount": 1.18, "total": 14.25, "debitCreditIndicator": "debit" }
+  ]
+}

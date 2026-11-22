@@ -1,0 +1,36 @@
+# Stripe PaymentIntent limits for Level 2 and Level 3 data (retrieved 2026-10-25).
+profile:
+  id: stripe
+  title: Stripe
+  description: Stripe forwards at most 200 line items, and only the first 4 to American Express.
+  sources:
+    - https://docs.stripe.com/payments/payment-line-items
+    - https://docs.stripe.com/api/payment_intents/create
+limits:
+  maxLineItems:
+    value: 200
+    source: https://docs.stripe.com/payments/payment-line-items
+  amexForwardedLineItems:
+    value: 4
+    source: https://docs.stripe.com/payments/payment-line-items
+    note: Only the first 4 line items reach American Express.
+  descriptionMax:
+    value: 1024
+    source: https://docs.stripe.com/api/payment_intents/create
+    note: Card networks show fewer characters; see VISA-L3-014.
+  productCodeMax:
+    value: 12
+    source: https://docs.stripe.com/api/payment_intents/create
+  commodityCodeMax:
+    value: 12
+    source: https://docs.stripe.com/payments/payment-line-items
+  unitOfMeasureMax:
+    value: 12
+    source: https://docs.stripe.com/payments/payment-line-items
+  postalCodeMax:
+    value: 10
+    source: https://docs.stripe.com/api/payment_intents/create
+  customerReferenceMax:
+    value: 25
+    source: https://docs.stripe.com/api/payment_intents/create?query=payment_details
+    note: Truncated to 25 characters before it reaches the networks.

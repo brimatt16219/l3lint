@@ -1,0 +1,20 @@
+{
+  "source": { "type": "token", "token": "tok_test_l3example" },
+  "amount": 27278,
+  "currency": "USD",
+  "reference": "INV-61377",
+  "processing": {
+    "order_id": "PO-31104",
+    "tax_amount": 1484,
+    "discount_amount": 0,
+    "duty_amount": 0,
+    "shipping_amount": 995
+  },
+  "shipping": { "address": { "zip": "02139", "country": "US" }, "from_address_zip": "02110" },
+  "items": [
+    { "name": "Copy paper letter case", "commodity_code": "14111507", "unit_of_measure": "CA", "quantity": 4, "unit_price": 4200, "total_amount": 16800, "tax_amount": 1008, "discount_amount": 0 },
+    { "name": "Ballpoint pens blue dozen", "reference": "PEN-BP-B12", "commodity_code": "44121704", "unit_of_measure": "DZ", "quantity": 6, "unit_price": 975, "total_amount": 5500, "tax_amount": 326, "discount_amount": 350 },
+    { "name": "Stapler heavy duty", "reference": "STP-HD-01", "commodity_code": "44121615", "quantity": 1, "unit_price": 2499, "total_amount": 2499, "tax_amount": 150 }
+  ],
+  "processing_channel_id": "pc_test_l3example"
+}

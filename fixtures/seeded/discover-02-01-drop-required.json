@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-84643",
+  "amount": 807.57,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "purchasing",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Ridgeline Industrial Co",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-78147"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-78147",
+    "invoiceNumber": "INV-84643"
+  },
+  "tax": {
+    "amount": 61.55,
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "quantity": 22,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 15.68,
+      "taxAmount": 24.57,
+      "total": 297.82
+    },
+    {
+      "sequence": 2,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "quantity": 18,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "taxAmount": 17.67,
+      "total": 214.20
+    },
+    {
+      "sequence": 3,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "quantity": 9,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 0.00,
+      "taxAmount": 19.31,
+      "total": 234.00
+    }
+  ]
+}

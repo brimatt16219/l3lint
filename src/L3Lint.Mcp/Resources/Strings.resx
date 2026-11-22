@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="ErrorArgument" xml:space="preserve">
+    <value>Unknown argument {0}.</value>
+  </data>
+  <data name="ErrorAsOf" xml:space="preserve">
+    <value>The date "{0}" is not valid. Use YYYY-MM-DD, for example 2026-10-19.</value>
+  </data>
+  <data name="ErrorAtLine" xml:space="preserve">
+    <value>Line {0}, column {1}: {2}</value>
+  </data>
+  <data name="ErrorBrand" xml:space="preserve">
+    <value>Unknown brand "{0}". Use general, visa, mastercard, amex or discover.</value>
+  </data>
+  <data name="ErrorCsvFormat" xml:space="preserve">
+    <value>The MCP tools take JSON payloads only. Convert CSV with the l3lint command-line tool.</value>
+  </data>
+  <data name="ErrorLevel" xml:space="preserve">
+    <value>Unknown level "{0}". Use general, L2 or L3.</value>
+  </data>
+  <data name="ErrorMissingValue" xml:space="preserve">
+    <value>{0} needs a value.</value>
+  </data>
+  <data name="ErrorPayloadKind" xml:space="preserve">
+    <value>The payload must be a JSON object, or a string that holds a JSON object.</value>
+  </data>
+  <data name="ErrorPayloadTooLarge" xml:space="preserve">
+    <value>The payload is {0} bytes; the limit is {1} bytes (2 MB). Send one transaction at a time.</value>
+  </data>
+  <data name="ErrorPort" xml:space="preserve">
+    <value>The port "{0}" is not valid. Use a number from 1 to 65535.</value>
+  </data>
+  <data name="ErrorProcessor" xml:space="preserve">
+    <value>Unknown processor profile "{0}". Use one of: {1}.</value>
+  </data>
+  <data name="ErrorUnknownExample" xml:space="preserve">
+    <value>There is no example {0}/{1}. Use one of: {2}.</value>
+  </data>
+  <data name="ErrorUnknownRule" xml:space="preserve">
+    <value>No rule has the ID {0}. Call list_rules to see every rule ID.</value>
+  </data>
+  <data name="ErrorUnknownSchema" xml:space="preserve">
+    <value>Unknown schema "{0}". Use one of: {1}.</value>
+  </data>
+  <data name="HintFormat" xml:space="preserve">
+    <value>Possible formats: {0}. Pass the format argument to choose one.</value>
+  </data>
+  <data name="HttpHostRejected" xml:space="preserve">
+    <value>This server only answers requests addressed to 127.0.0.1 or localhost.</value>
+  </data>
+  <data name="HttpOriginRejected" xml:space="preserve">
+    <value>This origin may not call the l3lint MCP server. Start it with --allow-origin to allow it.</value>
+  </data>
+  <data name="HttpTokenRequired" xml:space="preserve">
+    <value>A bearer token is required. Send it as Authorization: Bearer &lt;token&gt;.</value>
+  </data>
+  <data name="PromptDowngrade" xml:space="preserve">
+    <value>A commercial card transaction settled in the interchange category "{0}". Call the lint_payload tool with the payload below. List the findings that likely explain why it settled there rather than at a lower enhanced-data rate, most likely cause first, and say for each one what to change. Findings are advisory: say "likely" rather than certain, and note when the category does not match any finding.{1}Payload:{1}{2}</value>
+  </data>
+  <data name="PromptReview" xml:space="preserve">
+    <value>Call the lint_payload tool with the payload below. Then explain each error in plain words, one short paragraph each: what is wrong, why the card brand cares, and the fix. Call suggest_fixes and show the patch. Finally list the findings that need a person to decide, such as product descriptions, commodity codes and tax amounts, which must never be invented.{1}Payload:{1}{0}</value>
+  </data>
+  <data name="ServerInstructions" xml:space="preserve">
+    <value>l3lint checks commercial card Level 2 and Level 3 payment payloads against Visa, Mastercard, American Express and Discover requirements before submission. Call lint_payload with the request body you are about to send; it detects Stripe, Adyen, Braintree, Cybersource, Authorize.net, Checkout.com and canonical JSON. Use explain_rule for any rule ID you do not understand and suggest_fixes for safe mechanical patches. Never invent descriptions, commodity codes or tax amounts to clear a finding. Results are advisory, not a guarantee of any interchange rate.</value>
+  </data>
+  <data name="SummaryFixes" xml:space="preserve">
+    <value>{0} patch operation(s); {1} finding(s) need a person to decide.</value>
+  </data>
+  <data name="SummaryMap" xml:space="preserve">
+    <value>Mapped {0} payload to {1} canonical transaction(s); {2} card number(s) masked.</value>
+  </data>
+  <data name="SummaryRules" xml:space="preserve">
+    <value>{0} rule(s): {1}</value>
+  </data>
+  <data name="SummarySchema" xml:space="preserve">
+    <value>The {0} JSON Schema.</value>
+  </data>
+  <data name="SummaryTier" xml:space="preserve">
+    <value>Likely {0} tier: {1}.</value>
+  </data>
+  <data name="Usage" xml:space="preserve">
+    <value>Usage: l3lint-mcp [--http] [--port &lt;n&gt;] [--token &lt;token&gt;] [--allow-origin &lt;origin&gt;]... [--version] [--help]. Default transport: stdio. --http serves Streamable HTTP at http://127.0.0.1:&lt;port&gt;/mcp (default port 7341). The token can also come from the L3LINT_MCP_TOKEN environment variable.</value>
+  </data>
+</root>

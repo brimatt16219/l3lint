@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83742",
+  "amount": 945.59,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "purchasing",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77518"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77518",
+    "invoiceNumber": "INV-83742"
+  },
+  "tax": {
+    "amount": 354.60,
+    "indicator": "taxable",
+    "rate": 0.60
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "EAC",
+      "unitCost": 4.20,
+      "discountAmount": 5.04,
+      "discountIndicator": true,
+      "taxAmount": 57.46,
+      "taxRate": 0.60,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 95.76,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 12,
+      "unitOfMeasure": "EAC",
+      "unitCost": 12.50,
+      "discountAmount": 15.00,
+      "discountIndicator": true,
+      "taxAmount": 81.00,
+      "taxRate": 0.60,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 135.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 22,
+      "unitOfMeasure": "PCE",
+      "unitCost": 15.60,
+      "discountAmount": 34.32,
+      "discountIndicator": true,
+      "taxAmount": 185.33,
+      "taxRate": 0.60,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 308.88,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 4,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 13,
+      "unitOfMeasure": "EAC",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 30.81,
+      "taxRate": 0.60,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 51.35,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

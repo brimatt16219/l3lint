@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-63013",
+  "amount": 2860.29,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "corporate",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Summit Lab Products",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-75877"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-75877",
+    "invoiceNumber": "INV-63013"
+  },
+  "tax": {
+    "amount": 186.14,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "75201",
+    "toPostalCode": "75231",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "75231"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 12,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 38.40,
+      "taxAmount": 51.07,
+      "total": 729.60
+    },
+    {
+      "sequence": 2,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 22,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 0.00,
+      "taxAmount": 59.14,
+      "total": 844.80
+    },
+    {
+      "sequence": 3,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 19,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 92.91,
+      "taxAmount": 58.53,
+      "total": 836.19
+    },
+    {
+      "sequence": 4,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 13,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "taxAmount": 16.65,
+      "total": 237.90
+    },
+    {
+      "sequence": 5,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 3,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 1.19,
+      "taxAmount": 0.75,
+      "total": 10.66
+    }
+  ]
+}

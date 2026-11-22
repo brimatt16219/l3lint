@@ -1,0 +1,7 @@
+description: "Line 3 unit QQQ is not on the Mastercard list."
+operator: unlisted-unit
+context: { brand: mastercard, cardProduct: purchasing, mcc: "5198", asOf: 2026-10-19 }
+expect:
+  exitCode: 1
+  findings:
+    - { ruleId: MC-L3-005, path: /lineItems/2/unitOfMeasure, severity: error }

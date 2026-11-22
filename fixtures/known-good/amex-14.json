@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-87289",
+  "amount": 677.12,
+  "currency": "EUR",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "business",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Summit Lab Products",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-71881"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-71881",
+    "invoiceNumber": "INV-87289"
+  },
+  "tax": {
+    "amount": 30.02,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "75201",
+    "toPostalCode": "75231",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "75231"
+  },
+  "amex": {
+    "requestorName": "Lee Park",
+    "adviceText": [
+      "PO-71881 supplies order",
+      "Requested by Lee Park"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "quantity": 23,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 29.90,
+      "taxAmount": 26.98,
+      "total": 568.10
+    },
+    {
+      "sequence": 2,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 1,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 0.00,
+      "taxAmount": 3.04,
+      "total": 64.00
+    }
+  ]
+}

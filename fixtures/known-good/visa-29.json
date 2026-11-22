@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-77484",
+  "amount": 40.68,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "business",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Harborview Facility Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-65036"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-65036",
+    "invoiceNumber": "INV-77484"
+  },
+  "tax": {
+    "amount": 1.68,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 1,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.20,
+      "taxAmount": 0.26,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 3.75,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "commodityScheme": "unspsc",
+      "quantity": 3,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 0.00,
+      "taxAmount": 1.42,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 20.25,
+      "detailIndicator": "Y"
+    }
+  ]
+}

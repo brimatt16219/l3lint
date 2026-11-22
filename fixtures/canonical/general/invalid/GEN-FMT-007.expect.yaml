@@ -1,0 +1,5 @@
+description: "GEN-FMT-007 fail example: the rule must fire."
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19, only: GEN-FMT-007 }
+expect:
+  findings:
+    - { ruleId: GEN-FMT-007, path: "*" }

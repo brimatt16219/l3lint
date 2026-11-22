@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-84802",
+  "amount": 375.27,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "corporate",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Ridgeline Industrial Co",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-78258"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-78258",
+    "invoiceNumber": "INV-84802"
+  },
+  "tax": {
+    "amount": 17.02,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "PRD-OVERFLOW-3086",
+      "commodityCode": "42132203",
+      "quantity": 22,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 13.75,
+      "taxAmount": 12.41,
+      "total": 261.25
+    },
+    {
+      "sequence": 2,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 8,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 1.50,
+      "total": 31.60
+    },
+    {
+      "sequence": 3,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 3,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 0.00,
+      "taxAmount": 3.11,
+      "total": 65.40
+    }
+  ]
+}

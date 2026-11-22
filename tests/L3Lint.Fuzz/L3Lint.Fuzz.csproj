@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- SharpFuzz harness (T-43, NFR-006). A console program, not a test project: see README.md. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>L3Lint.Fuzz</RootNamespace>
+  </PropertyGroup>
+
+  <!-- tests/Directory.Build.props adds test usings that a console program does not reference. -->
+  <ItemGroup>
+    <Using Remove="Xunit" />
+    <Using Remove="Shouldly" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SharpFuzz" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\L3Lint.Hosting\L3Lint.Hosting.csproj" />
+  </ItemGroup>
+
+  <!-- The fixed CSV map and the payload the rule pack target lints, so the harness needs no files at run time. -->
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\fixtures\adapters\csv\01-erp-two-invoices.map.yaml" LogicalName="L3Lint.Fuzz.csv-map.yaml" Link="Data\csv-map.yaml" />
+    <EmbeddedResource Include="..\L3Lint.Core.Tests\SpecExamples\canonical-example.json" LogicalName="L3Lint.Fuzz.canonical-example.json" Link="Data\canonical-example.json" />
+  </ItemGroup>
+
+</Project>

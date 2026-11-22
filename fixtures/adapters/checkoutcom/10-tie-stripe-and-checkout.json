@@ -1,0 +1,15 @@
+{
+  "amount": 12000,
+  "currency": "usd",
+  "source": { "type": "token", "token": "tok_test_ambiguous" },
+  "payment_details": { "customer_reference": "PO-90001", "order_reference": "INV-90001" },
+  "amount_details": {
+    "line_items": [
+      { "product_code": "DSK-LMP-01", "product_name": "Desk lamp LED", "unit_cost": 6000, "quantity": 2, "unit_of_measure": "EA" }
+    ]
+  },
+  "processing": { "order_id": "PO-90001", "tax_amount": 0 },
+  "items": [
+    { "name": "Desk lamp LED", "reference": "DSK-LMP-01", "unit_of_measure": "EA", "quantity": 2, "unit_price": 6000, "total_amount": 12000 }
+  ]
+}

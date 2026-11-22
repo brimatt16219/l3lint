@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-88031",
+  "amount": 12850,
+  "currency": "JPY",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "purchasing",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Northbay Office Works",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-72399"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-72399",
+    "invoiceNumber": "INV-88031"
+  },
+  "tax": {
+    "amount": 693,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0,
+    "freight": 2250,
+    "duty": 0
+  },
+  "shipping": {
+    "fromPostalCode": "75201",
+    "toPostalCode": "75231",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "75231"
+  },
+  "amex": {
+    "requestorName": "Jordan Ellis",
+    "adviceText": [
+      "PO-72399 supplies order",
+      "Requested by Jordan Ellis"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "quantity": 8,
+      "unitOfMeasure": "EA",
+      "unitCost": 420,
+      "discountAmount": 168,
+      "taxAmount": 223,
+      "total": 3192
+    },
+    {
+      "sequence": 2,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 17,
+      "unitOfMeasure": "RL",
+      "unitCost": 395,
+      "discountAmount": 0,
+      "taxAmount": 470,
+      "total": 6715
+    }
+  ]
+}

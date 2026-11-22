@@ -1,0 +1,94 @@
+l3lint
+Copyright 2026 l3lint contributors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+l3lint lints commercial card Level 2 and Level 3 payment payloads. Its rules come only from public sources, and
+every rule cites the public pages it relies on. l3lint is not affiliated with or endorsed by Visa, Mastercard,
+American Express, Discover or any processor or gateway named in its rules and documentation. Brand and product
+names belong to their owners.
+
+----------------------------------------------------------------------------------------------------------------
+Data bundled in the packages
+----------------------------------------------------------------------------------------------------------------
+
+Each file below states its source in its own header. The files hold codes and short facts copied or transcribed
+from public pages.
+
+src/L3Lint.Core/Data/iso4217.csv
+  ISO 4217 currency codes and minor units (list one: current currencies and funds), published 2026-09-17.
+  Source: SIX Financial Information, the ISO 4217 maintenance agency:
+  https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml
+  ISO 4217 is a standard of the International Organization for Standardization.
+
+src/L3Lint.Adapters/Data/iso3166.csv
+  ISO 3166-1 alpha-3 to alpha-2 country codes (codes only, no names), transcribed from the public list at
+  https://www.iso.org/iso-3166-country-codes.html
+  ISO 3166 is a standard of the International Organization for Standardization.
+
+src/L3Lint.Rules.Amex/Pack/lists/amex-uom.csv
+  2-character ANSI X12 unit-of-measure codes (data element 355) as listed on the public Mastercard Gateway page
+  for Level 2 and 3 data with the American Express acquirer:
+  https://developer.mastercard.com/mastercard-gateway/documentation/gateway-features/trans-enrich-data/order-and-line-item-data/level-2-and-3/level2-3-data-for-amex-acq/
+  Cross-checked against https://www.stedi.com/edi/x12/element/355 and
+  https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/so/api-fields/item-no-unit-of-measure.html
+  ASC X12 is a standard of the Accredited Standards Committee X12.
+
+src/L3Lint.Rules.Mastercard/Pack/lists/mastercard-uom.csv
+  Mastercard Level 3 unit-of-measure codes as published by J.P. Morgan:
+  https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/online-payments/payment-methods/cards/commercialcards
+
+src/L3Lint.Rules.Mastercard/Pack/lists/mastercard-l2-excluded-mcc.csv
+src/L3Lint.Rules.Mastercard/Pack/lists/mastercard-l3-excluded-mcc.csv
+src/L3Lint.Rules.Mastercard/Pack/lists/mastercard-tax-exempt-mcc.csv
+src/L3Lint.Rules.Visa/Pack/lists/visa-product3-excluded-mcc.csv
+src/L3Lint.Rules.Visa/Pack/lists/visa-federal-excluded-mcc.csv
+  Merchant category code lists from Stripe's public payment line items guide:
+  https://docs.stripe.com/payments/payment-line-items
+
+src/L3Lint.Rules.Visa/Pack/lists/visa-fuel-mcc.csv
+  Fuel merchant category codes from
+  https://developer.paypal.com/braintree/docs/reference/general/level-2-and-3-processing/required-fields/dotnet/
+  and https://docs.stripe.com/payments/payment-line-items
+
+src/L3Lint.Rules.General/Pack/lists/placeholders.csv
+  Placeholder description terms from the l3lint specification. The terms Visa is publicly reported to reject
+  come from https://merchantcostconsulting.com/lower-credit-card-processing-fees/how-to-qualify-cedp-rates/ and
+  https://verisave.com/blog/visa-level-2-sunset-cedp-data-quality
+
+----------------------------------------------------------------------------------------------------------------
+Third-party libraries
+----------------------------------------------------------------------------------------------------------------
+
+The l3lint tool, the MCP server and the single-file binaries include these libraries. Each keeps its own license.
+The license names come from each package's NuGet metadata.
+
+  System.CommandLine 2.0.14 .................... MIT, Copyright (c) Microsoft Corporation
+  Microsoft.Extensions.* 10.0.14 ............... MIT, Copyright (c) Microsoft Corporation
+  JsonSchema.Net 8.0.5, Json.More.Net 2.2.0,
+  JsonPointer.Net 6.0.1 ........................ MIT
+  Humanizer.Core 3.0.1 ......................... MIT, Copyright (c) .NET Foundation and Contributors
+  YamlDotNet 18.1.0 ............................ MIT, Copyright (c) Antoine Aubry and contributors
+  CsvHelper 33.1.0 ............................. MS-PL OR Apache-2.0, Copyright 2009-2024 Josh Close
+  Spectre.Console 0.57.2, Spectre.Console.Ansi
+  0.57.2 (CLI only) ............................ MIT, Copyright Patrik Svensson, Phil Scott, Nils Andresen,
+                                                 Cédric Luthi
+  ModelContextProtocol 1.4.1 (MCP server only) . Apache-2.0, Copyright Model Context Protocol a Series of
+                                                 LF Projects, LLC
+  Microsoft.Extensions.AI.Abstractions 10.5.2
+  (MCP server only) ............................ MIT, Copyright (c) Microsoft Corporation
+
+----------------------------------------------------------------------------------------------------------------
+Files in the source repository only
+----------------------------------------------------------------------------------------------------------------
+
+These files are used by tests and are not part of any package or binary.
+
+tests/L3Lint.Reporting.Tests/Schemas/sarif-schema-2.1.0.json
+  OASIS Static Analysis Results Interchange Format (SARIF) Version 2.1.0 Plus Errata 01 JSON schema, unmodified.
+  Copyright (c) OASIS Open. Source:
+  https://docs.oasis-open.org/sarif/sarif/v2.1.0/errata01/os/schemas/sarif-schema-2.1.0.json
+
+tests/L3Lint.Reporting.Tests/Schemas/junit-10.xsd
+  JUnit XML schema from the Jenkins xUnit plugin. MIT License, Copyright (c) 2014, Gregory Boissinot. The license
+  text is inside the file. Source: https://github.com/jenkinsci/xunit-plugin

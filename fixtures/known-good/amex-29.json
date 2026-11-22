@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-88084",
+  "amount": 1560.53,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "purchasing",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-72436"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-72436",
+    "invoiceNumber": "INV-88084"
+  },
+  "tax": {
+    "amount": 118.18,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "75201",
+    "toPostalCode": "75231",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "75231"
+  },
+  "amex": {
+    "requestorName": "Lee Park",
+    "adviceText": [
+      "PO-72436 supplies order",
+      "Requested by Lee Park"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "quantity": 12,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 4.44,
+      "taxAmount": 6.96,
+      "total": 84.36
+    },
+    {
+      "sequence": 2,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 9,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 0.00,
+      "taxAmount": 47.52,
+      "total": 576.00
+    },
+    {
+      "sequence": 3,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "quantity": 13,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 20.28,
+      "taxAmount": 15.06,
+      "total": 182.52
+    },
+    {
+      "sequence": 4,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 15,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 5.93,
+      "taxAmount": 4.40,
+      "total": 53.32
+    },
+    {
+      "sequence": 5,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 14,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "taxAmount": 14.44,
+      "total": 175.00
+    },
+    {
+      "sequence": 6,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 8,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 0.00,
+      "taxAmount": 25.34,
+      "total": 307.20
+    },
+    {
+      "sequence": 7,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "quantity": 8,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 0.00,
+      "taxAmount": 4.46,
+      "total": 54.00
+    }
+  ]
+}

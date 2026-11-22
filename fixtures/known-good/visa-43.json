@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-78226",
+  "amount": 2533.19,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "purchasing",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5047",
+    "name": "Harborview Facility Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-65554"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-65554",
+    "invoiceNumber": "INV-78226"
+  },
+  "tax": {
+    "amount": 114.42,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "commodityScheme": "unspsc",
+      "quantity": 19,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 9.03,
+      "taxAmount": 8.14,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 171.47,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "taxAmount": 13.57,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 285.60,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 19,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 3.56,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 75.05,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 21,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 134.40,
+      "taxAmount": 57.46,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 1209.60,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 4,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "taxAmount": 16.91,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 356.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 6,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 17,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "taxAmount": 14.78,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 311.10,
+      "detailIndicator": "Y"
+    }
+  ]
+}

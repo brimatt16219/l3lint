@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="ConfigBadPath" xml:space="preserve">
+    <value>the path holds a character that file paths cannot contain, such as a NUL character</value>
+  </data>
+  <data name="ConfigInvalid" xml:space="preserve">
+    <value>{0} is invalid at {1}: {2}</value>
+  </data>
+  <data name="ConfigUnreadable" xml:space="preserve">
+    <value>Cannot read {0}: {1}</value>
+  </data>
+  <data name="ConfigYaml" xml:space="preserve">
+    <value>{0} is not valid YAML at line {1}, column {2}: {3}</value>
+  </data>
+  <data name="InputNoStandardInput" xml:space="preserve">
+    <value>Standard input is not available here. Pass a file path instead of "-".</value>
+  </data>
+  <data name="InputNotFound" xml:space="preserve">
+    <value>No file matches {0}. Check the path or the glob.</value>
+  </data>
+  <data name="InputUnreadable" xml:space="preserve">
+    <value>Cannot read {0}: {1}</value>
+  </data>
+  <data name="NoteConfiguration" xml:space="preserve">
+    <value>Using configuration {0}.</value>
+  </data>
+  <data name="OptionBrand" xml:space="preserve">
+    <value>--brand</value>
+  </data>
+  <data name="UsageBrand" xml:space="preserve">
+    <value>{0} must be auto, visa, mastercard, amex, discover or all, not "{1}".</value>
+  </data>
+  <data name="UsageCardProduct" xml:space="preserve">
+    <value>--card-product must be consumer, business, corporate, purchasing, fleet or commercialPrepaid, not "{0}".</value>
+  </data>
+  <data name="UsageCountry" xml:space="preserve">
+    <value>--merchant-country must be a 2-letter uppercase country code such as US, not "{0}".</value>
+  </data>
+  <data name="UsageCurrency" xml:space="preserve">
+    <value>Unknown currency "{0}". Use an ISO 4217 code such as USD, EUR or JPY.</value>
+  </data>
+  <data name="UsageFailOn" xml:space="preserve">
+    <value>--fail-on must be error, warning, information or none, not "{0}".</value>
+  </data>
+  <data name="UsageFormat" xml:space="preserve">
+    <value>Unknown format "{0}". Use one of: {1}.</value>
+  </data>
+  <data name="UsageMapRequired" xml:space="preserve">
+    <value>CSV input needs a column map. Pass --map with a YAML map file, or set inputs.csvMap in .l3lint.yaml.</value>
+  </data>
+  <data name="UsageMcc" xml:space="preserve">
+    <value>--mcc must be 4 digits, not "{0}".</value>
+  </data>
+  <data name="UsageOutput" xml:space="preserve">
+    <value>Unknown output "{0}". Use one of: {1}, optionally as kind=path.</value>
+  </data>
+  <data name="UsagePackFolder" xml:space="preserve">
+    <value>Rule pack folder {0} does not exist.</value>
+  </data>
+  <data name="UsageProcessor" xml:space="preserve">
+    <value>Unknown processor profile "{0}". Use one of: {1}, or a path to a profile file.</value>
+  </data>
+  <data name="UsageRuleSelector" xml:space="preserve">
+    <value>"{0}" is not a rule ID or glob. Use IDs such as VISA-L3-004 or globs such as VISA-DQ-*.</value>
+  </data>
+  <data name="UsageSeverity" xml:space="preserve">
+    <value>"{0}" is not a severity override. Use RULE=level, for example GEN-DQ-007=error.</value>
+  </data>
+  <data name="UsageUnreadable" xml:space="preserve">
+    <value>Cannot read {0}: {1}</value>
+  </data>
+</root>

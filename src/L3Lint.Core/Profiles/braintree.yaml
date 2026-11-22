@@ -1,0 +1,31 @@
+# Braintree transaction sale limits for Level 2 and 3 (retrieved 2026-10-25).
+# The canonical customer reference maps to Braintree's purchaseOrderNumber.
+profile:
+  id: braintree
+  title: Braintree
+  description: Braintree accepts up to 249 line items; item names hold 35 characters and PO numbers 17.
+  sources:
+    - https://developer.paypal.com/braintree/docs/reference/request/transaction/sale/node
+    - https://developer.paypal.com/braintree/docs/reference/general/level-2-and-3-processing/required-fields/dotnet/
+limits:
+  maxLineItems:
+    value: 249
+    source: https://developer.paypal.com/braintree/docs/reference/request/transaction/sale/node
+  descriptionMax:
+    value: 35
+    source: https://developer.paypal.com/braintree/docs/reference/request/transaction/sale/node
+  productCodeMax:
+    value: 12
+    source: https://developer.paypal.com/braintree/docs/reference/request/transaction/sale/node
+  commodityCodeMax:
+    value: 12
+    source: https://developer.paypal.com/braintree/docs/reference/request/transaction/sale/node
+  unitOfMeasureMax:
+    value: 12
+    source: https://developer.paypal.com/braintree/docs/reference/request/transaction/sale/node
+  customerReferenceMax:
+    value: 17
+    source: https://developer.paypal.com/braintree/docs/reference/request/transaction/sale/node
+  purchaseOrderNumberMax:
+    value: 17
+    source: https://developer.paypal.com/braintree/docs/reference/request/transaction/sale/node

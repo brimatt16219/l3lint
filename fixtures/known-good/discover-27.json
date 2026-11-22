@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-63278",
+  "amount": 2209.22,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "purchasing",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Gulfside Medical Supply",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-76062"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-76062",
+    "invoiceNumber": "INV-63278"
+  },
+  "tax": {
+    "amount": 125.06,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "quantity": 6,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 1.26,
+      "taxAmount": 1.44,
+      "total": 23.94
+    },
+    {
+      "sequence": 2,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 16,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "taxAmount": 12.00,
+      "total": 200.00
+    },
+    {
+      "sequence": 3,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "quantity": 14,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 0.00,
+      "taxAmount": 6.22,
+      "total": 103.60
+    },
+    {
+      "sequence": 4,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 24,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 117.36,
+      "taxAmount": 63.37,
+      "total": 1056.24
+    },
+    {
+      "sequence": 5,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 19,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 41.42,
+      "taxAmount": 22.37,
+      "total": 372.78
+    },
+    {
+      "sequence": 6,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "quantity": 21,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 19.66,
+      "total": 327.60
+    }
+  ]
+}

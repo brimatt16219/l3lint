@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-64126",
+  "amount": 1274.46,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "business",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Northbay Office Works",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-76654"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-76654",
+    "invoiceNumber": "INV-64126"
+  },
+  "tax": {
+    "amount": 57.34,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 2,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 2.18,
+      "taxAmount": 1.97,
+      "total": 41.42
+    },
+    {
+      "sequence": 2,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 10,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "taxAmount": 8.69,
+      "total": 183.00
+    },
+    {
+      "sequence": 3,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "quantity": 8,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "taxAmount": 33.82,
+      "total": 712.00
+    },
+    {
+      "sequence": 4,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "quantity": 19,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 0.00,
+      "taxAmount": 12.86,
+      "total": 270.75
+    }
+  ]
+}

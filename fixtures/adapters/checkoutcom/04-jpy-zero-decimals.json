@@ -1,0 +1,19 @@
+{
+  "source": { "type": "token", "token": "tok_test_jpexample" },
+  "amount": 27500,
+  "currency": "JPY",
+  "reference": "INV-JP-0918",
+  "processing": {
+    "order_id": "PO-JP-2210",
+    "tax_amount": 2400,
+    "discount_amount": 0,
+    "duty_amount": 0,
+    "shipping_amount": 1100
+  },
+  "shipping": { "address": { "zip": "530-0001", "country": "JP" }, "from_address_zip": "150-0002" },
+  "items": [
+    { "name": "Safety goggles clear", "reference": "SFG-CLR-01", "commodity_code": "46181804", "unit_of_measure": "EA", "quantity": 12, "unit_price": 1250, "total_amount": 15000, "tax_amount": 1500, "discount_amount": 0 },
+    { "name": "Work gloves cotton pair", "reference": "WGL-CTN-02", "commodity_code": "46181504", "unit_of_measure": "PR", "quantity": 20, "unit_price": 480, "total_amount": 9000, "tax_amount": 900, "discount_amount": 600 }
+  ],
+  "processing_channel_id": "pc_test_jpexample"
+}

@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83689",
+  "amount": 496.79,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "purchasing",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Summit Lab Products",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77481"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77481",
+    "invoiceNumber": "INV-83689"
+  },
+  "tax": {
+    "amount": 27.28,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Packing tape clear 6 rolls",
+      "commodityCode": "31201610",
+      "commodityScheme": "unspsc",
+      "quantity": 3,
+      "unitOfMeasure": "PCE",
+      "unitCost": 14.25,
+      "discountAmount": 2.14,
+      "discountIndicator": true,
+      "taxAmount": 2.44,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 40.61,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 6,
+      "unitOfMeasure": "PCE",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 5.62,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 93.60,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "commodityScheme": "unspsc",
+      "quantity": 12,
+      "unitOfMeasure": "PCE",
+      "unitCost": 26.00,
+      "discountAmount": 31.20,
+      "discountIndicator": true,
+      "taxAmount": 16.85,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 280.80,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 4,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 10,
+      "unitOfMeasure": "EAC",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 2.37,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 39.50,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

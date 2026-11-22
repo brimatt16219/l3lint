@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83583",
+  "amount": 553.64,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "purchasing",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Harborview Facility Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77407"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77407",
+    "invoiceNumber": "INV-83583"
+  },
+  "tax": {
+    "amount": 24.65,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 4,
+      "unitOfMeasure": "PCE",
+      "unitCost": 18.30,
+      "discountAmount": 3.66,
+      "discountIndicator": true,
+      "taxAmount": 3.30,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 69.54,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "commodityScheme": "unspsc",
+      "quantity": 6,
+      "unitOfMeasure": "PCE",
+      "unitCost": 14.25,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 4.06,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 85.50,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "PCE",
+      "unitCost": 26.00,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 17.29,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 364.02,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "amount": 272.78,
+  "currency": "USD",
+  "customer": { "reference": "PO-31104" },
+  "order": { "invoiceNumber": "INV-61377" },
+  "tax": { "amount": 14.84, "indicator": "taxable" },
+  "amounts": { "freight": 9.95 },
+  "shipping": { "fromPostalCode": "02110", "toPostalCode": "02139" },
+  "lineItems": [
+    { "sequence": 1, "description": "Copy paper letter case", "productCode": "PPR-LTR-10", "commodityCode": "14111507", "quantity": 4, "unitOfMeasure": "CA", "unitCost": 42.00, "taxAmount": 10.08, "total": 168.00 },
+    { "sequence": 2, "description": "Ballpoint pens blue dozen", "productCode": "PEN-BP-B12", "quantity": 6, "unitOfMeasure": "DZ", "unitCost": 9.75, "discountAmount": 3.50, "taxAmount": 3.26, "total": 55.00 },
+    { "sequence": 3, "description": "Stapler heavy duty", "productCode": "STP-HD-01", "commodityCode": "44121615", "quantity": 1, "unitCost": 24.99, "taxAmount": 1.50, "total": 24.99 }
+  ]
+}

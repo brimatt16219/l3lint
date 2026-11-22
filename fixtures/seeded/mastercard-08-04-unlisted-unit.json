@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83901",
+  "amount": 1844.64,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "corporate",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77629"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77629",
+    "invoiceNumber": "INV-83901"
+  },
+  "tax": {
+    "amount": 139.45,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "PCE",
+      "unitCost": 15.60,
+      "discountAmount": 5.46,
+      "discountIndicator": true,
+      "taxAmount": 8.56,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 103.74,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 13,
+      "unitOfMeasure": "EAC",
+      "unitCost": 89.00,
+      "discountAmount": 115.70,
+      "discountIndicator": true,
+      "taxAmount": 85.91,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 1041.30,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "commodityScheme": "unspsc",
+      "quantity": 19,
+      "unitOfMeasure": "EAC",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 18.65,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 226.10,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 4,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "commodityScheme": "unspsc",
+      "quantity": 6,
+      "unitOfMeasure": "PCE",
+      "unitCost": 48.90,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 24.21,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 293.40,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 5,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "commodityScheme": "unspsc",
+      "quantity": 3,
+      "unitOfMeasure": "QQQ",
+      "unitCost": 9.50,
+      "discountAmount": 2.85,
+      "discountIndicator": true,
+      "taxAmount": 2.12,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 25.65,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

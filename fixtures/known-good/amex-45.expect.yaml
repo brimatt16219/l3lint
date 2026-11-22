@@ -1,0 +1,6 @@
+description: "A valid amex business payload with 2 lines in USD: no error or warning may fire."
+context: { brand: amex, cardProduct: business, mcc: "5943", asOf: 2026-10-19 }
+expect:
+  exitCode: 0
+  findings: []
+  likelyTier: { brand: amex, status: noBenefit }

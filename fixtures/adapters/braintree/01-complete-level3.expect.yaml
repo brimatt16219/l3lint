@@ -1,0 +1,8 @@
+description: A Level 3 sale shaped like Braintree's published Node example, with decimal strings, taxExempt false and an alpha-3 ship-to country. The currency comes from the options because Braintree takes it from the merchant account; Braintree has no duty field.
+format: braintree
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19, defaultCurrency: USD }
+canonical: 01-complete-level3.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/duty }

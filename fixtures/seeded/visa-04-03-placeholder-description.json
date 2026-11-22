@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83159",
+  "amount": 315.03,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "corporate",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77111"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77111",
+    "invoiceNumber": "INV-83159"
+  },
+  "tax": {
+    "amount": 13.84,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "commodityScheme": "unspsc",
+      "quantity": 18,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 10.71,
+      "taxAmount": 9.67,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 203.49,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Item",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "commodityScheme": "unspsc",
+      "quantity": 13,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 0.00,
+      "taxAmount": 4.17,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 87.75,
+      "detailIndicator": "Y"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-62960",
+  "amount": 1499.82,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "business",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Northbay Office Works",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-75840"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-75840",
+    "invoiceNumber": "INV-62960"
+  },
+  "tax": {
+    "amount": 114.31,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 19,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 3.75,
+      "taxAmount": 5.88,
+      "total": 71.30
+    },
+    {
+      "sequence": 2,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 21,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 102.69,
+      "taxAmount": 76.25,
+      "total": 924.21
+    },
+    {
+      "sequence": 3,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "quantity": 15,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 0.00,
+      "taxAmount": 32.18,
+      "total": 390.00
+    }
+  ]
+}

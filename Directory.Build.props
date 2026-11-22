@@ -1,0 +1,49 @@
+<Project>
+  <!-- Settings shared by every project in the repository. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <Deterministic>true</Deterministic>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <NeutralLanguage>en</NeutralLanguage>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <RestoreLockedMode Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</RestoreLockedMode>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Version>1.0.0</Version>
+    <Authors>l3lint contributors</Authors>
+    <Company>l3lint</Company>
+    <Product>l3lint</Product>
+    <Copyright>Copyright 2026 the l3lint contributors</Copyright>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <!-- The owner changes these two values if the final repository or docs site lives elsewhere (ADR-0044). -->
+    <L3LintProjectUrl>https://github.com/brimatt16219/l3lint</L3LintProjectUrl>
+    <L3LintDocsUrl>https://brimatt16219.github.io/l3lint/</L3LintDocsUrl>
+    <PackageProjectUrl>$(L3LintProjectUrl)</PackageProjectUrl>
+    <RepositoryUrl>$(L3LintProjectUrl)</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>level-3;level-2;commercial-card;interchange;cedp;linter;payments</PackageTags>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <!-- SourceLink is built into the SDK. It needs a git repository, which the owner creates; until then it stays off. -->
+  <PropertyGroup Condition="!Exists('$(MSBuildThisFileDirectory).git')">
+    <EnableSourceControlManagerQueries>false</EnableSourceControlManagerQueries>
+    <EnableSourceLink>false</EnableSourceLink>
+  </PropertyGroup>
+  <PropertyGroup Condition="Exists('$(MSBuildThisFileDirectory).git')">
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+  </PropertyGroup>
+</Project>

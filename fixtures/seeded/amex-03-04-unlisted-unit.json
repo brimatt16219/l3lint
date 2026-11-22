@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-84166",
+  "amount": 351.46,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "corporate",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Summit Lab Products",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77814"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77814",
+    "invoiceNumber": "INV-84166"
+  },
+  "tax": {
+    "amount": 25.07,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "amex": {
+    "requestorName": "Sam Rivera",
+    "adviceText": [
+      "PO-77814 supplies order",
+      "Requested by Sam Rivera"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "quantity": 11,
+      "unitOfMeasure": "QQQ",
+      "unitCost": 4.20,
+      "discountAmount": 2.31,
+      "taxAmount": 3.62,
+      "total": 43.89
+    },
+    {
+      "sequence": 2,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "quantity": 10,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 0.00,
+      "taxAmount": 21.45,
+      "total": 260.00
+    }
+  ]
+}

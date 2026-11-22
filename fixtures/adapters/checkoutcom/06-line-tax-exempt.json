@@ -1,0 +1,19 @@
+{
+  "source": { "type": "token", "token": "tok_test_l3example" },
+  "amount": 32420,
+  "currency": "USD",
+  "reference": "INV-65109",
+  "processing": {
+    "order_id": "PO-27730",
+    "tax_amount": 0,
+    "discount_amount": 0,
+    "duty_amount": 0,
+    "shipping_amount": 1800
+  },
+  "shipping": { "address": { "zip": "66101", "country": "US" }, "from_address_zip": "64105" },
+  "items": [
+    { "name": "Bulk rice long grain", "reference": "RCE-LG-25", "commodity_code": "50221101", "unit_of_measure": "BG", "quantity": 8, "unit_price": 2140, "total_amount": 17120, "tax_amount": 0, "discount_amount": 0, "tax_exempt": true },
+    { "name": "Dry black beans case", "reference": "BNS-BK-12", "commodity_code": "50221106", "unit_of_measure": "CA", "quantity": 4, "unit_price": 3375, "total_amount": 13500, "tax_amount": 0, "discount_amount": 0, "tax_exempt": true }
+  ],
+  "processing_channel_id": "pc_test_l3example"
+}

@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-63543",
+  "amount": 823.83,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "corporate",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Summit Lab Products",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-76247"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-76247",
+    "invoiceNumber": "INV-63543"
+  },
+  "tax": {
+    "amount": 46.64,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 2,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 2.18,
+      "taxAmount": 2.49,
+      "total": 41.42
+    },
+    {
+      "sequence": 2,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "quantity": 1,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 0.00,
+      "taxAmount": 0.86,
+      "total": 14.25
+    },
+    {
+      "sequence": 3,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "quantity": 14,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 0.00,
+      "taxAmount": 3.53,
+      "total": 58.80
+    },
+    {
+      "sequence": 4,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "quantity": 21,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "taxAmount": 14.99,
+      "total": 249.90
+    },
+    {
+      "sequence": 5,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "quantity": 7,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 0.00,
+      "taxAmount": 3.99,
+      "total": 66.50
+    },
+    {
+      "sequence": 6,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 6,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 10.98,
+      "taxAmount": 5.93,
+      "total": 98.82
+    },
+    {
+      "sequence": 7,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 22,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 27.50,
+      "taxAmount": 14.85,
+      "total": 247.50
+    }
+  ]
+}

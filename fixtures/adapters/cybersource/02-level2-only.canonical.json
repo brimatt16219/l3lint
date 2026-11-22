@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "1.0",
+  "amount": 189.90,
+  "currency": "USD",
+  "customer": { "reference": "PO-66130" },
+  "order": { "invoiceNumber": "INV-81007" },
+  "tax": { "amount": 12.43, "indicator": "taxable" },
+  "shipping": { "toPostalCode": "85004", "toCountry": "US" }
+}

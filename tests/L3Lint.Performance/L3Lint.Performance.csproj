@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Timing tests (US-08, US-09). Not part of the solution-wide `dotnet test`: CI runs this project alone, in Release, after
+       the main suite (dotnet run, project tests/L3Lint.Performance, Release), because a time measured while other
+       test assemblies run in parallel says nothing about the code. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>L3Lint.Performance</RootNamespace>
+    <IsTestProject>false</IsTestProject>
+    <IsTestingPlatformApplication>false</IsTestingPlatformApplication>
+    <!-- Methods compile fully optimized on first call, so "warm" does not depend on background tier-up. -->
+    <TieredCompilation>false</TieredCompilation>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="Shouldly" />
+    <PackageReference Include="ModelContextProtocol" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\L3Lint.Hosting\L3Lint.Hosting.csproj" />
+    <ProjectReference Include="..\..\src\L3Lint.Mcp\L3Lint.Mcp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\L3Lint.Core.Tests\SpecExamples\canonical-example.json" Link="SpecExamples\canonical-example.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

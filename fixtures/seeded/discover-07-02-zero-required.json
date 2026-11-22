@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-84908",
+  "amount": 2448.28,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "corporate",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Northbay Office Works",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-78332"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-78332",
+    "invoiceNumber": "INV-84908"
+  },
+  "tax": {
+    "amount": 110.34,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "quantity": 11,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 3.71,
+      "taxAmount": 3.35,
+      "total": 70.54
+    },
+    {
+      "sequence": 2,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "quantity": 12,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "taxAmount": 50.73,
+      "total": 1068.00
+    },
+    {
+      "sequence": 3,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 17,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 108.80,
+      "taxAmount": 46.51,
+      "total": 979.20
+    },
+    {
+      "sequence": 4,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "quantity": 0,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 22.80,
+      "taxAmount": 9.75,
+      "total": 205.20
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83844",
+  "amount": 982.56,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "corporate",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-69476"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-69476",
+    "invoiceNumber": "INV-83844"
+  },
+  "tax": {
+    "amount": 73.16,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 6,
+      "unitOfMeasure": "EAC",
+      "unitCost": 89.00,
+      "discountAmount": 26.70,
+      "discountIndicator": true,
+      "taxAmount": 41.85,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 507.30,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "EAC",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 4.56,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 55.30,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 3,
+      "unitOfMeasure": "EAC",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 3.09,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 37.50,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 4,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "EAC",
+      "unitCost": 9.50,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 18.81,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 228.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 5,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "EAC",
+      "unitCost": 4.20,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 4.85,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 58.80,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

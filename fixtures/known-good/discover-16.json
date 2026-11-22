@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-62695",
+  "amount": 840.23,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "corporate",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Harborview Facility Supply",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-75655"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-75655",
+    "invoiceNumber": "INV-62695"
+  },
+  "tax": {
+    "amount": 37.09,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "quantity": 19,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 6.41,
+      "taxAmount": 5.79,
+      "total": 121.84
+    },
+    {
+      "sequence": 2,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 1,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 6.40,
+      "taxAmount": 2.74,
+      "total": 57.60
+    },
+    {
+      "sequence": 3,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "quantity": 24,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 0.00,
+      "taxAmount": 10.83,
+      "total": 228.00
+    },
+    {
+      "sequence": 4,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 24,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "taxAmount": 14.25,
+      "total": 300.00
+    },
+    {
+      "sequence": 5,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 4,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "taxAmount": 3.48,
+      "total": 73.20
+    }
+  ]
+}

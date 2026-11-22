@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-76583",
+  "amount": 1778.75,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "business",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-64407"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-64407",
+    "invoiceNumber": "INV-76583"
+  },
+  "tax": {
+    "amount": 115.38,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "commodityScheme": "unspsc",
+      "quantity": 6,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 11.52,
+      "taxAmount": 15.32,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 218.88,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "commodityScheme": "unspsc",
+      "quantity": 1,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 0.00,
+      "taxAmount": 1.00,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 14.25,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 21,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 22.93,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 327.60,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 12,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 21.96,
+      "taxAmount": 13.83,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 197.64,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 10,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "taxAmount": 62.30,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 890.00,
+      "detailIndicator": "Y"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-63967",
+  "amount": 1962.54,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "corporate",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Summit Lab Products",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-76543"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-76543",
+    "invoiceNumber": "INV-63967"
+  },
+  "tax": {
+    "amount": 110.24,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 17,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 41.57,
+      "taxAmount": 47.38,
+      "total": 789.73
+    },
+    {
+      "sequence": 2,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 7,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 26.88,
+      "taxAmount": 14.52,
+      "total": 241.92
+    },
+    {
+      "sequence": 3,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 19,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "taxAmount": 20.86,
+      "total": 347.70
+    },
+    {
+      "sequence": 4,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 14,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 3.32,
+      "total": 55.30
+    },
+    {
+      "sequence": 5,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 2,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "taxAmount": 1.50,
+      "total": 25.00
+    },
+    {
+      "sequence": 6,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 5,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 0.00,
+      "taxAmount": 6.54,
+      "total": 109.00
+    },
+    {
+      "sequence": 7,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "quantity": 18,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 25.65,
+      "taxAmount": 13.85,
+      "total": 230.85
+    },
+    {
+      "sequence": 8,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "quantity": 10,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 4.20,
+      "taxAmount": 2.27,
+      "total": 37.80
+    }
+  ]
+}

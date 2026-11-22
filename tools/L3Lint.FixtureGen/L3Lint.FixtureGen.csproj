@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>L3Lint.FixtureGen</RootNamespace>
+  </PropertyGroup>
+
+  <!-- FixtureGen never references the engine: expectations come from the definitions here, written from the
+       spec, never from running l3lint (directive hard constraint 9). -->
+
+</Project>

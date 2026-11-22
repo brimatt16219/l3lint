@@ -1,0 +1,5 @@
+description: "GEN-PCI-001 pass example: the rule must not fire."
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19, only: GEN-PCI-001 }
+expect:
+  findings: []
+  absent: [GEN-PCI-001]

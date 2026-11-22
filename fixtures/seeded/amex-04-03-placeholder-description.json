@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-84219",
+  "amount": 3940.83,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "corporate",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Summit Lab Products",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77851"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77851",
+    "invoiceNumber": "INV-84219"
+  },
+  "tax": {
+    "amount": 257.16,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "amex": {
+    "requestorName": "Jordan Ellis",
+    "adviceText": [
+      "PO-77851 supplies order",
+      "Requested by Jordan Ellis"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Merchandise",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 17,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 54.40,
+      "taxAmount": 72.35,
+      "total": 1033.60
+    },
+    {
+      "sequence": 2,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 14,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 0.00,
+      "taxAmount": 47.92,
+      "total": 684.60
+    },
+    {
+      "sequence": 3,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "quantity": 23,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 204.70,
+      "taxAmount": 128.96,
+      "total": 1842.30
+    },
+    {
+      "sequence": 4,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "quantity": 17,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 12.58,
+      "taxAmount": 7.93,
+      "total": 113.22
+    }
+  ]
+}

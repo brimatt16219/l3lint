@@ -1,0 +1,8 @@
+- name: CLI reference
+  href: cli.md
+- name: JSON results
+  href: results.md
+- name: Configuration file
+  href: config.md
+- name: Canonical payload
+  href: canonical.md

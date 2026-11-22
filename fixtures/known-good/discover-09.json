@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-62324",
+  "amount": 1215.36,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "corporate",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5047",
+    "name": "Northbay Office Works",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-75396"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-75396",
+    "invoiceNumber": "INV-62324"
+  },
+  "tax": {
+    "amount": 91.48,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "quantity": 12,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 9.36,
+      "taxAmount": 14.67,
+      "total": 177.84
+    },
+    {
+      "sequence": 2,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "quantity": 12,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 0.00,
+      "taxAmount": 25.74,
+      "total": 312.00
+    },
+    {
+      "sequence": 3,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 16,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 34.88,
+      "taxAmount": 25.90,
+      "total": 313.92
+    },
+    {
+      "sequence": 4,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 16,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 5.21,
+      "total": 63.20
+    },
+    {
+      "sequence": 5,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 7,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 26.88,
+      "taxAmount": 19.96,
+      "total": 241.92
+    }
+  ]
+}

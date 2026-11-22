@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>L3Lint.DocsGen</RootNamespace>
+  </PropertyGroup>
+
+  <!-- Rule pages come from the shipped packs through Hosting and Reporting. The CLI reference comes from the real
+       System.CommandLine tree, so the CLI project is referenced for its internal command builders. -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\L3Lint.Hosting\L3Lint.Hosting.csproj" />
+    <ProjectReference Include="..\..\src\L3Lint.Cli\L3Lint.Cli.csproj" />
+  </ItemGroup>
+
+</Project>

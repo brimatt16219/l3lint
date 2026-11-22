@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83159",
+  "amount": 417.69,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "corporate",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77111"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77111",
+    "invoiceNumber": "INV-83159"
+  },
+  "tax": {
+    "amount": 116.50,
+    "indicator": "taxable",
+    "rate": 0.40
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "commodityScheme": "unspsc",
+      "quantity": 18,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 10.71,
+      "taxAmount": 81.40,
+      "taxRate": 0.40,
+      "taxable": true,
+      "total": 203.49,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "commodityScheme": "unspsc",
+      "quantity": 13,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 0.00,
+      "taxAmount": 35.10,
+      "taxRate": 0.40,
+      "taxable": true,
+      "total": 87.75,
+      "detailIndicator": "Y"
+    }
+  ]
+}

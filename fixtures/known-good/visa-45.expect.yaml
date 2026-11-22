@@ -1,0 +1,6 @@
+description: "A valid visa purchasing payload with 5 lines in USD: no error or warning may fire."
+context: { brand: visa, cardProduct: purchasing, mcc: "5085", asOf: 2026-10-19 }
+expect:
+  exitCode: 0
+  findings: []
+  likelyTier: { brand: visa, status: meets }

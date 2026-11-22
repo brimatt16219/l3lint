@@ -1,0 +1,5 @@
+description: "AMEX-ELIG-001 fail example: the rule must fire."
+context: { brand: amex, cardProduct: corporate, mcc: "5047", asOf: 2026-10-19, only: AMEX-ELIG-001 }
+expect:
+  findings:
+    - { ruleId: AMEX-ELIG-001, path: "*" }

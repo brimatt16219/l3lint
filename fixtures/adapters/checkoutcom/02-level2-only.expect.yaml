@@ -1,0 +1,10 @@
+description: The Level 2 example shape, with only the order ID and tax amount under processing.
+format: checkoutcom
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 02-level2-only.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-001, path: /lineItems }
+    - { ruleId: VISA-L3-011, path: /amounts/discount }
+    - { ruleId: VISA-L3-011, path: /amounts/duty }
+    - { ruleId: VISA-L3-011, path: /amounts/freight }

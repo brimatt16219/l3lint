@@ -1,0 +1,6 @@
+description: "Line 2 description is the placeholder 'Merchandise'."
+operator: placeholder-description
+context: { brand: amex, cardProduct: corporate, mcc: "5085", asOf: 2026-10-19 }
+expect:
+  findings:
+    - { ruleId: GEN-DQ-001, path: /lineItems/1/description, severity: warning }

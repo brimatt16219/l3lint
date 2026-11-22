@@ -1,0 +1,10 @@
+description: Item 1 has no reference (the product code), and item 3 has no unit of measure and no discount amount.
+format: checkoutcom
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 03-missing-line-fields.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-003, path: /lineItems/0/productCode }
+    - { ruleId: VISA-L3-006, path: /lineItems/2/unitOfMeasure }
+    - { ruleId: VISA-L3-009, path: /lineItems/2/discountAmount }
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

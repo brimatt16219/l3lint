@@ -1,0 +1,6 @@
+description: "Line 3 description is the placeholder 'Services'."
+operator: placeholder-description
+context: { brand: mastercard, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+expect:
+  findings:
+    - { ruleId: GEN-DQ-001, path: /lineItems/2/description, severity: warning }

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-82360",
+  "amount": 2328.02,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "corporate",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-68440"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-68440",
+    "invoiceNumber": "INV-82360"
+  },
+  "tax": {
+    "amount": 150.82,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "75201",
+    "toPostalCode": "75231",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "75231"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "PCE",
+      "unitCost": 26.00,
+      "discountAmount": 9.10,
+      "discountIndicator": true,
+      "taxAmount": 12.10,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 172.90,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 12,
+      "unitOfMeasure": "PCE",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 15.37,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 219.60,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 22,
+      "unitOfMeasure": "EAC",
+      "unitCost": 89.00,
+      "discountAmount": 195.80,
+      "discountIndicator": true,
+      "taxAmount": 123.35,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 1762.20,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

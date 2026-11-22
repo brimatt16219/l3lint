@@ -1,0 +1,21 @@
+# Cybersource REST limits for Level 2 and 3 (retrieved 2026-10-25). Many limits depend on the processor behind
+# Cybersource; this profile uses the shortest public value where processors differ.
+profile:
+  id: cybersource
+  title: Cybersource
+  description: Purchase order numbers hold 17 characters at several processors; postal codes 10.
+  sources:
+    - https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/so/api-fields/invoice-header-user-po.md
+    - https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/so/api-fields/ship-to-postal-code.md
+limits:
+  purchaseOrderNumberMax:
+    value: 17
+    source: https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/so/api-fields/invoice-header-user-po.md
+    note: 17 at several processors and 25 at others.
+  customerReferenceMax:
+    value: 17
+    source: https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/so/api-fields/invoice-header-user-po.md
+    note: The canonical customer reference maps to the purchase order number.
+  postalCodeMax:
+    value: 10
+    source: https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/so/api-fields/ship-to-postal-code.md

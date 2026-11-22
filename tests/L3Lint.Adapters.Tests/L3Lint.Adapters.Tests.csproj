@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>L3Lint.Adapters.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="Shouldly" />
+    <PackageReference Include="coverlet.MTP" />
+    <PackageReference Include="Microsoft.Extensions.TimeProvider.Testing" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\L3Lint.Adapters\L3Lint.Adapters.csproj" />
+    <ProjectReference Include="..\..\src\L3Lint.Rules.General\L3Lint.Rules.General.csproj" />
+    <ProjectReference Include="..\..\src\L3Lint.Rules.Visa\L3Lint.Rules.Visa.csproj" />
+    <ProjectReference Include="..\..\src\L3Lint.Rules.Mastercard\L3Lint.Rules.Mastercard.csproj" />
+    <ProjectReference Include="..\..\src\L3Lint.Rules.Amex\L3Lint.Rules.Amex.csproj" />
+    <ProjectReference Include="..\..\src\L3Lint.Rules.Discover\L3Lint.Rules.Discover.csproj" />
+  </ItemGroup>
+
+</Project>

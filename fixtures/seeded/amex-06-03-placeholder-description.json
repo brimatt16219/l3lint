@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-84325",
+  "amount": 669.54,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "corporate",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Northbay Office Works",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77925"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77925",
+    "invoiceNumber": "INV-84325"
+  },
+  "tax": {
+    "amount": 43.15,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "amex": {
+    "requestorName": "Jordan Ellis",
+    "adviceText": [
+      "PO-77925 supplies order",
+      "Requested by Jordan Ellis"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "quantity": 12,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 9.36,
+      "taxAmount": 12.45,
+      "total": 177.84
+    },
+    {
+      "sequence": 2,
+      "description": "Services",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "quantity": 15,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 0.00,
+      "taxAmount": 4.41,
+      "total": 63.00
+    },
+    {
+      "sequence": 3,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "quantity": 14,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "taxAmount": 11.66,
+      "total": 166.60
+    },
+    {
+      "sequence": 4,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "quantity": 22,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 0.00,
+      "taxAmount": 14.63,
+      "total": 209.00
+    }
+  ]
+}

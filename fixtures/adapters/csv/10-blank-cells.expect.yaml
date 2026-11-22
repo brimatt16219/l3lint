@@ -1,0 +1,9 @@
+description: The second row leaves the invoice-level cells empty, which does not contradict the first row, and also leaves its unit of measure and unit price empty. Empty discount, freight and duty cells take the map's default of 0.
+format: csv
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 10-blank-cells.canonical.json
+expect:
+  findings:
+    - { transaction: 0, ruleId: VISA-L3-006, path: /lineItems/1/unitOfMeasure }
+    - { transaction: 0, ruleId: VISA-L3-007, path: /lineItems/1/unitCost }
+    - { transaction: 0, ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

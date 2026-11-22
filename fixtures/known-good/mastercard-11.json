@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-81830",
+  "amount": 3599.28,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "corporate",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Summit Lab Products",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-68070"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-68070",
+    "invoiceNumber": "INV-81830"
+  },
+  "tax": {
+    "amount": 203.73,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 18,
+      "unitOfMeasure": "PCE",
+      "unitCost": 64.00,
+      "discountAmount": 57.60,
+      "discountIndicator": true,
+      "taxAmount": 65.66,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 1094.40,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "PCE",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 22.46,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 374.40,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 20,
+      "unitOfMeasure": "EAC",
+      "unitCost": 89.00,
+      "discountAmount": 178.00,
+      "discountIndicator": true,
+      "taxAmount": 96.12,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 1602.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 4,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 20,
+      "unitOfMeasure": "EAC",
+      "unitCost": 12.50,
+      "discountAmount": 25.00,
+      "discountIndicator": true,
+      "taxAmount": 13.50,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 225.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 5,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "PCE",
+      "unitCost": 14.25,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 5.99,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 99.75,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

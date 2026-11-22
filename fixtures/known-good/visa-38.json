@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-77961",
+  "amount": 3120.70,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "corporate",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Northbay Office Works",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-65369"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-65369",
+    "invoiceNumber": "INV-77961"
+  },
+  "tax": {
+    "amount": 141.52,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 58.68,
+      "taxAmount": 52.96,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 1114.92,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 16.20,
+      "taxAmount": 6.93,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 145.80,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 21.84,
+      "taxAmount": 9.34,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 196.56,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 19,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 169.10,
+      "taxAmount": 72.29,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 1521.90,
+      "detailIndicator": "Y"
+    }
+  ]
+}

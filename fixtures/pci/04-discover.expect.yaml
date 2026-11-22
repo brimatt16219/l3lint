@@ -1,0 +1,6 @@
+description: "A public test card number in a line description. It must be masked in every output format."
+context: { brand: discover, cardProduct: business, mcc: "5065", asOf: 2026-10-19 }
+expect:
+  exitCode: 1
+  findings:
+    - { ruleId: GEN-PCI-001, path: /lineItems/1/description, severity: error }

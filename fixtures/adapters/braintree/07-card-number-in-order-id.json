@@ -1,0 +1,48 @@
+{
+  "amount": "280.36",
+  "paymentMethodNonce": "fake-valid-nonce",
+  "purchaseOrderNumber": "PO-48820",
+  "orderId": "5555 5555 5555 4444",
+  "taxAmount": "17.36",
+  "taxExempt": false,
+  "shippingAmount": "15.00",
+  "shippingTaxAmount": "0.00",
+  "discountAmount": "0.00",
+  "shipsFromPostalCode": "33602",
+  "shipping": {
+    "firstName": "Receiving",
+    "lastName": "Dock",
+    "streetAddress": "100 Example Way",
+    "extendedAddress": "Suite 4",
+    "locality": "Testville",
+    "region": "FL",
+    "postalCode": "33431",
+    "countryCodeAlpha3": "USA"
+  },
+  "lineItems": [
+    {
+      "name": "Nitrile gloves L box",
+      "kind": "debit",
+      "quantity": "10.0000",
+      "unitAmount": "12.5000",
+      "unitOfMeasure": "BX",
+      "totalAmount": "120.00",
+      "taxAmount": "8.40",
+      "discountAmount": "5.00",
+      "productCode": "GLV-NL-100",
+      "commodityCode": "42132203"
+    },
+    {
+      "name": "Isolation gown blue case",
+      "kind": "debit",
+      "quantity": "2.0000",
+      "unitAmount": "64.0000",
+      "unitOfMeasure": "CA",
+      "totalAmount": "128.00",
+      "taxAmount": "8.96",
+      "discountAmount": "0.00",
+      "productCode": "GWN-IS-B50",
+      "commodityCode": "42131606"
+    }
+  ]
+}

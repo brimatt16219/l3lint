@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-69265",
+  "amount": 710.82,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "purchasing",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-51185"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-51185",
+    "invoiceNumber": "INV-69265"
+  },
+  "tax": {
+    "amount": 53.42,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "5555555555554444",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "EAC",
+      "unitCost": 12.50,
+      "discountAmount": 8.75,
+      "discountIndicator": true,
+      "taxAmount": 13.72,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 166.25,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "commodityScheme": "unspsc",
+      "quantity": 20,
+      "unitOfMeasure": "PCE",
+      "unitCost": 14.25,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 23.51,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 285.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "commodityScheme": "unspsc",
+      "quantity": 10,
+      "unitOfMeasure": "GLI",
+      "unitCost": 21.80,
+      "discountAmount": 21.80,
+      "discountIndicator": true,
+      "taxAmount": 16.19,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 196.20,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

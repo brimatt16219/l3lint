@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-76159",
+  "amount": 804.83,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "corporate",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Northbay Office Works",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-64111"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-64111",
+    "invoiceNumber": "INV-76159"
+  },
+  "tax": {
+    "amount": 60.58,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "commodityScheme": "unspsc",
+      "quantity": 2,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 0.74,
+      "taxAmount": 1.16,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 14.06,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 12.81,
+      "taxAmount": 9.51,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 115.29,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 8,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 10.30,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 124.80,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "commodityScheme": "unspsc",
+      "quantity": 2,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 1.35,
+      "taxAmount": 1.00,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 12.15,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "commodityScheme": "unspsc",
+      "quantity": 18,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 0.00,
+      "taxAmount": 38.61,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 468.00,
+      "detailIndicator": "Y"
+    }
+  ]
+}

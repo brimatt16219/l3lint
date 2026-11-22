@@ -1,0 +1,9 @@
+{
+  "source": { "type": "token", "token": "tok_test_l2example" },
+  "amount": 43725,
+  "currency": "USD",
+  "reference": "INV-44017",
+  "customer": { "tax_number": "TX-55-0192" },
+  "processing": { "order_id": "PO-20931", "tax_amount": 2725 },
+  "processing_channel_id": "pc_test_l2example"
+}

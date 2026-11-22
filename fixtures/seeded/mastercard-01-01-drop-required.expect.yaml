@@ -1,0 +1,7 @@
+description: "Line 2 has no product code."
+operator: drop-required
+context: { brand: mastercard, cardProduct: purchasing, mcc: "5111", asOf: 2026-10-19 }
+expect:
+  exitCode: 1
+  findings:
+    - { ruleId: MC-L3-003, path: /lineItems/1/productCode, severity: error }

@@ -1,0 +1,8 @@
+description: The two rows of one invoice disagree on the invoice total (280.36 and 281.36). The amount is left out and reported once as GEN-FMT-001, pointing at the second row's cell; the amount checks skip it.
+format: csv
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 02-rows-disagree.canonical.json
+expect:
+  findings:
+    - { transaction: 0, ruleId: GEN-FMT-001, path: /amount }
+    - { transaction: 0, ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

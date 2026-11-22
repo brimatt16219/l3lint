@@ -1,0 +1,7 @@
+description: "51 line items under the checkoutcom profile, one more than it accepts."
+operator: too-many-lines
+context: { brand: mastercard, cardProduct: corporate, mcc: "5198", asOf: 2026-10-19, processor: checkoutcom }
+expect:
+  exitCode: 1
+  findings:
+    - { ruleId: GEN-FMT-005, path: /lineItems, severity: error }

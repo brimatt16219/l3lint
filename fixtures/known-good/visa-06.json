@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-76265",
+  "amount": 2408.97,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "purchasing",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Summit Lab Products",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-64185"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-64185",
+    "invoiceNumber": "INV-76265"
+  },
+  "tax": {
+    "amount": 108.56,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "commodityScheme": "unspsc",
+      "quantity": 23,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 7.76,
+      "taxAmount": 7.01,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 147.49,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "commodityScheme": "unspsc",
+      "quantity": 6,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 4.44,
+      "taxAmount": 1.90,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 39.96,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "taxAmount": 29.59,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 623.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 10,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 0.00,
+      "taxAmount": 30.40,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 640.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 5.19,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 109.20,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 6,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "commodityScheme": "unspsc",
+      "quantity": 21,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 80.64,
+      "taxAmount": 34.47,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 725.76,
+      "detailIndicator": "Y"
+    }
+  ]
+}

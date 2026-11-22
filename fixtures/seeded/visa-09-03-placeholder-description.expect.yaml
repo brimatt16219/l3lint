@@ -1,0 +1,8 @@
+description: "Line 4 description is the placeholder 'Services'."
+operator: placeholder-description
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+expect:
+  exitCode: 1
+  findings:
+    - { ruleId: VISA-DQ-001, path: /lineItems/3/description, severity: error }
+  absent: [GEN-DQ-001]

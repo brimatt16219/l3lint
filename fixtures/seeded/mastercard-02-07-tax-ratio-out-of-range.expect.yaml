@@ -1,0 +1,8 @@
+description: "Tax is 37.1% of the amount; line taxes and the amount were rebalanced."
+operator: tax-ratio-out-of-range
+context: { brand: mastercard, cardProduct: purchasing, mcc: "5065", asOf: 2026-10-19 }
+expect:
+  exitCode: 1
+  findings:
+    - { ruleId: MC-L2-001, path: /tax/amount, severity: error }
+  absent: [GEN-ARITH-002, GEN-ARITH-003]

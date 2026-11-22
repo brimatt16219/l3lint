@@ -1,0 +1,8 @@
+description: taxExempt true with zero tax maps to an exempt indicator, so the zero tax is not reported under Visa.
+format: braintree
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19, defaultCurrency: USD }
+canonical: 10-tax-exempt.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/duty }

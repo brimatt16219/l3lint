@@ -1,0 +1,24 @@
+# Synthetic rate table for the VISA-LT-001 examples. Not real interchange rates.
+name: Example Large Ticket schedule
+effective: 2026-04-18
+currency: USD
+programFees:
+  - brand: visa
+    when: enhancedDataSent
+    percent: 0.05
+categories:
+  - brand: visa
+    products: [corporate, purchasing]
+    tier: product3
+    percent: 1.75
+    fixed: 0.10
+  - brand: visa
+    products: [corporate, purchasing]
+    tier: largeTicket
+    percent: 1.45
+    fixed: 35.00
+  - brand: visa
+    products: [corporate, purchasing]
+    tier: cardNotPresent
+    percent: 2.70
+    fixed: 0.10

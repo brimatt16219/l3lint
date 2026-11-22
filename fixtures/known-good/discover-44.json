@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-64179",
+  "amount": 2402.22,
+  "currency": "EUR",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "business",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Ridgeline Industrial Co",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-76691"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-76691",
+    "invoiceNumber": "INV-64179"
+  },
+  "tax": {
+    "amount": 134.72,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "quantity": 5,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 22.25,
+      "taxAmount": 25.37,
+      "total": 422.75
+    },
+    {
+      "sequence": 2,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "quantity": 19,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 0.00,
+      "taxAmount": 16.25,
+      "total": 270.75
+    },
+    {
+      "sequence": 3,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 14,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 0.00,
+      "taxAmount": 32.26,
+      "total": 537.60
+    },
+    {
+      "sequence": 4,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 12,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 2.84,
+      "total": 47.40
+    },
+    {
+      "sequence": 5,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 7,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "taxAmount": 7.69,
+      "total": 128.10
+    },
+    {
+      "sequence": 6,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "quantity": 23,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 21.53,
+      "total": 358.80
+    },
+    {
+      "sequence": 7,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 22,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 0.00,
+      "taxAmount": 28.78,
+      "total": 479.60
+    }
+  ]
+}

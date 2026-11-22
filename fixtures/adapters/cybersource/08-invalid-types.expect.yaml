@@ -1,0 +1,11 @@
+description: taxable is neither a boolean nor true or false text, line 1 amountIncludesTax is not Y, N, true or false, line 2 totalAmount has a letter O for a zero, and shipTo is an array instead of an object. Each is one GEN-FMT-001 finding and the checks that need those values skip them.
+format: cybersource
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 08-invalid-types.canonical.json
+expect:
+  findings:
+    - { ruleId: GEN-FMT-001, path: /lineItems/0/amountIncludesTax }
+    - { ruleId: GEN-FMT-001, path: /lineItems/1/total }
+    - { ruleId: GEN-FMT-001, path: /shipping/toPostalCode }
+    - { ruleId: GEN-FMT-001, path: /tax/indicator }
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

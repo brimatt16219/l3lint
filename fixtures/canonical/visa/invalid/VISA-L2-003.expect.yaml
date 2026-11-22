@@ -1,0 +1,5 @@
+description: "VISA-L2-003 fail example: the rule must fire."
+context: { brand: visa, cardProduct: purchasing, mcc: "5541", asOf: 2026-03-01, only: VISA-L2-003 }
+expect:
+  findings:
+    - { ruleId: VISA-L2-003, path: "*" }

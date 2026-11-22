@@ -1,0 +1,158 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-78438",
+  "amount": 3901.47,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "purchasing",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-65702"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-65702",
+    "invoiceNumber": "INV-78438"
+  },
+  "tax": {
+    "amount": 176.92,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "commodityScheme": "unspsc",
+      "quantity": 19,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 46.46,
+      "taxAmount": 41.93,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 882.64,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 21,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 38.43,
+      "taxAmount": 16.43,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 345.87,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "commodityScheme": "unspsc",
+      "quantity": 22,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 47.96,
+      "taxAmount": 20.50,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 431.64,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "commodityScheme": "unspsc",
+      "quantity": 8,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 0.00,
+      "taxAmount": 3.61,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 76.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 17.78,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 374.40,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 6,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "commodityScheme": "unspsc",
+      "quantity": 3,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 0.00,
+      "taxAmount": 3.71,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 78.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 7,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 0.00,
+      "taxAmount": 72.96,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 1536.00,
+      "detailIndicator": "Y"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "amount": 27500,
+  "currency": "jpy",
+  "payment_method": "pm_card_visa",
+  "payment_details": {
+    "customer_reference": "PO-JP-2210",
+    "order_reference": "INV-JP-0918"
+  },
+  "amount_details": {
+    "shipping": { "amount": 1100, "from_postal_code": "150-0002", "to_postal_code": "530-0001" },
+    "line_items": [
+      {
+        "product_code": "SFG-CLR-01",
+        "product_name": "Safety goggles clear",
+        "unit_cost": 1250,
+        "quantity": 12,
+        "tax": { "total_tax_amount": 1500 },
+        "unit_of_measure": "EA",
+        "payment_method_options": { "card": { "commodity_code": "46181804" } }
+      },
+      {
+        "product_code": "WGL-CTN-02",
+        "product_name": "Work gloves cotton pair",
+        "unit_cost": 480,
+        "quantity": 20,
+        "discount_amount": 600,
+        "tax": { "total_tax_amount": 900 },
+        "unit_of_measure": "PR",
+        "payment_method_options": { "card": { "commodity_code": "46181504" } }
+      }
+    ]
+  }
+}

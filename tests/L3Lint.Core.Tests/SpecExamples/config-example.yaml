@@ -1,0 +1,46 @@
+# .l3lint.yaml
+version: 1
+
+context:                       # defaults when the payload and flags are silent
+  merchantCountry: US
+  mcc: "5047"
+  processor: generic          # or a profile name, e.g. stripe, adyen, jpmorgan
+
+inputs:
+  format: auto
+  csvMap: config/erp-map.yaml
+  limits:
+    maxFileBytes: 26214400     # 25 MB
+    maxLineItems: 1000
+    maxJsonDepth: 64
+
+rules:
+  disable: [GEN-DQ-008]
+  severity:
+    GEN-DQ-007: error
+    VISA-L3-010: information
+  placeholders:
+    add: ["supplies", "parts"]
+    remove: ["order"]
+  batch:
+    minTransactions: 20
+    sameValueShare: 0.80
+
+arithmetic:
+  lineTolerance: 0.01
+  totalTolerance: 0.01
+  toleranceMode: strict        # or accumulated
+  rounding: awayFromZero       # or toEven
+
+pci:
+  strict: false
+  allowFields: []              # canonical JSON Pointers, after human review
+
+output:
+  failOn: error
+  formats:
+    - text
+    - sarif=artifacts/l3lint.sarif
+  maxFindings: 500
+
+rates: config/ic-plus-2026-04.yaml   # optional; enables cost estimates

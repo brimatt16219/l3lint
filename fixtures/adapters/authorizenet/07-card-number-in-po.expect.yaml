@@ -1,0 +1,8 @@
+description: The public Discover test card number 6011 1111 1111 1117 was typed into the free-text poNumber, which maps to the customer reference.
+format: authorizenet
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 07-card-number-in-po.canonical.json
+expect:
+  findings:
+    - { ruleId: GEN-PCI-001, path: /customer/reference }
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

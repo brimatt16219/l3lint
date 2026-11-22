@@ -1,0 +1,58 @@
+{
+  "clientReferenceInformation": { "code": "INV-50311" },
+  "processingInformation": { "capture": true, "purchaseLevel": "3" },
+  "paymentInformation": {
+    "card": { "expirationMonth": "12", "expirationYear": "2031", "type": "001" }
+  },
+  "orderInformation": {
+    "billTo": {
+      "firstName": "Accounts",
+      "lastName": "Payable",
+      "address1": "1 Test Plaza",
+      "locality": "Testville",
+      "administrativeArea": "FL",
+      "postalCode": "33431",
+      "country": "US",
+      "email": "ap@example.test"
+    },
+    "shipTo": { "postalCode": "33431", "country": "US", "administrativeArea": "FL" },
+    "shippingDetails": { "shipFromPostalCode": "33602" },
+    "invoiceDetails": {
+      "purchaseOrderNumber": "378282246310005",
+      "purchaseOrderDate": "2026-10-15",
+      "taxable": true
+    },
+    "amountDetails": {
+      "totalAmount": "280.36",
+      "currency": "USD",
+      "taxAmount": "17.36",
+      "freightAmount": "15.00",
+      "dutyAmount": "0.00",
+      "discountAmount": "0.00"
+    },
+    "lineItems": [
+      {
+        "productCode": "GLV-NL-100",
+        "productName": "Nitrile gloves L box",
+        "commodityCode": "42132203",
+        "quantity": "10",
+        "unitPrice": "12.50",
+        "unitOfMeasure": "BX",
+        "discountAmount": "5.00",
+        "taxAmount": "8.40",
+        "totalAmount": "120.00"
+      },
+      {
+        "productCode": "GWN-IS-B50",
+        "productName": "Isolation gown blue case",
+        "commodityCode": "42131606",
+        "quantity": "2",
+        "unitPrice": "64.00",
+        "unitOfMeasure": "CA",
+        "discountAmount": "0.00",
+        "taxAmount": "8.96",
+        "totalAmount": "128.00"
+      }
+    ]
+  }
+}

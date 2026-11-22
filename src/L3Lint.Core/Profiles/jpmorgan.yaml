@@ -1,0 +1,13 @@
+# J.P. Morgan online payments Level 2 and 3 limits (from the public commercial cards page cited by the spec).
+# Selecting this profile also gives single-processor rules sourced from this page their catalog severity
+# (MC-L3-008, MC-L3-009, MC-FMT-001, AMEX-FMT-001, DISC-FMT-001, DISC-L2-001).
+profile:
+  id: jpmorgan
+  title: J.P. Morgan
+  description: Mastercard Level 3 holds up to 998 line items; Discover 98; amounts 9 digits; Amex advice text 4 lines of 40.
+  sources:
+    - https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/online-payments/payment-methods/cards/commercialcards
+limits:
+  maxLineItems:
+    value: 998
+    source: https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/online-payments/payment-methods/cards/commercialcards

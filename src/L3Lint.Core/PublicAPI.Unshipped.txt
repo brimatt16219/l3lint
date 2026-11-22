@@ -1,0 +1,1499 @@
+#nullable enable
+const L3Lint.Core.Input.InputLimits.DefaultMaxFileBytes = 26214400 -> long
+const L3Lint.Core.Input.InputLimits.DefaultMaxJsonDepth = 64 -> int
+const L3Lint.Core.Input.InputLimits.DefaultMaxLineItems = 1000 -> int
+L3Lint.Core.Adapters.AdapterNote
+L3Lint.Core.Adapters.AdapterNote.<Clone>$() -> L3Lint.Core.Adapters.AdapterNote!
+L3Lint.Core.Adapters.AdapterNote.AdapterNote(L3Lint.Core.Adapters.AdapterNoteKind Kind, string? SourcePointer, string? CanonicalPointer, string! Message) -> void
+L3Lint.Core.Adapters.AdapterNote.CanonicalPointer.get -> string?
+L3Lint.Core.Adapters.AdapterNote.CanonicalPointer.init -> void
+L3Lint.Core.Adapters.AdapterNote.Deconstruct(out L3Lint.Core.Adapters.AdapterNoteKind Kind, out string? SourcePointer, out string? CanonicalPointer, out string! Message) -> void
+L3Lint.Core.Adapters.AdapterNote.Equals(L3Lint.Core.Adapters.AdapterNote? other) -> bool
+L3Lint.Core.Adapters.AdapterNote.Kind.get -> L3Lint.Core.Adapters.AdapterNoteKind
+L3Lint.Core.Adapters.AdapterNote.Kind.init -> void
+L3Lint.Core.Adapters.AdapterNote.Message.get -> string!
+L3Lint.Core.Adapters.AdapterNote.Message.init -> void
+L3Lint.Core.Adapters.AdapterNote.SourcePointer.get -> string?
+L3Lint.Core.Adapters.AdapterNote.SourcePointer.init -> void
+L3Lint.Core.Adapters.AdapterNoteKind
+L3Lint.Core.Adapters.AdapterNoteKind.Ambiguous = 1 -> L3Lint.Core.Adapters.AdapterNoteKind
+L3Lint.Core.Adapters.AdapterNoteKind.Defaulted = 4 -> L3Lint.Core.Adapters.AdapterNoteKind
+L3Lint.Core.Adapters.AdapterNoteKind.Derived = 2 -> L3Lint.Core.Adapters.AdapterNoteKind
+L3Lint.Core.Adapters.AdapterNoteKind.Ignored = 0 -> L3Lint.Core.Adapters.AdapterNoteKind
+L3Lint.Core.Adapters.AdapterNoteKind.Invalid = 3 -> L3Lint.Core.Adapters.AdapterNoteKind
+L3Lint.Core.Adapters.AdapterOptions
+L3Lint.Core.Adapters.AdapterOptions.<Clone>$() -> L3Lint.Core.Adapters.AdapterOptions!
+L3Lint.Core.Adapters.AdapterOptions.AdapterOptions() -> void
+L3Lint.Core.Adapters.AdapterOptions.CsvMap.get -> string?
+L3Lint.Core.Adapters.AdapterOptions.CsvMap.init -> void
+L3Lint.Core.Adapters.AdapterOptions.CsvMapName.get -> string?
+L3Lint.Core.Adapters.AdapterOptions.CsvMapName.init -> void
+L3Lint.Core.Adapters.AdapterOptions.DefaultCurrency.get -> string?
+L3Lint.Core.Adapters.AdapterOptions.DefaultCurrency.init -> void
+L3Lint.Core.Adapters.AdapterOptions.Equals(L3Lint.Core.Adapters.AdapterOptions? other) -> bool
+L3Lint.Core.Adapters.AdapterOptions.Limits.get -> L3Lint.Core.Input.InputLimits!
+L3Lint.Core.Adapters.AdapterOptions.Limits.init -> void
+L3Lint.Core.Adapters.AdapterOptions.PciAllowFields.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Core.Adapters.AdapterOptions.PciAllowFields.init -> void
+L3Lint.Core.Adapters.AdapterOptions.Verbose.get -> bool
+L3Lint.Core.Adapters.AdapterOptions.Verbose.init -> void
+L3Lint.Core.Adapters.AdapterResult
+L3Lint.Core.Adapters.AdapterResult.<Clone>$() -> L3Lint.Core.Adapters.AdapterResult!
+L3Lint.Core.Adapters.AdapterResult.AdapterResult(L3Lint.Core.Model.Transaction! transaction, L3Lint.Core.Adapters.PathMap! paths) -> void
+L3Lint.Core.Adapters.AdapterResult.CardNumberMatches.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Pci.CardNumberMatch!>!
+L3Lint.Core.Adapters.AdapterResult.CardNumberMatches.init -> void
+L3Lint.Core.Adapters.AdapterResult.DerivedFields.get -> System.Collections.Generic.IReadOnlySet<string!>!
+L3Lint.Core.Adapters.AdapterResult.DerivedFields.init -> void
+L3Lint.Core.Adapters.AdapterResult.Equals(L3Lint.Core.Adapters.AdapterResult? other) -> bool
+L3Lint.Core.Adapters.AdapterResult.FirstLine.get -> int?
+L3Lint.Core.Adapters.AdapterResult.FirstLine.init -> void
+L3Lint.Core.Adapters.AdapterResult.InvalidFields.get -> System.Collections.Generic.IReadOnlySet<string!>!
+L3Lint.Core.Adapters.AdapterResult.InvalidFields.init -> void
+L3Lint.Core.Adapters.AdapterResult.Notes.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Adapters.AdapterNote!>!
+L3Lint.Core.Adapters.AdapterResult.Notes.init -> void
+L3Lint.Core.Adapters.AdapterResult.Paths.get -> L3Lint.Core.Adapters.PathMap!
+L3Lint.Core.Adapters.AdapterResult.Transaction.get -> L3Lint.Core.Model.Transaction!
+L3Lint.Core.Adapters.DetectionScore
+L3Lint.Core.Adapters.DetectionScore.Deconstruct(out string! Format, out double Score) -> void
+L3Lint.Core.Adapters.DetectionScore.DetectionScore() -> void
+L3Lint.Core.Adapters.DetectionScore.DetectionScore(string! Format, double Score) -> void
+L3Lint.Core.Adapters.DetectionScore.Equals(L3Lint.Core.Adapters.DetectionScore other) -> bool
+L3Lint.Core.Adapters.DetectionScore.Format.get -> string!
+L3Lint.Core.Adapters.DetectionScore.Format.init -> void
+L3Lint.Core.Adapters.DetectionScore.Score.get -> double
+L3Lint.Core.Adapters.DetectionScore.Score.init -> void
+L3Lint.Core.Adapters.FormatDetectionException
+L3Lint.Core.Adapters.FormatDetectionException.Candidates.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Core.Adapters.FormatDetectionException.FormatDetectionException() -> void
+L3Lint.Core.Adapters.FormatDetectionException.FormatDetectionException(string! message) -> void
+L3Lint.Core.Adapters.FormatDetectionException.FormatDetectionException(string! message, string? sourceName, System.Collections.Generic.IReadOnlyList<string!>! candidates) -> void
+L3Lint.Core.Adapters.FormatDetectionException.FormatDetectionException(string! message, System.Exception! innerException) -> void
+L3Lint.Core.Adapters.IAdapterRegistry
+L3Lint.Core.Adapters.IAdapterRegistry.Adapters.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Adapters.IPayloadAdapter!>!
+L3Lint.Core.Adapters.IAdapterRegistry.Resolve(string? format, L3Lint.Core.Input.RawDocument! document) -> L3Lint.Core.Adapters.IPayloadAdapter!
+L3Lint.Core.Adapters.IAdapterRegistry.Score(L3Lint.Core.Input.RawDocument! document) -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Adapters.DetectionScore>!
+L3Lint.Core.Adapters.IPayloadAdapter
+L3Lint.Core.Adapters.IPayloadAdapter.Detect(L3Lint.Core.Input.RawDocument! document) -> double
+L3Lint.Core.Adapters.IPayloadAdapter.Kind.get -> L3Lint.Core.Input.InputKind
+L3Lint.Core.Adapters.IPayloadAdapter.Map(L3Lint.Core.Input.RawDocument! document, L3Lint.Core.Adapters.AdapterOptions! options) -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Adapters.AdapterResult!>!
+L3Lint.Core.Adapters.IPayloadAdapter.Name.get -> string!
+L3Lint.Core.Adapters.IPayloadAdapter.ToCanonicalPointer(string! sourcePointer) -> string?
+L3Lint.Core.Adapters.PathMap
+L3Lint.Core.Adapters.PathMap.IsIdentity.get -> bool
+L3Lint.Core.Adapters.PathMap.Resolve(string! canonicalPointer) -> L3Lint.Core.Adapters.SourceField?
+L3Lint.Core.Adapters.PathMapBuilder
+L3Lint.Core.Adapters.PathMapBuilder.AdviceText(L3Lint.Core.Adapters.SourceField? collection, System.Func<int, L3Lint.Core.Adapters.SourceField?>! line) -> L3Lint.Core.Adapters.PathMapBuilder!
+L3Lint.Core.Adapters.PathMapBuilder.Build() -> L3Lint.Core.Adapters.PathMap!
+L3Lint.Core.Adapters.PathMapBuilder.Field(string! canonicalPointer, L3Lint.Core.Adapters.SourceField? source) -> L3Lint.Core.Adapters.PathMapBuilder!
+L3Lint.Core.Adapters.PathMapBuilder.LineField(string! fieldName, System.Func<int, L3Lint.Core.Adapters.SourceField?>! source) -> L3Lint.Core.Adapters.PathMapBuilder!
+L3Lint.Core.Adapters.PathMapBuilder.LineItems(L3Lint.Core.Adapters.SourceField? collection, System.Func<int, L3Lint.Core.Adapters.SourceField?>! item) -> L3Lint.Core.Adapters.PathMapBuilder!
+L3Lint.Core.Adapters.PathMapBuilder.PathMapBuilder() -> void
+L3Lint.Core.Adapters.SourceField
+L3Lint.Core.Adapters.SourceField.Deconstruct(out string! Pointer, out L3Lint.Core.Adapters.SourceValueConverter? ToSource, out L3Lint.Core.Input.SourceLocation? Location) -> void
+L3Lint.Core.Adapters.SourceField.Equals(L3Lint.Core.Adapters.SourceField other) -> bool
+L3Lint.Core.Adapters.SourceField.Location.get -> L3Lint.Core.Input.SourceLocation?
+L3Lint.Core.Adapters.SourceField.Location.init -> void
+L3Lint.Core.Adapters.SourceField.Pointer.get -> string!
+L3Lint.Core.Adapters.SourceField.Pointer.init -> void
+L3Lint.Core.Adapters.SourceField.SourceField() -> void
+L3Lint.Core.Adapters.SourceField.SourceField(string! Pointer, L3Lint.Core.Adapters.SourceValueConverter? ToSource = null, L3Lint.Core.Input.SourceLocation? Location = null) -> void
+L3Lint.Core.Adapters.SourceField.ToSource.get -> L3Lint.Core.Adapters.SourceValueConverter?
+L3Lint.Core.Adapters.SourceField.ToSource.init -> void
+L3Lint.Core.Adapters.SourceValueConverter
+L3Lint.Core.ArithmeticOptions
+L3Lint.Core.ArithmeticOptions.<Clone>$() -> L3Lint.Core.ArithmeticOptions!
+L3Lint.Core.ArithmeticOptions.ArithmeticOptions() -> void
+L3Lint.Core.ArithmeticOptions.Equals(L3Lint.Core.ArithmeticOptions? other) -> bool
+L3Lint.Core.ArithmeticOptions.LineTolerance.get -> decimal?
+L3Lint.Core.ArithmeticOptions.LineTolerance.init -> void
+L3Lint.Core.ArithmeticOptions.Rounding.get -> System.MidpointRounding
+L3Lint.Core.ArithmeticOptions.Rounding.init -> void
+L3Lint.Core.ArithmeticOptions.ToleranceMode.get -> L3Lint.Core.ToleranceMode
+L3Lint.Core.ArithmeticOptions.ToleranceMode.init -> void
+L3Lint.Core.ArithmeticOptions.TotalTolerance.get -> decimal?
+L3Lint.Core.ArithmeticOptions.TotalTolerance.init -> void
+L3Lint.Core.BatchOptions
+L3Lint.Core.BatchOptions.<Clone>$() -> L3Lint.Core.BatchOptions!
+L3Lint.Core.BatchOptions.BatchOptions() -> void
+L3Lint.Core.BatchOptions.Equals(L3Lint.Core.BatchOptions? other) -> bool
+L3Lint.Core.BatchOptions.MinTransactions.get -> int
+L3Lint.Core.BatchOptions.MinTransactions.init -> void
+L3Lint.Core.BatchOptions.SameValueShare.get -> decimal
+L3Lint.Core.BatchOptions.SameValueShare.init -> void
+L3Lint.Core.Confidence
+L3Lint.Core.Confidence.Inferred = 3 -> L3Lint.Core.Confidence
+L3Lint.Core.Confidence.Policy = 0 -> L3Lint.Core.Confidence
+L3Lint.Core.Confidence.ProcessorDoc = 2 -> L3Lint.Core.Confidence
+L3Lint.Core.Confidence.PublicBrand = 1 -> L3Lint.Core.Confidence
+L3Lint.Core.ContextDefaults
+L3Lint.Core.ContextDefaults.<Clone>$() -> L3Lint.Core.ContextDefaults!
+L3Lint.Core.ContextDefaults.Brand.get -> L3Lint.Core.Model.CardBrand?
+L3Lint.Core.ContextDefaults.Brand.init -> void
+L3Lint.Core.ContextDefaults.CardProduct.get -> L3Lint.Core.Model.CardProduct?
+L3Lint.Core.ContextDefaults.CardProduct.init -> void
+L3Lint.Core.ContextDefaults.ContextDefaults() -> void
+L3Lint.Core.ContextDefaults.Equals(L3Lint.Core.ContextDefaults? other) -> bool
+L3Lint.Core.ContextDefaults.Mcc.get -> string?
+L3Lint.Core.ContextDefaults.Mcc.init -> void
+L3Lint.Core.ContextDefaults.MerchantCountry.get -> string?
+L3Lint.Core.ContextDefaults.MerchantCountry.init -> void
+L3Lint.Core.EngineInfo
+L3Lint.Core.Estimates.CostEstimate
+L3Lint.Core.Estimates.CostEstimate.<Clone>$() -> L3Lint.Core.Estimates.CostEstimate!
+L3Lint.Core.Estimates.CostEstimate.CostEstimate(string! RateTableName, System.DateOnly Effective, string! Currency, System.Collections.Generic.IReadOnlyList<L3Lint.Core.Estimates.CostEstimateLine!>! Lines) -> void
+L3Lint.Core.Estimates.CostEstimate.Currency.get -> string!
+L3Lint.Core.Estimates.CostEstimate.Currency.init -> void
+L3Lint.Core.Estimates.CostEstimate.Deconstruct(out string! RateTableName, out System.DateOnly Effective, out string! Currency, out System.Collections.Generic.IReadOnlyList<L3Lint.Core.Estimates.CostEstimateLine!>! Lines) -> void
+L3Lint.Core.Estimates.CostEstimate.Effective.get -> System.DateOnly
+L3Lint.Core.Estimates.CostEstimate.Effective.init -> void
+L3Lint.Core.Estimates.CostEstimate.Equals(L3Lint.Core.Estimates.CostEstimate? other) -> bool
+L3Lint.Core.Estimates.CostEstimate.Lines.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Estimates.CostEstimateLine!>!
+L3Lint.Core.Estimates.CostEstimate.Lines.init -> void
+L3Lint.Core.Estimates.CostEstimate.RateTableName.get -> string!
+L3Lint.Core.Estimates.CostEstimate.RateTableName.init -> void
+L3Lint.Core.Estimates.CostEstimateLine
+L3Lint.Core.Estimates.CostEstimateLine.<Clone>$() -> L3Lint.Core.Estimates.CostEstimateLine!
+L3Lint.Core.Estimates.CostEstimateLine.BestCost.get -> decimal?
+L3Lint.Core.Estimates.CostEstimateLine.BestCost.init -> void
+L3Lint.Core.Estimates.CostEstimateLine.BestTier.get -> string!
+L3Lint.Core.Estimates.CostEstimateLine.BestTier.init -> void
+L3Lint.Core.Estimates.CostEstimateLine.Brand.get -> L3Lint.Core.Model.CardBrand
+L3Lint.Core.Estimates.CostEstimateLine.Brand.init -> void
+L3Lint.Core.Estimates.CostEstimateLine.CostEstimateLine(L3Lint.Core.Model.CardBrand Brand, string! LikelyTier, decimal? LikelyCost, string! BestTier, decimal? BestCost, decimal? Difference) -> void
+L3Lint.Core.Estimates.CostEstimateLine.Deconstruct(out L3Lint.Core.Model.CardBrand Brand, out string! LikelyTier, out decimal? LikelyCost, out string! BestTier, out decimal? BestCost, out decimal? Difference) -> void
+L3Lint.Core.Estimates.CostEstimateLine.Difference.get -> decimal?
+L3Lint.Core.Estimates.CostEstimateLine.Difference.init -> void
+L3Lint.Core.Estimates.CostEstimateLine.Equals(L3Lint.Core.Estimates.CostEstimateLine? other) -> bool
+L3Lint.Core.Estimates.CostEstimateLine.LikelyCost.get -> decimal?
+L3Lint.Core.Estimates.CostEstimateLine.LikelyCost.init -> void
+L3Lint.Core.Estimates.CostEstimateLine.LikelyTier.get -> string!
+L3Lint.Core.Estimates.CostEstimateLine.LikelyTier.init -> void
+L3Lint.Core.Estimates.ProgramFee
+L3Lint.Core.Estimates.ProgramFee.<Clone>$() -> L3Lint.Core.Estimates.ProgramFee!
+L3Lint.Core.Estimates.ProgramFee.Brand.get -> L3Lint.Core.Model.CardBrand
+L3Lint.Core.Estimates.ProgramFee.Brand.init -> void
+L3Lint.Core.Estimates.ProgramFee.Deconstruct(out L3Lint.Core.Model.CardBrand Brand, out string! When, out decimal Percent, out decimal Fixed) -> void
+L3Lint.Core.Estimates.ProgramFee.Equals(L3Lint.Core.Estimates.ProgramFee? other) -> bool
+L3Lint.Core.Estimates.ProgramFee.Fixed.get -> decimal
+L3Lint.Core.Estimates.ProgramFee.Fixed.init -> void
+L3Lint.Core.Estimates.ProgramFee.Percent.get -> decimal
+L3Lint.Core.Estimates.ProgramFee.Percent.init -> void
+L3Lint.Core.Estimates.ProgramFee.ProgramFee(L3Lint.Core.Model.CardBrand Brand, string! When, decimal Percent, decimal Fixed) -> void
+L3Lint.Core.Estimates.ProgramFee.When.get -> string!
+L3Lint.Core.Estimates.ProgramFee.When.init -> void
+L3Lint.Core.Estimates.RateCategory
+L3Lint.Core.Estimates.RateCategory.<Clone>$() -> L3Lint.Core.Estimates.RateCategory!
+L3Lint.Core.Estimates.RateCategory.Brand.get -> L3Lint.Core.Model.CardBrand
+L3Lint.Core.Estimates.RateCategory.Brand.init -> void
+L3Lint.Core.Estimates.RateCategory.Deconstruct(out L3Lint.Core.Model.CardBrand Brand, out System.Collections.Generic.IReadOnlyList<L3Lint.Core.Model.CardProduct>! Products, out string! Tier, out decimal Percent, out decimal Fixed, out string? Name) -> void
+L3Lint.Core.Estimates.RateCategory.Equals(L3Lint.Core.Estimates.RateCategory? other) -> bool
+L3Lint.Core.Estimates.RateCategory.Fixed.get -> decimal
+L3Lint.Core.Estimates.RateCategory.Fixed.init -> void
+L3Lint.Core.Estimates.RateCategory.Name.get -> string?
+L3Lint.Core.Estimates.RateCategory.Name.init -> void
+L3Lint.Core.Estimates.RateCategory.Percent.get -> decimal
+L3Lint.Core.Estimates.RateCategory.Percent.init -> void
+L3Lint.Core.Estimates.RateCategory.Products.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Model.CardProduct>!
+L3Lint.Core.Estimates.RateCategory.Products.init -> void
+L3Lint.Core.Estimates.RateCategory.RateCategory(L3Lint.Core.Model.CardBrand Brand, System.Collections.Generic.IReadOnlyList<L3Lint.Core.Model.CardProduct>! Products, string! Tier, decimal Percent, decimal Fixed, string? Name) -> void
+L3Lint.Core.Estimates.RateCategory.Tier.get -> string!
+L3Lint.Core.Estimates.RateCategory.Tier.init -> void
+L3Lint.Core.Estimates.RateTable
+L3Lint.Core.Estimates.RateTable.<Clone>$() -> L3Lint.Core.Estimates.RateTable!
+L3Lint.Core.Estimates.RateTable.Categories.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Estimates.RateCategory!>!
+L3Lint.Core.Estimates.RateTable.Categories.init -> void
+L3Lint.Core.Estimates.RateTable.Currency.get -> string!
+L3Lint.Core.Estimates.RateTable.Currency.init -> void
+L3Lint.Core.Estimates.RateTable.Effective.get -> System.DateOnly
+L3Lint.Core.Estimates.RateTable.Effective.init -> void
+L3Lint.Core.Estimates.RateTable.Equals(L3Lint.Core.Estimates.RateTable? other) -> bool
+L3Lint.Core.Estimates.RateTable.Name.get -> string!
+L3Lint.Core.Estimates.RateTable.Name.init -> void
+L3Lint.Core.Estimates.RateTable.ProgramFees.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Estimates.ProgramFee!>!
+L3Lint.Core.Estimates.RateTable.ProgramFees.init -> void
+L3Lint.Core.Estimates.RateTable.RateTable() -> void
+L3Lint.Core.FieldPath
+L3Lint.Core.FieldPath.Canonical.get -> string!
+L3Lint.Core.FieldPath.Canonical.init -> void
+L3Lint.Core.FieldPath.Deconstruct(out string! Canonical, out string? Source) -> void
+L3Lint.Core.FieldPath.Equals(L3Lint.Core.FieldPath other) -> bool
+L3Lint.Core.FieldPath.FieldPath() -> void
+L3Lint.Core.FieldPath.FieldPath(string! Canonical, string? Source) -> void
+L3Lint.Core.FieldPath.Source.get -> string?
+L3Lint.Core.FieldPath.Source.init -> void
+L3Lint.Core.Fields.PointerComparer
+L3Lint.Core.Fields.PointerComparer.Compare(string? x, string? y) -> int
+L3Lint.Core.Finding
+L3Lint.Core.Finding.<Clone>$() -> L3Lint.Core.Finding!
+L3Lint.Core.Finding.Actual.get -> string?
+L3Lint.Core.Finding.Actual.init -> void
+L3Lint.Core.Finding.Brand.get -> L3Lint.Core.Model.CardBrand?
+L3Lint.Core.Finding.Brand.init -> void
+L3Lint.Core.Finding.Confidence.get -> L3Lint.Core.Confidence
+L3Lint.Core.Finding.Confidence.init -> void
+L3Lint.Core.Finding.Equals(L3Lint.Core.Finding? other) -> bool
+L3Lint.Core.Finding.Expected.get -> string?
+L3Lint.Core.Finding.Expected.init -> void
+L3Lint.Core.Finding.Finding() -> void
+L3Lint.Core.Finding.Fix.get -> string!
+L3Lint.Core.Finding.Fix.init -> void
+L3Lint.Core.Finding.Impact.get -> L3Lint.Core.Impact
+L3Lint.Core.Finding.Impact.init -> void
+L3Lint.Core.Finding.Location.get -> L3Lint.Core.Input.SourceLocation?
+L3Lint.Core.Finding.Location.init -> void
+L3Lint.Core.Finding.Message.get -> string!
+L3Lint.Core.Finding.Message.init -> void
+L3Lint.Core.Finding.NeedsHuman.get -> bool
+L3Lint.Core.Finding.NeedsHuman.init -> void
+L3Lint.Core.Finding.Patch.get -> L3Lint.Core.Fixes.FixPatch?
+L3Lint.Core.Finding.Patch.init -> void
+L3Lint.Core.Finding.Path.get -> L3Lint.Core.FieldPath
+L3Lint.Core.Finding.Path.init -> void
+L3Lint.Core.Finding.RuleId.get -> string!
+L3Lint.Core.Finding.RuleId.init -> void
+L3Lint.Core.Finding.Severity.get -> L3Lint.Core.Severity
+L3Lint.Core.Finding.Severity.init -> void
+L3Lint.Core.Finding.Sources.get -> System.Collections.Generic.IReadOnlyList<System.Uri!>!
+L3Lint.Core.Finding.Sources.init -> void
+L3Lint.Core.Finding.TransactionIndex.get -> int
+L3Lint.Core.Finding.TransactionIndex.init -> void
+L3Lint.Core.Fixes.FixIntent
+L3Lint.Core.Fixes.FixIntent.<Clone>$() -> L3Lint.Core.Fixes.FixIntent!
+L3Lint.Core.Fixes.FixIntent.Deconstruct(out System.Collections.Generic.IReadOnlyList<L3Lint.Core.Fixes.PatchOperation!>! Operations, out bool NeedsHuman, out string? Note) -> void
+L3Lint.Core.Fixes.FixIntent.Equals(L3Lint.Core.Fixes.FixIntent? other) -> bool
+L3Lint.Core.Fixes.FixIntent.FixIntent(System.Collections.Generic.IReadOnlyList<L3Lint.Core.Fixes.PatchOperation!>! Operations, bool NeedsHuman = false, string? Note = null) -> void
+L3Lint.Core.Fixes.FixIntent.NeedsHuman.get -> bool
+L3Lint.Core.Fixes.FixIntent.NeedsHuman.init -> void
+L3Lint.Core.Fixes.FixIntent.Note.get -> string?
+L3Lint.Core.Fixes.FixIntent.Note.init -> void
+L3Lint.Core.Fixes.FixIntent.Operations.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Fixes.PatchOperation!>!
+L3Lint.Core.Fixes.FixIntent.Operations.init -> void
+L3Lint.Core.Fixes.FixPatch
+L3Lint.Core.Fixes.FixPatch.<Clone>$() -> L3Lint.Core.Fixes.FixPatch!
+L3Lint.Core.Fixes.FixPatch.Deconstruct(out System.Collections.Generic.IReadOnlyList<L3Lint.Core.Fixes.PatchOperation!>! Operations, out bool TargetsCanonical) -> void
+L3Lint.Core.Fixes.FixPatch.Equals(L3Lint.Core.Fixes.FixPatch? other) -> bool
+L3Lint.Core.Fixes.FixPatch.FixPatch(System.Collections.Generic.IReadOnlyList<L3Lint.Core.Fixes.PatchOperation!>! Operations, bool TargetsCanonical = false) -> void
+L3Lint.Core.Fixes.FixPatch.Operations.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Fixes.PatchOperation!>!
+L3Lint.Core.Fixes.FixPatch.Operations.init -> void
+L3Lint.Core.Fixes.FixPatch.TargetsCanonical.get -> bool
+L3Lint.Core.Fixes.FixPatch.TargetsCanonical.init -> void
+L3Lint.Core.Fixes.JsonPatch
+L3Lint.Core.Fixes.PatchOperation
+L3Lint.Core.Fixes.PatchOperation.<Clone>$() -> L3Lint.Core.Fixes.PatchOperation!
+L3Lint.Core.Fixes.PatchOperation.Deconstruct(out string! Op, out string! Path, out System.Text.Json.Nodes.JsonNode? Value) -> void
+L3Lint.Core.Fixes.PatchOperation.Equals(L3Lint.Core.Fixes.PatchOperation? other) -> bool
+L3Lint.Core.Fixes.PatchOperation.Op.get -> string!
+L3Lint.Core.Fixes.PatchOperation.Op.init -> void
+L3Lint.Core.Fixes.PatchOperation.PatchOperation(string! Op, string! Path, System.Text.Json.Nodes.JsonNode? Value) -> void
+L3Lint.Core.Fixes.PatchOperation.Path.get -> string!
+L3Lint.Core.Fixes.PatchOperation.Path.init -> void
+L3Lint.Core.Fixes.PatchOperation.Value.get -> System.Text.Json.Nodes.JsonNode?
+L3Lint.Core.Fixes.PatchOperation.Value.init -> void
+L3Lint.Core.ILinter
+L3Lint.Core.ILinter.Adapters.get -> L3Lint.Core.Adapters.IAdapterRegistry!
+L3Lint.Core.ILinter.CreateSession(L3Lint.Core.LintOptions? options = null) -> L3Lint.Core.ILintSession!
+L3Lint.Core.ILinter.EngineVersion.get -> string!
+L3Lint.Core.ILinter.Explain(string! ruleId) -> L3Lint.Core.Rules.RuleMetadata!
+L3Lint.Core.ILinter.Lint(L3Lint.Core.Input.RawDocument! document, L3Lint.Core.LintOptions? options = null) -> L3Lint.Core.LintResult!
+L3Lint.Core.ILinter.Lint(L3Lint.Core.Model.Transaction! transaction, L3Lint.Core.LintOptions? options = null) -> L3Lint.Core.LintResult!
+L3Lint.Core.ILinter.LintManyAsync(System.Collections.Generic.IAsyncEnumerable<L3Lint.Core.Model.Transaction!>! transactions, L3Lint.Core.LintOptions? options = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Collections.Generic.IAsyncEnumerable<L3Lint.Core.TransactionResult!>!
+L3Lint.Core.ILinter.Map(L3Lint.Core.Input.RawDocument! document, L3Lint.Core.LintOptions? options = null) -> L3Lint.Core.MapResult!
+L3Lint.Core.ILinter.RulePacks.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Rules.RulePackInfo!>!
+L3Lint.Core.ILinter.Rules(L3Lint.Core.RuleQuery? query = null) -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Rules.RuleMetadata!>!
+L3Lint.Core.ILinter.TryGetRule(string! ruleId, out L3Lint.Core.Rules.RuleMetadata? rule) -> bool
+L3Lint.Core.ILintSession
+L3Lint.Core.ILintSession.Complete(int index) -> L3Lint.Core.TransactionResult?
+L3Lint.Core.ILintSession.Lint(L3Lint.Core.Input.RawDocument! document, int firstIndex, int input) -> L3Lint.Core.LintResult!
+L3Lint.Core.ILintSession.Lint(L3Lint.Core.Model.Transaction! transaction, int index) -> L3Lint.Core.TransactionResult!
+L3Lint.Core.ILintSession.Options.get -> L3Lint.Core.LintOptions!
+L3Lint.Core.Impact
+L3Lint.Core.Impact.BlocksLevel2 = 1 -> L3Lint.Core.Impact
+L3Lint.Core.Impact.BlocksLevel3 = 0 -> L3Lint.Core.Impact
+L3Lint.Core.Impact.Hygiene = 5 -> L3Lint.Core.Impact
+L3Lint.Core.Impact.NoBenefit = 4 -> L3Lint.Core.Impact
+L3Lint.Core.Impact.RiskVisaValidation = 2 -> L3Lint.Core.Impact
+L3Lint.Core.Impact.Truncation = 3 -> L3Lint.Core.Impact
+L3Lint.Core.Input.InputErrorKind
+L3Lint.Core.Input.InputErrorKind.DuplicateProperty = 3 -> L3Lint.Core.Input.InputErrorKind
+L3Lint.Core.Input.InputErrorKind.Malformed = 1 -> L3Lint.Core.Input.InputErrorKind
+L3Lint.Core.Input.InputErrorKind.NotAnObject = 4 -> L3Lint.Core.Input.InputErrorKind
+L3Lint.Core.Input.InputErrorKind.TooDeep = 2 -> L3Lint.Core.Input.InputErrorKind
+L3Lint.Core.Input.InputErrorKind.TooLarge = 0 -> L3Lint.Core.Input.InputErrorKind
+L3Lint.Core.Input.InputErrorKind.TooManyLineItems = 5 -> L3Lint.Core.Input.InputErrorKind
+L3Lint.Core.Input.InputErrorKind.UnknownFormat = 6 -> L3Lint.Core.Input.InputErrorKind
+L3Lint.Core.Input.InputErrorKind.Unsupported = 7 -> L3Lint.Core.Input.InputErrorKind
+L3Lint.Core.Input.InputException
+L3Lint.Core.Input.InputException.Column.get -> int
+L3Lint.Core.Input.InputException.InputException() -> void
+L3Lint.Core.Input.InputException.InputException(L3Lint.Core.Input.InputErrorKind kind, string! message, string? sourceName, int line = 0, int column = 0, System.Exception? innerException = null) -> void
+L3Lint.Core.Input.InputException.InputException(string! message) -> void
+L3Lint.Core.Input.InputException.InputException(string! message, System.Exception! innerException) -> void
+L3Lint.Core.Input.InputException.Kind.get -> L3Lint.Core.Input.InputErrorKind
+L3Lint.Core.Input.InputException.Line.get -> int
+L3Lint.Core.Input.InputException.SourceName.get -> string?
+L3Lint.Core.Input.InputKind
+L3Lint.Core.Input.InputKind.Csv = 1 -> L3Lint.Core.Input.InputKind
+L3Lint.Core.Input.InputKind.Json = 0 -> L3Lint.Core.Input.InputKind
+L3Lint.Core.Input.InputLimits
+L3Lint.Core.Input.InputLimits.<Clone>$() -> L3Lint.Core.Input.InputLimits!
+L3Lint.Core.Input.InputLimits.Equals(L3Lint.Core.Input.InputLimits? other) -> bool
+L3Lint.Core.Input.InputLimits.InputLimits() -> void
+L3Lint.Core.Input.InputLimits.MaxFileBytes.get -> long
+L3Lint.Core.Input.InputLimits.MaxFileBytes.init -> void
+L3Lint.Core.Input.InputLimits.MaxJsonDepth.get -> int
+L3Lint.Core.Input.InputLimits.MaxJsonDepth.init -> void
+L3Lint.Core.Input.InputLimits.MaxLineItems.get -> int
+L3Lint.Core.Input.InputLimits.MaxLineItems.init -> void
+L3Lint.Core.Input.RawDocument
+L3Lint.Core.Input.RawDocument.FirstLine.get -> int
+L3Lint.Core.Input.RawDocument.GetText() -> string!
+L3Lint.Core.Input.RawDocument.IsMasked.get -> bool
+L3Lint.Core.Input.RawDocument.Json.get -> System.Text.Json.JsonElement
+L3Lint.Core.Input.RawDocument.Kind.get -> L3Lint.Core.Input.InputKind
+L3Lint.Core.Input.RawDocument.Length.get -> int
+L3Lint.Core.Input.RawDocument.Locate(string? pointer) -> L3Lint.Core.Input.SourceLocation?
+L3Lint.Core.Input.RawDocument.Sha256.get -> string!
+L3Lint.Core.Input.RawDocument.SourceName.get -> string!
+L3Lint.Core.Input.SourceLocation
+L3Lint.Core.Input.SourceLocation.Column.get -> int
+L3Lint.Core.Input.SourceLocation.Column.init -> void
+L3Lint.Core.Input.SourceLocation.Deconstruct(out int Line, out int Column) -> void
+L3Lint.Core.Input.SourceLocation.Equals(L3Lint.Core.Input.SourceLocation other) -> bool
+L3Lint.Core.Input.SourceLocation.Line.get -> int
+L3Lint.Core.Input.SourceLocation.Line.init -> void
+L3Lint.Core.Input.SourceLocation.SourceLocation() -> void
+L3Lint.Core.Input.SourceLocation.SourceLocation(int Line, int Column) -> void
+L3Lint.Core.InputError
+L3Lint.Core.InputError.<Clone>$() -> L3Lint.Core.InputError!
+L3Lint.Core.InputError.Candidates.get -> System.Collections.Generic.IReadOnlyList<string!>?
+L3Lint.Core.InputError.Candidates.init -> void
+L3Lint.Core.InputError.Deconstruct(out string! SourceName, out L3Lint.Core.Input.InputErrorKind Kind, out string! Message, out int? Line, out System.Collections.Generic.IReadOnlyList<string!>? Candidates) -> void
+L3Lint.Core.InputError.Equals(L3Lint.Core.InputError? other) -> bool
+L3Lint.Core.InputError.InputError(string! SourceName, L3Lint.Core.Input.InputErrorKind Kind, string! Message, int? Line = null, System.Collections.Generic.IReadOnlyList<string!>? Candidates = null) -> void
+L3Lint.Core.InputError.Kind.get -> L3Lint.Core.Input.InputErrorKind
+L3Lint.Core.InputError.Kind.init -> void
+L3Lint.Core.InputError.Line.get -> int?
+L3Lint.Core.InputError.Line.init -> void
+L3Lint.Core.InputError.Message.get -> string!
+L3Lint.Core.InputError.Message.init -> void
+L3Lint.Core.InputError.SourceName.get -> string!
+L3Lint.Core.InputError.SourceName.init -> void
+L3Lint.Core.LinterBuilder
+L3Lint.Core.LinterBuilder.AddAdapter(L3Lint.Core.Adapters.IPayloadAdapter! adapter) -> L3Lint.Core.LinterBuilder!
+L3Lint.Core.LinterBuilder.AddBatchCheck(L3Lint.Core.Rules.IBatchCheck! check) -> L3Lint.Core.LinterBuilder!
+L3Lint.Core.LinterBuilder.AddCustomCheck(L3Lint.Core.Rules.ICustomCheck! check) -> L3Lint.Core.LinterBuilder!
+L3Lint.Core.LinterBuilder.AddRule(L3Lint.Core.Rules.IRule! rule) -> L3Lint.Core.LinterBuilder!
+L3Lint.Core.LinterBuilder.AddRulePack(L3Lint.Core.Rules.IRulePackSource! source) -> L3Lint.Core.LinterBuilder!
+L3Lint.Core.LinterBuilder.Build() -> L3Lint.Core.ILinter!
+L3Lint.Core.LinterBuilder.LinterBuilder() -> void
+L3Lint.Core.LinterBuilder.RequirePackVersions(System.Collections.Generic.IReadOnlyDictionary<string!, string!>! packVersions) -> L3Lint.Core.LinterBuilder!
+L3Lint.Core.LinterBuilder.UseDefaults(L3Lint.Core.LintOptions! defaults) -> L3Lint.Core.LinterBuilder!
+L3Lint.Core.LinterBuilder.UseLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory! loggerFactory) -> L3Lint.Core.LinterBuilder!
+L3Lint.Core.LinterBuilder.UseTimeProvider(System.TimeProvider! time) -> L3Lint.Core.LinterBuilder!
+L3Lint.Core.LintOptions
+L3Lint.Core.LintOptions.<Clone>$() -> L3Lint.Core.LintOptions!
+L3Lint.Core.LintOptions.Adapter.get -> L3Lint.Core.Adapters.AdapterOptions!
+L3Lint.Core.LintOptions.Adapter.init -> void
+L3Lint.Core.LintOptions.AllBrands.get -> bool
+L3Lint.Core.LintOptions.AllBrands.init -> void
+L3Lint.Core.LintOptions.Arithmetic.get -> L3Lint.Core.ArithmeticOptions!
+L3Lint.Core.LintOptions.Arithmetic.init -> void
+L3Lint.Core.LintOptions.AsOf.get -> System.DateOnly?
+L3Lint.Core.LintOptions.AsOf.init -> void
+L3Lint.Core.LintOptions.Batch.get -> L3Lint.Core.BatchOptions!
+L3Lint.Core.LintOptions.Batch.init -> void
+L3Lint.Core.LintOptions.Brand.get -> L3Lint.Core.Model.CardBrand?
+L3Lint.Core.LintOptions.Brand.init -> void
+L3Lint.Core.LintOptions.CardProduct.get -> L3Lint.Core.Model.CardProduct?
+L3Lint.Core.LintOptions.CardProduct.init -> void
+L3Lint.Core.LintOptions.Defaults.get -> L3Lint.Core.ContextDefaults!
+L3Lint.Core.LintOptions.Defaults.init -> void
+L3Lint.Core.LintOptions.DisabledRules.get -> System.Collections.Generic.IReadOnlySet<string!>!
+L3Lint.Core.LintOptions.DisabledRules.init -> void
+L3Lint.Core.LintOptions.Equals(L3Lint.Core.LintOptions? other) -> bool
+L3Lint.Core.LintOptions.FailOn.get -> L3Lint.Core.Severity?
+L3Lint.Core.LintOptions.FailOn.init -> void
+L3Lint.Core.LintOptions.Format.get -> string?
+L3Lint.Core.LintOptions.Format.init -> void
+L3Lint.Core.LintOptions.Limits.get -> L3Lint.Core.Input.InputLimits!
+L3Lint.Core.LintOptions.Limits.init -> void
+L3Lint.Core.LintOptions.LintOptions() -> void
+L3Lint.Core.LintOptions.Mcc.get -> string?
+L3Lint.Core.LintOptions.Mcc.init -> void
+L3Lint.Core.LintOptions.MerchantCountry.get -> string?
+L3Lint.Core.LintOptions.MerchantCountry.init -> void
+L3Lint.Core.LintOptions.OnlyRules.get -> System.Collections.Generic.IReadOnlySet<string!>!
+L3Lint.Core.LintOptions.OnlyRules.init -> void
+L3Lint.Core.LintOptions.PciAllowFields.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Core.LintOptions.PciAllowFields.init -> void
+L3Lint.Core.LintOptions.PlaceholdersAdd.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Core.LintOptions.PlaceholdersAdd.init -> void
+L3Lint.Core.LintOptions.PlaceholdersRemove.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Core.LintOptions.PlaceholdersRemove.init -> void
+L3Lint.Core.LintOptions.Processor.get -> string?
+L3Lint.Core.LintOptions.Processor.init -> void
+L3Lint.Core.LintOptions.ProcessorProfile.get -> L3Lint.Core.Profiles.ProcessorProfile?
+L3Lint.Core.LintOptions.ProcessorProfile.init -> void
+L3Lint.Core.LintOptions.Rates.get -> L3Lint.Core.Estimates.RateTable?
+L3Lint.Core.LintOptions.Rates.init -> void
+L3Lint.Core.LintOptions.SeverityOverrides.get -> System.Collections.Generic.IReadOnlyDictionary<string!, L3Lint.Core.Severity>!
+L3Lint.Core.LintOptions.SeverityOverrides.init -> void
+L3Lint.Core.LintOptions.StrictPci.get -> bool
+L3Lint.Core.LintOptions.StrictPci.init -> void
+L3Lint.Core.LintOptions.StrictProfiles.get -> bool
+L3Lint.Core.LintOptions.StrictProfiles.init -> void
+L3Lint.Core.LintResult
+L3Lint.Core.LintResult.<Clone>$() -> L3Lint.Core.LintResult!
+L3Lint.Core.LintResult.EngineVersion.get -> string!
+L3Lint.Core.LintResult.EngineVersion.init -> void
+L3Lint.Core.LintResult.Equals(L3Lint.Core.LintResult? other) -> bool
+L3Lint.Core.LintResult.Findings.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Finding!>!
+L3Lint.Core.LintResult.Findings.init -> void
+L3Lint.Core.LintResult.Format.get -> string?
+L3Lint.Core.LintResult.Format.init -> void
+L3Lint.Core.LintResult.HasInternalError.get -> bool
+L3Lint.Core.LintResult.InputErrors.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.InputError!>!
+L3Lint.Core.LintResult.InputErrors.init -> void
+L3Lint.Core.LintResult.InputName.get -> string?
+L3Lint.Core.LintResult.InputName.init -> void
+L3Lint.Core.LintResult.InputSha256.get -> string!
+L3Lint.Core.LintResult.InputSha256.init -> void
+L3Lint.Core.LintResult.LintResult() -> void
+L3Lint.Core.LintResult.RulePackVersions.get -> System.Collections.Generic.IReadOnlyDictionary<string!, string!>!
+L3Lint.Core.LintResult.RulePackVersions.init -> void
+L3Lint.Core.LintResult.StoppedForCardNumber.get -> bool
+L3Lint.Core.LintResult.StoppedForCardNumber.init -> void
+L3Lint.Core.LintResult.Summary.get -> L3Lint.Core.LintSummary!
+L3Lint.Core.LintResult.Summary.init -> void
+L3Lint.Core.LintResult.Transactions.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.TransactionResult!>!
+L3Lint.Core.LintResult.Transactions.init -> void
+L3Lint.Core.LintSummary
+L3Lint.Core.LintSummary.<Clone>$() -> L3Lint.Core.LintSummary!
+L3Lint.Core.LintSummary.ByRule.get -> System.Collections.Generic.IReadOnlyDictionary<string!, int>!
+L3Lint.Core.LintSummary.ByRule.init -> void
+L3Lint.Core.LintSummary.Deconstruct(out int Transactions, out int Errors, out int Warnings, out int Information, out System.Collections.Generic.IReadOnlyDictionary<string!, int>! ByRule, out bool Failed) -> void
+L3Lint.Core.LintSummary.Equals(L3Lint.Core.LintSummary? other) -> bool
+L3Lint.Core.LintSummary.Errors.get -> int
+L3Lint.Core.LintSummary.Errors.init -> void
+L3Lint.Core.LintSummary.Failed.get -> bool
+L3Lint.Core.LintSummary.Failed.init -> void
+L3Lint.Core.LintSummary.Information.get -> int
+L3Lint.Core.LintSummary.Information.init -> void
+L3Lint.Core.LintSummary.LintSummary(int Transactions, int Errors, int Warnings, int Information, System.Collections.Generic.IReadOnlyDictionary<string!, int>! ByRule, bool Failed) -> void
+L3Lint.Core.LintSummary.Transactions.get -> int
+L3Lint.Core.LintSummary.Transactions.init -> void
+L3Lint.Core.LintSummary.Warnings.get -> int
+L3Lint.Core.LintSummary.Warnings.init -> void
+L3Lint.Core.MapResult
+L3Lint.Core.MapResult.<Clone>$() -> L3Lint.Core.MapResult!
+L3Lint.Core.MapResult.CardNumbers.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Pci.CardNumberMatch!>!
+L3Lint.Core.MapResult.CardNumbers.init -> void
+L3Lint.Core.MapResult.Deconstruct(out string! Format, out System.Collections.Generic.IReadOnlyList<L3Lint.Core.Adapters.AdapterResult!>! Transactions, out System.Collections.Generic.IReadOnlyList<L3Lint.Core.Pci.CardNumberMatch!>! CardNumbers, out L3Lint.Core.Input.RawDocument! Document) -> void
+L3Lint.Core.MapResult.Document.get -> L3Lint.Core.Input.RawDocument!
+L3Lint.Core.MapResult.Document.init -> void
+L3Lint.Core.MapResult.Equals(L3Lint.Core.MapResult? other) -> bool
+L3Lint.Core.MapResult.Format.get -> string!
+L3Lint.Core.MapResult.Format.init -> void
+L3Lint.Core.MapResult.MapResult(string! Format, System.Collections.Generic.IReadOnlyList<L3Lint.Core.Adapters.AdapterResult!>! Transactions, System.Collections.Generic.IReadOnlyList<L3Lint.Core.Pci.CardNumberMatch!>! CardNumbers, L3Lint.Core.Input.RawDocument! Document) -> void
+L3Lint.Core.MapResult.Transactions.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Adapters.AdapterResult!>!
+L3Lint.Core.MapResult.Transactions.init -> void
+L3Lint.Core.Model.AmexInfo
+L3Lint.Core.Model.AmexInfo.<Clone>$() -> L3Lint.Core.Model.AmexInfo!
+L3Lint.Core.Model.AmexInfo.AdviceText.get -> System.Collections.Generic.IReadOnlyList<string!>?
+L3Lint.Core.Model.AmexInfo.AdviceText.init -> void
+L3Lint.Core.Model.AmexInfo.AmexInfo() -> void
+L3Lint.Core.Model.AmexInfo.Equals(L3Lint.Core.Model.AmexInfo? other) -> bool
+L3Lint.Core.Model.AmexInfo.RequestorName.get -> string?
+L3Lint.Core.Model.AmexInfo.RequestorName.init -> void
+L3Lint.Core.Model.BillingInfo
+L3Lint.Core.Model.BillingInfo.<Clone>$() -> L3Lint.Core.Model.BillingInfo!
+L3Lint.Core.Model.BillingInfo.BillingInfo() -> void
+L3Lint.Core.Model.BillingInfo.Equals(L3Lint.Core.Model.BillingInfo? other) -> bool
+L3Lint.Core.Model.BillingInfo.PostalCode.get -> string?
+L3Lint.Core.Model.BillingInfo.PostalCode.init -> void
+L3Lint.Core.Model.CanonicalJson
+L3Lint.Core.Model.CanonicalNames
+L3Lint.Core.Model.CardBrand
+L3Lint.Core.Model.CardBrand.Amex = 3 -> L3Lint.Core.Model.CardBrand
+L3Lint.Core.Model.CardBrand.Discover = 4 -> L3Lint.Core.Model.CardBrand
+L3Lint.Core.Model.CardBrand.Mastercard = 2 -> L3Lint.Core.Model.CardBrand
+L3Lint.Core.Model.CardBrand.Unknown = 0 -> L3Lint.Core.Model.CardBrand
+L3Lint.Core.Model.CardBrand.Visa = 1 -> L3Lint.Core.Model.CardBrand
+L3Lint.Core.Model.CardInfo
+L3Lint.Core.Model.CardInfo.<Clone>$() -> L3Lint.Core.Model.CardInfo!
+L3Lint.Core.Model.CardInfo.Brand.get -> L3Lint.Core.Model.CardBrand?
+L3Lint.Core.Model.CardInfo.Brand.init -> void
+L3Lint.Core.Model.CardInfo.CardInfo() -> void
+L3Lint.Core.Model.CardInfo.Equals(L3Lint.Core.Model.CardInfo? other) -> bool
+L3Lint.Core.Model.CardInfo.IsFederalGovernment.get -> bool?
+L3Lint.Core.Model.CardInfo.IsFederalGovernment.init -> void
+L3Lint.Core.Model.CardInfo.Last4.get -> string?
+L3Lint.Core.Model.CardInfo.Last4.init -> void
+L3Lint.Core.Model.CardInfo.Product.get -> L3Lint.Core.Model.CardProduct?
+L3Lint.Core.Model.CardInfo.Product.init -> void
+L3Lint.Core.Model.CardInfo.ProductCode.get -> string?
+L3Lint.Core.Model.CardInfo.ProductCode.init -> void
+L3Lint.Core.Model.CardProduct
+L3Lint.Core.Model.CardProduct.Business = 2 -> L3Lint.Core.Model.CardProduct
+L3Lint.Core.Model.CardProduct.CommercialPrepaid = 6 -> L3Lint.Core.Model.CardProduct
+L3Lint.Core.Model.CardProduct.Consumer = 1 -> L3Lint.Core.Model.CardProduct
+L3Lint.Core.Model.CardProduct.Corporate = 3 -> L3Lint.Core.Model.CardProduct
+L3Lint.Core.Model.CardProduct.Fleet = 5 -> L3Lint.Core.Model.CardProduct
+L3Lint.Core.Model.CardProduct.Purchasing = 4 -> L3Lint.Core.Model.CardProduct
+L3Lint.Core.Model.CardProduct.Unknown = 0 -> L3Lint.Core.Model.CardProduct
+L3Lint.Core.Model.Channel
+L3Lint.Core.Model.Channel.CardNotPresent = 1 -> L3Lint.Core.Model.Channel
+L3Lint.Core.Model.Channel.CardPresent = 0 -> L3Lint.Core.Model.Channel
+L3Lint.Core.Model.CommodityScheme
+L3Lint.Core.Model.CommodityScheme.Hs = 3 -> L3Lint.Core.Model.CommodityScheme
+L3Lint.Core.Model.CommodityScheme.Naics = 4 -> L3Lint.Core.Model.CommodityScheme
+L3Lint.Core.Model.CommodityScheme.Nigp = 2 -> L3Lint.Core.Model.CommodityScheme
+L3Lint.Core.Model.CommodityScheme.Other = 5 -> L3Lint.Core.Model.CommodityScheme
+L3Lint.Core.Model.CommodityScheme.Unknown = 0 -> L3Lint.Core.Model.CommodityScheme
+L3Lint.Core.Model.CommodityScheme.Unspsc = 1 -> L3Lint.Core.Model.CommodityScheme
+L3Lint.Core.Model.Currency
+L3Lint.Core.Model.Currency.Code.get -> string!
+L3Lint.Core.Model.Currency.Code.init -> void
+L3Lint.Core.Model.Currency.Currency() -> void
+L3Lint.Core.Model.Currency.Currency(string! Code, int Exponent) -> void
+L3Lint.Core.Model.Currency.Deconstruct(out string! Code, out int Exponent) -> void
+L3Lint.Core.Model.Currency.Equals(L3Lint.Core.Model.Currency other) -> bool
+L3Lint.Core.Model.Currency.Exponent.get -> int
+L3Lint.Core.Model.Currency.Exponent.init -> void
+L3Lint.Core.Model.Currency.MinorUnit.get -> decimal
+L3Lint.Core.Model.CustomerInfo
+L3Lint.Core.Model.CustomerInfo.<Clone>$() -> L3Lint.Core.Model.CustomerInfo!
+L3Lint.Core.Model.CustomerInfo.CustomerInfo() -> void
+L3Lint.Core.Model.CustomerInfo.Equals(L3Lint.Core.Model.CustomerInfo? other) -> bool
+L3Lint.Core.Model.CustomerInfo.Reference.get -> string?
+L3Lint.Core.Model.CustomerInfo.Reference.init -> void
+L3Lint.Core.Model.DebitCredit
+L3Lint.Core.Model.DebitCredit.Credit = 1 -> L3Lint.Core.Model.DebitCredit
+L3Lint.Core.Model.DebitCredit.Debit = 0 -> L3Lint.Core.Model.DebitCredit
+L3Lint.Core.Model.Iso4217
+L3Lint.Core.Model.LineItem
+L3Lint.Core.Model.LineItem.<Clone>$() -> L3Lint.Core.Model.LineItem!
+L3Lint.Core.Model.LineItem.AmountIncludesTax.get -> bool?
+L3Lint.Core.Model.LineItem.AmountIncludesTax.init -> void
+L3Lint.Core.Model.LineItem.CommodityCode.get -> string?
+L3Lint.Core.Model.LineItem.CommodityCode.init -> void
+L3Lint.Core.Model.LineItem.CommodityScheme.get -> L3Lint.Core.Model.CommodityScheme?
+L3Lint.Core.Model.LineItem.CommodityScheme.init -> void
+L3Lint.Core.Model.LineItem.DebitCreditIndicator.get -> L3Lint.Core.Model.DebitCredit?
+L3Lint.Core.Model.LineItem.DebitCreditIndicator.init -> void
+L3Lint.Core.Model.LineItem.Description.get -> string?
+L3Lint.Core.Model.LineItem.Description.init -> void
+L3Lint.Core.Model.LineItem.DetailIndicator.get -> string?
+L3Lint.Core.Model.LineItem.DetailIndicator.init -> void
+L3Lint.Core.Model.LineItem.DiscountAmount.get -> decimal?
+L3Lint.Core.Model.LineItem.DiscountAmount.init -> void
+L3Lint.Core.Model.LineItem.DiscountIndicator.get -> bool?
+L3Lint.Core.Model.LineItem.DiscountIndicator.init -> void
+L3Lint.Core.Model.LineItem.Equals(L3Lint.Core.Model.LineItem? other) -> bool
+L3Lint.Core.Model.LineItem.LineItem() -> void
+L3Lint.Core.Model.LineItem.ProductCode.get -> string?
+L3Lint.Core.Model.LineItem.ProductCode.init -> void
+L3Lint.Core.Model.LineItem.Quantity.get -> decimal?
+L3Lint.Core.Model.LineItem.Quantity.init -> void
+L3Lint.Core.Model.LineItem.Sequence.get -> int?
+L3Lint.Core.Model.LineItem.Sequence.init -> void
+L3Lint.Core.Model.LineItem.Taxable.get -> bool?
+L3Lint.Core.Model.LineItem.Taxable.init -> void
+L3Lint.Core.Model.LineItem.TaxAmount.get -> decimal?
+L3Lint.Core.Model.LineItem.TaxAmount.init -> void
+L3Lint.Core.Model.LineItem.TaxRate.get -> decimal?
+L3Lint.Core.Model.LineItem.TaxRate.init -> void
+L3Lint.Core.Model.LineItem.TaxTypeCode.get -> string?
+L3Lint.Core.Model.LineItem.TaxTypeCode.init -> void
+L3Lint.Core.Model.LineItem.Total.get -> decimal?
+L3Lint.Core.Model.LineItem.Total.init -> void
+L3Lint.Core.Model.LineItem.UnitCost.get -> decimal?
+L3Lint.Core.Model.LineItem.UnitCost.init -> void
+L3Lint.Core.Model.LineItem.UnitOfMeasure.get -> string?
+L3Lint.Core.Model.LineItem.UnitOfMeasure.init -> void
+L3Lint.Core.Model.MerchantInfo
+L3Lint.Core.Model.MerchantInfo.<Clone>$() -> L3Lint.Core.Model.MerchantInfo!
+L3Lint.Core.Model.MerchantInfo.Country.get -> string?
+L3Lint.Core.Model.MerchantInfo.Country.init -> void
+L3Lint.Core.Model.MerchantInfo.Equals(L3Lint.Core.Model.MerchantInfo? other) -> bool
+L3Lint.Core.Model.MerchantInfo.Mcc.get -> string?
+L3Lint.Core.Model.MerchantInfo.Mcc.init -> void
+L3Lint.Core.Model.MerchantInfo.MerchantInfo() -> void
+L3Lint.Core.Model.MerchantInfo.Name.get -> string?
+L3Lint.Core.Model.MerchantInfo.Name.init -> void
+L3Lint.Core.Model.MerchantInfo.TaxId.get -> string?
+L3Lint.Core.Model.MerchantInfo.TaxId.init -> void
+L3Lint.Core.Model.Money
+L3Lint.Core.Model.Money.Currency.get -> L3Lint.Core.Model.Currency
+L3Lint.Core.Model.Money.Currency.init -> void
+L3Lint.Core.Model.Money.Deconstruct(out decimal Value, out L3Lint.Core.Model.Currency Currency) -> void
+L3Lint.Core.Model.Money.Equals(L3Lint.Core.Model.Money other) -> bool
+L3Lint.Core.Model.Money.HasExcessPrecision.get -> bool
+L3Lint.Core.Model.Money.Money() -> void
+L3Lint.Core.Model.Money.Money(decimal Value, L3Lint.Core.Model.Currency Currency) -> void
+L3Lint.Core.Model.Money.Rounded(System.MidpointRounding mode) -> decimal
+L3Lint.Core.Model.Money.ToMinorUnits() -> decimal
+L3Lint.Core.Model.Money.Value.get -> decimal
+L3Lint.Core.Model.Money.Value.init -> void
+L3Lint.Core.Model.OrderInfo
+L3Lint.Core.Model.OrderInfo.<Clone>$() -> L3Lint.Core.Model.OrderInfo!
+L3Lint.Core.Model.OrderInfo.Equals(L3Lint.Core.Model.OrderInfo? other) -> bool
+L3Lint.Core.Model.OrderInfo.InvoiceNumber.get -> string?
+L3Lint.Core.Model.OrderInfo.InvoiceNumber.init -> void
+L3Lint.Core.Model.OrderInfo.OrderDate.get -> System.DateOnly?
+L3Lint.Core.Model.OrderInfo.OrderDate.init -> void
+L3Lint.Core.Model.OrderInfo.OrderInfo() -> void
+L3Lint.Core.Model.OrderInfo.PurchaseOrderNumber.get -> string?
+L3Lint.Core.Model.OrderInfo.PurchaseOrderNumber.init -> void
+L3Lint.Core.Model.ShippingInfo
+L3Lint.Core.Model.ShippingInfo.<Clone>$() -> L3Lint.Core.Model.ShippingInfo!
+L3Lint.Core.Model.ShippingInfo.Equals(L3Lint.Core.Model.ShippingInfo? other) -> bool
+L3Lint.Core.Model.ShippingInfo.FromPostalCode.get -> string?
+L3Lint.Core.Model.ShippingInfo.FromPostalCode.init -> void
+L3Lint.Core.Model.ShippingInfo.ShippingInfo() -> void
+L3Lint.Core.Model.ShippingInfo.ToCountry.get -> string?
+L3Lint.Core.Model.ShippingInfo.ToCountry.init -> void
+L3Lint.Core.Model.ShippingInfo.ToPostalCode.get -> string?
+L3Lint.Core.Model.ShippingInfo.ToPostalCode.init -> void
+L3Lint.Core.Model.SummaryAmounts
+L3Lint.Core.Model.SummaryAmounts.<Clone>$() -> L3Lint.Core.Model.SummaryAmounts!
+L3Lint.Core.Model.SummaryAmounts.Discount.get -> decimal?
+L3Lint.Core.Model.SummaryAmounts.Discount.init -> void
+L3Lint.Core.Model.SummaryAmounts.Duty.get -> decimal?
+L3Lint.Core.Model.SummaryAmounts.Duty.init -> void
+L3Lint.Core.Model.SummaryAmounts.Equals(L3Lint.Core.Model.SummaryAmounts? other) -> bool
+L3Lint.Core.Model.SummaryAmounts.Freight.get -> decimal?
+L3Lint.Core.Model.SummaryAmounts.Freight.init -> void
+L3Lint.Core.Model.SummaryAmounts.Handling.get -> decimal?
+L3Lint.Core.Model.SummaryAmounts.Handling.init -> void
+L3Lint.Core.Model.SummaryAmounts.ShippingTax.get -> decimal?
+L3Lint.Core.Model.SummaryAmounts.ShippingTax.init -> void
+L3Lint.Core.Model.SummaryAmounts.SummaryAmounts() -> void
+L3Lint.Core.Model.TaxIndicator
+L3Lint.Core.Model.TaxIndicator.Exempt = 2 -> L3Lint.Core.Model.TaxIndicator
+L3Lint.Core.Model.TaxIndicator.NotProvided = 0 -> L3Lint.Core.Model.TaxIndicator
+L3Lint.Core.Model.TaxIndicator.Taxable = 1 -> L3Lint.Core.Model.TaxIndicator
+L3Lint.Core.Model.TaxInfo
+L3Lint.Core.Model.TaxInfo.<Clone>$() -> L3Lint.Core.Model.TaxInfo!
+L3Lint.Core.Model.TaxInfo.Amount.get -> decimal?
+L3Lint.Core.Model.TaxInfo.Amount.init -> void
+L3Lint.Core.Model.TaxInfo.Equals(L3Lint.Core.Model.TaxInfo? other) -> bool
+L3Lint.Core.Model.TaxInfo.ExemptionId.get -> string?
+L3Lint.Core.Model.TaxInfo.ExemptionId.init -> void
+L3Lint.Core.Model.TaxInfo.Indicator.get -> L3Lint.Core.Model.TaxIndicator?
+L3Lint.Core.Model.TaxInfo.Indicator.init -> void
+L3Lint.Core.Model.TaxInfo.Rate.get -> decimal?
+L3Lint.Core.Model.TaxInfo.Rate.init -> void
+L3Lint.Core.Model.TaxInfo.TaxInfo() -> void
+L3Lint.Core.Model.Transaction
+L3Lint.Core.Model.Transaction.<Clone>$() -> L3Lint.Core.Model.Transaction!
+L3Lint.Core.Model.Transaction.Amex.get -> L3Lint.Core.Model.AmexInfo!
+L3Lint.Core.Model.Transaction.Amex.init -> void
+L3Lint.Core.Model.Transaction.Amount.get -> decimal?
+L3Lint.Core.Model.Transaction.Amount.init -> void
+L3Lint.Core.Model.Transaction.Amounts.get -> L3Lint.Core.Model.SummaryAmounts!
+L3Lint.Core.Model.Transaction.Amounts.init -> void
+L3Lint.Core.Model.Transaction.Billing.get -> L3Lint.Core.Model.BillingInfo!
+L3Lint.Core.Model.Transaction.Billing.init -> void
+L3Lint.Core.Model.Transaction.Card.get -> L3Lint.Core.Model.CardInfo!
+L3Lint.Core.Model.Transaction.Card.init -> void
+L3Lint.Core.Model.Transaction.Channel.get -> L3Lint.Core.Model.Channel?
+L3Lint.Core.Model.Transaction.Channel.init -> void
+L3Lint.Core.Model.Transaction.Currency.get -> string?
+L3Lint.Core.Model.Transaction.Currency.init -> void
+L3Lint.Core.Model.Transaction.Customer.get -> L3Lint.Core.Model.CustomerInfo!
+L3Lint.Core.Model.Transaction.Customer.init -> void
+L3Lint.Core.Model.Transaction.Equals(L3Lint.Core.Model.Transaction? other) -> bool
+L3Lint.Core.Model.Transaction.Id.get -> string?
+L3Lint.Core.Model.Transaction.Id.init -> void
+L3Lint.Core.Model.Transaction.LineItems.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Model.LineItem!>!
+L3Lint.Core.Model.Transaction.LineItems.init -> void
+L3Lint.Core.Model.Transaction.Merchant.get -> L3Lint.Core.Model.MerchantInfo!
+L3Lint.Core.Model.Transaction.Merchant.init -> void
+L3Lint.Core.Model.Transaction.Order.get -> L3Lint.Core.Model.OrderInfo!
+L3Lint.Core.Model.Transaction.Order.init -> void
+L3Lint.Core.Model.Transaction.SchemaVersion.get -> string?
+L3Lint.Core.Model.Transaction.SchemaVersion.init -> void
+L3Lint.Core.Model.Transaction.Shipping.get -> L3Lint.Core.Model.ShippingInfo!
+L3Lint.Core.Model.Transaction.Shipping.init -> void
+L3Lint.Core.Model.Transaction.Tax.get -> L3Lint.Core.Model.TaxInfo!
+L3Lint.Core.Model.Transaction.Tax.init -> void
+L3Lint.Core.Model.Transaction.Transaction() -> void
+L3Lint.Core.Model.Transaction.TransactionDate.get -> System.DateOnly?
+L3Lint.Core.Model.Transaction.TransactionDate.init -> void
+L3Lint.Core.Pci.CardNumberMatch
+L3Lint.Core.Pci.CardNumberMatch.<Clone>$() -> L3Lint.Core.Pci.CardNumberMatch!
+L3Lint.Core.Pci.CardNumberMatch.Brand.get -> L3Lint.Core.Model.CardBrand
+L3Lint.Core.Pci.CardNumberMatch.Brand.init -> void
+L3Lint.Core.Pci.CardNumberMatch.CanonicalPointer.get -> string?
+L3Lint.Core.Pci.CardNumberMatch.CanonicalPointer.init -> void
+L3Lint.Core.Pci.CardNumberMatch.CardNumberMatch(string! SourcePointer, string? CanonicalPointer, string! MaskedValue, L3Lint.Core.Model.CardBrand Brand, bool IsCodeField, L3Lint.Core.Input.SourceLocation? Location = null) -> void
+L3Lint.Core.Pci.CardNumberMatch.Deconstruct(out string! SourcePointer, out string? CanonicalPointer, out string! MaskedValue, out L3Lint.Core.Model.CardBrand Brand, out bool IsCodeField, out L3Lint.Core.Input.SourceLocation? Location) -> void
+L3Lint.Core.Pci.CardNumberMatch.Equals(L3Lint.Core.Pci.CardNumberMatch? other) -> bool
+L3Lint.Core.Pci.CardNumberMatch.IsCodeField.get -> bool
+L3Lint.Core.Pci.CardNumberMatch.IsCodeField.init -> void
+L3Lint.Core.Pci.CardNumberMatch.Location.get -> L3Lint.Core.Input.SourceLocation?
+L3Lint.Core.Pci.CardNumberMatch.Location.init -> void
+L3Lint.Core.Pci.CardNumberMatch.MaskedValue.get -> string!
+L3Lint.Core.Pci.CardNumberMatch.MaskedValue.init -> void
+L3Lint.Core.Pci.CardNumberMatch.SourcePointer.get -> string!
+L3Lint.Core.Pci.CardNumberMatch.SourcePointer.init -> void
+L3Lint.Core.Profiles.ProcessorProfile
+L3Lint.Core.Profiles.ProcessorProfile.<Clone>$() -> L3Lint.Core.Profiles.ProcessorProfile!
+L3Lint.Core.Profiles.ProcessorProfile.Description.get -> string?
+L3Lint.Core.Profiles.ProcessorProfile.Description.init -> void
+L3Lint.Core.Profiles.ProcessorProfile.DisabledRules.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Core.Profiles.ProcessorProfile.DisabledRules.init -> void
+L3Lint.Core.Profiles.ProcessorProfile.Equals(L3Lint.Core.Profiles.ProcessorProfile? other) -> bool
+L3Lint.Core.Profiles.ProcessorProfile.GetLimit(string! key) -> int?
+L3Lint.Core.Profiles.ProcessorProfile.Id.get -> string!
+L3Lint.Core.Profiles.ProcessorProfile.Id.init -> void
+L3Lint.Core.Profiles.ProcessorProfile.Limits.get -> System.Collections.Generic.IReadOnlyDictionary<string!, L3Lint.Core.Profiles.ProfileLimit!>!
+L3Lint.Core.Profiles.ProcessorProfile.Limits.init -> void
+L3Lint.Core.Profiles.ProcessorProfile.ProcessorProfile() -> void
+L3Lint.Core.Profiles.ProcessorProfile.SeverityOverrides.get -> System.Collections.Generic.IReadOnlyDictionary<string!, L3Lint.Core.Severity>!
+L3Lint.Core.Profiles.ProcessorProfile.SeverityOverrides.init -> void
+L3Lint.Core.Profiles.ProcessorProfile.Sources.get -> System.Collections.Generic.IReadOnlyList<System.Uri!>!
+L3Lint.Core.Profiles.ProcessorProfile.Sources.init -> void
+L3Lint.Core.Profiles.ProcessorProfile.Title.get -> string!
+L3Lint.Core.Profiles.ProcessorProfile.Title.init -> void
+L3Lint.Core.Profiles.ProcessorProfiles
+L3Lint.Core.Profiles.ProfileLimit
+L3Lint.Core.Profiles.ProfileLimit.<Clone>$() -> L3Lint.Core.Profiles.ProfileLimit!
+L3Lint.Core.Profiles.ProfileLimit.Deconstruct(out int Value, out System.Uri! Source, out string? Note) -> void
+L3Lint.Core.Profiles.ProfileLimit.Equals(L3Lint.Core.Profiles.ProfileLimit? other) -> bool
+L3Lint.Core.Profiles.ProfileLimit.Note.get -> string?
+L3Lint.Core.Profiles.ProfileLimit.Note.init -> void
+L3Lint.Core.Profiles.ProfileLimit.ProfileLimit(int Value, System.Uri! Source, string? Note = null) -> void
+L3Lint.Core.Profiles.ProfileLimit.Source.get -> System.Uri!
+L3Lint.Core.Profiles.ProfileLimit.Source.init -> void
+L3Lint.Core.Profiles.ProfileLimit.Value.get -> int
+L3Lint.Core.Profiles.ProfileLimit.Value.init -> void
+L3Lint.Core.RuleExampleOutcome
+L3Lint.Core.RuleExampleOutcome.<Clone>$() -> L3Lint.Core.RuleExampleOutcome!
+L3Lint.Core.RuleExampleOutcome.Deconstruct(out string! RuleId, out bool PassExampleOk, out bool FailExampleOk, out string? Detail) -> void
+L3Lint.Core.RuleExampleOutcome.Detail.get -> string?
+L3Lint.Core.RuleExampleOutcome.Detail.init -> void
+L3Lint.Core.RuleExampleOutcome.Equals(L3Lint.Core.RuleExampleOutcome? other) -> bool
+L3Lint.Core.RuleExampleOutcome.FailExampleOk.get -> bool
+L3Lint.Core.RuleExampleOutcome.FailExampleOk.init -> void
+L3Lint.Core.RuleExampleOutcome.Passed.get -> bool
+L3Lint.Core.RuleExampleOutcome.PassExampleOk.get -> bool
+L3Lint.Core.RuleExampleOutcome.PassExampleOk.init -> void
+L3Lint.Core.RuleExampleOutcome.RuleExampleOutcome(string! RuleId, bool PassExampleOk, bool FailExampleOk, string? Detail) -> void
+L3Lint.Core.RuleExampleOutcome.RuleId.get -> string!
+L3Lint.Core.RuleExampleOutcome.RuleId.init -> void
+L3Lint.Core.RuleExampleTester
+L3Lint.Core.RuleQuery
+L3Lint.Core.RuleQuery.<Clone>$() -> L3Lint.Core.RuleQuery!
+L3Lint.Core.RuleQuery.Brand.get -> L3Lint.Core.Model.CardBrand?
+L3Lint.Core.RuleQuery.Brand.init -> void
+L3Lint.Core.RuleQuery.Equals(L3Lint.Core.RuleQuery? other) -> bool
+L3Lint.Core.RuleQuery.Level.get -> L3Lint.Core.Rules.RuleLevel?
+L3Lint.Core.RuleQuery.Level.init -> void
+L3Lint.Core.RuleQuery.Matches(L3Lint.Core.Rules.RuleMetadata! rule) -> bool
+L3Lint.Core.RuleQuery.RuleQuery() -> void
+L3Lint.Core.RuleQuery.Text.get -> string?
+L3Lint.Core.RuleQuery.Text.init -> void
+L3Lint.Core.Rules.DerivedFacts
+L3Lint.Core.Rules.DerivedFacts.AnyLineTax.get -> bool
+L3Lint.Core.Rules.DerivedFacts.AnyLineTotalMismatch.get -> bool
+L3Lint.Core.Rules.DerivedFacts.Currency.get -> L3Lint.Core.Model.Currency?
+L3Lint.Core.Rules.DerivedFacts.DerivedFields.get -> System.Collections.Generic.IReadOnlySet<string!>!
+L3Lint.Core.Rules.DerivedFacts.ExpectedAmount.get -> decimal?
+L3Lint.Core.Rules.DerivedFacts.IsDerived(string! template) -> bool
+L3Lint.Core.Rules.DerivedFacts.Lines.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Rules.LineFacts!>!
+L3Lint.Core.Rules.DerivedFacts.LineTolerance.get -> decimal
+L3Lint.Core.Rules.DerivedFacts.NormalizedMerchantName.get -> string?
+L3Lint.Core.Rules.DerivedFacts.Rounding.get -> System.MidpointRounding
+L3Lint.Core.Rules.DerivedFacts.SumLineDiscount.get -> decimal
+L3Lint.Core.Rules.DerivedFacts.SumLineTax.get -> decimal
+L3Lint.Core.Rules.DerivedFacts.TaxRatio.get -> decimal?
+L3Lint.Core.Rules.DerivedFacts.TotalTolerance.get -> decimal
+L3Lint.Core.Rules.DirectoryRulePackSource
+L3Lint.Core.Rules.DirectoryRulePackSource.BatchChecks.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Rules.IBatchCheck!>!
+L3Lint.Core.Rules.DirectoryRulePackSource.CustomChecks.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Rules.ICustomCheck!>!
+L3Lint.Core.Rules.DirectoryRulePackSource.DirectoryRulePackSource(string! folder) -> void
+L3Lint.Core.Rules.DirectoryRulePackSource.Files.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Core.Rules.DirectoryRulePackSource.Open(string! relativePath) -> System.IO.Stream!
+L3Lint.Core.Rules.DirectoryRulePackSource.Origin.get -> string!
+L3Lint.Core.Rules.DirectoryRulePackSource.TierPolicy.get -> L3Lint.Core.Tiers.ITierPolicy?
+L3Lint.Core.Rules.EmbeddedRulePackSource
+L3Lint.Core.Rules.EmbeddedRulePackSource.EmbeddedRulePackSource(System.Reflection.Assembly! assembly, string! folder) -> void
+L3Lint.Core.Rules.EmbeddedRulePackSource.Files.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Core.Rules.EmbeddedRulePackSource.Open(string! relativePath) -> System.IO.Stream!
+L3Lint.Core.Rules.EmbeddedRulePackSource.Origin.get -> string!
+L3Lint.Core.Rules.FindingDraft
+L3Lint.Core.Rules.FindingDraft.Actual.get -> string?
+L3Lint.Core.Rules.FindingDraft.Actual.init -> void
+L3Lint.Core.Rules.FindingDraft.Arguments.get -> System.Collections.Generic.IReadOnlyDictionary<string!, string!>?
+L3Lint.Core.Rules.FindingDraft.Arguments.init -> void
+L3Lint.Core.Rules.FindingDraft.Deconstruct(out L3Lint.Core.Rules.RuleMetadata! Rule, out string! Path) -> void
+L3Lint.Core.Rules.FindingDraft.Equals(L3Lint.Core.Rules.FindingDraft other) -> bool
+L3Lint.Core.Rules.FindingDraft.Expected.get -> string?
+L3Lint.Core.Rules.FindingDraft.Expected.init -> void
+L3Lint.Core.Rules.FindingDraft.FindingDraft() -> void
+L3Lint.Core.Rules.FindingDraft.FindingDraft(L3Lint.Core.Rules.RuleMetadata! Rule, string! Path) -> void
+L3Lint.Core.Rules.FindingDraft.Fix.get -> L3Lint.Core.Fixes.FixIntent?
+L3Lint.Core.Rules.FindingDraft.Fix.init -> void
+L3Lint.Core.Rules.FindingDraft.Location.get -> L3Lint.Core.Input.SourceLocation?
+L3Lint.Core.Rules.FindingDraft.Location.init -> void
+L3Lint.Core.Rules.FindingDraft.MessageVariant.get -> string?
+L3Lint.Core.Rules.FindingDraft.MessageVariant.init -> void
+L3Lint.Core.Rules.FindingDraft.Path.get -> string!
+L3Lint.Core.Rules.FindingDraft.Path.init -> void
+L3Lint.Core.Rules.FindingDraft.Rule.get -> L3Lint.Core.Rules.RuleMetadata!
+L3Lint.Core.Rules.FindingDraft.Rule.init -> void
+L3Lint.Core.Rules.FindingDraft.Severity.get -> L3Lint.Core.Severity?
+L3Lint.Core.Rules.FindingDraft.Severity.init -> void
+L3Lint.Core.Rules.FindingDraft.SourcePointer.get -> string?
+L3Lint.Core.Rules.FindingDraft.SourcePointer.init -> void
+L3Lint.Core.Rules.FindingDraft.TransactionIndex.get -> int?
+L3Lint.Core.Rules.FindingDraft.TransactionIndex.init -> void
+L3Lint.Core.Rules.IBatchCheck
+L3Lint.Core.Rules.IBatchCheck.Create(L3Lint.Core.Rules.RuleMetadata! rule, L3Lint.Core.LintOptions! options) -> L3Lint.Core.Rules.IBatchRule!
+L3Lint.Core.Rules.IBatchCheck.Name.get -> string!
+L3Lint.Core.Rules.IBatchRule
+L3Lint.Core.Rules.IBatchRule.Complete(L3Lint.Core.Rules.IFindingSink! sink) -> void
+L3Lint.Core.Rules.IBatchRule.Metadata.get -> L3Lint.Core.Rules.RuleMetadata!
+L3Lint.Core.Rules.IBatchRule.Observe(in L3Lint.Core.Rules.RuleContext context) -> void
+L3Lint.Core.Rules.ICustomCheck
+L3Lint.Core.Rules.ICustomCheck.Evaluate(in L3Lint.Core.Rules.RuleContext context, L3Lint.Core.Rules.RuleMetadata! rule, L3Lint.Core.Rules.IFindingSink! sink) -> void
+L3Lint.Core.Rules.ICustomCheck.Name.get -> string!
+L3Lint.Core.Rules.IFindingSink
+L3Lint.Core.Rules.IFindingSink.Report(in L3Lint.Core.Rules.FindingDraft draft) -> void
+L3Lint.Core.Rules.IListLookup
+L3Lint.Core.Rules.IListLookup.Contains(string! listName, string! value, bool ignoreCase = false) -> bool
+L3Lint.Core.Rules.IListLookup.IsPartial(string! listName) -> bool
+L3Lint.Core.Rules.IListLookup.Names.get -> System.Collections.Generic.IReadOnlyCollection<string!>!
+L3Lint.Core.Rules.IListLookup.Values(string! listName) -> System.Collections.Generic.IReadOnlySet<string!>!
+L3Lint.Core.Rules.IRule
+L3Lint.Core.Rules.IRule.AppliesTo(in L3Lint.Core.Rules.RuleContext context) -> bool
+L3Lint.Core.Rules.IRule.Evaluate(in L3Lint.Core.Rules.RuleContext context, L3Lint.Core.Rules.IFindingSink! sink) -> void
+L3Lint.Core.Rules.IRule.Metadata.get -> L3Lint.Core.Rules.RuleMetadata!
+L3Lint.Core.Rules.IRulePackSource
+L3Lint.Core.Rules.IRulePackSource.BatchChecks.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Rules.IBatchCheck!>!
+L3Lint.Core.Rules.IRulePackSource.CustomChecks.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Rules.ICustomCheck!>!
+L3Lint.Core.Rules.IRulePackSource.Files.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Core.Rules.IRulePackSource.Open(string! relativePath) -> System.IO.Stream!
+L3Lint.Core.Rules.IRulePackSource.Origin.get -> string!
+L3Lint.Core.Rules.IRulePackSource.TierPolicy.get -> L3Lint.Core.Tiers.ITierPolicy?
+L3Lint.Core.Rules.LineFacts
+L3Lint.Core.Rules.LineFacts.Difference.get -> decimal?
+L3Lint.Core.Rules.LineFacts.ExpectedTotal.get -> decimal?
+L3Lint.Core.Rules.LineFacts.IncludedTax.get -> decimal
+L3Lint.Core.Rules.LineFacts.Index.get -> int
+L3Lint.Core.Rules.LineFacts.IsCredit.get -> bool
+L3Lint.Core.Rules.LineFacts.NormalizedDescription.get -> string?
+L3Lint.Core.Rules.LineFacts.TotalIsDerived.get -> bool
+L3Lint.Core.Rules.LineFacts.TotalMismatch.get -> bool
+L3Lint.Core.Rules.RuleApplicability
+L3Lint.Core.Rules.RuleApplicability.<Clone>$() -> L3Lint.Core.Rules.RuleApplicability!
+L3Lint.Core.Rules.RuleApplicability.CardProducts.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Model.CardProduct>!
+L3Lint.Core.Rules.RuleApplicability.CardProducts.init -> void
+L3Lint.Core.Rules.RuleApplicability.Equals(L3Lint.Core.Rules.RuleApplicability? other) -> bool
+L3Lint.Core.Rules.RuleApplicability.MccIn.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Core.Rules.RuleApplicability.MccIn.init -> void
+L3Lint.Core.Rules.RuleApplicability.MccNotIn.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Core.Rules.RuleApplicability.MccNotIn.init -> void
+L3Lint.Core.Rules.RuleApplicability.RuleApplicability() -> void
+L3Lint.Core.Rules.RuleApplicability.Unless.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Rules.RuleCondition!>!
+L3Lint.Core.Rules.RuleApplicability.Unless.init -> void
+L3Lint.Core.Rules.RuleApplicability.When.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Rules.RuleCondition!>!
+L3Lint.Core.Rules.RuleApplicability.When.init -> void
+L3Lint.Core.Rules.RuleCheck
+L3Lint.Core.Rules.RuleCheck.<Clone>$() -> L3Lint.Core.Rules.RuleCheck!
+L3Lint.Core.Rules.RuleCheck.Deconstruct(out string! Kind, out System.Collections.Generic.IReadOnlyList<string!>! Fields, out System.Collections.Generic.IReadOnlyList<System.Collections.Generic.KeyValuePair<string!, string!>>! Parameters) -> void
+L3Lint.Core.Rules.RuleCheck.Equals(L3Lint.Core.Rules.RuleCheck? other) -> bool
+L3Lint.Core.Rules.RuleCheck.Fields.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Core.Rules.RuleCheck.Fields.init -> void
+L3Lint.Core.Rules.RuleCheck.Kind.get -> string!
+L3Lint.Core.Rules.RuleCheck.Kind.init -> void
+L3Lint.Core.Rules.RuleCheck.Parameters.get -> System.Collections.Generic.IReadOnlyList<System.Collections.Generic.KeyValuePair<string!, string!>>!
+L3Lint.Core.Rules.RuleCheck.Parameters.init -> void
+L3Lint.Core.Rules.RuleCheck.RuleCheck(string! Kind, System.Collections.Generic.IReadOnlyList<string!>! Fields, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.KeyValuePair<string!, string!>>! Parameters) -> void
+L3Lint.Core.Rules.RuleCondition
+L3Lint.Core.Rules.RuleCondition.<Clone>$() -> L3Lint.Core.Rules.RuleCondition!
+L3Lint.Core.Rules.RuleCondition.Deconstruct(out string! Field, out string! Operator, out System.Collections.Generic.IReadOnlyList<string!>! Operands) -> void
+L3Lint.Core.Rules.RuleCondition.Equals(L3Lint.Core.Rules.RuleCondition? other) -> bool
+L3Lint.Core.Rules.RuleCondition.Field.get -> string!
+L3Lint.Core.Rules.RuleCondition.Field.init -> void
+L3Lint.Core.Rules.RuleCondition.Operands.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Core.Rules.RuleCondition.Operands.init -> void
+L3Lint.Core.Rules.RuleCondition.Operator.get -> string!
+L3Lint.Core.Rules.RuleCondition.Operator.init -> void
+L3Lint.Core.Rules.RuleCondition.RuleCondition(string! Field, string! Operator, System.Collections.Generic.IReadOnlyList<string!>! Operands) -> void
+L3Lint.Core.Rules.RuleContext
+L3Lint.Core.Rules.RuleContext.AsOf.get -> System.DateOnly
+L3Lint.Core.Rules.RuleContext.Brand.get -> L3Lint.Core.Model.CardBrand
+L3Lint.Core.Rules.RuleContext.CardNumberMatches.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Pci.CardNumberMatch!>!
+L3Lint.Core.Rules.RuleContext.Equals(L3Lint.Core.Rules.RuleContext other) -> bool
+L3Lint.Core.Rules.RuleContext.EvaluatedBrands.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Model.CardBrand>!
+L3Lint.Core.Rules.RuleContext.Facts.get -> L3Lint.Core.Rules.DerivedFacts!
+L3Lint.Core.Rules.RuleContext.IsInvalid(string! canonicalPointer) -> bool
+L3Lint.Core.Rules.RuleContext.Lists.get -> L3Lint.Core.Rules.IListLookup!
+L3Lint.Core.Rules.RuleContext.Options.get -> L3Lint.Core.LintOptions!
+L3Lint.Core.Rules.RuleContext.Profile.get -> L3Lint.Core.Profiles.ProcessorProfile!
+L3Lint.Core.Rules.RuleContext.RuleContext() -> void
+L3Lint.Core.Rules.RuleContext.Transaction.get -> L3Lint.Core.Model.Transaction!
+L3Lint.Core.Rules.RuleContext.TransactionIndex.get -> int
+L3Lint.Core.Rules.RuleExampleContext
+L3Lint.Core.Rules.RuleExampleContext.<Clone>$() -> L3Lint.Core.Rules.RuleExampleContext!
+L3Lint.Core.Rules.RuleExampleContext.AsOf.get -> System.DateOnly?
+L3Lint.Core.Rules.RuleExampleContext.AsOf.init -> void
+L3Lint.Core.Rules.RuleExampleContext.Deconstruct(out System.DateOnly? AsOf, out string? Processor, out bool StrictProfiles, out string? RatesYaml) -> void
+L3Lint.Core.Rules.RuleExampleContext.Equals(L3Lint.Core.Rules.RuleExampleContext? other) -> bool
+L3Lint.Core.Rules.RuleExampleContext.Processor.get -> string?
+L3Lint.Core.Rules.RuleExampleContext.Processor.init -> void
+L3Lint.Core.Rules.RuleExampleContext.RatesYaml.get -> string?
+L3Lint.Core.Rules.RuleExampleContext.RatesYaml.init -> void
+L3Lint.Core.Rules.RuleExampleContext.RuleExampleContext(System.DateOnly? AsOf = null, string? Processor = null, bool StrictProfiles = false, string? RatesYaml = null) -> void
+L3Lint.Core.Rules.RuleExampleContext.StrictProfiles.get -> bool
+L3Lint.Core.Rules.RuleExampleContext.StrictProfiles.init -> void
+L3Lint.Core.Rules.RuleExamples
+L3Lint.Core.Rules.RuleExamples.<Clone>$() -> L3Lint.Core.Rules.RuleExamples!
+L3Lint.Core.Rules.RuleExamples.Context.get -> L3Lint.Core.Rules.RuleExampleContext!
+L3Lint.Core.Rules.RuleExamples.Context.init -> void
+L3Lint.Core.Rules.RuleExamples.Deconstruct(out string! PassFile, out string! FailFile, out string! PassJson, out string! FailJson, out string? PassNote, out string? FailNote, out L3Lint.Core.Rules.RuleExampleContext! Context) -> void
+L3Lint.Core.Rules.RuleExamples.Equals(L3Lint.Core.Rules.RuleExamples? other) -> bool
+L3Lint.Core.Rules.RuleExamples.FailFile.get -> string!
+L3Lint.Core.Rules.RuleExamples.FailFile.init -> void
+L3Lint.Core.Rules.RuleExamples.FailJson.get -> string!
+L3Lint.Core.Rules.RuleExamples.FailJson.init -> void
+L3Lint.Core.Rules.RuleExamples.FailNote.get -> string?
+L3Lint.Core.Rules.RuleExamples.FailNote.init -> void
+L3Lint.Core.Rules.RuleExamples.PassFile.get -> string!
+L3Lint.Core.Rules.RuleExamples.PassFile.init -> void
+L3Lint.Core.Rules.RuleExamples.PassJson.get -> string!
+L3Lint.Core.Rules.RuleExamples.PassJson.init -> void
+L3Lint.Core.Rules.RuleExamples.PassNote.get -> string?
+L3Lint.Core.Rules.RuleExamples.PassNote.init -> void
+L3Lint.Core.Rules.RuleExamples.RuleExamples(string! PassFile, string! FailFile, string! PassJson, string! FailJson, string? PassNote, string? FailNote, L3Lint.Core.Rules.RuleExampleContext! Context) -> void
+L3Lint.Core.Rules.RuleLevel
+L3Lint.Core.Rules.RuleLevel.General = 0 -> L3Lint.Core.Rules.RuleLevel
+L3Lint.Core.Rules.RuleLevel.L2 = 1 -> L3Lint.Core.Rules.RuleLevel
+L3Lint.Core.Rules.RuleLevel.L3 = 2 -> L3Lint.Core.Rules.RuleLevel
+L3Lint.Core.Rules.RuleMetadata
+L3Lint.Core.Rules.RuleMetadata.<Clone>$() -> L3Lint.Core.Rules.RuleMetadata!
+L3Lint.Core.Rules.RuleMetadata.AppliesTo.get -> L3Lint.Core.Rules.RuleApplicability!
+L3Lint.Core.Rules.RuleMetadata.AppliesTo.init -> void
+L3Lint.Core.Rules.RuleMetadata.Brand.get -> L3Lint.Core.Model.CardBrand?
+L3Lint.Core.Rules.RuleMetadata.Brand.init -> void
+L3Lint.Core.Rules.RuleMetadata.Check.get -> L3Lint.Core.Rules.RuleCheck!
+L3Lint.Core.Rules.RuleMetadata.Check.init -> void
+L3Lint.Core.Rules.RuleMetadata.Confidence.get -> L3Lint.Core.Confidence
+L3Lint.Core.Rules.RuleMetadata.Confidence.init -> void
+L3Lint.Core.Rules.RuleMetadata.EffectiveFrom.get -> System.DateOnly?
+L3Lint.Core.Rules.RuleMetadata.EffectiveFrom.init -> void
+L3Lint.Core.Rules.RuleMetadata.EffectiveUntil.get -> System.DateOnly?
+L3Lint.Core.Rules.RuleMetadata.EffectiveUntil.init -> void
+L3Lint.Core.Rules.RuleMetadata.Equals(L3Lint.Core.Rules.RuleMetadata? other) -> bool
+L3Lint.Core.Rules.RuleMetadata.Examples.get -> L3Lint.Core.Rules.RuleExamples?
+L3Lint.Core.Rules.RuleMetadata.Examples.init -> void
+L3Lint.Core.Rules.RuleMetadata.Fix.get -> string!
+L3Lint.Core.Rules.RuleMetadata.Fix.init -> void
+L3Lint.Core.Rules.RuleMetadata.Id.get -> string!
+L3Lint.Core.Rules.RuleMetadata.Id.init -> void
+L3Lint.Core.Rules.RuleMetadata.Impact.get -> L3Lint.Core.Impact
+L3Lint.Core.Rules.RuleMetadata.Impact.init -> void
+L3Lint.Core.Rules.RuleMetadata.IsBatch.get -> bool
+L3Lint.Core.Rules.RuleMetadata.IsBatch.init -> void
+L3Lint.Core.Rules.RuleMetadata.IsEffective(System.DateOnly asOf) -> bool
+L3Lint.Core.Rules.RuleMetadata.Level.get -> L3Lint.Core.Rules.RuleLevel
+L3Lint.Core.Rules.RuleMetadata.Level.init -> void
+L3Lint.Core.Rules.RuleMetadata.Message.get -> string!
+L3Lint.Core.Rules.RuleMetadata.Message.init -> void
+L3Lint.Core.Rules.RuleMetadata.Messages.get -> System.Collections.Generic.IReadOnlyDictionary<string!, string!>!
+L3Lint.Core.Rules.RuleMetadata.Messages.init -> void
+L3Lint.Core.Rules.RuleMetadata.Notes.get -> string?
+L3Lint.Core.Rules.RuleMetadata.Notes.init -> void
+L3Lint.Core.Rules.RuleMetadata.PackId.get -> string!
+L3Lint.Core.Rules.RuleMetadata.PackId.init -> void
+L3Lint.Core.Rules.RuleMetadata.PackVersion.get -> string!
+L3Lint.Core.Rules.RuleMetadata.PackVersion.init -> void
+L3Lint.Core.Rules.RuleMetadata.Profiles.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Core.Rules.RuleMetadata.Profiles.init -> void
+L3Lint.Core.Rules.RuleMetadata.Rationale.get -> string?
+L3Lint.Core.Rules.RuleMetadata.Rationale.init -> void
+L3Lint.Core.Rules.RuleMetadata.Requirement.get -> string?
+L3Lint.Core.Rules.RuleMetadata.Requirement.init -> void
+L3Lint.Core.Rules.RuleMetadata.RuleMetadata() -> void
+L3Lint.Core.Rules.RuleMetadata.Severity.get -> L3Lint.Core.Severity
+L3Lint.Core.Rules.RuleMetadata.Severity.init -> void
+L3Lint.Core.Rules.RuleMetadata.Sources.get -> System.Collections.Generic.IReadOnlyList<System.Uri!>!
+L3Lint.Core.Rules.RuleMetadata.Sources.init -> void
+L3Lint.Core.Rules.RuleMetadata.Supersedes.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Core.Rules.RuleMetadata.Supersedes.init -> void
+L3Lint.Core.Rules.RuleMetadata.Title.get -> string!
+L3Lint.Core.Rules.RuleMetadata.Title.init -> void
+L3Lint.Core.Rules.RulePackException
+L3Lint.Core.Rules.RulePackException.File.get -> string?
+L3Lint.Core.Rules.RulePackException.Pack.get -> string?
+L3Lint.Core.Rules.RulePackException.Pointer.get -> string?
+L3Lint.Core.Rules.RulePackException.RulePackException() -> void
+L3Lint.Core.Rules.RulePackException.RulePackException(string! message) -> void
+L3Lint.Core.Rules.RulePackException.RulePackException(string! message, string? pack, string? file, string? pointer, System.Exception? innerException = null) -> void
+L3Lint.Core.Rules.RulePackException.RulePackException(string! message, System.Exception! innerException) -> void
+L3Lint.Core.Rules.RulePackInfo
+L3Lint.Core.Rules.RulePackInfo.<Clone>$() -> L3Lint.Core.Rules.RulePackInfo!
+L3Lint.Core.Rules.RulePackInfo.Brand.get -> L3Lint.Core.Model.CardBrand?
+L3Lint.Core.Rules.RulePackInfo.Brand.init -> void
+L3Lint.Core.Rules.RulePackInfo.Deconstruct(out string! Id, out string! Version, out L3Lint.Core.Model.CardBrand? Brand, out System.DateOnly PublishedOn, out int RuleCount, out int SourceCount, out System.DateOnly? EarliestEffective, out System.DateOnly? LatestEnd, out string! Origin) -> void
+L3Lint.Core.Rules.RulePackInfo.EarliestEffective.get -> System.DateOnly?
+L3Lint.Core.Rules.RulePackInfo.EarliestEffective.init -> void
+L3Lint.Core.Rules.RulePackInfo.Equals(L3Lint.Core.Rules.RulePackInfo? other) -> bool
+L3Lint.Core.Rules.RulePackInfo.Id.get -> string!
+L3Lint.Core.Rules.RulePackInfo.Id.init -> void
+L3Lint.Core.Rules.RulePackInfo.LatestEnd.get -> System.DateOnly?
+L3Lint.Core.Rules.RulePackInfo.LatestEnd.init -> void
+L3Lint.Core.Rules.RulePackInfo.Origin.get -> string!
+L3Lint.Core.Rules.RulePackInfo.Origin.init -> void
+L3Lint.Core.Rules.RulePackInfo.PublishedOn.get -> System.DateOnly
+L3Lint.Core.Rules.RulePackInfo.PublishedOn.init -> void
+L3Lint.Core.Rules.RulePackInfo.RuleCount.get -> int
+L3Lint.Core.Rules.RulePackInfo.RuleCount.init -> void
+L3Lint.Core.Rules.RulePackInfo.RulePackInfo(string! Id, string! Version, L3Lint.Core.Model.CardBrand? Brand, System.DateOnly PublishedOn, int RuleCount, int SourceCount, System.DateOnly? EarliestEffective, System.DateOnly? LatestEnd, string! Origin) -> void
+L3Lint.Core.Rules.RulePackInfo.SourceCount.get -> int
+L3Lint.Core.Rules.RulePackInfo.SourceCount.init -> void
+L3Lint.Core.Rules.RulePackInfo.Version.get -> string!
+L3Lint.Core.Rules.RulePackInfo.Version.init -> void
+L3Lint.Core.Schemas.SchemaCatalog
+L3Lint.Core.Severity
+L3Lint.Core.Severity.Error = 2 -> L3Lint.Core.Severity
+L3Lint.Core.Severity.Information = 0 -> L3Lint.Core.Severity
+L3Lint.Core.Severity.Warning = 1 -> L3Lint.Core.Severity
+L3Lint.Core.Tiers.ITierPolicy
+L3Lint.Core.Tiers.ITierPolicy.Brand.get -> L3Lint.Core.Model.CardBrand
+L3Lint.Core.Tiers.ITierPolicy.GetLadder(in L3Lint.Core.Rules.RuleContext context) -> L3Lint.Core.Tiers.TierLadder!
+L3Lint.Core.Tiers.NoProgramTierPolicy
+L3Lint.Core.Tiers.NoProgramTierPolicy.Brand.get -> L3Lint.Core.Model.CardBrand
+L3Lint.Core.Tiers.NoProgramTierPolicy.GetLadder(in L3Lint.Core.Rules.RuleContext context) -> L3Lint.Core.Tiers.TierLadder!
+L3Lint.Core.Tiers.NoProgramTierPolicy.NoProgramTierPolicy(L3Lint.Core.Model.CardBrand brand) -> void
+L3Lint.Core.Tiers.TierAssessment
+L3Lint.Core.Tiers.TierAssessment.<Clone>$() -> L3Lint.Core.Tiers.TierAssessment!
+L3Lint.Core.Tiers.TierAssessment.Best.get -> string!
+L3Lint.Core.Tiers.TierAssessment.Best.init -> void
+L3Lint.Core.Tiers.TierAssessment.BlockingErrors.get -> int
+L3Lint.Core.Tiers.TierAssessment.BlockingErrors.init -> void
+L3Lint.Core.Tiers.TierAssessment.Brand.get -> L3Lint.Core.Model.CardBrand
+L3Lint.Core.Tiers.TierAssessment.Brand.init -> void
+L3Lint.Core.Tiers.TierAssessment.Deconstruct(out L3Lint.Core.Model.CardBrand Brand, out string! Best, out string! Likely, out L3Lint.Core.Tiers.TierStatus Status, out int BlockingErrors) -> void
+L3Lint.Core.Tiers.TierAssessment.Equals(L3Lint.Core.Tiers.TierAssessment? other) -> bool
+L3Lint.Core.Tiers.TierAssessment.Likely.get -> string!
+L3Lint.Core.Tiers.TierAssessment.Likely.init -> void
+L3Lint.Core.Tiers.TierAssessment.Status.get -> L3Lint.Core.Tiers.TierStatus
+L3Lint.Core.Tiers.TierAssessment.Status.init -> void
+L3Lint.Core.Tiers.TierAssessment.TierAssessment(L3Lint.Core.Model.CardBrand Brand, string! Best, string! Likely, L3Lint.Core.Tiers.TierStatus Status, int BlockingErrors) -> void
+L3Lint.Core.Tiers.TierLadder
+L3Lint.Core.Tiers.TierLadder.<Clone>$() -> L3Lint.Core.Tiers.TierLadder!
+L3Lint.Core.Tiers.TierLadder.Base.get -> string!
+L3Lint.Core.Tiers.TierLadder.Base.init -> void
+L3Lint.Core.Tiers.TierLadder.Deconstruct(out System.Collections.Generic.IReadOnlyList<L3Lint.Core.Tiers.TierRung!>! Rungs, out string! Base) -> void
+L3Lint.Core.Tiers.TierLadder.Equals(L3Lint.Core.Tiers.TierLadder? other) -> bool
+L3Lint.Core.Tiers.TierLadder.Rungs.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Tiers.TierRung!>!
+L3Lint.Core.Tiers.TierLadder.Rungs.init -> void
+L3Lint.Core.Tiers.TierLadder.TierLadder(System.Collections.Generic.IReadOnlyList<L3Lint.Core.Tiers.TierRung!>! Rungs, string! Base) -> void
+L3Lint.Core.Tiers.TierRung
+L3Lint.Core.Tiers.TierRung.<Clone>$() -> L3Lint.Core.Tiers.TierRung!
+L3Lint.Core.Tiers.TierRung.Deconstruct(out string! Name, out L3Lint.Core.Rules.RuleLevel Level) -> void
+L3Lint.Core.Tiers.TierRung.Equals(L3Lint.Core.Tiers.TierRung? other) -> bool
+L3Lint.Core.Tiers.TierRung.Level.get -> L3Lint.Core.Rules.RuleLevel
+L3Lint.Core.Tiers.TierRung.Level.init -> void
+L3Lint.Core.Tiers.TierRung.Name.get -> string!
+L3Lint.Core.Tiers.TierRung.Name.init -> void
+L3Lint.Core.Tiers.TierRung.TierRung(string! Name, L3Lint.Core.Rules.RuleLevel Level) -> void
+L3Lint.Core.Tiers.TierStatus
+L3Lint.Core.Tiers.TierStatus.AtRisk = 1 -> L3Lint.Core.Tiers.TierStatus
+L3Lint.Core.Tiers.TierStatus.Blocked = 2 -> L3Lint.Core.Tiers.TierStatus
+L3Lint.Core.Tiers.TierStatus.Meets = 0 -> L3Lint.Core.Tiers.TierStatus
+L3Lint.Core.Tiers.TierStatus.NoBenefit = 3 -> L3Lint.Core.Tiers.TierStatus
+L3Lint.Core.ToleranceMode
+L3Lint.Core.ToleranceMode.Accumulated = 1 -> L3Lint.Core.ToleranceMode
+L3Lint.Core.ToleranceMode.Strict = 0 -> L3Lint.Core.ToleranceMode
+L3Lint.Core.TransactionResult
+L3Lint.Core.TransactionResult.<Clone>$() -> L3Lint.Core.TransactionResult!
+L3Lint.Core.TransactionResult.AsOf.get -> System.DateOnly
+L3Lint.Core.TransactionResult.AsOf.init -> void
+L3Lint.Core.TransactionResult.Brand.get -> L3Lint.Core.Model.CardBrand
+L3Lint.Core.TransactionResult.Brand.init -> void
+L3Lint.Core.TransactionResult.Brands.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Model.CardBrand>!
+L3Lint.Core.TransactionResult.Brands.init -> void
+L3Lint.Core.TransactionResult.CardProduct.get -> L3Lint.Core.Model.CardProduct?
+L3Lint.Core.TransactionResult.CardProduct.init -> void
+L3Lint.Core.TransactionResult.CostEstimate.get -> L3Lint.Core.Estimates.CostEstimate?
+L3Lint.Core.TransactionResult.CostEstimate.init -> void
+L3Lint.Core.TransactionResult.Equals(L3Lint.Core.TransactionResult? other) -> bool
+L3Lint.Core.TransactionResult.Findings.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Finding!>!
+L3Lint.Core.TransactionResult.Findings.init -> void
+L3Lint.Core.TransactionResult.FirstLine.get -> int
+L3Lint.Core.TransactionResult.FirstLine.init -> void
+L3Lint.Core.TransactionResult.Format.get -> string?
+L3Lint.Core.TransactionResult.Format.init -> void
+L3Lint.Core.TransactionResult.Id.get -> string?
+L3Lint.Core.TransactionResult.Id.init -> void
+L3Lint.Core.TransactionResult.Index.get -> int
+L3Lint.Core.TransactionResult.Index.init -> void
+L3Lint.Core.TransactionResult.Input.get -> int
+L3Lint.Core.TransactionResult.Input.init -> void
+L3Lint.Core.TransactionResult.InputName.get -> string?
+L3Lint.Core.TransactionResult.InputName.init -> void
+L3Lint.Core.TransactionResult.Kind.get -> L3Lint.Core.TransactionResultKind
+L3Lint.Core.TransactionResult.Kind.init -> void
+L3Lint.Core.TransactionResult.Mcc.get -> string?
+L3Lint.Core.TransactionResult.Mcc.init -> void
+L3Lint.Core.TransactionResult.Notes.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Core.TransactionResult.Notes.init -> void
+L3Lint.Core.TransactionResult.PrimaryTier.get -> L3Lint.Core.Tiers.TierAssessment?
+L3Lint.Core.TransactionResult.Tiers.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Tiers.TierAssessment!>!
+L3Lint.Core.TransactionResult.Tiers.init -> void
+L3Lint.Core.TransactionResult.Transaction.get -> L3Lint.Core.Model.Transaction?
+L3Lint.Core.TransactionResult.Transaction.init -> void
+L3Lint.Core.TransactionResult.TransactionResult() -> void
+L3Lint.Core.TransactionResultKind
+L3Lint.Core.TransactionResultKind.Batch = 1 -> L3Lint.Core.TransactionResultKind
+L3Lint.Core.TransactionResultKind.Transaction = 0 -> L3Lint.Core.TransactionResultKind
+L3Lint.Core.WireNames
+L3Lint.Core.Yaml.YamlFormatException
+L3Lint.Core.Yaml.YamlFormatException.Column.get -> int
+L3Lint.Core.Yaml.YamlFormatException.Line.get -> int
+L3Lint.Core.Yaml.YamlFormatException.YamlFormatException() -> void
+L3Lint.Core.Yaml.YamlFormatException.YamlFormatException(string! message) -> void
+L3Lint.Core.Yaml.YamlFormatException.YamlFormatException(string! message, int line, int column, System.Exception? innerException) -> void
+L3Lint.Core.Yaml.YamlFormatException.YamlFormatException(string! message, System.Exception! innerException) -> void
+override L3Lint.Core.Adapters.AdapterNote.Equals(object? obj) -> bool
+override L3Lint.Core.Adapters.AdapterNote.GetHashCode() -> int
+override L3Lint.Core.Adapters.AdapterNote.ToString() -> string!
+override L3Lint.Core.Adapters.AdapterOptions.Equals(object? obj) -> bool
+override L3Lint.Core.Adapters.AdapterOptions.GetHashCode() -> int
+override L3Lint.Core.Adapters.AdapterOptions.ToString() -> string!
+override L3Lint.Core.Adapters.AdapterResult.Equals(object? obj) -> bool
+override L3Lint.Core.Adapters.AdapterResult.GetHashCode() -> int
+override L3Lint.Core.Adapters.AdapterResult.ToString() -> string!
+override L3Lint.Core.Adapters.DetectionScore.GetHashCode() -> int
+override L3Lint.Core.Adapters.SourceField.GetHashCode() -> int
+override L3Lint.Core.ArithmeticOptions.Equals(object? obj) -> bool
+override L3Lint.Core.ArithmeticOptions.GetHashCode() -> int
+override L3Lint.Core.ArithmeticOptions.ToString() -> string!
+override L3Lint.Core.BatchOptions.Equals(object? obj) -> bool
+override L3Lint.Core.BatchOptions.GetHashCode() -> int
+override L3Lint.Core.BatchOptions.ToString() -> string!
+override L3Lint.Core.ContextDefaults.Equals(object? obj) -> bool
+override L3Lint.Core.ContextDefaults.GetHashCode() -> int
+override L3Lint.Core.ContextDefaults.ToString() -> string!
+override L3Lint.Core.Estimates.CostEstimate.Equals(object? obj) -> bool
+override L3Lint.Core.Estimates.CostEstimate.GetHashCode() -> int
+override L3Lint.Core.Estimates.CostEstimate.ToString() -> string!
+override L3Lint.Core.Estimates.CostEstimateLine.Equals(object? obj) -> bool
+override L3Lint.Core.Estimates.CostEstimateLine.GetHashCode() -> int
+override L3Lint.Core.Estimates.CostEstimateLine.ToString() -> string!
+override L3Lint.Core.Estimates.ProgramFee.Equals(object? obj) -> bool
+override L3Lint.Core.Estimates.ProgramFee.GetHashCode() -> int
+override L3Lint.Core.Estimates.ProgramFee.ToString() -> string!
+override L3Lint.Core.Estimates.RateCategory.Equals(object? obj) -> bool
+override L3Lint.Core.Estimates.RateCategory.GetHashCode() -> int
+override L3Lint.Core.Estimates.RateCategory.ToString() -> string!
+override L3Lint.Core.Estimates.RateTable.Equals(object? obj) -> bool
+override L3Lint.Core.Estimates.RateTable.GetHashCode() -> int
+override L3Lint.Core.Estimates.RateTable.ToString() -> string!
+override L3Lint.Core.FieldPath.GetHashCode() -> int
+override L3Lint.Core.Finding.Equals(object? obj) -> bool
+override L3Lint.Core.Finding.GetHashCode() -> int
+override L3Lint.Core.Finding.ToString() -> string!
+override L3Lint.Core.Fixes.FixIntent.Equals(object? obj) -> bool
+override L3Lint.Core.Fixes.FixIntent.GetHashCode() -> int
+override L3Lint.Core.Fixes.FixIntent.ToString() -> string!
+override L3Lint.Core.Fixes.FixPatch.Equals(object? obj) -> bool
+override L3Lint.Core.Fixes.FixPatch.GetHashCode() -> int
+override L3Lint.Core.Fixes.FixPatch.ToString() -> string!
+override L3Lint.Core.Fixes.PatchOperation.Equals(object? obj) -> bool
+override L3Lint.Core.Fixes.PatchOperation.GetHashCode() -> int
+override L3Lint.Core.Fixes.PatchOperation.ToString() -> string!
+override L3Lint.Core.Input.InputLimits.Equals(object? obj) -> bool
+override L3Lint.Core.Input.InputLimits.GetHashCode() -> int
+override L3Lint.Core.Input.InputLimits.ToString() -> string!
+override L3Lint.Core.Input.SourceLocation.GetHashCode() -> int
+override L3Lint.Core.InputError.Equals(object? obj) -> bool
+override L3Lint.Core.InputError.GetHashCode() -> int
+override L3Lint.Core.InputError.ToString() -> string!
+override L3Lint.Core.LintOptions.Equals(object? obj) -> bool
+override L3Lint.Core.LintOptions.GetHashCode() -> int
+override L3Lint.Core.LintOptions.ToString() -> string!
+override L3Lint.Core.LintResult.Equals(object? obj) -> bool
+override L3Lint.Core.LintResult.GetHashCode() -> int
+override L3Lint.Core.LintResult.ToString() -> string!
+override L3Lint.Core.LintSummary.Equals(object? obj) -> bool
+override L3Lint.Core.LintSummary.GetHashCode() -> int
+override L3Lint.Core.LintSummary.ToString() -> string!
+override L3Lint.Core.MapResult.Equals(object? obj) -> bool
+override L3Lint.Core.MapResult.GetHashCode() -> int
+override L3Lint.Core.MapResult.ToString() -> string!
+override L3Lint.Core.Model.AmexInfo.Equals(object? obj) -> bool
+override L3Lint.Core.Model.AmexInfo.GetHashCode() -> int
+override L3Lint.Core.Model.AmexInfo.ToString() -> string!
+override L3Lint.Core.Model.BillingInfo.Equals(object? obj) -> bool
+override L3Lint.Core.Model.BillingInfo.GetHashCode() -> int
+override L3Lint.Core.Model.BillingInfo.ToString() -> string!
+override L3Lint.Core.Model.CardInfo.Equals(object? obj) -> bool
+override L3Lint.Core.Model.CardInfo.GetHashCode() -> int
+override L3Lint.Core.Model.CardInfo.ToString() -> string!
+override L3Lint.Core.Model.Currency.GetHashCode() -> int
+override L3Lint.Core.Model.CustomerInfo.Equals(object? obj) -> bool
+override L3Lint.Core.Model.CustomerInfo.GetHashCode() -> int
+override L3Lint.Core.Model.CustomerInfo.ToString() -> string!
+override L3Lint.Core.Model.LineItem.Equals(object? obj) -> bool
+override L3Lint.Core.Model.LineItem.GetHashCode() -> int
+override L3Lint.Core.Model.LineItem.ToString() -> string!
+override L3Lint.Core.Model.MerchantInfo.Equals(object? obj) -> bool
+override L3Lint.Core.Model.MerchantInfo.GetHashCode() -> int
+override L3Lint.Core.Model.MerchantInfo.ToString() -> string!
+override L3Lint.Core.Model.Money.GetHashCode() -> int
+override L3Lint.Core.Model.OrderInfo.Equals(object? obj) -> bool
+override L3Lint.Core.Model.OrderInfo.GetHashCode() -> int
+override L3Lint.Core.Model.OrderInfo.ToString() -> string!
+override L3Lint.Core.Model.ShippingInfo.Equals(object? obj) -> bool
+override L3Lint.Core.Model.ShippingInfo.GetHashCode() -> int
+override L3Lint.Core.Model.ShippingInfo.ToString() -> string!
+override L3Lint.Core.Model.SummaryAmounts.Equals(object? obj) -> bool
+override L3Lint.Core.Model.SummaryAmounts.GetHashCode() -> int
+override L3Lint.Core.Model.SummaryAmounts.ToString() -> string!
+override L3Lint.Core.Model.TaxInfo.Equals(object? obj) -> bool
+override L3Lint.Core.Model.TaxInfo.GetHashCode() -> int
+override L3Lint.Core.Model.TaxInfo.ToString() -> string!
+override L3Lint.Core.Model.Transaction.Equals(object? obj) -> bool
+override L3Lint.Core.Model.Transaction.GetHashCode() -> int
+override L3Lint.Core.Model.Transaction.ToString() -> string!
+override L3Lint.Core.Pci.CardNumberMatch.Equals(object? obj) -> bool
+override L3Lint.Core.Pci.CardNumberMatch.GetHashCode() -> int
+override L3Lint.Core.Pci.CardNumberMatch.ToString() -> string!
+override L3Lint.Core.Profiles.ProcessorProfile.Equals(object? obj) -> bool
+override L3Lint.Core.Profiles.ProcessorProfile.GetHashCode() -> int
+override L3Lint.Core.Profiles.ProcessorProfile.ToString() -> string!
+override L3Lint.Core.Profiles.ProfileLimit.Equals(object? obj) -> bool
+override L3Lint.Core.Profiles.ProfileLimit.GetHashCode() -> int
+override L3Lint.Core.Profiles.ProfileLimit.ToString() -> string!
+override L3Lint.Core.RuleExampleOutcome.Equals(object? obj) -> bool
+override L3Lint.Core.RuleExampleOutcome.GetHashCode() -> int
+override L3Lint.Core.RuleExampleOutcome.ToString() -> string!
+override L3Lint.Core.RuleQuery.Equals(object? obj) -> bool
+override L3Lint.Core.RuleQuery.GetHashCode() -> int
+override L3Lint.Core.RuleQuery.ToString() -> string!
+override L3Lint.Core.Rules.FindingDraft.GetHashCode() -> int
+override L3Lint.Core.Rules.RuleApplicability.Equals(object? obj) -> bool
+override L3Lint.Core.Rules.RuleApplicability.GetHashCode() -> int
+override L3Lint.Core.Rules.RuleApplicability.ToString() -> string!
+override L3Lint.Core.Rules.RuleCheck.Equals(object? obj) -> bool
+override L3Lint.Core.Rules.RuleCheck.GetHashCode() -> int
+override L3Lint.Core.Rules.RuleCheck.ToString() -> string!
+override L3Lint.Core.Rules.RuleCondition.Equals(object? obj) -> bool
+override L3Lint.Core.Rules.RuleCondition.GetHashCode() -> int
+override L3Lint.Core.Rules.RuleCondition.ToString() -> string!
+override L3Lint.Core.Rules.RuleContext.Equals(object? obj) -> bool
+override L3Lint.Core.Rules.RuleContext.GetHashCode() -> int
+override L3Lint.Core.Rules.RuleExampleContext.Equals(object? obj) -> bool
+override L3Lint.Core.Rules.RuleExampleContext.GetHashCode() -> int
+override L3Lint.Core.Rules.RuleExampleContext.ToString() -> string!
+override L3Lint.Core.Rules.RuleExamples.Equals(object? obj) -> bool
+override L3Lint.Core.Rules.RuleExamples.GetHashCode() -> int
+override L3Lint.Core.Rules.RuleExamples.ToString() -> string!
+override L3Lint.Core.Rules.RuleMetadata.Equals(object? obj) -> bool
+override L3Lint.Core.Rules.RuleMetadata.GetHashCode() -> int
+override L3Lint.Core.Rules.RuleMetadata.ToString() -> string!
+override L3Lint.Core.Rules.RulePackInfo.Equals(object? obj) -> bool
+override L3Lint.Core.Rules.RulePackInfo.GetHashCode() -> int
+override L3Lint.Core.Rules.RulePackInfo.ToString() -> string!
+override L3Lint.Core.Tiers.TierAssessment.Equals(object? obj) -> bool
+override L3Lint.Core.Tiers.TierAssessment.GetHashCode() -> int
+override L3Lint.Core.Tiers.TierAssessment.ToString() -> string!
+override L3Lint.Core.Tiers.TierLadder.Equals(object? obj) -> bool
+override L3Lint.Core.Tiers.TierLadder.GetHashCode() -> int
+override L3Lint.Core.Tiers.TierLadder.ToString() -> string!
+override L3Lint.Core.Tiers.TierRung.Equals(object? obj) -> bool
+override L3Lint.Core.Tiers.TierRung.GetHashCode() -> int
+override L3Lint.Core.Tiers.TierRung.ToString() -> string!
+override L3Lint.Core.TransactionResult.Equals(object? obj) -> bool
+override L3Lint.Core.TransactionResult.GetHashCode() -> int
+override L3Lint.Core.TransactionResult.ToString() -> string!
+static L3Lint.Core.Adapters.AdapterNote.operator !=(L3Lint.Core.Adapters.AdapterNote? left, L3Lint.Core.Adapters.AdapterNote? right) -> bool
+static L3Lint.Core.Adapters.AdapterNote.operator ==(L3Lint.Core.Adapters.AdapterNote? left, L3Lint.Core.Adapters.AdapterNote? right) -> bool
+static L3Lint.Core.Adapters.AdapterOptions.Default.get -> L3Lint.Core.Adapters.AdapterOptions!
+static L3Lint.Core.Adapters.AdapterOptions.operator !=(L3Lint.Core.Adapters.AdapterOptions? left, L3Lint.Core.Adapters.AdapterOptions? right) -> bool
+static L3Lint.Core.Adapters.AdapterOptions.operator ==(L3Lint.Core.Adapters.AdapterOptions? left, L3Lint.Core.Adapters.AdapterOptions? right) -> bool
+static L3Lint.Core.Adapters.AdapterResult.operator !=(L3Lint.Core.Adapters.AdapterResult? left, L3Lint.Core.Adapters.AdapterResult? right) -> bool
+static L3Lint.Core.Adapters.AdapterResult.operator ==(L3Lint.Core.Adapters.AdapterResult? left, L3Lint.Core.Adapters.AdapterResult? right) -> bool
+static L3Lint.Core.Adapters.DetectionScore.operator !=(L3Lint.Core.Adapters.DetectionScore left, L3Lint.Core.Adapters.DetectionScore right) -> bool
+static L3Lint.Core.Adapters.DetectionScore.operator ==(L3Lint.Core.Adapters.DetectionScore left, L3Lint.Core.Adapters.DetectionScore right) -> bool
+static L3Lint.Core.Adapters.PathMap.Identity.get -> L3Lint.Core.Adapters.PathMap!
+static L3Lint.Core.Adapters.SourceField.operator !=(L3Lint.Core.Adapters.SourceField left, L3Lint.Core.Adapters.SourceField right) -> bool
+static L3Lint.Core.Adapters.SourceField.operator ==(L3Lint.Core.Adapters.SourceField left, L3Lint.Core.Adapters.SourceField right) -> bool
+static L3Lint.Core.ArithmeticOptions.operator !=(L3Lint.Core.ArithmeticOptions? left, L3Lint.Core.ArithmeticOptions? right) -> bool
+static L3Lint.Core.ArithmeticOptions.operator ==(L3Lint.Core.ArithmeticOptions? left, L3Lint.Core.ArithmeticOptions? right) -> bool
+static L3Lint.Core.BatchOptions.operator !=(L3Lint.Core.BatchOptions? left, L3Lint.Core.BatchOptions? right) -> bool
+static L3Lint.Core.BatchOptions.operator ==(L3Lint.Core.BatchOptions? left, L3Lint.Core.BatchOptions? right) -> bool
+static L3Lint.Core.ContextDefaults.None.get -> L3Lint.Core.ContextDefaults!
+static L3Lint.Core.ContextDefaults.operator !=(L3Lint.Core.ContextDefaults? left, L3Lint.Core.ContextDefaults? right) -> bool
+static L3Lint.Core.ContextDefaults.operator ==(L3Lint.Core.ContextDefaults? left, L3Lint.Core.ContextDefaults? right) -> bool
+static L3Lint.Core.EngineInfo.DocsUrl.get -> string!
+static L3Lint.Core.EngineInfo.ProjectUrl.get -> string!
+static L3Lint.Core.EngineInfo.RuleHelpUri(string! ruleId) -> System.Uri!
+static L3Lint.Core.EngineInfo.Version.get -> string!
+static L3Lint.Core.Estimates.CostEstimate.operator !=(L3Lint.Core.Estimates.CostEstimate? left, L3Lint.Core.Estimates.CostEstimate? right) -> bool
+static L3Lint.Core.Estimates.CostEstimate.operator ==(L3Lint.Core.Estimates.CostEstimate? left, L3Lint.Core.Estimates.CostEstimate? right) -> bool
+static L3Lint.Core.Estimates.CostEstimateLine.operator !=(L3Lint.Core.Estimates.CostEstimateLine? left, L3Lint.Core.Estimates.CostEstimateLine? right) -> bool
+static L3Lint.Core.Estimates.CostEstimateLine.operator ==(L3Lint.Core.Estimates.CostEstimateLine? left, L3Lint.Core.Estimates.CostEstimateLine? right) -> bool
+static L3Lint.Core.Estimates.ProgramFee.operator !=(L3Lint.Core.Estimates.ProgramFee? left, L3Lint.Core.Estimates.ProgramFee? right) -> bool
+static L3Lint.Core.Estimates.ProgramFee.operator ==(L3Lint.Core.Estimates.ProgramFee? left, L3Lint.Core.Estimates.ProgramFee? right) -> bool
+static L3Lint.Core.Estimates.RateCategory.operator !=(L3Lint.Core.Estimates.RateCategory? left, L3Lint.Core.Estimates.RateCategory? right) -> bool
+static L3Lint.Core.Estimates.RateCategory.operator ==(L3Lint.Core.Estimates.RateCategory? left, L3Lint.Core.Estimates.RateCategory? right) -> bool
+static L3Lint.Core.Estimates.RateTable.operator !=(L3Lint.Core.Estimates.RateTable? left, L3Lint.Core.Estimates.RateTable? right) -> bool
+static L3Lint.Core.Estimates.RateTable.operator ==(L3Lint.Core.Estimates.RateTable? left, L3Lint.Core.Estimates.RateTable? right) -> bool
+static L3Lint.Core.Estimates.RateTable.Parse(string! yaml, string! sourceName) -> L3Lint.Core.Estimates.RateTable!
+static L3Lint.Core.FieldPath.operator !=(L3Lint.Core.FieldPath left, L3Lint.Core.FieldPath right) -> bool
+static L3Lint.Core.FieldPath.operator ==(L3Lint.Core.FieldPath left, L3Lint.Core.FieldPath right) -> bool
+static L3Lint.Core.Fields.PointerComparer.Instance.get -> L3Lint.Core.Fields.PointerComparer!
+static L3Lint.Core.Finding.operator !=(L3Lint.Core.Finding? left, L3Lint.Core.Finding? right) -> bool
+static L3Lint.Core.Finding.operator ==(L3Lint.Core.Finding? left, L3Lint.Core.Finding? right) -> bool
+static L3Lint.Core.Fixes.FixIntent.operator !=(L3Lint.Core.Fixes.FixIntent? left, L3Lint.Core.Fixes.FixIntent? right) -> bool
+static L3Lint.Core.Fixes.FixIntent.operator ==(L3Lint.Core.Fixes.FixIntent? left, L3Lint.Core.Fixes.FixIntent? right) -> bool
+static L3Lint.Core.Fixes.FixPatch.operator !=(L3Lint.Core.Fixes.FixPatch? left, L3Lint.Core.Fixes.FixPatch? right) -> bool
+static L3Lint.Core.Fixes.FixPatch.operator ==(L3Lint.Core.Fixes.FixPatch? left, L3Lint.Core.Fixes.FixPatch? right) -> bool
+static L3Lint.Core.Fixes.JsonPatch.Apply(System.Text.Json.Nodes.JsonNode! document, System.Collections.Generic.IEnumerable<L3Lint.Core.Fixes.PatchOperation!>! operations) -> System.Text.Json.Nodes.JsonNode!
+static L3Lint.Core.Fixes.PatchOperation.operator !=(L3Lint.Core.Fixes.PatchOperation? left, L3Lint.Core.Fixes.PatchOperation? right) -> bool
+static L3Lint.Core.Fixes.PatchOperation.operator ==(L3Lint.Core.Fixes.PatchOperation? left, L3Lint.Core.Fixes.PatchOperation? right) -> bool
+static L3Lint.Core.Input.InputLimits.Default.get -> L3Lint.Core.Input.InputLimits!
+static L3Lint.Core.Input.InputLimits.operator !=(L3Lint.Core.Input.InputLimits? left, L3Lint.Core.Input.InputLimits? right) -> bool
+static L3Lint.Core.Input.InputLimits.operator ==(L3Lint.Core.Input.InputLimits? left, L3Lint.Core.Input.InputLimits? right) -> bool
+static L3Lint.Core.Input.RawDocument.FromCsv(System.ReadOnlyMemory<byte> utf8, string! sourceName, L3Lint.Core.Input.InputLimits? limits = null) -> L3Lint.Core.Input.RawDocument!
+static L3Lint.Core.Input.RawDocument.ParseJson(string! json, string! sourceName) -> L3Lint.Core.Input.RawDocument!
+static L3Lint.Core.Input.RawDocument.ParseJson(System.ReadOnlyMemory<byte> utf8, string! sourceName, L3Lint.Core.Input.InputLimits? limits = null, int firstLine = 1) -> L3Lint.Core.Input.RawDocument!
+static L3Lint.Core.Input.SourceLocation.operator !=(L3Lint.Core.Input.SourceLocation left, L3Lint.Core.Input.SourceLocation right) -> bool
+static L3Lint.Core.Input.SourceLocation.operator ==(L3Lint.Core.Input.SourceLocation left, L3Lint.Core.Input.SourceLocation right) -> bool
+static L3Lint.Core.InputError.From(L3Lint.Core.Input.InputException! exception, string! fallbackName) -> L3Lint.Core.InputError!
+static L3Lint.Core.InputError.operator !=(L3Lint.Core.InputError? left, L3Lint.Core.InputError? right) -> bool
+static L3Lint.Core.InputError.operator ==(L3Lint.Core.InputError? left, L3Lint.Core.InputError? right) -> bool
+static L3Lint.Core.LintOptions.Default.get -> L3Lint.Core.LintOptions!
+static L3Lint.Core.LintOptions.operator !=(L3Lint.Core.LintOptions? left, L3Lint.Core.LintOptions? right) -> bool
+static L3Lint.Core.LintOptions.operator ==(L3Lint.Core.LintOptions? left, L3Lint.Core.LintOptions? right) -> bool
+static L3Lint.Core.LintResult.operator !=(L3Lint.Core.LintResult? left, L3Lint.Core.LintResult? right) -> bool
+static L3Lint.Core.LintResult.operator ==(L3Lint.Core.LintResult? left, L3Lint.Core.LintResult? right) -> bool
+static L3Lint.Core.LintSummary.From(System.Collections.Generic.IEnumerable<L3Lint.Core.Finding!>! findings, int transactions, L3Lint.Core.Severity? failOn) -> L3Lint.Core.LintSummary!
+static L3Lint.Core.LintSummary.operator !=(L3Lint.Core.LintSummary? left, L3Lint.Core.LintSummary? right) -> bool
+static L3Lint.Core.LintSummary.operator ==(L3Lint.Core.LintSummary? left, L3Lint.Core.LintSummary? right) -> bool
+static L3Lint.Core.MapResult.operator !=(L3Lint.Core.MapResult? left, L3Lint.Core.MapResult? right) -> bool
+static L3Lint.Core.MapResult.operator ==(L3Lint.Core.MapResult? left, L3Lint.Core.MapResult? right) -> bool
+static L3Lint.Core.Model.AmexInfo.operator !=(L3Lint.Core.Model.AmexInfo? left, L3Lint.Core.Model.AmexInfo? right) -> bool
+static L3Lint.Core.Model.AmexInfo.operator ==(L3Lint.Core.Model.AmexInfo? left, L3Lint.Core.Model.AmexInfo? right) -> bool
+static L3Lint.Core.Model.BillingInfo.operator !=(L3Lint.Core.Model.BillingInfo? left, L3Lint.Core.Model.BillingInfo? right) -> bool
+static L3Lint.Core.Model.BillingInfo.operator ==(L3Lint.Core.Model.BillingInfo? left, L3Lint.Core.Model.BillingInfo? right) -> bool
+static L3Lint.Core.Model.CanonicalJson.Serialize(L3Lint.Core.Model.Transaction! transaction) -> string!
+static L3Lint.Core.Model.CanonicalJson.SerializeToElement(L3Lint.Core.Model.Transaction! transaction) -> System.Text.Json.JsonElement
+static L3Lint.Core.Model.CanonicalJson.SerializeToUtf8Bytes(L3Lint.Core.Model.Transaction! transaction) -> byte[]!
+static L3Lint.Core.Model.CanonicalNames.ToName(L3Lint.Core.Model.CardBrand value) -> string!
+static L3Lint.Core.Model.CanonicalNames.ToName(L3Lint.Core.Model.CardProduct value) -> string!
+static L3Lint.Core.Model.CanonicalNames.ToName(L3Lint.Core.Model.Channel value) -> string!
+static L3Lint.Core.Model.CanonicalNames.ToName(L3Lint.Core.Model.CommodityScheme value) -> string!
+static L3Lint.Core.Model.CanonicalNames.ToName(L3Lint.Core.Model.DebitCredit value) -> string!
+static L3Lint.Core.Model.CanonicalNames.ToName(L3Lint.Core.Model.TaxIndicator value) -> string!
+static L3Lint.Core.Model.CanonicalNames.TryParse(string? name, out L3Lint.Core.Model.CardBrand value) -> bool
+static L3Lint.Core.Model.CanonicalNames.TryParse(string? name, out L3Lint.Core.Model.CardProduct value) -> bool
+static L3Lint.Core.Model.CanonicalNames.TryParse(string? name, out L3Lint.Core.Model.Channel value) -> bool
+static L3Lint.Core.Model.CanonicalNames.TryParse(string? name, out L3Lint.Core.Model.CommodityScheme value) -> bool
+static L3Lint.Core.Model.CanonicalNames.TryParse(string? name, out L3Lint.Core.Model.DebitCredit value) -> bool
+static L3Lint.Core.Model.CanonicalNames.TryParse(string? name, out L3Lint.Core.Model.TaxIndicator value) -> bool
+static L3Lint.Core.Model.CardInfo.operator !=(L3Lint.Core.Model.CardInfo? left, L3Lint.Core.Model.CardInfo? right) -> bool
+static L3Lint.Core.Model.CardInfo.operator ==(L3Lint.Core.Model.CardInfo? left, L3Lint.Core.Model.CardInfo? right) -> bool
+static L3Lint.Core.Model.Currency.operator !=(L3Lint.Core.Model.Currency left, L3Lint.Core.Model.Currency right) -> bool
+static L3Lint.Core.Model.Currency.operator ==(L3Lint.Core.Model.Currency left, L3Lint.Core.Model.Currency right) -> bool
+static L3Lint.Core.Model.CustomerInfo.operator !=(L3Lint.Core.Model.CustomerInfo? left, L3Lint.Core.Model.CustomerInfo? right) -> bool
+static L3Lint.Core.Model.CustomerInfo.operator ==(L3Lint.Core.Model.CustomerInfo? left, L3Lint.Core.Model.CustomerInfo? right) -> bool
+static L3Lint.Core.Model.Iso4217.All.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Model.Currency>!
+static L3Lint.Core.Model.Iso4217.TryGetCurrency(string? code, out L3Lint.Core.Model.Currency currency) -> bool
+static L3Lint.Core.Model.LineItem.operator !=(L3Lint.Core.Model.LineItem? left, L3Lint.Core.Model.LineItem? right) -> bool
+static L3Lint.Core.Model.LineItem.operator ==(L3Lint.Core.Model.LineItem? left, L3Lint.Core.Model.LineItem? right) -> bool
+static L3Lint.Core.Model.MerchantInfo.operator !=(L3Lint.Core.Model.MerchantInfo? left, L3Lint.Core.Model.MerchantInfo? right) -> bool
+static L3Lint.Core.Model.MerchantInfo.operator ==(L3Lint.Core.Model.MerchantInfo? left, L3Lint.Core.Model.MerchantInfo? right) -> bool
+static L3Lint.Core.Model.Money.FromMinorUnits(decimal minorUnits, L3Lint.Core.Model.Currency currency) -> L3Lint.Core.Model.Money
+static L3Lint.Core.Model.Money.operator !=(L3Lint.Core.Model.Money left, L3Lint.Core.Model.Money right) -> bool
+static L3Lint.Core.Model.Money.operator ==(L3Lint.Core.Model.Money left, L3Lint.Core.Model.Money right) -> bool
+static L3Lint.Core.Model.OrderInfo.operator !=(L3Lint.Core.Model.OrderInfo? left, L3Lint.Core.Model.OrderInfo? right) -> bool
+static L3Lint.Core.Model.OrderInfo.operator ==(L3Lint.Core.Model.OrderInfo? left, L3Lint.Core.Model.OrderInfo? right) -> bool
+static L3Lint.Core.Model.ShippingInfo.operator !=(L3Lint.Core.Model.ShippingInfo? left, L3Lint.Core.Model.ShippingInfo? right) -> bool
+static L3Lint.Core.Model.ShippingInfo.operator ==(L3Lint.Core.Model.ShippingInfo? left, L3Lint.Core.Model.ShippingInfo? right) -> bool
+static L3Lint.Core.Model.SummaryAmounts.operator !=(L3Lint.Core.Model.SummaryAmounts? left, L3Lint.Core.Model.SummaryAmounts? right) -> bool
+static L3Lint.Core.Model.SummaryAmounts.operator ==(L3Lint.Core.Model.SummaryAmounts? left, L3Lint.Core.Model.SummaryAmounts? right) -> bool
+static L3Lint.Core.Model.TaxInfo.operator !=(L3Lint.Core.Model.TaxInfo? left, L3Lint.Core.Model.TaxInfo? right) -> bool
+static L3Lint.Core.Model.TaxInfo.operator ==(L3Lint.Core.Model.TaxInfo? left, L3Lint.Core.Model.TaxInfo? right) -> bool
+static L3Lint.Core.Model.Transaction.operator !=(L3Lint.Core.Model.Transaction? left, L3Lint.Core.Model.Transaction? right) -> bool
+static L3Lint.Core.Model.Transaction.operator ==(L3Lint.Core.Model.Transaction? left, L3Lint.Core.Model.Transaction? right) -> bool
+static L3Lint.Core.Pci.CardNumberMatch.operator !=(L3Lint.Core.Pci.CardNumberMatch? left, L3Lint.Core.Pci.CardNumberMatch? right) -> bool
+static L3Lint.Core.Pci.CardNumberMatch.operator ==(L3Lint.Core.Pci.CardNumberMatch? left, L3Lint.Core.Pci.CardNumberMatch? right) -> bool
+static L3Lint.Core.Profiles.ProcessorProfile.operator !=(L3Lint.Core.Profiles.ProcessorProfile? left, L3Lint.Core.Profiles.ProcessorProfile? right) -> bool
+static L3Lint.Core.Profiles.ProcessorProfile.operator ==(L3Lint.Core.Profiles.ProcessorProfile? left, L3Lint.Core.Profiles.ProcessorProfile? right) -> bool
+static L3Lint.Core.Profiles.ProcessorProfiles.All.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Profiles.ProcessorProfile!>!
+static L3Lint.Core.Profiles.ProcessorProfiles.Generic.get -> L3Lint.Core.Profiles.ProcessorProfile!
+static L3Lint.Core.Profiles.ProcessorProfiles.Parse(string! yaml, string! sourceName) -> L3Lint.Core.Profiles.ProcessorProfile!
+static L3Lint.Core.Profiles.ProcessorProfiles.TryGet(string? id, out L3Lint.Core.Profiles.ProcessorProfile! profile) -> bool
+static L3Lint.Core.Profiles.ProfileLimit.operator !=(L3Lint.Core.Profiles.ProfileLimit? left, L3Lint.Core.Profiles.ProfileLimit? right) -> bool
+static L3Lint.Core.Profiles.ProfileLimit.operator ==(L3Lint.Core.Profiles.ProfileLimit? left, L3Lint.Core.Profiles.ProfileLimit? right) -> bool
+static L3Lint.Core.RuleExampleOutcome.operator !=(L3Lint.Core.RuleExampleOutcome? left, L3Lint.Core.RuleExampleOutcome? right) -> bool
+static L3Lint.Core.RuleExampleOutcome.operator ==(L3Lint.Core.RuleExampleOutcome? left, L3Lint.Core.RuleExampleOutcome? right) -> bool
+static L3Lint.Core.RuleExampleTester.Run(L3Lint.Core.ILinter! linter, L3Lint.Core.Rules.RuleMetadata! rule) -> L3Lint.Core.RuleExampleOutcome!
+static L3Lint.Core.RuleExampleTester.Run(L3Lint.Core.ILinter! linter, System.Collections.Generic.IEnumerable<L3Lint.Core.Rules.RuleMetadata!>! rules) -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.RuleExampleOutcome!>!
+static L3Lint.Core.RuleQuery.operator !=(L3Lint.Core.RuleQuery? left, L3Lint.Core.RuleQuery? right) -> bool
+static L3Lint.Core.RuleQuery.operator ==(L3Lint.Core.RuleQuery? left, L3Lint.Core.RuleQuery? right) -> bool
+static L3Lint.Core.Rules.FindingDraft.operator !=(L3Lint.Core.Rules.FindingDraft left, L3Lint.Core.Rules.FindingDraft right) -> bool
+static L3Lint.Core.Rules.FindingDraft.operator ==(L3Lint.Core.Rules.FindingDraft left, L3Lint.Core.Rules.FindingDraft right) -> bool
+static L3Lint.Core.Rules.RuleApplicability.Always.get -> L3Lint.Core.Rules.RuleApplicability!
+static L3Lint.Core.Rules.RuleApplicability.operator !=(L3Lint.Core.Rules.RuleApplicability? left, L3Lint.Core.Rules.RuleApplicability? right) -> bool
+static L3Lint.Core.Rules.RuleApplicability.operator ==(L3Lint.Core.Rules.RuleApplicability? left, L3Lint.Core.Rules.RuleApplicability? right) -> bool
+static L3Lint.Core.Rules.RuleCheck.operator !=(L3Lint.Core.Rules.RuleCheck? left, L3Lint.Core.Rules.RuleCheck? right) -> bool
+static L3Lint.Core.Rules.RuleCheck.operator ==(L3Lint.Core.Rules.RuleCheck? left, L3Lint.Core.Rules.RuleCheck? right) -> bool
+static L3Lint.Core.Rules.RuleCondition.operator !=(L3Lint.Core.Rules.RuleCondition? left, L3Lint.Core.Rules.RuleCondition? right) -> bool
+static L3Lint.Core.Rules.RuleCondition.operator ==(L3Lint.Core.Rules.RuleCondition? left, L3Lint.Core.Rules.RuleCondition? right) -> bool
+static L3Lint.Core.Rules.RuleContext.operator !=(L3Lint.Core.Rules.RuleContext left, L3Lint.Core.Rules.RuleContext right) -> bool
+static L3Lint.Core.Rules.RuleContext.operator ==(L3Lint.Core.Rules.RuleContext left, L3Lint.Core.Rules.RuleContext right) -> bool
+static L3Lint.Core.Rules.RuleExampleContext.None.get -> L3Lint.Core.Rules.RuleExampleContext!
+static L3Lint.Core.Rules.RuleExampleContext.operator !=(L3Lint.Core.Rules.RuleExampleContext? left, L3Lint.Core.Rules.RuleExampleContext? right) -> bool
+static L3Lint.Core.Rules.RuleExampleContext.operator ==(L3Lint.Core.Rules.RuleExampleContext? left, L3Lint.Core.Rules.RuleExampleContext? right) -> bool
+static L3Lint.Core.Rules.RuleExamples.operator !=(L3Lint.Core.Rules.RuleExamples? left, L3Lint.Core.Rules.RuleExamples? right) -> bool
+static L3Lint.Core.Rules.RuleExamples.operator ==(L3Lint.Core.Rules.RuleExamples? left, L3Lint.Core.Rules.RuleExamples? right) -> bool
+static L3Lint.Core.Rules.RuleMetadata.operator !=(L3Lint.Core.Rules.RuleMetadata? left, L3Lint.Core.Rules.RuleMetadata? right) -> bool
+static L3Lint.Core.Rules.RuleMetadata.operator ==(L3Lint.Core.Rules.RuleMetadata? left, L3Lint.Core.Rules.RuleMetadata? right) -> bool
+static L3Lint.Core.Rules.RulePackInfo.operator !=(L3Lint.Core.Rules.RulePackInfo? left, L3Lint.Core.Rules.RulePackInfo? right) -> bool
+static L3Lint.Core.Rules.RulePackInfo.operator ==(L3Lint.Core.Rules.RulePackInfo? left, L3Lint.Core.Rules.RulePackInfo? right) -> bool
+static L3Lint.Core.Schemas.SchemaCatalog.GetText(string! name) -> string!
+static L3Lint.Core.Schemas.SchemaCatalog.Names.get -> System.Collections.Generic.IReadOnlyList<string!>!
+static L3Lint.Core.Schemas.SchemaCatalog.TryGetText(string? name, out string! text) -> bool
+static L3Lint.Core.Tiers.TierAssessment.operator !=(L3Lint.Core.Tiers.TierAssessment? left, L3Lint.Core.Tiers.TierAssessment? right) -> bool
+static L3Lint.Core.Tiers.TierAssessment.operator ==(L3Lint.Core.Tiers.TierAssessment? left, L3Lint.Core.Tiers.TierAssessment? right) -> bool
+static L3Lint.Core.Tiers.TierLadder.NoProgram.get -> L3Lint.Core.Tiers.TierLadder!
+static L3Lint.Core.Tiers.TierLadder.operator !=(L3Lint.Core.Tiers.TierLadder? left, L3Lint.Core.Tiers.TierLadder? right) -> bool
+static L3Lint.Core.Tiers.TierLadder.operator ==(L3Lint.Core.Tiers.TierLadder? left, L3Lint.Core.Tiers.TierLadder? right) -> bool
+static L3Lint.Core.Tiers.TierRung.operator !=(L3Lint.Core.Tiers.TierRung? left, L3Lint.Core.Tiers.TierRung? right) -> bool
+static L3Lint.Core.Tiers.TierRung.operator ==(L3Lint.Core.Tiers.TierRung? left, L3Lint.Core.Tiers.TierRung? right) -> bool
+static L3Lint.Core.TransactionResult.operator !=(L3Lint.Core.TransactionResult? left, L3Lint.Core.TransactionResult? right) -> bool
+static L3Lint.Core.TransactionResult.operator ==(L3Lint.Core.TransactionResult? left, L3Lint.Core.TransactionResult? right) -> bool
+static L3Lint.Core.WireNames.Of(L3Lint.Core.Adapters.AdapterNoteKind value) -> string!
+static L3Lint.Core.WireNames.Of(L3Lint.Core.Confidence value) -> string!
+static L3Lint.Core.WireNames.Of(L3Lint.Core.Impact value) -> string!
+static L3Lint.Core.WireNames.Of(L3Lint.Core.Rules.RuleLevel value) -> string!
+static L3Lint.Core.WireNames.Of(L3Lint.Core.Severity value) -> string!
+static L3Lint.Core.WireNames.Of(L3Lint.Core.Tiers.TierStatus value) -> string!
+static L3Lint.Core.WireNames.TryParseSeverity(string? text, out L3Lint.Core.Severity severity) -> bool
+virtual L3Lint.Core.Adapters.SourceValueConverter.Invoke(System.Text.Json.Nodes.JsonNode? canonicalValue) -> System.Text.Json.Nodes.JsonNode?
+virtual L3Lint.Core.Rules.EmbeddedRulePackSource.BatchChecks.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Rules.IBatchCheck!>!
+virtual L3Lint.Core.Rules.EmbeddedRulePackSource.CustomChecks.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Rules.ICustomCheck!>!
+virtual L3Lint.Core.Rules.EmbeddedRulePackSource.TierPolicy.get -> L3Lint.Core.Tiers.ITierPolicy?
+~override L3Lint.Core.Adapters.DetectionScore.Equals(object obj) -> bool
+~override L3Lint.Core.Adapters.DetectionScore.ToString() -> string
+~override L3Lint.Core.Adapters.SourceField.Equals(object obj) -> bool
+~override L3Lint.Core.Adapters.SourceField.ToString() -> string
+~override L3Lint.Core.FieldPath.Equals(object obj) -> bool
+~override L3Lint.Core.FieldPath.ToString() -> string
+~override L3Lint.Core.Input.SourceLocation.Equals(object obj) -> bool
+~override L3Lint.Core.Input.SourceLocation.ToString() -> string
+~override L3Lint.Core.Model.Currency.Equals(object obj) -> bool
+~override L3Lint.Core.Model.Currency.ToString() -> string
+~override L3Lint.Core.Model.Money.Equals(object obj) -> bool
+~override L3Lint.Core.Model.Money.ToString() -> string
+~override L3Lint.Core.Rules.FindingDraft.Equals(object obj) -> bool
+~override L3Lint.Core.Rules.FindingDraft.ToString() -> string

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-82042",
+  "amount": 616.93,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "purchasing",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-68218"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-68218",
+    "invoiceNumber": "INV-82042"
+  },
+  "tax": {
+    "amount": 34.36,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 11,
+      "unitOfMeasure": "EAC",
+      "unitCost": 12.50,
+      "discountAmount": 6.88,
+      "discountIndicator": true,
+      "taxAmount": 7.84,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 130.62,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 20,
+      "unitOfMeasure": "PCE",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 21.96,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 366.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "commodityScheme": "unspsc",
+      "quantity": 8,
+      "unitOfMeasure": "EAC",
+      "unitCost": 9.50,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 4.56,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 76.00,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

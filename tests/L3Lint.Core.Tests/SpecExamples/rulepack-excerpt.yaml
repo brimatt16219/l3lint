@@ -1,0 +1,43 @@
+pack:
+  id: l3lint.rules.visa
+  version: 1.2.0
+  brand: visa
+  publishedOn: 2026-10-19
+  lists:
+    product3ExcludedMcc: lists/visa-product3-excluded-mcc.csv
+rules:
+  - id: VISA-L3-004
+    title: Commodity code is required for Product 3
+    level: L3
+    severity: error
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    appliesTo:
+      cardProducts: [business, corporate, purchasing, fleet]
+      mccNotIn: product3ExcludedMcc
+    check:
+      kind: required
+      field: /lineItems/*/commodityCode
+      allowZero: false
+    message: "Line {index} has no commodity code; Visa needs one on every line for Product 3."
+    fix: "Add the most specific 8-digit UNSPSC code for this item."
+    impact: blocksLevel3
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+    examples:
+      pass: examples/VISA-L3-004.pass.json
+      fail: examples/VISA-L3-004.fail.json
+  - id: VISA-L3-012
+    title: Tax must be positive or explicitly exempt
+    level: L3
+    severity: error
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    check:
+      kind: custom
+      check: ExplicitTaxCheck
+    message: "Tax is {actual} and the sale is not marked exempt."
+    fix: "Send the tax amount, or set tax.indicator to exempt."
+    impact: riskVisaValidation
+    sources:
+      - https://www.versapay.com/cedp

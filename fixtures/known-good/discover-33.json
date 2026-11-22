@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-63596",
+  "amount": 600.42,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "purchasing",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Harborview Facility Supply",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-76284"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-76284",
+    "invoiceNumber": "INV-63596"
+  },
+  "tax": {
+    "amount": 33.14,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "quantity": 18,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 6.08,
+      "taxAmount": 6.93,
+      "total": 115.42
+    },
+    {
+      "sequence": 2,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 19,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 41.42,
+      "taxAmount": 22.37,
+      "total": 372.78
+    },
+    {
+      "sequence": 3,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "quantity": 11,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 4.62,
+      "taxAmount": 2.49,
+      "total": 41.58
+    },
+    {
+      "sequence": 4,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 2,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 2.50,
+      "taxAmount": 1.35,
+      "total": 22.50
+    }
+  ]
+}

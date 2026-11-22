@@ -1,0 +1,290 @@
+#nullable enable
+const L3Lint.Hosting.L3LintConfiguration.FileName = ".l3lint.yaml" -> string!
+const L3Lint.Hosting.LockFile.FileName = ".l3lint.lock" -> string!
+L3Lint.Hosting.ConfigurationException
+L3Lint.Hosting.ConfigurationException.ConfigurationException() -> void
+L3Lint.Hosting.ConfigurationException.ConfigurationException(string! message) -> void
+L3Lint.Hosting.ConfigurationException.ConfigurationException(string! message, string! file, string? pointer, System.Exception? innerException = null) -> void
+L3Lint.Hosting.ConfigurationException.ConfigurationException(string! message, System.Exception! innerException) -> void
+L3Lint.Hosting.ConfigurationException.File.get -> string?
+L3Lint.Hosting.ConfigurationException.Pointer.get -> string?
+L3Lint.Hosting.Fixes.FixPlan
+L3Lint.Hosting.Fixes.FixPlan.<Clone>$() -> L3Lint.Hosting.Fixes.FixPlan!
+L3Lint.Hosting.Fixes.FixPlan.Applied.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Finding!>!
+L3Lint.Hosting.Fixes.FixPlan.Applied.init -> void
+L3Lint.Hosting.Fixes.FixPlan.Deconstruct(out int TransactionIndex, out System.Collections.Generic.IReadOnlyList<L3Lint.Core.Fixes.PatchOperation!>! Operations, out bool TargetsCanonical, out System.Collections.Generic.IReadOnlyList<L3Lint.Core.Finding!>! Applied, out System.Collections.Generic.IReadOnlyList<L3Lint.Core.Finding!>! NeedsHuman) -> void
+L3Lint.Hosting.Fixes.FixPlan.Equals(L3Lint.Hosting.Fixes.FixPlan? other) -> bool
+L3Lint.Hosting.Fixes.FixPlan.FixPlan(int TransactionIndex, System.Collections.Generic.IReadOnlyList<L3Lint.Core.Fixes.PatchOperation!>! Operations, bool TargetsCanonical, System.Collections.Generic.IReadOnlyList<L3Lint.Core.Finding!>! Applied, System.Collections.Generic.IReadOnlyList<L3Lint.Core.Finding!>! NeedsHuman) -> void
+L3Lint.Hosting.Fixes.FixPlan.NeedsHuman.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Finding!>!
+L3Lint.Hosting.Fixes.FixPlan.NeedsHuman.init -> void
+L3Lint.Hosting.Fixes.FixPlan.Operations.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Fixes.PatchOperation!>!
+L3Lint.Hosting.Fixes.FixPlan.Operations.init -> void
+L3Lint.Hosting.Fixes.FixPlan.TargetsCanonical.get -> bool
+L3Lint.Hosting.Fixes.FixPlan.TargetsCanonical.init -> void
+L3Lint.Hosting.Fixes.FixPlan.TransactionIndex.get -> int
+L3Lint.Hosting.Fixes.FixPlan.TransactionIndex.init -> void
+L3Lint.Hosting.Fixes.FixPlanner
+L3Lint.Hosting.L3LintConfiguration
+L3Lint.Hosting.L3LintConfiguration.<Clone>$() -> L3Lint.Hosting.L3LintConfiguration!
+L3Lint.Hosting.L3LintConfiguration.Arithmetic.get -> L3Lint.Core.ArithmeticOptions!
+L3Lint.Hosting.L3LintConfiguration.Arithmetic.init -> void
+L3Lint.Hosting.L3LintConfiguration.BaseDirectory.get -> string!
+L3Lint.Hosting.L3LintConfiguration.BaseDirectory.init -> void
+L3Lint.Hosting.L3LintConfiguration.Batch.get -> L3Lint.Core.BatchOptions!
+L3Lint.Hosting.L3LintConfiguration.Batch.init -> void
+L3Lint.Hosting.L3LintConfiguration.Brand.get -> string?
+L3Lint.Hosting.L3LintConfiguration.Brand.init -> void
+L3Lint.Hosting.L3LintConfiguration.CardProduct.get -> L3Lint.Core.Model.CardProduct?
+L3Lint.Hosting.L3LintConfiguration.CardProduct.init -> void
+L3Lint.Hosting.L3LintConfiguration.CsvMap.get -> string?
+L3Lint.Hosting.L3LintConfiguration.CsvMap.init -> void
+L3Lint.Hosting.L3LintConfiguration.DefaultCurrency.get -> string?
+L3Lint.Hosting.L3LintConfiguration.DefaultCurrency.init -> void
+L3Lint.Hosting.L3LintConfiguration.DisabledRules.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Hosting.L3LintConfiguration.DisabledRules.init -> void
+L3Lint.Hosting.L3LintConfiguration.Equals(L3Lint.Hosting.L3LintConfiguration? other) -> bool
+L3Lint.Hosting.L3LintConfiguration.FailOn.get -> string?
+L3Lint.Hosting.L3LintConfiguration.FailOn.init -> void
+L3Lint.Hosting.L3LintConfiguration.Format.get -> string?
+L3Lint.Hosting.L3LintConfiguration.Format.init -> void
+L3Lint.Hosting.L3LintConfiguration.Hash.get -> string!
+L3Lint.Hosting.L3LintConfiguration.Hash.init -> void
+L3Lint.Hosting.L3LintConfiguration.L3LintConfiguration() -> void
+L3Lint.Hosting.L3LintConfiguration.Limits.get -> L3Lint.Core.Input.InputLimits!
+L3Lint.Hosting.L3LintConfiguration.Limits.init -> void
+L3Lint.Hosting.L3LintConfiguration.MaxFindings.get -> int?
+L3Lint.Hosting.L3LintConfiguration.MaxFindings.init -> void
+L3Lint.Hosting.L3LintConfiguration.Mcc.get -> string?
+L3Lint.Hosting.L3LintConfiguration.Mcc.init -> void
+L3Lint.Hosting.L3LintConfiguration.MerchantCountry.get -> string?
+L3Lint.Hosting.L3LintConfiguration.MerchantCountry.init -> void
+L3Lint.Hosting.L3LintConfiguration.OnlyRules.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Hosting.L3LintConfiguration.OnlyRules.init -> void
+L3Lint.Hosting.L3LintConfiguration.Outputs.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Hosting.L3LintConfiguration.Outputs.init -> void
+L3Lint.Hosting.L3LintConfiguration.Path.get -> string?
+L3Lint.Hosting.L3LintConfiguration.Path.init -> void
+L3Lint.Hosting.L3LintConfiguration.PciAllowFields.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Hosting.L3LintConfiguration.PciAllowFields.init -> void
+L3Lint.Hosting.L3LintConfiguration.PlaceholdersAdd.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Hosting.L3LintConfiguration.PlaceholdersAdd.init -> void
+L3Lint.Hosting.L3LintConfiguration.PlaceholdersRemove.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Hosting.L3LintConfiguration.PlaceholdersRemove.init -> void
+L3Lint.Hosting.L3LintConfiguration.Processor.get -> string?
+L3Lint.Hosting.L3LintConfiguration.Processor.init -> void
+L3Lint.Hosting.L3LintConfiguration.Rates.get -> string?
+L3Lint.Hosting.L3LintConfiguration.Rates.init -> void
+L3Lint.Hosting.L3LintConfiguration.Severity.get -> System.Collections.Generic.IReadOnlyDictionary<string!, L3Lint.Core.Severity>!
+L3Lint.Hosting.L3LintConfiguration.Severity.init -> void
+L3Lint.Hosting.L3LintConfiguration.StrictPci.get -> bool
+L3Lint.Hosting.L3LintConfiguration.StrictPci.init -> void
+L3Lint.Hosting.L3LintConfiguration.StrictProfiles.get -> bool
+L3Lint.Hosting.L3LintConfiguration.StrictProfiles.init -> void
+L3Lint.Hosting.L3LintFactory
+L3Lint.Hosting.L3LintOptions
+L3Lint.Hosting.L3LintOptions.AddAdapter(L3Lint.Core.Adapters.IPayloadAdapter! adapter) -> L3Lint.Hosting.L3LintOptions!
+L3Lint.Hosting.L3LintOptions.AddCustomCheck(L3Lint.Core.Rules.ICustomCheck! check) -> L3Lint.Hosting.L3LintOptions!
+L3Lint.Hosting.L3LintOptions.AddRule(L3Lint.Core.Rules.IRule! rule) -> L3Lint.Hosting.L3LintOptions!
+L3Lint.Hosting.L3LintOptions.AddRule<T>() -> L3Lint.Hosting.L3LintOptions!
+L3Lint.Hosting.L3LintOptions.AddRulePack(L3Lint.Core.Rules.IRulePackSource! pack) -> L3Lint.Hosting.L3LintOptions!
+L3Lint.Hosting.L3LintOptions.AllBrands.get -> bool
+L3Lint.Hosting.L3LintOptions.AllBrands.set -> void
+L3Lint.Hosting.L3LintOptions.Arithmetic.get -> L3Lint.Core.ArithmeticOptions!
+L3Lint.Hosting.L3LintOptions.Arithmetic.set -> void
+L3Lint.Hosting.L3LintOptions.AsOf.get -> System.DateOnly?
+L3Lint.Hosting.L3LintOptions.AsOf.set -> void
+L3Lint.Hosting.L3LintOptions.Brand.get -> L3Lint.Core.Model.CardBrand?
+L3Lint.Hosting.L3LintOptions.Brand.set -> void
+L3Lint.Hosting.L3LintOptions.CardProduct.get -> L3Lint.Core.Model.CardProduct?
+L3Lint.Hosting.L3LintOptions.CardProduct.set -> void
+L3Lint.Hosting.L3LintOptions.DefaultCurrency.get -> string?
+L3Lint.Hosting.L3LintOptions.DefaultCurrency.set -> void
+L3Lint.Hosting.L3LintOptions.DisabledRules.get -> System.Collections.Generic.ISet<string!>!
+L3Lint.Hosting.L3LintOptions.FailOn.get -> L3Lint.Core.Severity?
+L3Lint.Hosting.L3LintOptions.FailOn.set -> void
+L3Lint.Hosting.L3LintOptions.L3LintOptions() -> void
+L3Lint.Hosting.L3LintOptions.Mcc.get -> string?
+L3Lint.Hosting.L3LintOptions.Mcc.set -> void
+L3Lint.Hosting.L3LintOptions.MerchantCountry.get -> string?
+L3Lint.Hosting.L3LintOptions.MerchantCountry.set -> void
+L3Lint.Hosting.L3LintOptions.Processor.get -> string?
+L3Lint.Hosting.L3LintOptions.Processor.set -> void
+L3Lint.Hosting.L3LintOptions.SeverityOverrides.get -> System.Collections.Generic.IDictionary<string!, L3Lint.Core.Severity>!
+L3Lint.Hosting.L3LintOptions.StrictPci.get -> bool
+L3Lint.Hosting.L3LintOptions.StrictPci.set -> void
+L3Lint.Hosting.L3LintOptions.StrictProfiles.get -> bool
+L3Lint.Hosting.L3LintOptions.StrictProfiles.set -> void
+L3Lint.Hosting.L3LintOptions.ToLintOptions() -> L3Lint.Core.LintOptions!
+L3Lint.Hosting.L3LintServiceCollectionExtensions
+L3Lint.Hosting.LintOverrides
+L3Lint.Hosting.LintOverrides.<Clone>$() -> L3Lint.Hosting.LintOverrides!
+L3Lint.Hosting.LintOverrides.AsOf.get -> System.DateOnly?
+L3Lint.Hosting.LintOverrides.AsOf.init -> void
+L3Lint.Hosting.LintOverrides.Brand.get -> string?
+L3Lint.Hosting.LintOverrides.Brand.init -> void
+L3Lint.Hosting.LintOverrides.CardProduct.get -> string?
+L3Lint.Hosting.LintOverrides.CardProduct.init -> void
+L3Lint.Hosting.LintOverrides.CsvMap.get -> string?
+L3Lint.Hosting.LintOverrides.CsvMap.init -> void
+L3Lint.Hosting.LintOverrides.Currency.get -> string?
+L3Lint.Hosting.LintOverrides.Currency.init -> void
+L3Lint.Hosting.LintOverrides.Disable.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Hosting.LintOverrides.Disable.init -> void
+L3Lint.Hosting.LintOverrides.Equals(L3Lint.Hosting.LintOverrides? other) -> bool
+L3Lint.Hosting.LintOverrides.FailOn.get -> string?
+L3Lint.Hosting.LintOverrides.FailOn.init -> void
+L3Lint.Hosting.LintOverrides.Format.get -> string?
+L3Lint.Hosting.LintOverrides.Format.init -> void
+L3Lint.Hosting.LintOverrides.LintOverrides() -> void
+L3Lint.Hosting.LintOverrides.MaxFindings.get -> int?
+L3Lint.Hosting.LintOverrides.MaxFindings.init -> void
+L3Lint.Hosting.LintOverrides.Mcc.get -> string?
+L3Lint.Hosting.LintOverrides.Mcc.init -> void
+L3Lint.Hosting.LintOverrides.MerchantCountry.get -> string?
+L3Lint.Hosting.LintOverrides.MerchantCountry.init -> void
+L3Lint.Hosting.LintOverrides.Only.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Hosting.LintOverrides.Only.init -> void
+L3Lint.Hosting.LintOverrides.Outputs.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Hosting.LintOverrides.Outputs.init -> void
+L3Lint.Hosting.LintOverrides.Processor.get -> string?
+L3Lint.Hosting.LintOverrides.Processor.init -> void
+L3Lint.Hosting.LintOverrides.Rates.get -> string?
+L3Lint.Hosting.LintOverrides.Rates.init -> void
+L3Lint.Hosting.LintOverrides.RulePacks.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Hosting.LintOverrides.RulePacks.init -> void
+L3Lint.Hosting.LintOverrides.Severity.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Hosting.LintOverrides.Severity.init -> void
+L3Lint.Hosting.LintOverrides.StrictPci.get -> bool
+L3Lint.Hosting.LintOverrides.StrictPci.init -> void
+L3Lint.Hosting.LintOverrides.StrictProfiles.get -> bool
+L3Lint.Hosting.LintOverrides.StrictProfiles.init -> void
+L3Lint.Hosting.LintOverrides.Verbose.get -> bool
+L3Lint.Hosting.LintOverrides.Verbose.init -> void
+L3Lint.Hosting.LockFile
+L3Lint.Hosting.OutputTarget
+L3Lint.Hosting.OutputTarget.<Clone>$() -> L3Lint.Hosting.OutputTarget!
+L3Lint.Hosting.OutputTarget.Deconstruct(out string! Format, out string? Path) -> void
+L3Lint.Hosting.OutputTarget.Equals(L3Lint.Hosting.OutputTarget? other) -> bool
+L3Lint.Hosting.OutputTarget.Format.get -> string!
+L3Lint.Hosting.OutputTarget.Format.init -> void
+L3Lint.Hosting.OutputTarget.OutputTarget(string! Format, string? Path) -> void
+L3Lint.Hosting.OutputTarget.Path.get -> string?
+L3Lint.Hosting.OutputTarget.Path.init -> void
+L3Lint.Hosting.ResolvedSettings
+L3Lint.Hosting.ResolvedSettings.<Clone>$() -> L3Lint.Hosting.ResolvedSettings!
+L3Lint.Hosting.ResolvedSettings.ConfigHash.get -> string!
+L3Lint.Hosting.ResolvedSettings.ConfigHash.init -> void
+L3Lint.Hosting.ResolvedSettings.Equals(L3Lint.Hosting.ResolvedSettings? other) -> bool
+L3Lint.Hosting.ResolvedSettings.LocalPacks.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Hosting.ResolvedSettings.LocalPacks.init -> void
+L3Lint.Hosting.ResolvedSettings.LockFile.get -> string?
+L3Lint.Hosting.ResolvedSettings.LockFile.init -> void
+L3Lint.Hosting.ResolvedSettings.MaxFindings.get -> int?
+L3Lint.Hosting.ResolvedSettings.MaxFindings.init -> void
+L3Lint.Hosting.ResolvedSettings.Notes.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Hosting.ResolvedSettings.Notes.init -> void
+L3Lint.Hosting.ResolvedSettings.Options.get -> L3Lint.Core.LintOptions!
+L3Lint.Hosting.ResolvedSettings.Options.init -> void
+L3Lint.Hosting.ResolvedSettings.Outputs.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Hosting.OutputTarget!>!
+L3Lint.Hosting.ResolvedSettings.Outputs.init -> void
+L3Lint.Hosting.ResolvedSettings.ProfileName.get -> string!
+L3Lint.Hosting.ResolvedSettings.ProfileName.init -> void
+L3Lint.Hosting.ResolvedSettings.ResolvedSettings() -> void
+L3Lint.Hosting.Runs.InputFile
+L3Lint.Hosting.Runs.InputFile.<Clone>$() -> L3Lint.Hosting.Runs.InputFile!
+L3Lint.Hosting.Runs.InputFile.Deconstruct(out string! DisplayName, out L3Lint.Hosting.Runs.InputFileKind Kind, out System.Collections.Generic.IReadOnlyList<L3Lint.Core.Input.RawDocument!>! Documents) -> void
+L3Lint.Hosting.Runs.InputFile.DisplayName.get -> string!
+L3Lint.Hosting.Runs.InputFile.DisplayName.init -> void
+L3Lint.Hosting.Runs.InputFile.Documents.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Input.RawDocument!>!
+L3Lint.Hosting.Runs.InputFile.Documents.init -> void
+L3Lint.Hosting.Runs.InputFile.Equals(L3Lint.Hosting.Runs.InputFile? other) -> bool
+L3Lint.Hosting.Runs.InputFile.InputFile(string! DisplayName, L3Lint.Hosting.Runs.InputFileKind Kind, System.Collections.Generic.IReadOnlyList<L3Lint.Core.Input.RawDocument!>! Documents) -> void
+L3Lint.Hosting.Runs.InputFile.Kind.get -> L3Lint.Hosting.Runs.InputFileKind
+L3Lint.Hosting.Runs.InputFile.Kind.init -> void
+L3Lint.Hosting.Runs.InputFileKind
+L3Lint.Hosting.Runs.InputFileKind.Csv = 2 -> L3Lint.Hosting.Runs.InputFileKind
+L3Lint.Hosting.Runs.InputFileKind.Json = 0 -> L3Lint.Hosting.Runs.InputFileKind
+L3Lint.Hosting.Runs.InputFileKind.Ndjson = 1 -> L3Lint.Hosting.Runs.InputFileKind
+L3Lint.Hosting.Runs.LintRunner
+L3Lint.Hosting.Runs.LintRunner.LintRunner(L3Lint.Core.ILinter! linter, Microsoft.Extensions.Logging.ILogger<L3Lint.Hosting.Runs.LintRunner!>? logger = null) -> void
+L3Lint.Hosting.Runs.LintRunner.RunAsync(L3Lint.Hosting.Runs.LintRunRequest! request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<L3Lint.Reporting.LintReport!>!
+L3Lint.Hosting.Runs.LintRunRequest
+L3Lint.Hosting.Runs.LintRunRequest.<Clone>$() -> L3Lint.Hosting.Runs.LintRunRequest!
+L3Lint.Hosting.Runs.LintRunRequest.ConfigHash.get -> string!
+L3Lint.Hosting.Runs.LintRunRequest.ConfigHash.init -> void
+L3Lint.Hosting.Runs.LintRunRequest.Equals(L3Lint.Hosting.Runs.LintRunRequest? other) -> bool
+L3Lint.Hosting.Runs.LintRunRequest.Inputs.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Hosting.Runs.LintRunRequest.Inputs.init -> void
+L3Lint.Hosting.Runs.LintRunRequest.LintRunRequest() -> void
+L3Lint.Hosting.Runs.LintRunRequest.MaxFindings.get -> int?
+L3Lint.Hosting.Runs.LintRunRequest.MaxFindings.init -> void
+L3Lint.Hosting.Runs.LintRunRequest.Notes.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Hosting.Runs.LintRunRequest.Notes.init -> void
+L3Lint.Hosting.Runs.LintRunRequest.Options.get -> L3Lint.Core.LintOptions!
+L3Lint.Hosting.Runs.LintRunRequest.Options.init -> void
+L3Lint.Hosting.Runs.LintRunRequest.Parallelism.get -> int
+L3Lint.Hosting.Runs.LintRunRequest.Parallelism.init -> void
+L3Lint.Hosting.Runs.LintRunRequest.Profile.get -> string!
+L3Lint.Hosting.Runs.LintRunRequest.Profile.init -> void
+L3Lint.Hosting.Runs.LintRunRequest.StandardInput.get -> System.Func<System.IO.Stream!>?
+L3Lint.Hosting.Runs.LintRunRequest.StandardInput.init -> void
+L3Lint.Hosting.Runs.LintRunRequest.WorkingDirectory.get -> string!
+L3Lint.Hosting.Runs.LintRunRequest.WorkingDirectory.init -> void
+L3Lint.Hosting.SettingsResolver
+L3Lint.Hosting.UsageException
+L3Lint.Hosting.UsageException.UsageException() -> void
+L3Lint.Hosting.UsageException.UsageException(string! message) -> void
+L3Lint.Hosting.UsageException.UsageException(string! message, System.Exception! innerException) -> void
+override L3Lint.Hosting.Fixes.FixPlan.Equals(object? obj) -> bool
+override L3Lint.Hosting.Fixes.FixPlan.GetHashCode() -> int
+override L3Lint.Hosting.Fixes.FixPlan.ToString() -> string!
+override L3Lint.Hosting.L3LintConfiguration.Equals(object? obj) -> bool
+override L3Lint.Hosting.L3LintConfiguration.GetHashCode() -> int
+override L3Lint.Hosting.L3LintConfiguration.ToString() -> string!
+override L3Lint.Hosting.LintOverrides.Equals(object? obj) -> bool
+override L3Lint.Hosting.LintOverrides.GetHashCode() -> int
+override L3Lint.Hosting.LintOverrides.ToString() -> string!
+override L3Lint.Hosting.OutputTarget.Equals(object? obj) -> bool
+override L3Lint.Hosting.OutputTarget.GetHashCode() -> int
+override L3Lint.Hosting.OutputTarget.ToString() -> string!
+override L3Lint.Hosting.ResolvedSettings.Equals(object? obj) -> bool
+override L3Lint.Hosting.ResolvedSettings.GetHashCode() -> int
+override L3Lint.Hosting.ResolvedSettings.ToString() -> string!
+override L3Lint.Hosting.Runs.InputFile.Equals(object? obj) -> bool
+override L3Lint.Hosting.Runs.InputFile.GetHashCode() -> int
+override L3Lint.Hosting.Runs.InputFile.ToString() -> string!
+override L3Lint.Hosting.Runs.LintRunRequest.Equals(object? obj) -> bool
+override L3Lint.Hosting.Runs.LintRunRequest.GetHashCode() -> int
+override L3Lint.Hosting.Runs.LintRunRequest.ToString() -> string!
+static L3Lint.Hosting.Fixes.FixPlan.operator !=(L3Lint.Hosting.Fixes.FixPlan? left, L3Lint.Hosting.Fixes.FixPlan? right) -> bool
+static L3Lint.Hosting.Fixes.FixPlan.operator ==(L3Lint.Hosting.Fixes.FixPlan? left, L3Lint.Hosting.Fixes.FixPlan? right) -> bool
+static L3Lint.Hosting.Fixes.FixPlanner.Plan(L3Lint.Core.LintResult! result, bool includeAmount) -> System.Collections.Generic.IReadOnlyList<L3Lint.Hosting.Fixes.FixPlan!>!
+static L3Lint.Hosting.Fixes.FixPlanner.Plan(L3Lint.Core.TransactionResult! transaction, bool includeAmount) -> L3Lint.Hosting.Fixes.FixPlan!
+static L3Lint.Hosting.L3LintConfiguration.Default.get -> L3Lint.Hosting.L3LintConfiguration!
+static L3Lint.Hosting.L3LintConfiguration.FindNearest(string! startDirectory) -> string?
+static L3Lint.Hosting.L3LintConfiguration.Load(string! path) -> L3Lint.Hosting.L3LintConfiguration!
+static L3Lint.Hosting.L3LintConfiguration.operator !=(L3Lint.Hosting.L3LintConfiguration? left, L3Lint.Hosting.L3LintConfiguration? right) -> bool
+static L3Lint.Hosting.L3LintConfiguration.operator ==(L3Lint.Hosting.L3LintConfiguration? left, L3Lint.Hosting.L3LintConfiguration? right) -> bool
+static L3Lint.Hosting.L3LintConfiguration.Parse(string! yaml, string! path) -> L3Lint.Hosting.L3LintConfiguration!
+static L3Lint.Hosting.L3LintFactory.Create(L3Lint.Hosting.ResolvedSettings! settings, Microsoft.Extensions.Logging.ILoggerFactory? loggerFactory = null, System.TimeProvider? timeProvider = null) -> L3Lint.Core.ILinter!
+static L3Lint.Hosting.L3LintFactory.CreateBuilder() -> L3Lint.Core.LinterBuilder!
+static L3Lint.Hosting.L3LintFactory.EmbeddedPacks() -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Rules.IRulePackSource!>!
+static L3Lint.Hosting.L3LintServiceCollectionExtensions.AddL3Lint(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, System.Action<L3Lint.Hosting.L3LintOptions!>? configure = null) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static L3Lint.Hosting.LintOverrides.operator !=(L3Lint.Hosting.LintOverrides? left, L3Lint.Hosting.LintOverrides? right) -> bool
+static L3Lint.Hosting.LintOverrides.operator ==(L3Lint.Hosting.LintOverrides? left, L3Lint.Hosting.LintOverrides? right) -> bool
+static L3Lint.Hosting.LockFile.Read(string! path) -> System.Collections.Generic.IReadOnlyDictionary<string!, string!>!
+static L3Lint.Hosting.LockFile.Render(System.Collections.Generic.IEnumerable<L3Lint.Core.Rules.RulePackInfo!>! packs) -> string!
+static L3Lint.Hosting.OutputTarget.operator !=(L3Lint.Hosting.OutputTarget? left, L3Lint.Hosting.OutputTarget? right) -> bool
+static L3Lint.Hosting.OutputTarget.operator ==(L3Lint.Hosting.OutputTarget? left, L3Lint.Hosting.OutputTarget? right) -> bool
+static L3Lint.Hosting.OutputTarget.Parse(string! text, string! workingDirectory) -> L3Lint.Hosting.OutputTarget!
+static L3Lint.Hosting.ResolvedSettings.operator !=(L3Lint.Hosting.ResolvedSettings? left, L3Lint.Hosting.ResolvedSettings? right) -> bool
+static L3Lint.Hosting.ResolvedSettings.operator ==(L3Lint.Hosting.ResolvedSettings? left, L3Lint.Hosting.ResolvedSettings? right) -> bool
+static L3Lint.Hosting.Runs.InputFile.operator !=(L3Lint.Hosting.Runs.InputFile? left, L3Lint.Hosting.Runs.InputFile? right) -> bool
+static L3Lint.Hosting.Runs.InputFile.operator ==(L3Lint.Hosting.Runs.InputFile? left, L3Lint.Hosting.Runs.InputFile? right) -> bool
+static L3Lint.Hosting.Runs.InputFile.ReadAsync(string! input, string! workingDirectory, System.Func<System.IO.Stream!>? standardInput, L3Lint.Core.LintOptions! options, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<L3Lint.Hosting.Runs.InputFile!>!
+static L3Lint.Hosting.Runs.LintRunRequest.operator !=(L3Lint.Hosting.Runs.LintRunRequest? left, L3Lint.Hosting.Runs.LintRunRequest? right) -> bool
+static L3Lint.Hosting.Runs.LintRunRequest.operator ==(L3Lint.Hosting.Runs.LintRunRequest? left, L3Lint.Hosting.Runs.LintRunRequest? right) -> bool
+static L3Lint.Hosting.SettingsResolver.Formats.get -> System.Collections.Generic.IReadOnlyList<string!>!
+static L3Lint.Hosting.SettingsResolver.OutputKinds.get -> System.Collections.Generic.IReadOnlyList<string!>!
+static L3Lint.Hosting.SettingsResolver.ParseFailOn(string! text) -> L3Lint.Core.Severity?
+static L3Lint.Hosting.SettingsResolver.Resolve(L3Lint.Hosting.L3LintConfiguration! configuration, L3Lint.Hosting.LintOverrides! overrides, string! workingDirectory) -> L3Lint.Hosting.ResolvedSettings!

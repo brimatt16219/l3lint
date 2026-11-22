@@ -1,0 +1,42 @@
+{
+  "amount": { "currency": "USD", "value": 28036 },
+  "reference": "INV-50311",
+  "paymentMethod": { "type": "scheme", "storedPaymentMethodId": "PM-STORED-7Q2K" },
+  "shopperInteraction": "ContAuth",
+  "recurringProcessingModel": "CardOnFile",
+  "returnUrl": "https://example.test/checkout/return",
+  "merchantAccount": "ExampleMerchantL3",
+  "enhancedSchemeData": {
+    "levelTwoThree": {
+      "customerReferenceNumber": "PO-48820",
+      "totalTaxAmount": 1736,
+      "freightAmount": 1500,
+      "dutyAmount": 0,
+      "shipFromPostalCode": "33602",
+      "orderDate": "2026-10-15",
+      "destination": { "postalCode": "33431", "stateOrProvince": "FL", "countryCode": "US" },
+      "itemDetailLines": [
+        {
+          "description": "4111-1111-1111-1111",
+          "productCode": "GLV-NL-100",
+          "commodityCode": "42132203",
+          "quantity": 10,
+          "unitOfMeasure": "BX",
+          "unitPrice": 1250,
+          "discountAmount": 500,
+          "totalAmount": 12000
+        },
+        {
+          "description": "Isolation gown blue case",
+          "productCode": "GWN-IS-B50",
+          "commodityCode": "42131606",
+          "quantity": 2,
+          "unitOfMeasure": "CA",
+          "unitPrice": 6400,
+          "discountAmount": 0,
+          "totalAmount": 12800
+        }
+      ]
+    }
+  }
+}

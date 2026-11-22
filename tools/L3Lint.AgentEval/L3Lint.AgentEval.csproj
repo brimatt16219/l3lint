@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Agent evaluation harness (Test and delivery tab: "Agent evaluation runs nightly"). A developer tool: it calls
+       the Claude API by design and is never packed or shipped. -->
+  <PropertyGroup>
+    <RootNamespace>L3Lint.AgentEval</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Anthropic" />
+    <PackageReference Include="ModelContextProtocol" />
+    <PackageReference Include="YamlDotNet" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\L3Lint.Hosting\L3Lint.Hosting.csproj" />
+    <ProjectReference Include="..\..\src\L3Lint.Mcp\L3Lint.Mcp.csproj" />
+  </ItemGroup>
+
+</Project>

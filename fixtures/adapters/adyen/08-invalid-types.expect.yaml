@@ -1,0 +1,11 @@
+description: The customer reference is a number, line 2's quantity is a string and destination is a string instead of an object. Each is one GEN-FMT-001 finding; the destination postal code and country inside it are skipped rather than reported missing.
+format: adyen
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 08-invalid-types.canonical.json
+expect:
+  findings:
+    - { ruleId: GEN-FMT-001, path: /customer/reference }
+    - { ruleId: GEN-FMT-001, path: /lineItems/1/quantity }
+    - { ruleId: GEN-FMT-001, path: /shipping/toPostalCode }
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/discount }

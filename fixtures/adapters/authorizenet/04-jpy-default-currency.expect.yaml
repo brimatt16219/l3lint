@@ -1,0 +1,7 @@
+description: No currencyCode is sent, so the default currency JPY from the options is used with a Defaulted note. Yen amounts are whole numbers in major units.
+format: authorizenet
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19, defaultCurrency: JPY }
+canonical: 04-jpy-default-currency.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

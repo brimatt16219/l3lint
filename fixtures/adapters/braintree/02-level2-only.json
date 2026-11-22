@@ -1,0 +1,10 @@
+{
+  "amount": "432.50",
+  "paymentMethodNonce": "fake-valid-nonce",
+  "purchaseOrderNumber": "PO-55021",
+  "taxAmount": "28.30",
+  "taxExempt": false,
+  "shippingAmount": "12.50",
+  "shipsFromPostalCode": "75201",
+  "shipping": { "postalCode": "75093", "countryCodeAlpha2": "US" }
+}

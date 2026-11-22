@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-86759",
+  "amount": 333.78,
+  "currency": "EUR",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "purchasing",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-71511"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-71511",
+    "invoiceNumber": "INV-86759"
+  },
+  "tax": {
+    "amount": 14.11,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "amex": {
+    "requestorName": "Jordan Ellis",
+    "adviceText": [
+      "PO-71511 supplies order",
+      "Requested by Jordan Ellis"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 13,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 8.13,
+      "taxAmount": 7.33,
+      "total": 154.37
+    },
+    {
+      "sequence": 2,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "quantity": 12,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "taxAmount": 6.78,
+      "total": 142.80
+    }
+  ]
+}

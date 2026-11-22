@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-84590",
+  "amount": 550.29,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "corporate",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Summit Lab Products",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-78110"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-78110",
+    "invoiceNumber": "INV-84590"
+  },
+  "tax": {
+    "amount": 24.95,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 8,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 15.36,
+      "taxAmount": 13.86,
+      "total": 291.84
+    },
+    {
+      "sequence": 2,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 5,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "taxAmount": 2.97,
+      "total": 62.50
+    },
+    {
+      "sequence": 3,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "quantity": 0,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 19.00,
+      "taxAmount": 8.12,
+      "total": 171.00
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+description: A Level III sale shaped like the Visa Platform Connect REST example, with every Level 3 field Cybersource can carry. Only the line-item detail indicator, which no gateway request carries, is reported.
+format: cybersource
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 01-complete-level3.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

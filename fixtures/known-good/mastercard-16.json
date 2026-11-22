@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-82095",
+  "amount": 2769.84,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "purchasing",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-68255"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-68255",
+    "invoiceNumber": "INV-82095"
+  },
+  "tax": {
+    "amount": 181.20,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "PCE",
+      "unitCost": 64.00,
+      "discountAmount": 76.80,
+      "discountIndicator": true,
+      "taxAmount": 102.14,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 1459.20,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "PCE",
+      "unitCost": 38.40,
+      "discountAmount": 92.16,
+      "discountIndicator": true,
+      "taxAmount": 58.06,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 829.44,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "EAC",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 21.00,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 300.00,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

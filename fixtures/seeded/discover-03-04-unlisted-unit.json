@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-84696",
+  "amount": 212.48,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "corporate",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Summit Lab Products",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-78184"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-78184",
+    "invoiceNumber": "INV-84696"
+  },
+  "tax": {
+    "amount": 8.61,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "quantity": 14,
+      "unitOfMeasure": "QQQ",
+      "unitCost": 7.40,
+      "discountAmount": 5.18,
+      "taxAmount": 4.67,
+      "total": 98.42
+    },
+    {
+      "sequence": 2,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 21,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 3.94,
+      "total": 82.95
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>L3Lint.Mcp</RootNamespace>
+    <AssemblyName>l3lint-mcp</AssemblyName>
+    <PackageId>L3Lint.Mcp</PackageId>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>l3lint-mcp</ToolCommandName>
+    <PackageType>McpServer</PackageType>
+    <Description>l3lint MCP server: lets AI agents lint commercial card Level 2 and Level 3 payloads, read why each rule exists and get safe mechanical fixes. Six read-only tools over stdio or local Streamable HTTP. Offline; keeps nothing after a call.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\L3Lint.Hosting\L3Lint.Hosting.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ModelContextProtocol" />
+    <PackageReference Include="ModelContextProtocol.AspNetCore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".mcp\server.json" Pack="true" PackagePath=".mcp\" Condition="Exists('.mcp\server.json')" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Examples/**/*.json" LogicalName="L3Lint.Mcp.Examples.%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="L3Lint.Mcp.Tests" />
+  </ItemGroup>
+
+</Project>

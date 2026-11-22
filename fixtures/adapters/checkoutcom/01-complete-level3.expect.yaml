@@ -1,0 +1,7 @@
+description: A Level 3 payment request shaped like Checkout.com's published example, with every amount in minor units under processing and items. Checkout.com has no tax indicator field, so tax above 0 marks the sale taxable.
+format: checkoutcom
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 01-complete-level3.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

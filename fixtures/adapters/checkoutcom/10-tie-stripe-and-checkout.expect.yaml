@@ -1,0 +1,4 @@
+description: A deliberately ambiguous document that carries both Stripe's amount_details and payment_details and Checkout.com's processing and items. Both adapters score within 0.2 of each other, so detection must report a tie and list both candidates.
+format: tie
+candidates: [checkoutcom, stripe]
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }

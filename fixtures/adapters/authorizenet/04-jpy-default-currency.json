@@ -1,0 +1,24 @@
+{
+  "createTransactionRequest": {
+    "merchantAuthentication": { "name": "test-api-login", "transactionKey": "test-transaction-key" },
+    "transactionRequest": {
+      "transactionType": "authCaptureTransaction",
+      "amount": "27500",
+      "order": { "invoiceNumber": "INV-JP-0918" },
+      "lineItems": {
+        "lineItem": [
+          { "itemId": "1", "name": "Safety goggles clear", "quantity": "12", "unitPrice": "1250", "unitOfMeasure": "EA", "taxAmount": "1500", "totalAmount": "15000", "commodityCode": "46181804", "productCode": "SFG-CLR-01", "discountAmount": "0" },
+          { "itemId": "2", "name": "Work gloves cotton pair", "quantity": "20", "unitPrice": "480", "unitOfMeasure": "PR", "taxAmount": "900", "totalAmount": "9000", "commodityCode": "46181504", "productCode": "WGL-CTN-02", "discountAmount": "600" }
+        ]
+      },
+      "tax": { "amount": "2400" },
+      "duty": { "amount": "0" },
+      "shipping": { "amount": "1100" },
+      "taxExempt": "false",
+      "poNumber": "POJP2210",
+      "shipTo": { "zip": "530-0001", "country": "JP" },
+      "shipFrom": { "zip": "150-0002", "country": "JP" },
+      "discount": { "amount": "0" }
+    }
+  }
+}

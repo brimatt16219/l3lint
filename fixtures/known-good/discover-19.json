@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-62854",
+  "amount": 74.83,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "corporate",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Ridgeline Industrial Co",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-75766"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-75766",
+    "invoiceNumber": "INV-62854"
+  },
+  "tax": {
+    "amount": 3.40,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "quantity": 4,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 3.12,
+      "taxAmount": 2.82,
+      "total": 59.28
+    },
+    {
+      "sequence": 2,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "quantity": 2,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 1.35,
+      "taxAmount": 0.58,
+      "total": 12.15
+    }
+  ]
+}

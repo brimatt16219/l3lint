@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-76954",
+  "amount": 1840.45,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "corporate",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Summit Lab Products",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-64666"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-64666",
+    "invoiceNumber": "INV-76954"
+  },
+  "tax": {
+    "amount": 119.76,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "75201",
+    "toPostalCode": "75231",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "75231"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "commodityScheme": "unspsc",
+      "quantity": 18,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 6.08,
+      "taxAmount": 8.08,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 115.42,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 10,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 0.00,
+      "taxAmount": 44.80,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 640.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 9,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 2.49,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 35.55,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 21,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 26.25,
+      "taxAmount": 16.54,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 236.25,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "commodityScheme": "unspsc",
+      "quantity": 21,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 0.00,
+      "taxAmount": 10.88,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 155.40,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 6,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "commodityScheme": "unspsc",
+      "quantity": 12,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 58.68,
+      "taxAmount": 36.97,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 528.12,
+      "detailIndicator": "Y"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "build": {
+    "content": [
+      {
+        "files": [
+          "index.md",
+          "toc.yml",
+          "articles/**.md",
+          "articles/toc.yml",
+          "rules/**.md",
+          "rules/toc.yml",
+          "reference/**.md",
+          "reference/toc.yml",
+          "dev/verification*.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "schemas/*.json"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "l3lint",
+      "_appTitle": "l3lint",
+      "_appFooter": "l3lint is licensed under Apache-2.0. Findings are advisory: card networks and issuers decide the rate.",
+      "_enableSearch": true,
+      "_disableContribution": true
+    },
+    "sitemap": {
+      "baseUrl": "https://brimatt16219.github.io/l3lint/"
+    }
+  }
+}

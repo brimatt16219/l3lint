@@ -1,0 +1,9 @@
+- name: Guide
+  href: articles/
+  homepage: articles/getting-started.md
+- name: Rules
+  href: rules/
+  homepage: rules/index.md
+- name: Reference
+  href: reference/
+  homepage: reference/cli.md

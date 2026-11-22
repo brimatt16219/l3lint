@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0",
+  "currency": "USD",
+  "customer": { "reference": "PO-48820" },
+  "order": { "invoiceNumber": "INV-50311" },
+  "tax": { "amount": 17.36, "indicator": "taxable" },
+  "amounts": { "freight": 15.00 },
+  "shipping": { "fromPostalCode": "33602", "toPostalCode": "33431" },
+  "lineItems": [
+    { "sequence": 1, "description": "Nitrile gloves L box", "productCode": "GLV-NL-100", "commodityCode": "42132203", "unitOfMeasure": "BX", "unitCost": 12.50, "discountAmount": 5.00, "taxAmount": 8.40 },
+    { "sequence": 2, "description": "Isolation gown blue case", "productCode": "GWN-IS-B50", "commodityCode": "42131606", "quantity": 2, "unitOfMeasure": "CA", "taxAmount": 8.96 }
+  ]
+}

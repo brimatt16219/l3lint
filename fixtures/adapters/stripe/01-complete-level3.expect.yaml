@@ -1,0 +1,11 @@
+description: A Level 3 PaymentIntent shaped like Stripe's published sample, with tax on each line and no order-level tax. Line totals and the order tax are derived; duty, the order discount and the destination country cannot be sent through Stripe, and line 2 has no discount because Stripe only accepts a discount above 0.
+format: stripe
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 01-complete-level3.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-009, path: /lineItems/1/discountAmount }
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/discount }
+    - { ruleId: VISA-L3-011, path: /amounts/duty }
+    - { ruleId: VISA-L3-013, path: /shipping/toCountry }

@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83049",
+  "amount": 1731.48,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "purchasing",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Harborview Facility Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-68921"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-68921",
+    "invoiceNumber": "INV-83049"
+  },
+  "tax": {
+    "amount": 97.16,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 21,
+      "unitOfMeasure": "PCE",
+      "unitCost": 18.30,
+      "discountAmount": 19.22,
+      "discountIndicator": true,
+      "taxAmount": 21.90,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 365.08,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 9,
+      "unitOfMeasure": "PCE",
+      "unitCost": 15.60,
+      "discountAmount": 14.04,
+      "discountIndicator": true,
+      "taxAmount": 7.58,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 126.36,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "commodityScheme": "unspsc",
+      "quantity": 4,
+      "unitOfMeasure": "PCE",
+      "unitCost": 14.25,
+      "discountAmount": 5.70,
+      "discountIndicator": true,
+      "taxAmount": 3.08,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 51.30,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 4,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "commodityScheme": "unspsc",
+      "quantity": 16,
+      "unitOfMeasure": "EAC",
+      "unitCost": 4.20,
+      "discountAmount": 6.72,
+      "discountIndicator": true,
+      "taxAmount": 3.63,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 60.48,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 5,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "PCE",
+      "unitCost": 38.40,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 55.30,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 921.60,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 6,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "PCE",
+      "unitCost": 6.75,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 5.67,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 94.50,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

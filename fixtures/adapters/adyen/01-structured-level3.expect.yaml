@@ -1,0 +1,8 @@
+description: A /payments request shaped like Adyen's current Level 3 example, using the structured enhancedSchemeData.levelTwoThree object. Adyen has no order-level discount field.
+format: adyen
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 01-structured-level3.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/discount }

@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83371",
+  "amount": 4226.87,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "fleet",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77259"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77259",
+    "invoiceNumber": "INV-83371"
+  },
+  "tax": {
+    "amount": 237.99,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 4.17,
+      "taxAmount": 4.75,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 79.13,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 21,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 0.00,
+      "taxAmount": 80.64,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 1344.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 16,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "taxAmount": 85.44,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 1424.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 11,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 2.61,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 43.45,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "5555 5555 5555 4444",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "commodityScheme": "unspsc",
+      "quantity": 22,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 0.00,
+      "taxAmount": 64.55,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 1075.80,
+      "detailIndicator": "Y"
+    }
+  ]
+}

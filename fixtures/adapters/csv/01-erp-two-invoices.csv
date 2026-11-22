@@ -1,0 +1,4 @@
+invoice_number,invoice_total,card_brand,po_number,tax_total,taxable_flag,freight,item_description,sku,unspsc,qty,uom,unit_price,line_discount,line_total
+INV-50311,280.36,visa,PO-48820,17.36,Y,15.00,Nitrile gloves L box,GLV-NL-100,42132203,10,BX,12.50,5.00,120.00
+INV-50311,280.36,visa,PO-48820,17.36,Y,15.00,Isolation gown blue case,GWN-IS-B50,42131606,2,CA,64.00,,128.00
+INV-50312,94.16,visa,PO-48821,6.16,Y,,Surgical masks box,MSK-SG-050,42131713,4,BX,22.00,,88.00

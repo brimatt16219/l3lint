@@ -1,0 +1,190 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-81989",
+  "amount": 1815.65,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "purchasing",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-68181"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-68181",
+    "invoiceNumber": "INV-81989"
+  },
+  "tax": {
+    "amount": 137.22,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "commodityScheme": "unspsc",
+      "quantity": 3,
+      "unitOfMeasure": "EAC",
+      "unitCost": 9.50,
+      "discountAmount": 1.43,
+      "discountIndicator": true,
+      "taxAmount": 2.23,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 27.07,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "commodityScheme": "unspsc",
+      "quantity": 19,
+      "unitOfMeasure": "EAC",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 18.65,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 226.10,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "commodityScheme": "unspsc",
+      "quantity": 13,
+      "unitOfMeasure": "PCE",
+      "unitCost": 48.90,
+      "discountAmount": 63.57,
+      "discountIndicator": true,
+      "taxAmount": 47.20,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 572.13,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 4,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "commodityScheme": "unspsc",
+      "quantity": 5,
+      "unitOfMeasure": "PCE",
+      "unitCost": 6.75,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 2.78,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 33.75,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 5,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "commodityScheme": "unspsc",
+      "quantity": 11,
+      "unitOfMeasure": "PCE",
+      "unitCost": 26.00,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 23.60,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 286.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 6,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "commodityScheme": "unspsc",
+      "quantity": 13,
+      "unitOfMeasure": "PCE",
+      "unitCost": 7.40,
+      "discountAmount": 9.62,
+      "discountIndicator": true,
+      "taxAmount": 7.14,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 86.58,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 7,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 3,
+      "unitOfMeasure": "PCE",
+      "unitCost": 64.00,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 15.84,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 192.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 8,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "commodityScheme": "unspsc",
+      "quantity": 11,
+      "unitOfMeasure": "GLI",
+      "unitCost": 21.80,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 19.78,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 239.80,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

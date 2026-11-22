@@ -1,0 +1,3 @@
+invoice,total,customer_ref,po,tax,freight,ship_from,ship_to,ship_country,item,sku,unspsc,qty,uom,unit_price,line_discount,line_discount_flag,line_tax,line_total
+INV-50311,280.36,CUST-7781,PO-48820,17.36,15.00,33602,33431,US,Nitrile gloves L box,GLV-NL-100,42132203,10,PCE,12.50,5.00,Y,8.40,120.00
+INV-50311,280.36,CUST-7781,PO-48820,17.36,15.00,33602,33431,US,Isolation gown blue case,GWN-IS-B50,42131606,2,EAC,64.00,0.00,N,8.96,128.00

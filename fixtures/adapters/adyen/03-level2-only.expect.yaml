@@ -1,0 +1,8 @@
+description: Level 2 data only in the structured object, with no item detail lines.
+format: adyen
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 03-level2-only.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-001, path: /lineItems }
+    - { ruleId: VISA-L3-011, path: /amounts/discount }

@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-88402",
+  "amount": 1904.65,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "purchasing",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Harborview Facility Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-72658"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-72658",
+    "invoiceNumber": "INV-88402"
+  },
+  "tax": {
+    "amount": 85.35,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "amex": {
+    "requestorName": "Jordan Ellis",
+    "adviceText": [
+      "PO-72658 supplies order",
+      "Requested by Jordan Ellis"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 21,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 13.13,
+      "taxAmount": 11.85,
+      "total": 249.37
+    },
+    {
+      "sequence": 2,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "quantity": 9,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 0.00,
+      "taxAmount": 6.09,
+      "total": 128.25
+    },
+    {
+      "sequence": 3,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 23,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 88.32,
+      "taxAmount": 37.76,
+      "total": 794.88
+    },
+    {
+      "sequence": 4,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 3,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 0.56,
+      "total": 11.85
+    },
+    {
+      "sequence": 5,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "quantity": 5,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 5.95,
+      "taxAmount": 2.54,
+      "total": 53.55
+    },
+    {
+      "sequence": 6,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 24,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 52.32,
+      "taxAmount": 22.37,
+      "total": 470.88
+    },
+    {
+      "sequence": 7,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 2,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 9.78,
+      "taxAmount": 4.18,
+      "total": 88.02
+    }
+  ]
+}

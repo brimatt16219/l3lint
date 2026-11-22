@@ -1,0 +1,7 @@
+description: "Line 2 quantity is zero."
+operator: zero-required
+context: { brand: discover, cardProduct: corporate, mcc: "5047", asOf: 2026-10-19 }
+expect:
+  exitCode: 1
+  findings:
+    - { ruleId: GEN-ARITH-001, path: /lineItems/1/total, severity: error }

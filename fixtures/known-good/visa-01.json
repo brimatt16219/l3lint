@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-76000",
+  "amount": 3015.75,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "purchasing",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Northbay Office Works",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-64000"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-64000",
+    "invoiceNumber": "INV-76000"
+  },
+  "tax": {
+    "amount": 170.70,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "75201",
+    "toPostalCode": "75231",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "75231"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 23,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 17.94,
+      "taxAmount": 20.45,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 340.86,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "commodityScheme": "unspsc",
+      "quantity": 12,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 0.00,
+      "taxAmount": 5.33,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 88.80,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 1,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 0.24,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 3.95,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 20,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "taxAmount": 106.80,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 1780.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "commodityScheme": "unspsc",
+      "quantity": 20,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 28.50,
+      "taxAmount": 15.39,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 256.50,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 6,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "commodityScheme": "unspsc",
+      "quantity": 18,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 7.56,
+      "taxAmount": 4.08,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 68.04,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 7,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "commodityScheme": "unspsc",
+      "quantity": 9,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 0.00,
+      "taxAmount": 14.04,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 234.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 8,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "commodityScheme": "unspsc",
+      "quantity": 12,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 8.10,
+      "taxAmount": 4.37,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 72.90,
+      "detailIndicator": "Y"
+    }
+  ]
+}

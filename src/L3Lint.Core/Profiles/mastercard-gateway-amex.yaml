@@ -1,0 +1,19 @@
+# Mastercard Gateway with the American Express acquirer: structured Amex Level 2 and 3 data (retrieved 2026-10-25).
+# Selecting this profile gives AMEX-L2-001, AMEX-L2-004 and AMEX-L3-002 their catalog severity.
+profile:
+  id: mastercard-gateway-amex
+  title: Mastercard Gateway, American Express acquirer
+  description: Structured Amex Level 2 and 3 records with 2-character ANSI X12 units.
+  sources:
+    - https://developer.mastercard.com/mastercard-gateway/documentation/gateway-features/trans-enrich-data/order-and-line-item-data/level-2-and-3/level2-3-data-for-amex-acq/
+limits:
+  unitOfMeasureMax:
+    value: 2
+    source: https://developer.mastercard.com/mastercard-gateway/documentation/gateway-features/trans-enrich-data/order-and-line-item-data/level-2-and-3/level2-3-data-for-amex-acq/
+  purchaseOrderNumberMax:
+    value: 22
+    source: https://developer.mastercard.com/mastercard-gateway/documentation/gateway-features/trans-enrich-data/order-and-line-item-data/level-2-and-3/level2-3-data-for-amex-acq/
+  customerReferenceMax:
+    value: 20
+    source: https://developer.mastercard.com/mastercard-gateway/documentation/gateway-features/trans-enrich-data/order-and-line-item-data/level-2-and-3/level2-3-data-for-amex-acq/
+    note: Some settlement files keep only 17.

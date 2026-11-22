@@ -1,0 +1,5 @@
+#nullable enable
+L3Lint.Rules.General.GeneralRulePack
+L3Lint.Rules.General.GeneralRulePack.GeneralRulePack() -> void
+override L3Lint.Rules.General.GeneralRulePack.BatchChecks.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Rules.IBatchCheck!>!
+override L3Lint.Rules.General.GeneralRulePack.CustomChecks.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Rules.ICustomCheck!>!

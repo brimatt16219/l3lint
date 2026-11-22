@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-81353",
+  "amount": 1878.41,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "purchasing",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-67737"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-67737",
+    "invoiceNumber": "INV-81353"
+  },
+  "tax": {
+    "amount": 85.18,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "commodityScheme": "unspsc",
+      "quantity": 5,
+      "unitOfMeasure": "GLI",
+      "unitCost": 21.80,
+      "discountAmount": 5.45,
+      "discountIndicator": true,
+      "taxAmount": 4.92,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 103.55,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "commodityScheme": "unspsc",
+      "quantity": 3,
+      "unitOfMeasure": "PCE",
+      "unitCost": 38.40,
+      "discountAmount": 11.52,
+      "discountIndicator": true,
+      "taxAmount": 4.92,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 103.68,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 8,
+      "unitOfMeasure": "EAC",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 33.82,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 712.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 4,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "PCE",
+      "unitCost": 26.00,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 29.64,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 624.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 5,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 20,
+      "unitOfMeasure": "EAC",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 11.88,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 250.00,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

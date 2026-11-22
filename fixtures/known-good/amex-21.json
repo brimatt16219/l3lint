@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-87660",
+  "amount": 913.21,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "purchasing",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-72140"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-72140",
+    "invoiceNumber": "INV-87660"
+  },
+  "tax": {
+    "amount": 51.13,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "amex": {
+    "requestorName": "Lee Park",
+    "adviceText": [
+      "PO-72140 supplies order",
+      "Requested by Lee Park"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 4,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 4.36,
+      "taxAmount": 4.97,
+      "total": 82.84
+    },
+    {
+      "sequence": 2,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 9,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 34.56,
+      "taxAmount": 18.66,
+      "total": 311.04
+    },
+    {
+      "sequence": 3,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "quantity": 7,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 0.00,
+      "taxAmount": 5.99,
+      "total": 99.75
+    },
+    {
+      "sequence": 4,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 12,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 2.84,
+      "total": 47.40
+    },
+    {
+      "sequence": 5,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 17,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "taxAmount": 18.67,
+      "total": 311.10
+    }
+  ]
+}

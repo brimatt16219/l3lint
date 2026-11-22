@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-84113",
+  "amount": 3218.25,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "purchasing",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Northbay Office Works",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77777"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77777",
+    "invoiceNumber": "INV-84113"
+  },
+  "tax": {
+    "amount": 181.60,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "amex": {
+    "requestorName": "Dana Ortiz",
+    "adviceText": [
+      "PO-77777 supplies order",
+      "Requested by Dana Ortiz"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Shop towels roll blue",
+      "productCode": "PRD-OVERFLOW-2062",
+      "commodityCode": "47131502",
+      "quantity": 2,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.40,
+      "taxAmount": 0.45,
+      "total": 7.50
+    },
+    {
+      "sequence": 2,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 23,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 0.00,
+      "taxAmount": 52.99,
+      "total": 883.20
+    },
+    {
+      "sequence": 3,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "quantity": 24,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "taxAmount": 128.16,
+      "total": 2136.00
+    }
+  ]
+}

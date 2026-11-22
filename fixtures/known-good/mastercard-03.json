@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-81406",
+  "amount": 770.83,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "corporate",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5047",
+    "name": "Northbay Office Works",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-67774"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-67774",
+    "invoiceNumber": "INV-81406"
+  },
+  "tax": {
+    "amount": 43.07,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "PCE",
+      "unitCost": 18.30,
+      "discountAmount": 6.41,
+      "discountIndicator": true,
+      "taxAmount": 7.30,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 121.69,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "PCE",
+      "unitCost": 7.40,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 3.11,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 51.80,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "commodityScheme": "unspsc",
+      "quantity": 16,
+      "unitOfMeasure": "GLI",
+      "unitCost": 21.80,
+      "discountAmount": 34.88,
+      "discountIndicator": true,
+      "taxAmount": 18.84,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 313.92,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 4,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 4,
+      "unitOfMeasure": "PCE",
+      "unitCost": 64.00,
+      "discountAmount": 25.60,
+      "discountIndicator": true,
+      "taxAmount": 13.82,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 230.40,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

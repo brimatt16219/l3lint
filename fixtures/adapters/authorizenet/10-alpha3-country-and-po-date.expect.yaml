@@ -1,0 +1,7 @@
+description: shipTo.country holds the alpha-3 code USA, which maps to US, and the schema-only order.purchaseOrderDateUTC is not mapped, because the spec lists the order date as not supported for Authorize.net.
+format: authorizenet
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 10-alpha3-country-and-po-date.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

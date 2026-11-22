@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>L3Lint.Rules.Mastercard</RootNamespace>
+    <PackageId>L3Lint.Rules.Mastercard</PackageId>
+    <Description>The l3lint Mastercard rule pack (l3lint.rules.mastercard): versioned, sourced rules as YAML data plus the checks they name. Every rule cites public sources.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\L3Lint.Core\L3Lint.Core.csproj" />
+  </ItemGroup>
+
+  <!-- The pack files are embedded for the engine and also shipped as package content for rule authors. -->
+  <ItemGroup>
+    <EmbeddedResource Include="Pack\**\*" LogicalName="L3Lint.Pack.mastercard/%(RecursiveDir)%(Filename)%(Extension)" />
+    <None Include="Pack\**\*" Pack="true" PackagePath="content\l3lint\packs\mastercard\%(RecursiveDir)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="L3Lint.Rules.Tests" />
+    <InternalsVisibleTo Include="L3Lint.FixtureGen" />
+    <InternalsVisibleTo Include="L3Lint.DocsGen" />
+  </ItemGroup>
+
+</Project>

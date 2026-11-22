@@ -1,0 +1,243 @@
+# AMEX-FMT-002: More line items than the gateway forwards to Amex
+
+| Property | Value |
+| --- | --- |
+| Severity | warning |
+| Confidence | processor-doc |
+| Level | L3 |
+| Brand | amex |
+| Impact | truncation |
+| Effective | always |
+| Pack | l3lint.rules.amex 1.0.0 |
+
+## Requirement
+
+Under profiles that forward only the first 4 line items to Amex, put the most important lines first.
+
+## Why
+
+One gateway forwards only the first 4 line items to Amex; later lines are dropped.
+
+## Check
+
+`maxCount /lineItems (max: none; profileKey: amexForwardedLineItems)`
+
+## Message
+
+`The transaction has {count} line items; this processor forwards only the first {max} to Amex.`
+
+## Fix
+
+Put the most important lines first.
+
+## Sources
+
+- <https://docs.stripe.com/payments/payment-line-items>
+
+## Examples
+
+### Passing example
+
+Two line items, within the 4 Stripe forwards.
+
+```json
+{
+  "schemaVersion": "1.0",
+  "id": "INV-41077",
+  "amount": 280.36,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "corporate",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5047",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-55120"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-55120",
+    "invoiceNumber": "INV-41077"
+  },
+  "tax": {
+    "amount": 17.36,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "amex": {
+    "requestorName": "Dana Ortiz",
+    "adviceText": [
+      "PO-55120 gloves and gowns",
+      "Requested by Dana Ortiz"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 10,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 5.00,
+      "taxAmount": 8.40,
+      "total": 120.00
+    },
+    {
+      "sequence": 2,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 2,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 0.00,
+      "taxAmount": 8.96,
+      "total": 128.00
+    }
+  ]
+}
+```
+
+### Failing example
+
+Five line items under the Stripe profile.
+
+```json
+{
+  "schemaVersion": "1.0",
+  "id": "INV-41077",
+  "amount": 280.36,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "corporate",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5047",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-55120"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-55120",
+    "invoiceNumber": "INV-41077"
+  },
+  "tax": {
+    "amount": 17.36,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "amex": {
+    "requestorName": "Dana Ortiz",
+    "adviceText": [
+      "PO-55120 gloves and gowns",
+      "Requested by Dana Ortiz"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 10,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 5.00,
+      "taxAmount": 8.40,
+      "total": 120.00
+    },
+    {
+      "sequence": 2,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 2,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 0.00,
+      "taxAmount": 8.96,
+      "total": 128.00
+    },
+    {
+      "sequence": 3,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 10,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 5.00,
+      "taxAmount": 8.40,
+      "total": 120.00
+    },
+    {
+      "sequence": 4,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 2,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 0.00,
+      "taxAmount": 8.96,
+      "total": 128.00
+    },
+    {
+      "sequence": 5,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 10,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 5.00,
+      "taxAmount": 8.40,
+      "total": 120.00
+    }
+  ]
+}
+```
+
+The examples run with --processor stripe.

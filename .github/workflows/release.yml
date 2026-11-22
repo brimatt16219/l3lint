@@ -1,0 +1,198 @@
+# Release pipeline (Test and delivery tab, "Release workflow"), run on a vX.Y.Z tag that the owner pushes.
+# It publishes to NuGet.org, the MCP Registry, GitHub Releases and GitHub Pages, so it needs these secrets:
+# NUGET_API_KEY (push), and optionally NUGET_SIGNING_CERT (base64 PFX) and NUGET_SIGNING_PASSWORD (package signing).
+# Third-party actions are pinned by full commit SHA.
+name: release
+
+on:
+  push:
+    tags: ["v*.*.*"]
+
+permissions:
+  contents: read
+
+env:
+  DOTNET_NOLOGO: "true"
+  DOTNET_CLI_TELEMETRY_OPTOUT: "true"
+  ContinuousIntegrationBuild: "true"
+
+jobs:
+  gate:
+    uses: ./.github/workflows/ci.yml
+
+  pack:
+    name: Pack packages and SBOM
+    needs: gate
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          global-json-file: global.json
+      - id: version
+        name: Read and check the version
+        shell: bash
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          action_version="$(tr -d '[:space:]' < action/VERSION)"
+          if [ "$version" != "$action_version" ]; then
+            echo "::error::action/VERSION is $action_version but the tag is $GITHUB_REF_NAME. Update action/VERSION before tagging."
+            exit 1
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+      - run: dotnet tool restore
+      - run: dotnet restore L3Lint.slnx --locked-mode
+      - name: Pack the tool, libraries, rule packs and the MCP server
+        run: dotnet pack L3Lint.slnx -c Release --no-restore -p:Version=${{ steps.version.outputs.version }} -o artifacts/packages
+      - name: Sign packages when a certificate is configured
+        shell: bash
+        env:
+          CERT: ${{ secrets.NUGET_SIGNING_CERT }}
+          CERT_PASSWORD: ${{ secrets.NUGET_SIGNING_PASSWORD }}
+        run: |
+          if [ -z "$CERT" ]; then
+            echo "No signing certificate configured; packages stay unsigned (NuGet.org adds its repository signature)."
+            exit 0
+          fi
+          echo "$CERT" | base64 --decode > "$RUNNER_TEMP/signing.pfx"
+          for package in artifacts/packages/*.nupkg; do
+            dotnet nuget sign "$package" --certificate-path "$RUNNER_TEMP/signing.pfx" --certificate-password "$CERT_PASSWORD" --timestamper http://timestamp.digicert.com --overwrite
+          done
+          rm -f "$RUNNER_TEMP/signing.pfx"
+      - name: CycloneDX SBOMs for the tool and the MCP server (the build-only API analyzer left out)
+        shell: bash
+        run: |
+          for target in "src/L3Lint.Cli/L3Lint.Cli.csproj l3lint" "src/L3Lint.Mcp/L3Lint.Mcp.csproj l3lint-mcp"; do
+            set -- $target
+            dotnet tool run dotnet-CycloneDX -- "$1" --recursive --include-project-references \
+              --exclude-filter Microsoft.CodeAnalysis.PublicApiAnalyzers \
+              --output artifacts/sbom --filename "$2.cdx.json" --output-format Json
+          done
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: packages
+          path: |
+            artifacts/packages
+            artifacts/sbom
+
+  binaries:
+    name: Single-file binary (${{ matrix.rid }})
+    needs: pack
+    strategy:
+      matrix:
+        include:
+          # Each operating system cross-publishes both of its architectures.
+          - { rid: win-x64, os: windows-latest }
+          - { rid: win-arm64, os: windows-latest }
+          - { rid: linux-x64, os: ubuntu-latest }
+          - { rid: linux-arm64, os: ubuntu-latest }
+          - { rid: osx-x64, os: macos-latest }
+          - { rid: osx-arm64, os: macos-latest }
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          global-json-file: global.json
+      - name: Publish ReadyToRun single-file binary
+        shell: bash
+        run: |
+          dotnet publish src/L3Lint.Cli -c Release -r ${{ matrix.rid }} -p:Version=${{ needs.pack.outputs.version }} -o "artifacts/binaries/${{ matrix.rid }}"
+          cd "artifacts/binaries/${{ matrix.rid }}"
+          name="l3lint-${{ needs.pack.outputs.version }}-${{ matrix.rid }}"
+          if [ -f l3lint.exe ]; then
+            7z a "../$name.zip" l3lint.exe > /dev/null
+            archive="../$name.zip"
+          else
+            tar -czf "../$name.tar.gz" l3lint
+            archive="../$name.tar.gz"
+          fi
+          cd ..
+          if command -v sha256sum > /dev/null; then sha256sum "$(basename "$archive")" > "$(basename "$archive").sha256"; else shasum -a 256 "$(basename "$archive")" > "$(basename "$archive").sha256"; fi
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: binary-${{ matrix.rid }}
+          path: |
+            artifacts/binaries/*.zip
+            artifacts/binaries/*.tar.gz
+            artifacts/binaries/*.sha256
+
+  publish:
+    name: Attest and publish
+    needs: [pack, binaries]
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          global-json-file: global.json
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          path: artifacts/download
+      - name: Gather release files
+        shell: bash
+        run: |
+          mkdir -p artifacts/release
+          cp artifacts/download/packages/packages/*.nupkg artifacts/download/packages/packages/*.snupkg artifacts/release/
+          cp artifacts/download/packages/sbom/* artifacts/release/
+          cp artifacts/download/binary-*/* artifacts/release/
+      - uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: |
+            artifacts/release/*.nupkg
+            artifacts/release/*.zip
+            artifacts/release/*.tar.gz
+      - name: Push to NuGet.org
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: dotnet nuget push "artifacts/release/*.nupkg" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json --skip-duplicate
+      - name: Wait for NuGet.org to finish validating the MCP server package
+        shell: bash
+        run: |
+          url="https://api.nuget.org/v3-flatcontainer/l3lint.mcp/${{ needs.pack.outputs.version }}/readme"
+          for attempt in $(seq 1 60); do
+            if curl --silent --fail --output /dev/null "$url"; then echo "Package is available."; exit 0; fi
+            echo "Not available yet (attempt $attempt)."; sleep 10
+          done
+          echo "::error::L3Lint.Mcp ${{ needs.pack.outputs.version }} did not become available within 10 minutes."
+          exit 1
+      - name: Publish to the official MCP Registry
+        shell: bash
+        run: |
+          curl --silent --fail --location "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz" | tar -xz mcp-publisher
+          ./mcp-publisher login github-oidc
+          ./mcp-publisher publish src/L3Lint.Mcp/.mcp/server.json
+      - name: Create the GitHub release with binaries, checksums and SBOM
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          version="${{ needs.pack.outputs.version }}"
+          awk -v v="$version" '$0 ~ "^## \\[" v "\\]" { found = 1; next } found && /^## \[/ { exit } found { print }' CHANGELOG.md > "$RUNNER_TEMP/notes.md"
+          gh release create "$GITHUB_REF_NAME" --title "l3lint $version" --notes-file "$RUNNER_TEMP/notes.md" \
+            artifacts/release/*.zip artifacts/release/*.tar.gz artifacts/release/*.sha256 artifacts/release/*.cdx.json
+      - name: Move the major tag for the Action
+        shell: bash
+        run: |
+          major="v${GITHUB_REF_NAME#v}"
+          major="${major%%.*}"
+          git tag --force "$major" "$GITHUB_SHA"
+          git push --force origin "refs/tags/$major"
+
+  docs:
+    name: Publish the docs site
+    needs: publish
+    uses: ./.github/workflows/docs.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

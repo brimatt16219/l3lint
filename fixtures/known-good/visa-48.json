@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-78491",
+  "amount": 1025.25,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "corporate",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Northbay Office Works",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-65739"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-65739",
+    "invoiceNumber": "INV-78491"
+  },
+  "tax": {
+    "amount": 57.47,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "commodityScheme": "unspsc",
+      "quantity": 3,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 1.79,
+      "taxAmount": 2.03,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 33.91,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 44.80,
+      "taxAmount": 24.19,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 403.20,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 21,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 38.43,
+      "taxAmount": 20.75,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 345.87,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 0.00,
+      "taxAmount": 3.53,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 58.80,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 11,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 4.35,
+      "taxAmount": 2.35,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 39.10,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 6,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "commodityScheme": "unspsc",
+      "quantity": 6,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 8.55,
+      "taxAmount": 4.62,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 76.95,
+      "detailIndicator": "Y"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-87342",
+  "amount": 1992.70,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "business",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-71918"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-71918",
+    "invoiceNumber": "INV-87342"
+  },
+  "tax": {
+    "amount": 90.36,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "75201",
+    "toPostalCode": "75231",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "75231"
+  },
+  "amex": {
+    "requestorName": "Lee Park",
+    "adviceText": [
+      "PO-71918 supplies order",
+      "Requested by Lee Park"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 24,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 4.74,
+      "taxAmount": 4.28,
+      "total": 90.06
+    },
+    {
+      "sequence": 2,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "quantity": 19,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 0.00,
+      "taxAmount": 23.47,
+      "total": 494.00
+    },
+    {
+      "sequence": 3,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "quantity": 21,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 0.00,
+      "taxAmount": 14.21,
+      "total": 299.25
+    },
+    {
+      "sequence": 4,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "quantity": 10,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "taxAmount": 5.65,
+      "total": 119.00
+    },
+    {
+      "sequence": 5,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 20,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 0.00,
+      "taxAmount": 36.48,
+      "total": 768.00
+    },
+    {
+      "sequence": 6,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 3,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 14.67,
+      "taxAmount": 6.27,
+      "total": 132.03
+    }
+  ]
+}

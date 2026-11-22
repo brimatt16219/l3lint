@@ -1,0 +1,8 @@
+description: Constants, a value map and defaults. E maps to exempt; the empty tax cells take the default 0; the second invoice has no tax status, so the map's default (taxable) applies, and its empty unit of measure takes the default EA.
+format: csv
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 04-const-map-default.canonical.json
+expect:
+  findings:
+    - { transaction: 0, ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { transaction: 1, ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

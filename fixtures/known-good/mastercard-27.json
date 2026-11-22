@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-82678",
+  "amount": 1473.14,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "purchasing",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Summit Lab Products",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-68662"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-68662",
+    "invoiceNumber": "INV-82678"
+  },
+  "tax": {
+    "amount": 96.37,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "commodityScheme": "unspsc",
+      "quantity": 23,
+      "unitOfMeasure": "EAC",
+      "unitCost": 4.20,
+      "discountAmount": 4.83,
+      "discountIndicator": true,
+      "taxAmount": 6.42,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 91.77,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "commodityScheme": "unspsc",
+      "quantity": 5,
+      "unitOfMeasure": "PCE",
+      "unitCost": 7.40,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 2.59,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 37.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "EAC",
+      "unitCost": 12.50,
+      "discountAmount": 30.00,
+      "discountIndicator": true,
+      "taxAmount": 18.90,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 270.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 4,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 6,
+      "unitOfMeasure": "PCE",
+      "unitCost": 64.00,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 26.88,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 384.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 5,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 3,
+      "unitOfMeasure": "EAC",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 18.69,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 267.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 6,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "commodityScheme": "unspsc",
+      "quantity": 15,
+      "unitOfMeasure": "GLI",
+      "unitCost": 21.80,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 22.89,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 327.00,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

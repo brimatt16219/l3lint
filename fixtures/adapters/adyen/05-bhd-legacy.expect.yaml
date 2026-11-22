@@ -1,0 +1,8 @@
+description: Dinar amounts (exponent 3) as strings in the legacy additionalData keys; "829" is 0.829 BHD.
+format: adyen
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 05-bhd-legacy.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/discount }

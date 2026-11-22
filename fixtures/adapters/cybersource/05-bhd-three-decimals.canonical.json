@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "amount": 19.204,
+  "currency": "BHD",
+  "customer": { "reference": "PO-BH-0412" },
+  "order": { "invoiceNumber": "INV-BH-7733" },
+  "tax": { "amount": 0.829, "indicator": "taxable" },
+  "amounts": { "discount": 0.000, "freight": 1.500, "duty": 0.000 },
+  "shipping": { "fromPostalCode": "1001", "toPostalCode": "317", "toCountry": "BH" },
+  "lineItems": [
+    { "sequence": 1, "description": "Cable ties black pack", "productCode": "CBL-TIE-BK", "commodityCode": "39121704", "quantity": 5, "unitOfMeasure": "PK", "unitCost": 2.750, "discountAmount": 0.250, "taxAmount": 0.660, "amountIncludesTax": false, "total": 13.500 },
+    { "sequence": 2, "description": "Electrical tape roll", "productCode": "ETP-RL-19", "commodityCode": "31201502", "quantity": 3, "unitOfMeasure": "RL", "unitCost": 1.125, "discountAmount": 0.000, "taxAmount": 0.169, "amountIncludesTax": false, "total": 3.375 }
+  ]
+}

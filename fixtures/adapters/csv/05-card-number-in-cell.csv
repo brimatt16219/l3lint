@@ -1,0 +1,3 @@
+invoice,total,currency,customer_ref,tax,tax_flag,discount,freight,duty,ship_from,ship_to,ship_country,item,sku,unspsc,qty,uom,unit_price,line_discount,line_tax,line_total
+INV-50311,280.36,USD,PO-48820,17.36,T,0.00,15.00,0.00,33602,33431,US,4111 1111 1111 1111,GLV-NL-100,42132203,10,BX,12.50,5.00,8.40,120.00
+INV-50311,280.36,USD,PO-48820,17.36,T,0.00,15.00,0.00,33602,33431,US,Isolation gown blue case,GWN-IS-B50,42131606,2,CA,64.00,0.00,8.96,128.00

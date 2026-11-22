@@ -1,0 +1,21 @@
+{
+  "clientReferenceInformation": { "code": "INV-JP-0918" },
+  "processingInformation": { "capture": true, "purchaseLevel": "3" },
+  "orderInformation": {
+    "shipTo": { "postalCode": "530-0001", "country": "JP" },
+    "shippingDetails": { "shipFromPostalCode": "150-0002" },
+    "invoiceDetails": { "purchaseOrderNumber": "PO-JP-2210", "taxable": true },
+    "amountDetails": {
+      "totalAmount": "27500",
+      "currency": "JPY",
+      "taxAmount": "2400",
+      "freightAmount": "1100",
+      "dutyAmount": "0",
+      "discountAmount": "0"
+    },
+    "lineItems": [
+      { "productCode": "SFG-CLR-01", "productName": "Safety goggles clear", "commodityCode": "46181804", "quantity": "12", "unitPrice": "1250", "unitOfMeasure": "EA", "discountAmount": "0", "taxAmount": "1500", "totalAmount": "15000" },
+      { "productCode": "WGL-CTN-02", "productName": "Work gloves cotton pair", "commodityCode": "46181504", "quantity": "20", "unitPrice": "480", "unitOfMeasure": "PR", "discountAmount": "600", "taxAmount": "900.40", "totalAmount": "9000" }
+    ]
+  }
+}

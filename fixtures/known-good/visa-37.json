@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-77908",
+  "amount": 1278.54,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "purchasing",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Summit Lab Products",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-65332"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-65332",
+    "invoiceNumber": "INV-77908"
+  },
+  "tax": {
+    "amount": 95.73,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "commodityScheme": "unspsc",
+      "quantity": 13,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 31.79,
+      "taxAmount": 49.82,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 603.91,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 8,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 10.30,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 124.80,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "commodityScheme": "unspsc",
+      "quantity": 6,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 5.70,
+      "taxAmount": 4.23,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 51.30,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "commodityScheme": "unspsc",
+      "quantity": 6,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 0.00,
+      "taxAmount": 19.01,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 230.40,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "taxAmount": 10.57,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 128.10,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 6,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "commodityScheme": "unspsc",
+      "quantity": 1,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 0.00,
+      "taxAmount": 1.80,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 21.80,
+      "detailIndicator": "Y"
+    }
+  ]
+}

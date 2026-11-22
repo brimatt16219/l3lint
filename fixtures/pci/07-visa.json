@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-69318",
+  "amount": 1392.35,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "purchasing",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-51222"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-51222",
+    "invoiceNumber": 4111111111111111
+  },
+  "tax": {
+    "amount": 78.81,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "commodityScheme": "unspsc",
+      "quantity": 9,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 5.36,
+      "taxAmount": 6.10,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 101.74,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 18,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 115.20,
+      "taxAmount": 62.21,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 1036.80,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "taxAmount": 10.50,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 175.00,
+      "detailIndicator": "Y"
+    }
+  ]
+}

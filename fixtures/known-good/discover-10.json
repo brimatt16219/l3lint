@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-62377",
+  "amount": 2723.32,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "business",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Northbay Office Works",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-75433"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-75433",
+    "invoiceNumber": "INV-62377"
+  },
+  "tax": {
+    "amount": 178.16,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 18,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 3.56,
+      "taxAmount": 4.73,
+      "total": 67.54
+    },
+    {
+      "sequence": 2,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 22,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 107.58,
+      "taxAmount": 67.78,
+      "total": 968.22
+    },
+    {
+      "sequence": 3,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "quantity": 12,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 8.10,
+      "taxAmount": 5.10,
+      "total": 72.90
+    },
+    {
+      "sequence": 4,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "quantity": 7,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "taxAmount": 5.83,
+      "total": 83.30
+    },
+    {
+      "sequence": 5,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "quantity": 17,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 18.56,
+      "total": 265.20
+    },
+    {
+      "sequence": 6,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 17,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 0.00,
+      "taxAmount": 76.16,
+      "total": 1088.00
+    }
+  ]
+}

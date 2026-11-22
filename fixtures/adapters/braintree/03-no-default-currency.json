@@ -1,0 +1,17 @@
+{
+  "amount": "272.78",
+  "paymentMethodNonce": "fake-valid-nonce",
+  "purchaseOrderNumber": "PO-31104",
+  "orderId": "INV-61377",
+  "taxAmount": "14.84",
+  "taxExempt": false,
+  "shippingAmount": "9.95",
+  "discountAmount": "0.00",
+  "shipsFromPostalCode": "02110",
+  "shipping": { "postalCode": "02139", "countryCodeAlpha2": "US" },
+  "lineItems": [
+    { "name": "Copy paper letter case", "kind": "debit", "quantity": "4", "unitAmount": "42.00", "unitOfMeasure": "CA", "totalAmount": "168.00", "taxAmount": "10.08", "discountAmount": "0.00", "productCode": "PPR-LTR-10", "commodityCode": "14111507" },
+    { "name": "Ballpoint pens blue dozen", "kind": "debit", "quantity": "6", "unitAmount": "9.75", "unitOfMeasure": "DZ", "totalAmount": "55.00", "taxAmount": "3.26", "discountAmount": "3.50", "productCode": "PEN-BP-B12", "commodityCode": "44121704" },
+    { "name": "Stapler heavy duty", "kind": "debit", "quantity": "1", "unitAmount": "24.99", "unitOfMeasure": "EA", "totalAmount": "24.99", "taxAmount": "1.50", "discountAmount": "0.00", "productCode": "STP-HD-01", "commodityCode": "44121615" }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-88614",
+  "amount": 2029.07,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "purchasing",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-72806"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-72806",
+    "invoiceNumber": "INV-88614"
+  },
+  "tax": {
+    "amount": 114.02,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "amex": {
+    "requestorName": "Dana Ortiz",
+    "adviceText": [
+      "PO-72806 supplies order",
+      "Requested by Dana Ortiz"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "quantity": 14,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 8.33,
+      "taxAmount": 9.50,
+      "total": 158.27
+    },
+    {
+      "sequence": 2,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 1,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 2.18,
+      "taxAmount": 1.18,
+      "total": 19.62
+    },
+    {
+      "sequence": 3,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 13,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 23.79,
+      "taxAmount": 12.85,
+      "total": 214.11
+    },
+    {
+      "sequence": 4,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "quantity": 17,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 0.00,
+      "taxAmount": 7.55,
+      "total": 125.80
+    },
+    {
+      "sequence": 5,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "quantity": 7,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 0.00,
+      "taxAmount": 2.84,
+      "total": 47.25
+    },
+    {
+      "sequence": 6,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "quantity": 15,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "taxAmount": 80.10,
+      "total": 1335.00
+    }
+  ]
+}

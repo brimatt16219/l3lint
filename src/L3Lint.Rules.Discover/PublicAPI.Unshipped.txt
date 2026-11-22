@@ -1,0 +1,4 @@
+#nullable enable
+L3Lint.Rules.Discover.DiscoverRulePack
+L3Lint.Rules.Discover.DiscoverRulePack.DiscoverRulePack() -> void
+override L3Lint.Rules.Discover.DiscoverRulePack.TierPolicy.get -> L3Lint.Core.Tiers.ITierPolicy!

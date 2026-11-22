@@ -1,0 +1,7 @@
+description: "99 line items under the jpmorgan profile, one more than it accepts."
+operator: too-many-lines
+context: { brand: discover, cardProduct: corporate, mcc: "5198", asOf: 2026-10-19, processor: jpmorgan }
+expect:
+  exitCode: 1
+  findings:
+    - { ruleId: DISC-FMT-001, path: /lineItems, severity: error }

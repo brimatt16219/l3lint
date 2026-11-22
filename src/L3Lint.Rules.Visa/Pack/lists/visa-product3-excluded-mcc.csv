@@ -1,0 +1,15 @@
+# MCCs excluded from Visa Commercial Product 3 (CEDP), per Stripe's public payment line items guide.
+# source: https://docs.stripe.com/payments/payment-line-items
+# retrieved: 2026-10-25
+mcc,note
+3000-3999,Airlines, car rental and lodging chains
+4000-4010,Railroads
+4112,Passenger railways
+4411,Cruise lines
+4511,Airlines and air carriers
+4722,Travel agencies and tour operators
+5812,Restaurants
+5814,Fast food restaurants
+7011,Lodging
+7512,Car rental agencies
+7513,Truck and utility trailer rentals

@@ -1,0 +1,8 @@
+# Generic processor profile (the default).
+# It sets no processor-specific limits, so every rule uses the default from the canonical field dictionary
+# in the l3lint spec. Choose a named profile with --processor when your gateway documents tighter limits.
+profile:
+  id: generic
+  title: Generic (no processor-specific limits)
+  description: Rule defaults from the canonical field dictionary apply. Single-processor rules run as warnings.
+  sources: []

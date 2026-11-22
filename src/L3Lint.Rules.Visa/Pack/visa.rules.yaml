@@ -1,0 +1,599 @@
+# l3lint Visa rule pack: Visa Commercial Enhanced Data Program (CEDP), Product 3, and the retired Level 2
+# rules kept with an end date so --as-of can lint older payloads. Source of truth for the 26 VISA rules in the
+# spec's rule catalog (Card brand rules tab); design notes are in docs/dev/RULE-DESIGN.md.
+pack:
+  id: l3lint.rules.visa
+  version: 1.0.0
+  brand: visa
+  publishedOn: 2026-10-25
+  title: Visa (CEDP Product 3)
+  description: Visa Commercial Enhanced Data Program checks for US commercial cards.
+  lists:
+    visaProduct3ExcludedMcc: lists/visa-product3-excluded-mcc.csv
+    visaFederalExcludedMcc: lists/visa-federal-excluded-mcc.csv
+    visaFuelMcc: lists/visa-fuel-mcc.csv
+
+# Product 3 gate (VR3): commercial cards only, MCC not excluded, and not a federal card at an excluded medical MCC.
+x-gates:
+  product3: &product3
+    cardProducts: [business, corporate, purchasing, fleet]
+    mccNotIn: visaProduct3ExcludedMcc
+    unless:
+      - { field: /card/isFederalGovernment, equals: true }
+      - { field: /merchant/mcc, inList: visaFederalExcludedMcc }
+  level2: &level2
+    cardProducts: [business, corporate, purchasing, fleet]
+
+rules:
+  - id: VISA-ELIG-001
+    title: Card product not eligible for Product 3
+    requirement: Visa Product 3 rates apply only to business, corporate, purchasing and fleet cards.
+    rationale: Visa pays Product 3 rates on US domestic commercial credit cards only.
+    level: general
+    severity: information
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    check: { kind: inList, field: /card/product, values: [business, corporate, purchasing, fleet] }
+    message: "Card product {actual} cannot earn Visa Product 3 rates."
+    fix: None; no Product 3 rate.
+    impact: noBenefit
+    sources:
+      - https://docs.stripe.com/payments/payment-line-items
+      - https://paypal.com/us/brc/article/visas-commercial-enhanced-data-program
+    examples:
+      pass: examples/VISA-ELIG-001.pass.json
+      fail: examples/VISA-ELIG-001.fail.json
+      passNote: The card is a purchasing card.
+      failNote: The card is a consumer card.
+
+  - id: VISA-ELIG-002
+    title: MCC excluded from Product 3
+    requirement: Visa excludes some MCCs (travel, lodging, restaurants and others) from Product 3.
+    rationale: At these MCCs enhanced data earns no Product 3 rate, so data errors there do not cost a downgrade.
+    level: general
+    severity: information
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    check: { kind: inList, field: /merchant/mcc, list: visaProduct3ExcludedMcc, mode: deny }
+    message: "MCC {actual} is excluded from Visa Product 3, so no enhanced-data rate is available."
+    fix: None; no Product 3 rate.
+    impact: noBenefit
+    sources:
+      - https://docs.stripe.com/payments/payment-line-items
+    examples:
+      pass: examples/VISA-ELIG-002.pass.json
+      fail: examples/VISA-ELIG-002.fail.json
+      passNote: MCC 5047 (medical supplies) is eligible.
+      failNote: MCC 5812 (restaurants) is excluded.
+
+  - id: VISA-ELIG-003
+    title: Commercial prepaid card
+    requirement: Commercial prepaid cards are listed as ineligible for Visa enhanced-data rates by one processor.
+    rationale: One public processor source lists commercial prepaid as ineligible; l3lint reports it as context.
+    level: general
+    severity: information
+    confidence: processor-doc
+    check: { kind: inList, field: /card/product, values: [commercialPrepaid], mode: deny }
+    message: The card is commercial prepaid, which one processor lists as ineligible for Visa enhanced-data rates.
+    fix: None; listed as ineligible by one processor.
+    impact: noBenefit
+    supersedes: [VISA-ELIG-001]
+    sources:
+      - https://resource.payrix.com/resources/understanding-interchange-data-requirements
+    examples:
+      pass: examples/VISA-ELIG-003.pass.json
+      fail: examples/VISA-ELIG-003.fail.json
+      passNote: The card is a purchasing card.
+      failNote: The card is commercial prepaid.
+
+  - id: VISA-ELIG-004
+    title: Federal government card at an excluded medical MCC
+    requirement: Federal government corporate and purchasing cards are excluded from Product 3 at medical MCCs.
+    rationale: Visa's exclusion for federal cards covers doctors, dentists, hospitals and similar MCCs.
+    level: general
+    severity: information
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    appliesTo:
+      when:
+        - { field: /card/isFederalGovernment, equals: true }
+    check: { kind: inList, field: /merchant/mcc, list: visaFederalExcludedMcc, mode: deny }
+    message: "Federal government cards are excluded from Product 3 at MCC {actual}."
+    fix: None.
+    impact: noBenefit
+    sources:
+      - https://docs.stripe.com/payments/payment-line-items
+    examples:
+      pass: examples/VISA-ELIG-004.pass.json
+      fail: examples/VISA-ELIG-004.fail.json
+      passNote: A federal card at MCC 5047, which is not a medical MCC.
+      failNote: A federal card at MCC 8062 (hospitals).
+
+  - id: VISA-ELIG-005
+    title: Card not present without a billing postal code
+    requirement: Card-not-present sales should carry the billing postal code for address verification.
+    rationale: Address verification data is expected for the lower commercial rates on card-not-present sales.
+    level: L2
+    severity: warning
+    confidence: processor-doc
+    appliesTo:
+      when:
+        - { field: /channel, equals: cardNotPresent }
+    check: { kind: required, field: /billing/postalCode }
+    message: The sale is card not present but has no billing postal code.
+    fix: Send the billing postal code for address verification.
+    impact: blocksLevel3
+    sources:
+      - https://docs.adyen.com/payment-methods/cards/enhanced-scheme-data
+    examples:
+      pass: examples/VISA-ELIG-005.pass.json
+      fail: examples/VISA-ELIG-005.fail.json
+      passNote: The billing postal code is 33431.
+      failNote: The billing object is missing.
+
+  - id: VISA-L2-001
+    title: Tax outside 0.1% to 22% of the amount
+    requirement: Until the Level 2 sunset, Visa Level 2 needed tax between 0.1% and 22% of the amount, except at fuel MCCs or when the sale is exempt.
+    rationale: Tax outside the range was treated as not real, so the transaction settled without the Level 2 rate.
+    level: L2
+    severity: error
+    confidence: processor-doc
+    effective: { until: 2026-04-17 }
+    appliesTo:
+      cardProducts: [business, corporate, purchasing, fleet]
+      mccNotIn: visaFuelMcc
+      unless:
+        - { field: /tax/indicator, equals: exempt }
+    check: { kind: ratio, numerator: /tax/amount, denominator: /amount, min: 0.001, max: 0.22 }
+    message: "Tax is {ratio} of the amount; Visa Level 2 needs {min} to {max}."
+    fix: Correct the tax amount or mark the sale exempt.
+    impact: blocksLevel2
+    sources:
+      - https://developer.paypal.com/braintree/docs/reference/general/level-2-and-3-processing/required-fields/dotnet/
+      - https://docs.stripe.com/payments/payment-line-items
+    notes: Sources give April 17 and April 18, 2026 for the Level 2 sunset; the pack uses April 17 as the last day these rules apply (the stricter reading, risk R2).
+    examples:
+      pass: examples/VISA-L2-001.pass.json
+      fail: examples/VISA-L2-001.fail.json
+      passNote: Tax 17.36 is 6.19% of 280.36.
+      failNote: Tax 0.10 is 0.04% of 280.36.
+      context: { asOf: 2026-03-01 }
+
+  - id: VISA-L2-002
+    title: Tax indicator missing
+    requirement: Until the Level 2 sunset, Visa Level 2 needed the tax indicator.
+    rationale: The indicator tells the network whether a zero tax means exempt or missing.
+    level: L2
+    severity: error
+    confidence: processor-doc
+    effective: { until: 2026-04-17 }
+    appliesTo: *level2
+    check: { kind: required, field: /tax/indicator }
+    message: The tax indicator is missing.
+    fix: Send `taxable` or `exempt`.
+    impact: blocksLevel2
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+      - https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/online-payments/payment-methods/cards/commercialcards
+    examples:
+      pass: examples/VISA-L2-002.pass.json
+      fail: examples/VISA-L2-002.fail.json
+      passNote: The indicator is taxable.
+      failNote: The indicator is missing.
+      context: { asOf: 2026-03-01 }
+
+  - id: VISA-L2-003
+    title: Purchasing card at a fuel MCC without a customer code
+    requirement: Until the Level 2 sunset, purchasing cards at fuel MCCs needed a customer code instead of the tax range.
+    rationale: At fuel MCCs the customer code replaced the tax check for Level 2.
+    level: L2
+    severity: error
+    confidence: processor-doc
+    effective: { until: 2026-04-17 }
+    appliesTo:
+      cardProducts: [purchasing]
+      mccIn: visaFuelMcc
+    check: { kind: required, field: /customer/reference }
+    message: A purchasing card at a fuel MCC needs a customer code.
+    fix: Send the customer code.
+    impact: blocksLevel2
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+      - https://developer.paypal.com/braintree/docs/reference/general/level-2-and-3-processing/required-fields/dotnet/
+    examples:
+      pass: examples/VISA-L2-003.pass.json
+      fail: examples/VISA-L2-003.fail.json
+      passNote: A purchasing card at MCC 5541 with customer code PO-77812.
+      failNote: A purchasing card at MCC 5541 with no customer code.
+      context: { asOf: 2026-03-01 }
+
+  - id: VISA-L3-001
+    title: No line items
+    requirement: Product 3 needs the invoice's line items.
+    rationale: Product 3 is the line-item level; without lines the transaction cannot reach it.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    appliesTo: *product3
+    check: { kind: required, field: /lineItems }
+    message: The transaction has no line items; Visa needs them for Product 3.
+    fix: Send the invoice lines.
+    impact: blocksLevel3
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+    examples:
+      pass: examples/VISA-L3-001.pass.json
+      fail: examples/VISA-L3-001.fail.json
+      passNote: The transaction has 2 line items.
+      failNote: The line items array is empty.
+
+  - id: VISA-L3-002
+    title: Line item descriptor missing
+    requirement: Each line needs an item descriptor for Product 3.
+    rationale: The descriptor is one of the 12 Product 3 fields and is what the buyer sees on the statement.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    appliesTo: *product3
+    check: { kind: required, field: /lineItems/*/description }
+    message: "Line {index} has no description; Visa needs one on every line for Product 3."
+    fix: Add the item name.
+    impact: blocksLevel3
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+    examples:
+      pass: examples/VISA-L3-002.pass.json
+      fail: examples/VISA-L3-002.fail.json
+      passNote: Both lines have descriptions.
+      failNote: Line 2 has no description.
+
+  - id: VISA-L3-003
+    title: Product code missing
+    requirement: Each line needs a product code (SKU or part number) for Product 3.
+    rationale: The product code is one of the 12 Product 3 fields.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    appliesTo: *product3
+    check: { kind: required, field: /lineItems/*/productCode }
+    message: "Line {index} has no product code; Visa needs one on every line for Product 3."
+    fix: Add the SKU or part number.
+    impact: blocksLevel3
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+    examples:
+      pass: examples/VISA-L3-003.pass.json
+      fail: examples/VISA-L3-003.fail.json
+      passNote: Both lines have product codes.
+      failNote: Line 2 has no product code.
+
+  - id: VISA-L3-004
+    title: Commodity code is required for Product 3
+    requirement: Each line needs a commodity code, usually an 8-digit UNSPSC code, for Product 3.
+    rationale: The commodity code is one of the 12 Product 3 fields; it classifies what was bought.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    appliesTo: *product3
+    check: { kind: required, field: /lineItems/*/commodityCode, allowZero: false }
+    message: "Line {index} has no commodity code; Visa needs one on every line for Product 3."
+    fix: Add the most specific 8-digit UNSPSC code for this item.
+    impact: blocksLevel3
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+    examples:
+      pass: examples/VISA-L3-004.pass.json
+      fail: examples/VISA-L3-004.fail.json
+      passNote: Both lines have UNSPSC codes.
+      failNote: Line 2 has no commodity code.
+
+  - id: VISA-L3-005
+    title: Quantity missing or not above 0
+    requirement: Each line needs a quantity above 0 for Product 3.
+    rationale: A zero or missing quantity is filler that Visa's validation rejects.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    appliesTo: *product3
+    check: { kind: required, field: /lineItems/*/quantity, positiveOnly: true }
+    message: "Line {index} quantity is {actual}; Visa needs a quantity above 0."
+    fix: Send the real quantity.
+    impact: blocksLevel3
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+    examples:
+      pass: examples/VISA-L3-005.pass.json
+      fail: examples/VISA-L3-005.fail.json
+      passNote: Quantities are 10 and 2.
+      failNote: Line 2 quantity is 0.
+
+  - id: VISA-L3-006
+    title: Unit of measure missing
+    requirement: Each line needs a unit of measure (up to 12 characters) for Product 3.
+    rationale: The unit of measure is one of the 12 Product 3 fields.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    appliesTo: *product3
+    check: { kind: required, field: /lineItems/*/unitOfMeasure }
+    message: "Line {index} has no unit of measure; Visa needs one for Product 3."
+    fix: Send a unit such as EA or BX.
+    impact: blocksLevel3
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+    examples:
+      pass: examples/VISA-L3-006.pass.json
+      fail: examples/VISA-L3-006.fail.json
+      passNote: Units are BX and CA.
+      failNote: Line 2 has no unit of measure.
+
+  - id: VISA-L3-007
+    title: Unit cost missing
+    requirement: Each line needs its unit cost for Product 3.
+    rationale: The unit cost is one of the 12 Product 3 fields and drives the line arithmetic.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    appliesTo: *product3
+    check: { kind: required, field: /lineItems/*/unitCost }
+    message: "Line {index} has no unit cost; Visa needs it for Product 3."
+    fix: Send the unit price.
+    impact: blocksLevel3
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+    examples:
+      pass: examples/VISA-L3-007.pass.json
+      fail: examples/VISA-L3-007.fail.json
+      passNote: Unit costs are 12.50 and 64.00.
+      failNote: Line 2 has no unit cost.
+
+  - id: VISA-L3-008
+    title: Line total missing
+    requirement: Each line needs its extended amount for Product 3.
+    rationale: The line total is one of the 12 Product 3 fields and must reconcile with the transaction amount.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    appliesTo: *product3
+    check: { kind: required, field: /lineItems/*/total }
+    message: "Line {index} has no total; Visa needs the extended amount for Product 3."
+    fix: Send the extended amount.
+    impact: blocksLevel3
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+    examples:
+      pass: examples/VISA-L3-008.pass.json
+      fail: examples/VISA-L3-008.fail.json
+      passNote: Line totals are 120.00 and 128.00.
+      failNote: Line 2 has no total.
+
+  - id: VISA-L3-009
+    title: Line discount missing
+    requirement: Each line needs a discount amount for Product 3, 0 when there is no discount.
+    rationale: The line discount is one of the 12 Product 3 fields; an explicit 0 shows it was considered.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    appliesTo: *product3
+    check: { kind: required, field: /lineItems/*/discountAmount, allowZero: true }
+    message: "Line {index} has no discount amount; Visa needs one, 0 when there is no discount."
+    fix: Send 0 when there is no discount.
+    impact: blocksLevel3
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+    examples:
+      pass: examples/VISA-L3-009.pass.json
+      fail: examples/VISA-L3-009.fail.json
+      passNote: Line discounts are 5.00 and 0.00.
+      failNote: Line 2 has no discount amount.
+
+  - id: VISA-L3-010
+    title: Line-item detail indicator missing
+    requirement: Product 3 line items carry a line-item detail indicator, often set by the processor.
+    rationale: The detail indicator marks the record as line-item detail; many processors fill it, so this is a warning.
+    level: L3
+    severity: warning
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    appliesTo: *product3
+    check: { kind: required, field: /lineItems/*/detailIndicator, report: once }
+    message: "{count} line(s) have no line-item detail indicator, starting with line {index}."
+    fix: Confirm your processor sets it.
+    impact: blocksLevel3
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+      - https://community.developer.cybersource.com/t5/Integration-and-Testing/Submitting-Level-2-Data/m-p/60293
+    notes: Checked for presence only; no public list of valid values was found (ADR-0015). Reported once per transaction (ADR-0039).
+    examples:
+      pass: examples/VISA-L3-010.pass.json
+      fail: examples/VISA-L3-010.fail.json
+      passNote: Both lines carry the indicator.
+      failNote: Neither line carries the indicator, as in the spec's example payload.
+
+  - id: VISA-L3-011
+    title: Summary discount, freight or duty missing
+    requirement: Product 3 needs the summary discount, freight and duty amounts, 0 for each that does not apply.
+    rationale: These are among the 12 Product 3 fields; an explicit 0 shows the value was considered.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    appliesTo: *product3
+    check: { kind: required, fields: [/amounts/discount, /amounts/freight, /amounts/duty], allowZero: true }
+    message: "{field} is missing; Visa needs it for Product 3, 0 when it does not apply."
+    fix: Send 0 for each that does not apply.
+    impact: blocksLevel3
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+    examples:
+      pass: examples/VISA-L3-011.pass.json
+      fail: examples/VISA-L3-011.fail.json
+      passNote: Discount, freight and duty are all sent.
+      failNote: Duty is missing.
+
+  - id: VISA-L3-012
+    title: Tax must be positive or explicitly exempt
+    requirement: Under CEDP, tax must be above 0, or the sale must be flagged exempt with tax.indicator.
+    rationale: A bare zero tax is not accepted as a tax-exempt sale; exemption must be flagged explicitly.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    appliesTo: *product3
+    check: { kind: custom, check: ExplicitTax }
+    message: "Tax is {actual} and the sale is not marked exempt."
+    fix: Send the tax amount, or set tax.indicator to exempt.
+    impact: riskVisaValidation
+    sources:
+      - https://www.versapay.com/cedp
+      - https://www.forbes.com/councils/forbesbusinesscouncil/2025/06/27/what-merchants-should-know-about-visas-commercial-enhanced-data-program/
+    examples:
+      pass: examples/VISA-L3-012.pass.json
+      fail: examples/VISA-L3-012.fail.json
+      passNote: Tax is 17.36.
+      failNote: Tax is 0.00 and the indicator says taxable.
+
+  - id: VISA-L3-013
+    title: Freight without shipping postal codes or country
+    requirement: When freight is above 0, send the ship-from and ship-to postal codes and the destination country.
+    rationale: Shipping data is conditional for Product 3 and expected whenever goods ship.
+    level: L3
+    severity: warning
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    appliesTo:
+      cardProducts: [business, corporate, purchasing, fleet]
+      mccNotIn: visaProduct3ExcludedMcc
+      when:
+        - { field: /amounts/freight, greaterThan: 0 }
+    check: { kind: required, fields: [/shipping/fromPostalCode, /shipping/toPostalCode, /shipping/toCountry] }
+    message: "Freight is charged but {field} is missing."
+    fix: Send the shipping postal codes and country.
+    impact: blocksLevel3
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+    examples:
+      pass: examples/VISA-L3-013.pass.json
+      fail: examples/VISA-L3-013.fail.json
+      passNote: Freight 15.00 with both postal codes and the country.
+      failNote: Freight 15.00 but no ship-from postal code.
+
+  - id: VISA-L3-014
+    title: Descriptor longer than 26 characters
+    requirement: Visa statements show 26 characters of the line descriptor.
+    rationale: Longer descriptors are cut on the buyer's statement.
+    level: L3
+    severity: warning
+    confidence: processor-doc
+    check: { kind: maxLength, field: /lineItems/*/description, max: 26 }
+    message: "Line {index} description is {length} characters; Visa statements show {max}."
+    fix: Shorten it; statements show 26.
+    impact: truncation
+    supersedes: [GEN-FMT-006]
+    sources:
+      - https://docs.stripe.com/payments/payment-line-items
+    examples:
+      pass: examples/VISA-L3-014.pass.json
+      fail: examples/VISA-L3-014.fail.json
+      passNote: Descriptions are 25 characters.
+      failNote: Line 1 description is 36 characters.
+
+  - id: VISA-L3-015
+    title: Commodity code over 12 characters or not alphanumeric
+    requirement: The commodity code must be up to 12 letters or digits with no spaces.
+    rationale: Gateways reject or strip codes with spaces or punctuation.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    check: { kind: pattern, field: /lineItems/*/commodityCode, regex: "^[A-Za-z0-9]{1,12}$" }
+    message: "Line {index} commodity code \"{actual}\" must be up to 12 letters or digits with no spaces."
+    fix: Send the bare code, for example 42132203.
+    impact: blocksLevel3
+    supersedes: [GEN-FMT-006]
+    sources:
+      - https://docs.stripe.com/payments/payment-line-items
+    examples:
+      pass: examples/VISA-L3-015.pass.json
+      fail: examples/VISA-L3-015.fail.json
+      passNote: Codes are 8 digits.
+      failNote: Line 1 code is "4213 2203", with a space.
+
+  - id: VISA-DQ-001
+    title: Placeholder description or merchant name as description
+    requirement: Each line description must name the real item; Visa rejects generic labels, merchant names and single characters.
+    rationale: Visa is publicly reported to reject descriptions such as "ITEM", "PRODUCT", "N/A", "Goods" and "Service".
+    level: L3
+    severity: error
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    appliesTo: *product3
+    check: { kind: custom, check: VisaDescriptionQuality }
+    message: "Line {index} description \"{actual}\" is a placeholder Visa rejects."
+    messages:
+      merchantName: "Line {index} description \"{actual}\" is the merchant name, which Visa rejects."
+    fix: Use the real item name.
+    impact: riskVisaValidation
+    supersedes: [GEN-DQ-001, GEN-DQ-002]
+    sources:
+      - https://merchantcostconsulting.com/lower-credit-card-processing-fees/how-to-qualify-cedp-rates/
+      - https://verisave.com/blog/visa-level-2-sunset-cedp-data-quality
+      - https://finix.com/resources/blogs/visa-level-2-3-programs-changing-cedp
+    examples:
+      pass: examples/VISA-DQ-001.pass.json
+      fail: examples/VISA-DQ-001.fail.json
+      passNote: Both descriptions name real items.
+      failNote: Line 2 description is "Item".
+
+  - id: VISA-DQ-002
+    title: Zero or filler in a required code field
+    requirement: Product code, commodity code and unit of measure must hold real values, not zeros or filler.
+    rationale: Blanks, zeros and filler text in required fields fail CEDP validation.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    effective: { from: 2025-10-17 }
+    appliesTo: *product3
+    check: { kind: custom, check: VisaCodeQuality }
+    message: "Line {index} has filler \"{actual}\" at {field}, which Visa rejects."
+    fix: Send real values.
+    impact: riskVisaValidation
+    supersedes: [GEN-DQ-003]
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+      - https://merchantcostconsulting.com/lower-credit-card-processing-fees/how-to-qualify-cedp-rates/
+    examples:
+      pass: examples/VISA-DQ-002.pass.json
+      fail: examples/VISA-DQ-002.fail.json
+      passNote: Codes are real values.
+      failNote: Line 1 product code is "0".
+
+  - id: VISA-LT-001
+    title: Large Ticket rates may be cheaper
+    requirement: At high amounts on corporate and purchasing cards, Large Ticket interchange may cost less than Product 3.
+    rationale: Large Ticket rates use the same CEDP flag; the break-even amount moves with each rate schedule, so it is computed from the user's rate table.
+    level: general
+    severity: information
+    confidence: processor-doc
+    check: { kind: custom, check: LargeTicket }
+    message: "The amount {actual} is above the Large Ticket break-even of {expected} in rate table {detail}."
+    fix: Ask your processor about Large Ticket.
+    impact: noBenefit
+    sources:
+      - https://paypal.com/us/brc/article/visas-commercial-enhanced-data-program
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+    notes: Runs only when --rates supplies Visa largeTicket and product3 categories for the card product (ADR-0018). One source estimated the break-even near 7,756 USD; the rule never hard-codes it.
+    examples:
+      pass: examples/VISA-LT-001.pass.json
+      fail: examples/VISA-LT-001.fail.json
+      passNote: 280.36 USD is far below the break-even of 11,633.33 USD in the example rate table.
+      failNote: 25,000.00 USD is above the break-even.
+      context: { rates: examples/VISA-LT-001.rates.yaml }

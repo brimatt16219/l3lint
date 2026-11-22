@@ -1,0 +1,24 @@
+# Lints commercial card payload fixtures on every pull request and uploads SARIF to code scanning.
+# Reference: https://brimatt16219.github.io/l3lint/articles/github-action.html
+# Third-party actions are pinned by full commit SHA for supply-chain safety.
+name: l3lint
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  l3lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: brimatt16219/l3lint/action@v{{version}}
+        with:
+          paths: |
+            samples/**/*.json
+          fail-on: error

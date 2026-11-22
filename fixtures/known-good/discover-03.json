@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-62006",
+  "amount": 2571.59,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "business",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Ridgeline Industrial Co",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-75174"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-75174",
+    "invoiceNumber": "INV-62006"
+  },
+  "tax": {
+    "amount": 167.57,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "75201",
+    "toPostalCode": "75231",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "75231"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 16,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 14.64,
+      "taxAmount": 19.47,
+      "total": 278.16
+    },
+    {
+      "sequence": 2,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "quantity": 1,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "taxAmount": 0.83,
+      "total": 11.90
+    },
+    {
+      "sequence": 3,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 19,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 5.25,
+      "total": 75.05
+    },
+    {
+      "sequence": 4,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "quantity": 22,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 195.80,
+      "taxAmount": 123.35,
+      "total": 1762.20
+    },
+    {
+      "sequence": 5,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "quantity": 19,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 29.64,
+      "taxAmount": 18.67,
+      "total": 266.76
+    }
+  ]
+}

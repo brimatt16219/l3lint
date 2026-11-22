@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-69159",
+  "amount": 660.93,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "business",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Harborview Facility Supply",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-51111"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-51111",
+    "invoiceNumber": "INV-69159"
+  },
+  "tax": {
+    "amount": 36.14,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 17,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 15.56,
+      "taxAmount": 17.73,
+      "total": 295.54
+    },
+    {
+      "sequence": 2,
+      "description": "6011 1111 1111 1117",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 22,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 27.50,
+      "taxAmount": 14.85,
+      "total": 247.50
+    },
+    {
+      "sequence": 3,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 15,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 3.56,
+      "total": 59.25
+    }
+  ]
+}

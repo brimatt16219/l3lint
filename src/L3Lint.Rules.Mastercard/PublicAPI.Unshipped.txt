@@ -1,0 +1,5 @@
+#nullable enable
+L3Lint.Rules.Mastercard.MastercardRulePack
+L3Lint.Rules.Mastercard.MastercardRulePack.MastercardRulePack() -> void
+override L3Lint.Rules.Mastercard.MastercardRulePack.CustomChecks.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Rules.ICustomCheck!>!
+override L3Lint.Rules.Mastercard.MastercardRulePack.TierPolicy.get -> L3Lint.Core.Tiers.ITierPolicy!

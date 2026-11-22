@@ -1,0 +1,6 @@
+description: "A valid discover purchasing payload with 3 lines in USD: no error or warning may fire."
+context: { brand: discover, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+expect:
+  exitCode: 0
+  findings: []
+  likelyTier: { brand: discover, status: noBenefit }

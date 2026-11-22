@@ -1,0 +1,35 @@
+# Placeholder terms for GEN-DQ-001 and VISA-DQ-001, from the l3lint spec (Card brand rules, "Placeholder list").
+# Visa is publicly reported to reject "ITEM", "PRODUCT", "N/A", "Goods" and "Service":
+#   https://merchantcostconsulting.com/lower-credit-card-processing-fees/how-to-qualify-cedp-rates/
+#   https://verisave.com/blog/visa-level-2-sunset-cedp-data-quality
+#   https://finix.com/resources/blogs/visa-level-2-3-programs-changing-cedp
+# The rest of the list is l3lint's own inference (confidence: inferred). Edit it with rules.placeholders in .l3lint.yaml.
+term
+item
+items
+product
+products
+service
+services
+goods
+merchandise
+misc
+miscellaneous
+n/a
+na
+none
+null
+undefined
+test
+default
+sale
+purchase
+order
+invoice
+fee
+charge
+various
+other
+general
+description
+line

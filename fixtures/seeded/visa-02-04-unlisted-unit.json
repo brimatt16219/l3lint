@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83053",
+  "amount": 2684.54,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "business",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77037"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77037",
+    "invoiceNumber": "INV-83053"
+  },
+  "tax": {
+    "amount": 151.10,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 18,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 3.56,
+      "taxAmount": 4.05,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 67.54,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 16,
+      "unitOfMeasure": "QQQ",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "taxAmount": 85.44,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 1424.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "commodityScheme": "unspsc",
+      "quantity": 21,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 0.00,
+      "taxAmount": 61.61,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 1026.90,
+      "detailIndicator": "Y"
+    }
+  ]
+}

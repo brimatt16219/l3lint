@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- BenchmarkDotNet suite (T-44, NFR-002, NFR-003, US-08, US-09). A console program, not a test project. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>L3Lint.Benchmarks</RootNamespace>
+  </PropertyGroup>
+
+  <!-- tests/Directory.Build.props adds test usings that a console program does not reference. -->
+  <ItemGroup>
+    <Using Remove="Xunit" />
+    <Using Remove="Shouldly" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\L3Lint.Hosting\L3Lint.Hosting.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\L3Lint.Core.Tests\SpecExamples\canonical-example.json" LogicalName="L3Lint.Benchmarks.canonical-example.json" Link="Data\canonical-example.json" />
+    <EmbeddedResource Include="..\..\fixtures\adapters\stripe\01-complete-level3.json" LogicalName="L3Lint.Benchmarks.stripe.json" Link="Data\stripe.json" />
+  </ItemGroup>
+
+</Project>

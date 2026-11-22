@@ -1,0 +1,8 @@
+description: Both the structured object and older legacy keys are present with different values. The structured object is used and an Ambiguous note says the legacy keys were not read.
+format: adyen
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 10-both-forms.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/discount }

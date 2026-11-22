@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://brimatt16219.github.io/l3lint/schemas/lock.schema.json",
+  "title": "l3lint rule pack lock file (.l3lint.lock)",
+  "description": "Pins rule pack versions so CI results stay reproducible. A mismatch with the loaded packs stops the run with exit code 3.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "packs"],
+  "properties": {
+    "version": { "const": 1 },
+    "packs": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" }
+    }
+  }
+}

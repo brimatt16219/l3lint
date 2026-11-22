@@ -1,0 +1,8 @@
+description: "Line 1 total is 0.02 above quantity x unit cost - discount; the amount was not changed."
+operator: line-total-off-by-one-cent
+context: { brand: mastercard, cardProduct: corporate, mcc: "5047", asOf: 2026-10-19 }
+expect:
+  exitCode: 1
+  findings:
+    - { ruleId: GEN-ARITH-001, path: /lineItems/0/total, severity: error }
+    - { ruleId: GEN-ARITH-002, path: /amount, severity: error }

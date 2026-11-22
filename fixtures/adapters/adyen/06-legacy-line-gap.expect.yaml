@@ -1,0 +1,8 @@
+description: Legacy item lines numbered 1 and 3 with no line 2. Lines are read in number order and numbered 1 and 2 from that order; an Ambiguous note records the gap.
+format: adyen
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 06-legacy-line-gap.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/discount }

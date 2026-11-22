@@ -1,0 +1,24 @@
+{
+  "source": { "type": "token", "token": "tok_test_l3example" },
+  "amount": 28036,
+  "currency": "USD",
+  "reference": "INV-50311",
+  "customer": { "tax_number": "TX-55-0192" },
+  "processing": {
+    "order_id": "PO-48820",
+    "tax_amount": 1736,
+    "discount_amount": 0,
+    "duty_amount": 0,
+    "shipping_amount": 1500,
+    "shipping_tax_amount": 0
+  },
+  "shipping": {
+    "address": { "zip": "33431", "country": "US" },
+    "from_address_zip": "33602"
+  },
+  "items": [
+    { "name": "Nitrile gloves L box", "reference": "GLV-NL-100", "commodity_code": "42132203", "unit_of_measure": "BX", "quantity": 10, "unit_price": 1250, "total_amount": 12000, "tax_amount": 840, "discount_amount": 500 },
+    { "name": "Isolation gown blue case", "reference": "GWN-IS-B50", "commodity_code": "42131606", "unit_of_measure": "CA", "quantity": 2, "unit_price": 6400, "total_amount": 12800, "tax_amount": 896, "discount_amount": 0 }
+  ],
+  "processing_channel_id": "pc_test_l3example"
+}

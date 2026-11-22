@@ -1,0 +1,9 @@
+description: A yen sale in major units where the shipping amount has decimals. Yen has exponent 0, so 1100.50 has more decimals than the currency allows.
+format: braintree
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19, defaultCurrency: JPY }
+canonical: 04-jpy-excess-decimals.canonical.json
+expect:
+  findings:
+    - { ruleId: GEN-FMT-003, path: /amounts/freight }
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/duty }

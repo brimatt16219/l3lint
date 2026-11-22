@@ -1,0 +1,6 @@
+description: "The ship-to postal code is missing."
+operator: drop-required
+context: { brand: amex, cardProduct: business, mcc: "5943", asOf: 2026-10-19 }
+expect:
+  findings:
+    - { ruleId: AMEX-L2-001, path: /shipping/toPostalCode, severity: warning }

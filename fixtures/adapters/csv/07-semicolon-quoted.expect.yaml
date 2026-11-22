@@ -1,0 +1,7 @@
+description: A semicolon-delimited export with every cell quoted, as some spreadsheet tools write it. Quotes are removed and leading zeros in postal codes are kept because cells are text.
+format: csv
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 07-semicolon-quoted.canonical.json
+expect:
+  findings:
+    - { transaction: 0, ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

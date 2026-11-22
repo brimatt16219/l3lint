@@ -1,0 +1,16 @@
+{
+  "amount": "324.20",
+  "paymentMethodNonce": "fake-valid-nonce",
+  "purchaseOrderNumber": "PO-27730",
+  "orderId": "INV-65109",
+  "taxAmount": "0.00",
+  "taxExempt": true,
+  "shippingAmount": "18.00",
+  "discountAmount": "0.00",
+  "shipsFromPostalCode": "64105",
+  "shipping": { "postalCode": "66101", "countryCodeAlpha2": "US" },
+  "lineItems": [
+    { "name": "Bulk rice long grain", "kind": "debit", "quantity": "8", "unitAmount": "21.40", "unitOfMeasure": "BG", "totalAmount": "171.20", "taxAmount": "0.00", "discountAmount": "0.00", "productCode": "RCE-LG-25", "commodityCode": "50221101" },
+    { "name": "Dry black beans case", "kind": "debit", "quantity": "4", "unitAmount": "33.75", "unitOfMeasure": "CA", "totalAmount": "135.00", "taxAmount": "0.00", "discountAmount": "0.00", "productCode": "BNS-BK-12", "commodityCode": "50221106" }
+  ]
+}

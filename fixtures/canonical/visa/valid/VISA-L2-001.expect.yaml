@@ -1,0 +1,5 @@
+description: "VISA-L2-001 pass example: the rule must not fire."
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-03-01, only: VISA-L2-001 }
+expect:
+  findings: []
+  absent: [VISA-L2-001]

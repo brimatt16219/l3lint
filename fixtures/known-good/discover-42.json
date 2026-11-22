@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-64073",
+  "amount": 1057.03,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "business",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Ridgeline Industrial Co",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-76617"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-76617",
+    "invoiceNumber": "INV-64073"
+  },
+  "tax": {
+    "amount": 68.17,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 12,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 23.04,
+      "taxAmount": 30.64,
+      "total": 437.76
+    },
+    {
+      "sequence": 2,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 5,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "taxAmount": 6.41,
+      "total": 91.50
+    },
+    {
+      "sequence": 3,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "quantity": 19,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 49.40,
+      "taxAmount": 31.12,
+      "total": 444.60
+    }
+  ]
+}

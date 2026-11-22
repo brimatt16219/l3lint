@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-63066",
+  "amount": 619.70,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "purchasing",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Northbay Office Works",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-75914"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-75914",
+    "invoiceNumber": "INV-63066"
+  },
+  "tax": {
+    "amount": 46.09,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "75201",
+    "toPostalCode": "75231",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "75231"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 1,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 1.09,
+      "taxAmount": 1.71,
+      "total": 20.71
+    },
+    {
+      "sequence": 2,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 11,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 0.00,
+      "taxAmount": 44.38,
+      "total": 537.90
+    }
+  ]
+}

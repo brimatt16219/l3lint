@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-78279",
+  "amount": 3191.51,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "business",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Harborview Facility Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-65591"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-65591",
+    "invoiceNumber": "INV-78279"
+  },
+  "tax": {
+    "amount": 242.08,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 9.10,
+      "taxAmount": 14.26,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 172.90,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "commodityScheme": "unspsc",
+      "quantity": 22,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 0.00,
+      "taxAmount": 88.75,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 1075.80,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 12,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 4.74,
+      "taxAmount": 3.52,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 42.66,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "commodityScheme": "unspsc",
+      "quantity": 17,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 65.28,
+      "taxAmount": 48.47,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 587.52,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 1,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "taxAmount": 1.51,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 18.30,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 6,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 34.20,
+      "taxAmount": 25.39,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 307.80,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 7,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 62.30,
+      "taxAmount": 46.26,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 560.70,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 8,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 15,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 18.75,
+      "taxAmount": 13.92,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 168.75,
+      "detailIndicator": "Y"
+    }
+  ]
+}

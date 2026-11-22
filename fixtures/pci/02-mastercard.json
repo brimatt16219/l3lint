@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-69053",
+  "amount": 80.03,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "corporate",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5047",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "5555-5555-5555-4444"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-51037",
+    "invoiceNumber": "INV-69053"
+  },
+  "tax": {
+    "amount": 6.10,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "commodityScheme": "unspsc",
+      "quantity": 5,
+      "unitOfMeasure": "EAC",
+      "unitCost": 11.90,
+      "discountAmount": 2.98,
+      "discountIndicator": true,
+      "taxAmount": 4.66,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 56.52,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 3,
+      "unitOfMeasure": "EAC",
+      "unitCost": 3.95,
+      "discountAmount": 1.19,
+      "discountIndicator": true,
+      "taxAmount": 0.88,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 10.66,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "commodityScheme": "unspsc",
+      "quantity": 1,
+      "unitOfMeasure": "PCE",
+      "unitCost": 6.75,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 0.56,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 6.75,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

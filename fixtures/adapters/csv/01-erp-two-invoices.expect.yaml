@@ -1,0 +1,15 @@
+description: The spec's column map example applied to an ERP export with two invoices. Rows group by invoice_number in file order, Y maps to taxable, and empty freight and discount cells take the map's default of 0. The map sends no duty, order discount or shipping postal codes.
+format: csv
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 01-erp-two-invoices.canonical.json
+expect:
+  findings:
+    - { transaction: 0, ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { transaction: 0, ruleId: VISA-L3-011, path: /amounts/discount }
+    - { transaction: 0, ruleId: VISA-L3-011, path: /amounts/duty }
+    - { transaction: 0, ruleId: VISA-L3-013, path: /shipping/fromPostalCode }
+    - { transaction: 0, ruleId: VISA-L3-013, path: /shipping/toCountry }
+    - { transaction: 0, ruleId: VISA-L3-013, path: /shipping/toPostalCode }
+    - { transaction: 1, ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { transaction: 1, ruleId: VISA-L3-011, path: /amounts/discount }
+    - { transaction: 1, ruleId: VISA-L3-011, path: /amounts/duty }

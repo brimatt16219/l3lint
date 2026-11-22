@@ -1,0 +1,7 @@
+description: "Line 1 description is the public test card number 5555 5555 5555 4444."
+operator: card-number-in-text
+context: { brand: visa, cardProduct: fleet, mcc: "5065", asOf: 2026-10-19 }
+expect:
+  exitCode: 1
+  findings:
+    - { ruleId: GEN-PCI-001, path: /lineItems/0/description, severity: error }

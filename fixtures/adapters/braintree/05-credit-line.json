@@ -1,0 +1,17 @@
+{
+  "amount": "331.62",
+  "paymentMethodNonce": "fake-valid-nonce",
+  "purchaseOrderNumber": "PO-40917",
+  "orderId": "INV-63180",
+  "taxAmount": "25.62",
+  "taxExempt": false,
+  "shippingAmount": "0.00",
+  "discountAmount": "0.00",
+  "shipsFromPostalCode": "44114",
+  "shipping": { "postalCode": "44113", "countryCodeAlpha2": "US" },
+  "lineItems": [
+    { "name": "Toner cartridge black", "kind": "debit", "quantity": "3", "unitAmount": "89.00", "unitOfMeasure": "EA", "totalAmount": "267.00", "taxAmount": "18.69", "discountAmount": "0.00", "productCode": "TNR-BK-26A", "commodityCode": "44103103" },
+    { "name": "Toner cartridge cyan", "kind": "debit", "quantity": "1", "unitAmount": "99.00", "unitOfMeasure": "EA", "totalAmount": "99.00", "taxAmount": "6.93", "discountAmount": "0.00", "productCode": "TNR-CY-26A", "commodityCode": "44103103" },
+    { "name": "Returned drum unit", "kind": "credit", "quantity": "1", "unitAmount": "60.00", "unitOfMeasure": "EA", "totalAmount": "60.00", "taxAmount": "0.00", "discountAmount": "0.00", "productCode": "DRM-UN-32A", "commodityCode": "44103105" }
+  ]
+}

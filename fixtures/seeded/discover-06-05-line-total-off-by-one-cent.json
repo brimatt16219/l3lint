@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-84855",
+  "amount": 1006.49,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "corporate",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Northbay Office Works",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-78295"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-78295",
+    "invoiceNumber": "INV-84855"
+  },
+  "tax": {
+    "amount": 56.12,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 24,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 46.08,
+      "taxAmount": 52.53,
+      "total": 875.52
+    },
+    {
+      "sequence": 2,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "quantity": 7,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 6.65,
+      "taxAmount": 3.59,
+      "total": 59.87
+    }
+  ]
+}

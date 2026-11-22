@@ -1,0 +1,5 @@
+description: "MC-L3-006 pass example: the rule must not fire."
+context: { brand: mastercard, cardProduct: corporate, mcc: "5047", asOf: 2026-10-19, only: MC-L3-006 }
+expect:
+  findings: []
+  absent: [MC-L3-006]

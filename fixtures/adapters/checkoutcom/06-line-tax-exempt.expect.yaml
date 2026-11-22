@@ -1,0 +1,8 @@
+description: Every item sets tax_exempt true and the order tax is 0. The line flags map to taxable false, but Checkout.com has no order-level exempt flag and an exemption is never guessed from zero tax, so Visa reports the zero tax.
+format: checkoutcom
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 06-line-tax-exempt.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-012, path: /tax/amount }

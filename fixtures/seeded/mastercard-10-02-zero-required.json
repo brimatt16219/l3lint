@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-84007",
+  "amount": 2361.64,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "purchasing",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77703"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77703",
+    "invoiceNumber": "INV-84007"
+  },
+  "tax": {
+    "amount": 133.11,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "75201",
+    "toPostalCode": "75231",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "75231"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 13,
+      "unitOfMeasure": "EAC",
+      "unitCost": 3.95,
+      "discountAmount": 2.57,
+      "discountIndicator": true,
+      "taxAmount": 2.93,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 48.78,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "EAC",
+      "unitCost": 89.00,
+      "discountAmount": 213.60,
+      "discountIndicator": true,
+      "taxAmount": 115.34,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 1922.40,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "commodityScheme": "unspsc",
+      "quantity": 0,
+      "unitOfMeasure": "EAC",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 11.42,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 190.40,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 4,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "commodityScheme": "unspsc",
+      "quantity": 6,
+      "unitOfMeasure": "EAC",
+      "unitCost": 9.50,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 3.42,
+      "taxRate": 0.06,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 57.00,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

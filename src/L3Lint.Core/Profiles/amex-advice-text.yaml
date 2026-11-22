@@ -1,0 +1,8 @@
+# Processors that send American Express invoice detail as transaction advice text (up to 4 lines of 40 characters).
+# Selecting this profile gives AMEX-FMT-001 its catalog severity (error).
+profile:
+  id: amex-advice-text
+  title: American Express advice text
+  description: Invoice detail travels as up to 4 lines of 40 characters in a format certified with Amex.
+  sources:
+    - https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/online-payments/payment-methods/cards/commercialcards

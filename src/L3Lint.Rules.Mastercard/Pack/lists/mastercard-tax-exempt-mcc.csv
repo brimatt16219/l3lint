@@ -1,0 +1,24 @@
+# MCCs exempt from the Mastercard Level 2 tax range check (0.1% to 30%), per Stripe's public guide.
+# source: https://docs.stripe.com/payments/payment-line-items
+# retrieved: 2026-10-25
+mcc
+4111
+4131
+4215
+4468
+4784
+5499
+5541
+5542
+5983
+7511
+8211
+8220
+8398
+8661
+9211
+9222
+9311
+9399
+9402
+9752

@@ -1,0 +1,8 @@
+description: "Tax is 28.4% of the amount; line taxes and the amount were rebalanced."
+operator: tax-ratio-out-of-range
+context: { brand: visa, cardProduct: corporate, mcc: "5198", asOf: 2026-04-17 }
+expect:
+  exitCode: 1
+  findings:
+    - { ruleId: VISA-L2-001, path: /tax/amount, severity: error }
+  absent: [GEN-ARITH-002, GEN-ARITH-003]

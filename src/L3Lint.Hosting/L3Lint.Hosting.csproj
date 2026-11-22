@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>L3Lint.Hosting</RootNamespace>
+    <!-- This project ships as the meta-package L3Lint.Hosting (ADR-0031): NuGet IDs ignore case, so "L3Lint" would collide with the "l3lint" tool. -->
+    <PackageId>L3Lint.Hosting</PackageId>
+    <Description>l3lint for .NET services: AddL3Lint() registration, configuration loading and batch runs over the engine, adapters, writers and all five rule packs. Lints commercial card Level 2 and Level 3 payloads before submission.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\L3Lint.Core\L3Lint.Core.csproj" />
+    <ProjectReference Include="..\L3Lint.Rules.General\L3Lint.Rules.General.csproj" />
+    <ProjectReference Include="..\L3Lint.Rules.Visa\L3Lint.Rules.Visa.csproj" />
+    <ProjectReference Include="..\L3Lint.Rules.Mastercard\L3Lint.Rules.Mastercard.csproj" />
+    <ProjectReference Include="..\L3Lint.Rules.Amex\L3Lint.Rules.Amex.csproj" />
+    <ProjectReference Include="..\L3Lint.Rules.Discover\L3Lint.Rules.Discover.csproj" />
+    <ProjectReference Include="..\L3Lint.Adapters\L3Lint.Adapters.csproj" />
+    <ProjectReference Include="..\L3Lint.Reporting\L3Lint.Reporting.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Options" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="L3Lint.Cli" />
+    <InternalsVisibleTo Include="L3Lint.Mcp" />
+    <InternalsVisibleTo Include="L3Lint.Cli.Tests" />
+    <InternalsVisibleTo Include="L3Lint.Corpus.Tests" />
+    <InternalsVisibleTo Include="L3Lint.Mcp.Tests" />
+    <InternalsVisibleTo Include="L3Lint.Rules.Tests" />
+    <InternalsVisibleTo Include="L3Lint.Benchmarks" />
+    <InternalsVisibleTo Include="L3Lint.FixtureGen" />
+    <InternalsVisibleTo Include="L3Lint.DocsGen" />
+  </ItemGroup>
+
+</Project>

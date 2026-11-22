@@ -1,0 +1,6 @@
+description: "The tax indicator is missing."
+operator: drop-required
+context: { brand: discover, cardProduct: corporate, mcc: "5111", asOf: 2026-10-19 }
+expect:
+  findings:
+    - { ruleId: DISC-L2-001, path: /tax/indicator, severity: warning }

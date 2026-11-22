@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-88985",
+  "amount": 3277.92,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "purchasing",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5047",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-73065"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-73065",
+    "invoiceNumber": "INV-88985"
+  },
+  "tax": {
+    "amount": 212.97,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "amex": {
+    "requestorName": "Jordan Ellis",
+    "adviceText": [
+      "PO-73065 supplies order",
+      "Requested by Jordan Ellis"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "quantity": 20,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 89.00,
+      "taxAmount": 118.37,
+      "total": 1691.00
+    },
+    {
+      "sequence": 2,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 18,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 0.00,
+      "taxAmount": 27.47,
+      "total": 392.40
+    },
+    {
+      "sequence": 3,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "quantity": 1,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 0.00,
+      "taxAmount": 0.29,
+      "total": 4.20
+    },
+    {
+      "sequence": 4,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 10,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 0.00,
+      "taxAmount": 34.23,
+      "total": 489.00
+    },
+    {
+      "sequence": 5,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "quantity": 5,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 5.46,
+      "total": 78.00
+    },
+    {
+      "sequence": 6,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "quantity": 23,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 15.53,
+      "taxAmount": 9.78,
+      "total": 139.72
+    },
+    {
+      "sequence": 7,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "quantity": 10,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 14.25,
+      "taxAmount": 8.98,
+      "total": 128.25
+    },
+    {
+      "sequence": 8,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "quantity": 18,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 13.32,
+      "taxAmount": 8.39,
+      "total": 119.88
+    }
+  ]
+}

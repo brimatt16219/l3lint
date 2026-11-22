@@ -1,0 +1,9 @@
+description: No default currency was given, so the transaction has no currency. GEN-FMT-002 reports it and the arithmetic checks, which need the exponent, are skipped.
+format: braintree
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 03-no-default-currency.canonical.json
+expect:
+  findings:
+    - { ruleId: GEN-FMT-002, path: /currency }
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/duty }

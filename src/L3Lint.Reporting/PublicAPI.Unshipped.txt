@@ -1,0 +1,125 @@
+#nullable enable
+L3Lint.Reporting.Fixes.PatchJson
+L3Lint.Reporting.IReportWriter
+L3Lint.Reporting.IReportWriter.Format.get -> string!
+L3Lint.Reporting.IReportWriter.Write(L3Lint.Reporting.LintReport! report, System.IO.TextWriter! output, L3Lint.Reporting.ReportWriterOptions! options) -> void
+L3Lint.Reporting.Json.JsonReportWriter
+L3Lint.Reporting.Json.JsonReportWriter.Format.get -> string!
+L3Lint.Reporting.Json.JsonReportWriter.JsonReportWriter() -> void
+L3Lint.Reporting.Json.JsonReportWriter.Write(L3Lint.Reporting.LintReport! report, System.IO.TextWriter! output, L3Lint.Reporting.ReportWriterOptions! options) -> void
+L3Lint.Reporting.Junit.JunitReportWriter
+L3Lint.Reporting.Junit.JunitReportWriter.Format.get -> string!
+L3Lint.Reporting.Junit.JunitReportWriter.JunitReportWriter() -> void
+L3Lint.Reporting.Junit.JunitReportWriter.Write(L3Lint.Reporting.LintReport! report, System.IO.TextWriter! output, L3Lint.Reporting.ReportWriterOptions! options) -> void
+L3Lint.Reporting.LintReport
+L3Lint.Reporting.LintReport.<Clone>$() -> L3Lint.Reporting.LintReport!
+L3Lint.Reporting.LintReport.AllFindings() -> System.Collections.Generic.IEnumerable<L3Lint.Core.Finding!>!
+L3Lint.Reporting.LintReport.AsOf.get -> System.DateOnly?
+L3Lint.Reporting.LintReport.AsOf.init -> void
+L3Lint.Reporting.LintReport.BatchFindings.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Finding!>!
+L3Lint.Reporting.LintReport.BatchFindings.init -> void
+L3Lint.Reporting.LintReport.ConfigHash.get -> string!
+L3Lint.Reporting.LintReport.ConfigHash.init -> void
+L3Lint.Reporting.LintReport.Equals(L3Lint.Reporting.LintReport? other) -> bool
+L3Lint.Reporting.LintReport.ExitCode.get -> int
+L3Lint.Reporting.LintReport.ExitCode.init -> void
+L3Lint.Reporting.LintReport.FailOn.get -> L3Lint.Core.Severity?
+L3Lint.Reporting.LintReport.FailOn.init -> void
+L3Lint.Reporting.LintReport.FindingsOmitted.get -> int
+L3Lint.Reporting.LintReport.FindingsOmitted.init -> void
+L3Lint.Reporting.LintReport.InputErrors.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.InputError!>!
+L3Lint.Reporting.LintReport.InputErrors.init -> void
+L3Lint.Reporting.LintReport.Inputs.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Reporting.ReportInput!>!
+L3Lint.Reporting.LintReport.Inputs.init -> void
+L3Lint.Reporting.LintReport.LintReport() -> void
+L3Lint.Reporting.LintReport.Notes.get -> System.Collections.Generic.IReadOnlyList<string!>!
+L3Lint.Reporting.LintReport.Notes.init -> void
+L3Lint.Reporting.LintReport.Profile.get -> string!
+L3Lint.Reporting.LintReport.Profile.init -> void
+L3Lint.Reporting.LintReport.RulePacks.get -> System.Collections.Generic.IReadOnlyDictionary<string!, string!>!
+L3Lint.Reporting.LintReport.RulePacks.init -> void
+L3Lint.Reporting.LintReport.Rules.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Rules.RuleMetadata!>!
+L3Lint.Reporting.LintReport.Rules.init -> void
+L3Lint.Reporting.LintReport.Summary.get -> L3Lint.Core.LintSummary!
+L3Lint.Reporting.LintReport.Summary.init -> void
+L3Lint.Reporting.LintReport.ToolVersion.get -> string!
+L3Lint.Reporting.LintReport.ToolVersion.init -> void
+L3Lint.Reporting.LintReport.Transactions.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.TransactionResult!>!
+L3Lint.Reporting.LintReport.Transactions.init -> void
+L3Lint.Reporting.Mapping.MappingJson
+L3Lint.Reporting.Markdown.MarkdownReportWriter
+L3Lint.Reporting.Markdown.MarkdownReportWriter.Format.get -> string!
+L3Lint.Reporting.Markdown.MarkdownReportWriter.MarkdownReportWriter() -> void
+L3Lint.Reporting.Markdown.MarkdownReportWriter.Write(L3Lint.Reporting.LintReport! report, System.IO.TextWriter! output, L3Lint.Reporting.ReportWriterOptions! options) -> void
+L3Lint.Reporting.ReportInput
+L3Lint.Reporting.ReportInput.<Clone>$() -> L3Lint.Reporting.ReportInput!
+L3Lint.Reporting.ReportInput.Deconstruct(out string! Path, out string! Format, out string! Sha256, out int Transactions) -> void
+L3Lint.Reporting.ReportInput.Equals(L3Lint.Reporting.ReportInput? other) -> bool
+L3Lint.Reporting.ReportInput.Format.get -> string!
+L3Lint.Reporting.ReportInput.Format.init -> void
+L3Lint.Reporting.ReportInput.Path.get -> string!
+L3Lint.Reporting.ReportInput.Path.init -> void
+L3Lint.Reporting.ReportInput.ReportInput(string! Path, string! Format, string! Sha256, int Transactions) -> void
+L3Lint.Reporting.ReportInput.Sha256.get -> string!
+L3Lint.Reporting.ReportInput.Sha256.init -> void
+L3Lint.Reporting.ReportInput.Transactions.get -> int
+L3Lint.Reporting.ReportInput.Transactions.init -> void
+L3Lint.Reporting.ReportWriterOptions
+L3Lint.Reporting.ReportWriterOptions.<Clone>$() -> L3Lint.Reporting.ReportWriterOptions!
+L3Lint.Reporting.ReportWriterOptions.BaseDirectory.get -> string?
+L3Lint.Reporting.ReportWriterOptions.BaseDirectory.init -> void
+L3Lint.Reporting.ReportWriterOptions.Color.get -> bool
+L3Lint.Reporting.ReportWriterOptions.Color.init -> void
+L3Lint.Reporting.ReportWriterOptions.Equals(L3Lint.Reporting.ReportWriterOptions? other) -> bool
+L3Lint.Reporting.ReportWriterOptions.Quiet.get -> bool
+L3Lint.Reporting.ReportWriterOptions.Quiet.init -> void
+L3Lint.Reporting.ReportWriterOptions.ReportWriterOptions() -> void
+L3Lint.Reporting.ReportWriterOptions.Verbose.get -> bool
+L3Lint.Reporting.ReportWriterOptions.Verbose.init -> void
+L3Lint.Reporting.ReportWriters
+L3Lint.Reporting.Rules.RuleJson
+L3Lint.Reporting.Rules.RuleMarkdown
+L3Lint.Reporting.Rules.RuleText
+L3Lint.Reporting.Sarif.SarifReportWriter
+L3Lint.Reporting.Sarif.SarifReportWriter.Format.get -> string!
+L3Lint.Reporting.Sarif.SarifReportWriter.SarifReportWriter() -> void
+L3Lint.Reporting.Sarif.SarifReportWriter.Write(L3Lint.Reporting.LintReport! report, System.IO.TextWriter! output, L3Lint.Reporting.ReportWriterOptions! options) -> void
+L3Lint.Reporting.Text.TextReportWriter
+L3Lint.Reporting.Text.TextReportWriter.Format.get -> string!
+L3Lint.Reporting.Text.TextReportWriter.TextReportWriter() -> void
+L3Lint.Reporting.Text.TextReportWriter.Write(L3Lint.Reporting.LintReport! report, System.IO.TextWriter! output, L3Lint.Reporting.ReportWriterOptions! options) -> void
+L3Lint.Reporting.TierNames
+override L3Lint.Reporting.LintReport.Equals(object? obj) -> bool
+override L3Lint.Reporting.LintReport.GetHashCode() -> int
+override L3Lint.Reporting.LintReport.ToString() -> string!
+override L3Lint.Reporting.ReportInput.Equals(object? obj) -> bool
+override L3Lint.Reporting.ReportInput.GetHashCode() -> int
+override L3Lint.Reporting.ReportInput.ToString() -> string!
+override L3Lint.Reporting.ReportWriterOptions.Equals(object? obj) -> bool
+override L3Lint.Reporting.ReportWriterOptions.GetHashCode() -> int
+override L3Lint.Reporting.ReportWriterOptions.ToString() -> string!
+static L3Lint.Reporting.Fixes.PatchJson.Render(System.Collections.Generic.IEnumerable<L3Lint.Core.Fixes.PatchOperation!>! operations, bool indented) -> string!
+static L3Lint.Reporting.Fixes.PatchJson.WriteOperations(System.Text.Json.Utf8JsonWriter! json, System.Collections.Generic.IEnumerable<L3Lint.Core.Fixes.PatchOperation!>! operations) -> void
+static L3Lint.Reporting.Json.JsonReportWriter.Render(L3Lint.Reporting.LintReport! report) -> string!
+static L3Lint.Reporting.LintReport.operator !=(L3Lint.Reporting.LintReport? left, L3Lint.Reporting.LintReport? right) -> bool
+static L3Lint.Reporting.LintReport.operator ==(L3Lint.Reporting.LintReport? left, L3Lint.Reporting.LintReport? right) -> bool
+static L3Lint.Reporting.Mapping.MappingJson.Render(L3Lint.Core.MapResult! result, bool indented) -> string!
+static L3Lint.Reporting.ReportInput.operator !=(L3Lint.Reporting.ReportInput? left, L3Lint.Reporting.ReportInput? right) -> bool
+static L3Lint.Reporting.ReportInput.operator ==(L3Lint.Reporting.ReportInput? left, L3Lint.Reporting.ReportInput? right) -> bool
+static L3Lint.Reporting.ReportWriterOptions.Default.get -> L3Lint.Reporting.ReportWriterOptions!
+static L3Lint.Reporting.ReportWriterOptions.operator !=(L3Lint.Reporting.ReportWriterOptions? left, L3Lint.Reporting.ReportWriterOptions? right) -> bool
+static L3Lint.Reporting.ReportWriterOptions.operator ==(L3Lint.Reporting.ReportWriterOptions? left, L3Lint.Reporting.ReportWriterOptions? right) -> bool
+static L3Lint.Reporting.ReportWriters.All.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Reporting.IReportWriter!>!
+static L3Lint.Reporting.ReportWriters.TryGet(string! format, out L3Lint.Reporting.IReportWriter! writer) -> bool
+static L3Lint.Reporting.Rules.RuleJson.Render(L3Lint.Core.Rules.RuleMetadata! rule, bool includeExamples) -> string!
+static L3Lint.Reporting.Rules.RuleJson.RenderList(System.Collections.Generic.IEnumerable<L3Lint.Core.Rules.RuleMetadata!>! rules) -> string!
+static L3Lint.Reporting.Rules.RuleJson.Write(System.Text.Json.Utf8JsonWriter! json, L3Lint.Core.Rules.RuleMetadata! rule, bool includeExamples) -> void
+static L3Lint.Reporting.Rules.RuleMarkdown.Render(L3Lint.Core.Rules.RuleMetadata! rule) -> string!
+static L3Lint.Reporting.Rules.RuleText.AppliesTo(L3Lint.Core.Rules.RuleMetadata! rule) -> System.Collections.Generic.IEnumerable<string!>!
+static L3Lint.Reporting.Rules.RuleText.Brand(L3Lint.Core.Rules.RuleMetadata! rule) -> string!
+static L3Lint.Reporting.Rules.RuleText.Check(L3Lint.Core.Rules.RuleMetadata! rule) -> string!
+static L3Lint.Reporting.Rules.RuleText.Date(System.DateOnly date) -> string!
+static L3Lint.Reporting.Rules.RuleText.Effective(L3Lint.Core.Rules.RuleMetadata! rule) -> string!
+static L3Lint.Reporting.Text.TextReportWriter.SummaryLine(L3Lint.Reporting.LintReport! report) -> string!
+static L3Lint.Reporting.TierNames.Describe(L3Lint.Core.Tiers.TierAssessment! tier) -> string!
+static L3Lint.Reporting.TierNames.Display(string! tier) -> string!

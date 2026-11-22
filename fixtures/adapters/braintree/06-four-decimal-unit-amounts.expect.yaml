@@ -1,0 +1,8 @@
+description: Unit amounts with four decimals, which Braintree allows. Unit cost is exempt from the currency precision check, and 3 times 3.3333 rounds to the 10.00 line total.
+format: braintree
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19, defaultCurrency: USD }
+canonical: 06-four-decimal-unit-amounts.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/duty }

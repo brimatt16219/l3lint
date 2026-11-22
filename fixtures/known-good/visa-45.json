@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-78332",
+  "amount": 1620.90,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "purchasing",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-65628"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-65628",
+    "invoiceNumber": "INV-78332"
+  },
+  "tax": {
+    "amount": 72.83,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "commodityScheme": "unspsc",
+      "quantity": 11,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 5.23,
+      "taxAmount": 4.72,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 99.27,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 8,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "taxAmount": 4.75,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 100.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "commodityScheme": "unspsc",
+      "quantity": 9,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 0.00,
+      "taxAmount": 16.42,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 345.60,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "commodityScheme": "unspsc",
+      "quantity": 9,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "taxAmount": 5.09,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 107.10,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 11,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 97.90,
+      "taxAmount": 41.85,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 881.10,
+      "detailIndicator": "Y"
+    }
+  ]
+}

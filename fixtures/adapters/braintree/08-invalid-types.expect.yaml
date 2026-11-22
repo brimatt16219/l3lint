@@ -1,0 +1,12 @@
+description: taxExempt is text that is neither true nor false, line 1 kind is not debit or credit, line 2 quantity is a word and shipping is a string instead of an object. Each is one GEN-FMT-001 finding.
+format: braintree
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19, defaultCurrency: USD }
+canonical: 08-invalid-types.canonical.json
+expect:
+  findings:
+    - { ruleId: GEN-FMT-001, path: /lineItems/0/debitCreditIndicator }
+    - { ruleId: GEN-FMT-001, path: /lineItems/1/quantity }
+    - { ruleId: GEN-FMT-001, path: /shipping/toPostalCode }
+    - { ruleId: GEN-FMT-001, path: /tax/indicator }
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/duty }

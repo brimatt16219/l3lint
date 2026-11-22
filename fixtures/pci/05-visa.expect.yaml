@@ -1,0 +1,5 @@
+description: "A public test card number in a product code, a code field where a match is a warning. It must be masked in every output format."
+context: { brand: visa, cardProduct: purchasing, mcc: "5065", asOf: 2026-10-19 }
+expect:
+  findings:
+    - { ruleId: GEN-PCI-001, path: /lineItems/1/productCode, severity: warning }

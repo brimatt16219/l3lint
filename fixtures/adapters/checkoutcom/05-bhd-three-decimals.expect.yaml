@@ -1,0 +1,7 @@
+description: Dinar amounts in fils (exponent 3). Every value ends in 0, as Checkout.com asks for three-decimal currencies, and 19190 fils is 19.190 BHD.
+format: checkoutcom
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 05-bhd-three-decimals.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

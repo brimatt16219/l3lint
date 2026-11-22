@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-87925",
+  "amount": 689.47,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "purchasing",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-72325"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-72325",
+    "invoiceNumber": "INV-87925"
+  },
+  "tax": {
+    "amount": 50.83,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "amex": {
+    "requestorName": "Dana Ortiz",
+    "adviceText": [
+      "PO-72325 supplies order",
+      "Requested by Dana Ortiz"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "quantity": 7,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 9.10,
+      "taxAmount": 14.26,
+      "total": 172.90
+    },
+    {
+      "sequence": 2,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "quantity": 4,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 2.70,
+      "taxAmount": 2.00,
+      "total": 24.30
+    },
+    {
+      "sequence": 3,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "quantity": 11,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 14.16,
+      "total": 171.60
+    },
+    {
+      "sequence": 4,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "quantity": 24,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 17.76,
+      "taxAmount": 13.19,
+      "total": 159.84
+    },
+    {
+      "sequence": 5,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 7,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "taxAmount": 7.22,
+      "total": 87.50
+    }
+  ]
+}

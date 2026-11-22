@@ -1,0 +1,190 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-81671",
+  "amount": 1222.61,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "purchasing",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Harborview Facility Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-67959"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-67959",
+    "invoiceNumber": "INV-81671"
+  },
+  "tax": {
+    "amount": 91.46,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "commodityScheme": "unspsc",
+      "quantity": 8,
+      "unitOfMeasure": "EAC",
+      "unitCost": 4.20,
+      "discountAmount": 1.68,
+      "discountIndicator": true,
+      "taxAmount": 2.63,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 31.92,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "EAC",
+      "unitCost": 12.50,
+      "discountAmount": 17.50,
+      "discountIndicator": true,
+      "taxAmount": 12.99,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 157.50,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 18,
+      "unitOfMeasure": "PCE",
+      "unitCost": 18.30,
+      "discountAmount": 32.94,
+      "discountIndicator": true,
+      "taxAmount": 24.46,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 296.46,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 4,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "EAC",
+      "unitCost": 3.95,
+      "discountAmount": 5.53,
+      "discountIndicator": true,
+      "taxAmount": 4.11,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 49.77,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 5,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "commodityScheme": "unspsc",
+      "quantity": 18,
+      "unitOfMeasure": "EAC",
+      "unitCost": 9.50,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 14.11,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 171.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 6,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "commodityScheme": "unspsc",
+      "quantity": 12,
+      "unitOfMeasure": "PCE",
+      "unitCost": 6.75,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 6.68,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 81.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 7,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "commodityScheme": "unspsc",
+      "quantity": 22,
+      "unitOfMeasure": "EAC",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 21.60,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 261.80,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 8,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "commodityScheme": "unspsc",
+      "quantity": 8,
+      "unitOfMeasure": "PCE",
+      "unitCost": 7.40,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 4.88,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 59.20,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

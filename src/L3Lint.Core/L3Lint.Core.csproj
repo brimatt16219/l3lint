@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>L3Lint.Core</RootNamespace>
+    <PackageId>L3Lint.Core</PackageId>
+    <Description>The l3lint engine: canonical commercial card payload model, money and currency handling, rule engine, detectors and arithmetic checks. Rule packs ship separately.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JsonSchema.Net" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <PackageReference Include="YamlDotNet" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\schemas\*.schema.json" LogicalName="L3Lint.Schemas.%(Filename)%(Extension)" Link="Schemas\%(Filename)%(Extension)" />
+    <EmbeddedResource Include="Data\iso4217.csv" LogicalName="L3Lint.Data.iso4217.csv" />
+    <EmbeddedResource Include="Profiles\*.yaml" LogicalName="L3Lint.Profiles.%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="L3Lint.Core.Tests" />
+    <InternalsVisibleTo Include="L3Lint.Rules.Tests" />
+    <InternalsVisibleTo Include="L3Lint.Adapters.Tests" />
+    <InternalsVisibleTo Include="L3Lint.Reporting.Tests" />
+    <InternalsVisibleTo Include="L3Lint.Cli.Tests" />
+    <InternalsVisibleTo Include="L3Lint.Mcp.Tests" />
+    <InternalsVisibleTo Include="L3Lint.Benchmarks" />
+    <InternalsVisibleTo Include="L3Lint.Fuzz" />
+    <InternalsVisibleTo Include="L3Lint.Rules.General" />
+    <InternalsVisibleTo Include="L3Lint.Rules.Visa" />
+    <InternalsVisibleTo Include="L3Lint.Rules.Mastercard" />
+    <InternalsVisibleTo Include="L3Lint.Rules.Amex" />
+    <InternalsVisibleTo Include="L3Lint.Rules.Discover" />
+    <InternalsVisibleTo Include="L3Lint.Adapters" />
+    <InternalsVisibleTo Include="L3Lint.Reporting" />
+    <InternalsVisibleTo Include="L3Lint.Hosting" />
+    <InternalsVisibleTo Include="L3Lint.FixtureGen" />
+    <InternalsVisibleTo Include="L3Lint.DocsGen" />
+    <InternalsVisibleTo Include="L3Lint.PackManifest" />
+  </ItemGroup>
+
+</Project>

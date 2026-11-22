@@ -1,0 +1,27 @@
+{
+  "pack": "l3lint.rules.amex",
+  "version": "1.0.0",
+  "algorithm": "sha256",
+  "files": {
+    "amex.rules.yaml": "45e179a3139eab9978075ba02426fafa4167530d78d051e51d53232a35885c0e",
+    "examples/AMEX-ELIG-001.fail.json": "e92ac00426bf748c348aa67132b16e0fc7198960458435840d6c7c0a156b6f7b",
+    "examples/AMEX-ELIG-001.pass.json": "dc7b21775956aa910edb74448f6c4a2a9cac9f7a8ca047b716943bb7bfa4a9bb",
+    "examples/AMEX-FMT-001.fail.json": "20a5f48a12668a55224e6f3b7906ddd9f81449d826139f6fea51279c7c73175c",
+    "examples/AMEX-FMT-001.pass.json": "e92ac00426bf748c348aa67132b16e0fc7198960458435840d6c7c0a156b6f7b",
+    "examples/AMEX-FMT-002.fail.json": "3aeb9abefa20918595f8bc9b3753bb17e5711d157311e62300a7a38de9e10d93",
+    "examples/AMEX-FMT-002.pass.json": "e92ac00426bf748c348aa67132b16e0fc7198960458435840d6c7c0a156b6f7b",
+    "examples/AMEX-L2-001.fail.json": "c8628f98a93ee38c466b833c797002798e78d69923898b2a682d1d5e77a9a9ce",
+    "examples/AMEX-L2-001.pass.json": "e92ac00426bf748c348aa67132b16e0fc7198960458435840d6c7c0a156b6f7b",
+    "examples/AMEX-L2-002.fail.json": "ccb6c9100bcc924f401317e8052d201bb5e418d243dde9812839de33c76ac23e",
+    "examples/AMEX-L2-002.pass.json": "e92ac00426bf748c348aa67132b16e0fc7198960458435840d6c7c0a156b6f7b",
+    "examples/AMEX-L2-003.fail.json": "479eeb5f02effb0e6b1b98b1b0325a8a26252d31b8f536501292145bcd01e39a",
+    "examples/AMEX-L2-003.pass.json": "e92ac00426bf748c348aa67132b16e0fc7198960458435840d6c7c0a156b6f7b",
+    "examples/AMEX-L2-004.fail.json": "f193f14a3e70e77647cec38570308e09d66987f7eb62596fa426830a8e94c724",
+    "examples/AMEX-L2-004.pass.json": "e92ac00426bf748c348aa67132b16e0fc7198960458435840d6c7c0a156b6f7b",
+    "examples/AMEX-L3-001.fail.json": "55c1f2d9a7c7f33bc2c7a936b7e008186c7cb2ec50dad49e73d530e75ccb5215",
+    "examples/AMEX-L3-001.pass.json": "e92ac00426bf748c348aa67132b16e0fc7198960458435840d6c7c0a156b6f7b",
+    "examples/AMEX-L3-002.fail.json": "005eab73f51dae99b5f68e357bd4e0f620784e7384af3e02a2bdec83d6f45dc7",
+    "examples/AMEX-L3-002.pass.json": "e92ac00426bf748c348aa67132b16e0fc7198960458435840d6c7c0a156b6f7b",
+    "lists/amex-uom.csv": "e328d9e836938a66055e141e7dfb489f35c15fbd33ceec7372fa113e41192540"
+  }
+}

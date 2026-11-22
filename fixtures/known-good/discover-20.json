@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-62907",
+  "amount": 618.23,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "business",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Gulfside Medical Supply",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-75803"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-75803",
+    "invoiceNumber": "INV-62907"
+  },
+  "tax": {
+    "amount": 34.43,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 7,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 6.41,
+      "taxAmount": 7.30,
+      "total": 121.69
+    },
+    {
+      "sequence": 2,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "quantity": 2,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 0.84,
+      "taxAmount": 0.45,
+      "total": 7.56
+    },
+    {
+      "sequence": 3,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "quantity": 19,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 49.40,
+      "taxAmount": 26.68,
+      "total": 444.60
+    }
+  ]
+}

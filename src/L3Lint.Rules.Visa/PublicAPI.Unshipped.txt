@@ -1,0 +1,5 @@
+#nullable enable
+L3Lint.Rules.Visa.VisaRulePack
+L3Lint.Rules.Visa.VisaRulePack.VisaRulePack() -> void
+override L3Lint.Rules.Visa.VisaRulePack.CustomChecks.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Rules.ICustomCheck!>!
+override L3Lint.Rules.Visa.VisaRulePack.TierPolicy.get -> L3Lint.Core.Tiers.ITierPolicy!

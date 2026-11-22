@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-77855",
+  "amount": 1479.51,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "business",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Summit Lab Products",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-65295"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-65295",
+    "invoiceNumber": "INV-77855"
+  },
+  "tax": {
+    "amount": 66.64,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "commodityScheme": "unspsc",
+      "quantity": 21,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 27.30,
+      "taxAmount": 24.64,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 518.70,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "commodityScheme": "unspsc",
+      "quantity": 17,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 0.00,
+      "taxAmount": 39.49,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 831.30,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 5.88,
+      "taxAmount": 2.51,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 52.92,
+      "detailIndicator": "Y"
+    }
+  ]
+}

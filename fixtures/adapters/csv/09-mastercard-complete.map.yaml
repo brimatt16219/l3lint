@@ -1,0 +1,31 @@
+format: csv
+groupBy: invoice
+transaction:
+  id: invoice
+  amount: total
+  currency: { const: USD }
+  merchant.taxId: { const: "84-1234567" }
+  customer.reference: customer_ref
+  order.purchaseOrderNumber: po
+  tax.amount: tax
+  tax.indicator: { const: taxable }
+  amounts.discount: { const: 0 }
+  amounts.freight: freight
+  amounts.duty: { const: 0 }
+  shipping.fromPostalCode: ship_from
+  shipping.toPostalCode: ship_to
+  shipping.toCountry: ship_country
+lineItems:
+  description: item
+  productCode: sku
+  commodityCode: unspsc
+  quantity: qty
+  unitOfMeasure: uom
+  unitCost: unit_price
+  discountAmount: line_discount
+  discountIndicator: { from: line_discount_flag, map: { Y: true, N: false } }
+  taxAmount: line_tax
+  taxable: { const: true }
+  taxTypeCode: { const: SLS }
+  total: line_total
+  debitCreditIndicator: { const: debit }

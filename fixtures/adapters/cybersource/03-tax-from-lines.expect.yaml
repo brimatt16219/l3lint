@@ -1,0 +1,7 @@
+description: Tax is sent per line only, as the Visa Platform Connect guide does. The header tax is the sum of the line taxes and is listed as derived. invoiceDetails.taxable is not sent, so the tax indicator stays absent; no current Visa rule needs it when tax is above 0.
+format: cybersource
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 03-tax-from-lines.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

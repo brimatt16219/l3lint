@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83477",
+  "amount": 1395.57,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "fleet",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77333"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77333",
+    "invoiceNumber": "INV-83477"
+  },
+  "tax": {
+    "amount": 90.32,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "commodityScheme": "unspsc",
+      "quantity": 18,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 8.55,
+      "taxAmount": 11.37,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 162.45,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 21,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 5.81,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 82.95,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "QQQ",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "taxAmount": 12.25,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 175.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 0.00,
+      "taxAmount": 47.92,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 684.60,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "commodityScheme": "unspsc",
+      "quantity": 13,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 0.00,
+      "taxAmount": 12.97,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 185.25,
+      "detailIndicator": "Y"
+    }
+  ]
+}

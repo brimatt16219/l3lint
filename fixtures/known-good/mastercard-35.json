@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83102",
+  "amount": 1021.12,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "corporate",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Northbay Office Works",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-68958"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-68958",
+    "invoiceNumber": "INV-83102"
+  },
+  "tax": {
+    "amount": 65.34,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "commodityScheme": "unspsc",
+      "quantity": 6,
+      "unitOfMeasure": "PCE",
+      "unitCost": 14.25,
+      "discountAmount": 4.28,
+      "discountIndicator": true,
+      "taxAmount": 5.69,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 81.22,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 23,
+      "unitOfMeasure": "PCE",
+      "unitCost": 18.30,
+      "discountAmount": 42.09,
+      "discountIndicator": true,
+      "taxAmount": 26.52,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 378.81,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "PCE",
+      "unitCost": 6.75,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 3.31,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 47.25,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 4,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "commodityScheme": "unspsc",
+      "quantity": 10,
+      "unitOfMeasure": "GLI",
+      "unitCost": 21.80,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 15.26,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 218.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 5,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "commodityScheme": "unspsc",
+      "quantity": 8,
+      "unitOfMeasure": "PCE",
+      "unitCost": 26.00,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 14.56,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 208.00,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

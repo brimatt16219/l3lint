@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-77113",
+  "amount": 528.25,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "fleet",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-64777"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-64777",
+    "invoiceNumber": "INV-77113"
+  },
+  "tax": {
+    "amount": 34.56,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "commodityScheme": "unspsc",
+      "quantity": 9,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 22.01,
+      "taxAmount": 29.27,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 418.09,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "commodityScheme": "unspsc",
+      "quantity": 18,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 0.00,
+      "taxAmount": 5.29,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 75.60,
+      "detailIndicator": "Y"
+    }
+  ]
+}

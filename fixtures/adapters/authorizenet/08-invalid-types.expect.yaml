@@ -1,0 +1,10 @@
+description: The invoice number is a JSON number, line 2's taxable flag is "yes" instead of true or false, and shipFrom is a string instead of a name and address object. Each is one GEN-FMT-001 finding; the ship-from check skips the unreadable value.
+format: authorizenet
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 08-invalid-types.canonical.json
+expect:
+  findings:
+    - { ruleId: GEN-FMT-001, path: /lineItems/1/taxable }
+    - { ruleId: GEN-FMT-001, path: /order/invoiceNumber }
+    - { ruleId: GEN-FMT-001, path: /shipping/fromPostalCode }
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

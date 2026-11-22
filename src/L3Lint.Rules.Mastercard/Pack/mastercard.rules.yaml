@@ -1,0 +1,375 @@
+# l3lint Mastercard rule pack: Data Rate II (Level 2) and Data Rate III (Level 3). CEDP does not apply to
+# Mastercard; unit-of-measure requirements tightened in October 2025. Source of truth for the 17 MC rules in the
+# spec's rule catalog (Card brand rules tab); design notes are in docs/dev/RULE-DESIGN.md.
+pack:
+  id: l3lint.rules.mastercard
+  version: 1.0.0
+  brand: mastercard
+  publishedOn: 2026-10-25
+  title: Mastercard (Data Rate II and III)
+  description: Mastercard commercial Level 2 and Level 3 checks.
+  lists:
+    mastercardUom: lists/mastercard-uom.csv
+    mastercardLevel2ExcludedMcc: lists/mastercard-l2-excluded-mcc.csv
+    mastercardLevel3ExcludedMcc: lists/mastercard-l3-excluded-mcc.csv
+    mastercardTaxExemptMcc: lists/mastercard-tax-exempt-mcc.csv
+
+# Level 2 gate (MR2) and Level 3 gate (MR3).
+x-gates:
+  level2: &level2
+    cardProducts: [business, corporate, purchasing]
+    mccNotIn: mastercardLevel2ExcludedMcc
+  level3: &level3
+    cardProducts: [corporate, purchasing]
+    mccNotIn: [mastercardLevel2ExcludedMcc, mastercardLevel3ExcludedMcc]
+    unless:
+      - { field: /card/productCode, in: [MBS, MEF] }
+
+rules:
+  - id: MC-ELIG-001
+    title: Business card earns Level 2 only
+    requirement: Mastercard Data Rate III needs a corporate or purchasing card; business cards reach Data Rate II at most.
+    rationale: Mastercard Level 3 covers purchasing and corporate cards only.
+    level: general
+    severity: information
+    confidence: processor-doc
+    check: { kind: inList, field: /card/product, values: [business], mode: deny }
+    message: This is a business card, so Data Rate II is the best available tier.
+    fix: None; Data Rate III needs corporate or purchasing.
+    impact: noBenefit
+    sources:
+      - https://docs.stripe.com/payments/payment-line-items
+    examples:
+      pass: examples/MC-ELIG-001.pass.json
+      fail: examples/MC-ELIG-001.fail.json
+      passNote: The card is a corporate card.
+      failNote: The card is a business card.
+
+  - id: MC-ELIG-002
+    title: Card product code MBS or MEF
+    requirement: Mastercard product codes MBS (B2B Product 1) and MEF (Electronic Payment Account) are not Level 3 eligible.
+    rationale: One processor lists these product codes as ineligible for Data Rate III.
+    level: general
+    severity: information
+    confidence: processor-doc
+    check: { kind: inList, field: /card/productCode, values: [MBS, MEF], mode: deny, caseInsensitive: true }
+    message: "Card product code {actual} is not eligible for Mastercard Level 3."
+    fix: None; not Level 3 eligible.
+    impact: noBenefit
+    sources:
+      - https://resource.payrix.com/docs/interchange-data-requirements
+    examples:
+      pass: examples/MC-ELIG-002.pass.json
+      fail: examples/MC-ELIG-002.fail.json
+      passNote: No product code is sent.
+      failNote: The product code is MBS.
+
+  - id: MC-ELIG-003
+    title: MCC excluded from Mastercard Level 2 or Level 3
+    requirement: Some MCCs are excluded from Mastercard enhanced-data rates; Level 3 excludes more than Level 2.
+    rationale: At these MCCs enhanced data earns no Data Rate II or III.
+    level: general
+    severity: information
+    confidence: processor-doc
+    check: { kind: inList, field: /merchant/mcc, list: [mastercardLevel2ExcludedMcc, mastercardLevel3ExcludedMcc], mode: deny }
+    message: "MCC {actual} is excluded from Mastercard enhanced-data rates at Level 3, and at Level 2 when it is on the Level 2 list."
+    fix: None.
+    impact: noBenefit
+    sources:
+      - https://docs.stripe.com/payments/payment-line-items
+    examples:
+      pass: examples/MC-ELIG-003.pass.json
+      fail: examples/MC-ELIG-003.fail.json
+      passNote: MCC 5047 is eligible.
+      failNote: MCC 5812 is excluded.
+
+  - id: MC-L2-001
+    title: Tax outside 0.1% to 30% of the amount
+    requirement: Mastercard Level 2 needs tax between 0.1% and 30% of the amount, unless the MCC is exempt or the sale is marked exempt.
+    rationale: Tax outside the range is treated as not real, so the transaction loses Data Rate II.
+    level: L2
+    severity: error
+    confidence: processor-doc
+    appliesTo:
+      cardProducts: [business, corporate, purchasing]
+      mccNotIn: [mastercardLevel2ExcludedMcc, mastercardTaxExemptMcc]
+      unless:
+        - { field: /tax/indicator, equals: exempt }
+    check: { kind: ratio, numerator: /tax/amount, denominator: /amount, min: 0.001, max: 0.30 }
+    message: "Tax is {ratio} of the amount; Mastercard Level 2 needs {min} to {max}."
+    fix: Correct the tax amount or mark the sale exempt.
+    impact: blocksLevel2
+    sources:
+      - https://developer.paypal.com/braintree/docs/reference/general/level-2-and-3-processing/required-fields/dotnet/
+      - https://docs.stripe.com/payments/payment-line-items
+    examples:
+      pass: examples/MC-L2-001.pass.json
+      fail: examples/MC-L2-001.fail.json
+      passNote: Tax 17.36 is 6.19% of 280.36.
+      failNote: Tax 100.00 is 35.67% of 280.36.
+
+  - id: MC-L2-002
+    title: Customer code and PO both missing
+    requirement: Mastercard Level 2 needs the customer code or the purchase order number.
+    rationale: The buyer's reference is how the business reconciles the charge; Mastercard requires it for Data Rate II.
+    level: L2
+    severity: error
+    confidence: processor-doc
+    appliesTo: *level2
+    check: { kind: anyOf, fields: [/customer/reference, /order/purchaseOrderNumber] }
+    message: Neither a customer code nor a purchase order number is sent.
+    fix: Send the buyer's reference.
+    impact: blocksLevel2
+    sources:
+      - https://pcdocs.paymentcloudinc.com/developer-docs/processing-payments/level2
+    examples:
+      pass: examples/MC-L2-002.pass.json
+      fail: examples/MC-L2-002.fail.json
+      passNote: The customer code is PO-90214.
+      failNote: Both the customer code and the PO number are missing.
+
+  - id: MC-L2-003
+    title: Tax indicator missing
+    requirement: Mastercard Level 2 needs the tax indicator.
+    rationale: The indicator tells the network whether a zero tax means exempt or missing.
+    level: L2
+    severity: error
+    confidence: processor-doc
+    appliesTo: *level2
+    check: { kind: required, field: /tax/indicator }
+    message: The tax indicator is missing.
+    fix: Send `taxable` or `exempt`.
+    impact: blocksLevel2
+    sources:
+      - https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/online-payments/payment-methods/cards/commercialcards
+    examples:
+      pass: examples/MC-L2-003.pass.json
+      fail: examples/MC-L2-003.fail.json
+      passNote: The indicator is taxable.
+      failNote: The indicator is missing.
+
+  - id: MC-L2-004
+    title: Merchant tax ID missing
+    requirement: One processor lists the merchant tax ID as required for Mastercard Level 2.
+    rationale: Listed as required by one processor; a warning, not an error.
+    level: L2
+    severity: warning
+    confidence: processor-doc
+    appliesTo: *level2
+    check: { kind: required, field: /merchant/taxId }
+    message: The merchant tax ID is missing.
+    fix: Send your tax ID.
+    impact: blocksLevel2
+    sources:
+      - https://inte2.epicor.com/en/products/digital-commerce/payments/ptw-credit-card-processing/understanding-levels-2-and-3/
+    examples:
+      pass: examples/MC-L2-004.pass.json
+      fail: examples/MC-L2-004.fail.json
+      passNote: The merchant tax ID is sent.
+      failNote: The merchant tax ID is missing.
+
+  - id: MC-L3-001
+    title: No line items
+    requirement: Mastercard Data Rate III needs the invoice's line items.
+    rationale: Data Rate III is the line-item level.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    appliesTo: *level3
+    check: { kind: required, field: /lineItems }
+    message: The transaction has no line items; Mastercard needs them for Data Rate III.
+    fix: Send the invoice lines.
+    impact: blocksLevel3
+    sources:
+      - https://inte2.epicor.com/en/products/digital-commerce/payments/ptw-credit-card-processing/understanding-levels-2-and-3/
+    examples:
+      pass: examples/MC-L3-001.pass.json
+      fail: examples/MC-L3-001.fail.json
+      passNote: The transaction has 2 line items.
+      failNote: The line items array is empty.
+
+  - id: MC-L3-002
+    title: Description missing
+    requirement: Each line needs a description for Data Rate III.
+    rationale: Mastercard Level 3 line items need a description.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    appliesTo: *level3
+    check: { kind: required, field: /lineItems/*/description }
+    message: "Line {index} has no description."
+    fix: Add the item name.
+    impact: blocksLevel3
+    sources:
+      - https://inte2.epicor.com/en/products/digital-commerce/payments/ptw-credit-card-processing/understanding-levels-2-and-3/
+    examples:
+      pass: examples/MC-L3-002.pass.json
+      fail: examples/MC-L3-002.fail.json
+      passNote: Both lines have descriptions.
+      failNote: Line 2 has no description.
+
+  - id: MC-L3-003
+    title: Product code missing
+    requirement: Each line needs a product code for Data Rate III.
+    rationale: Mastercard Level 3 line items need a product code.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    appliesTo: *level3
+    check: { kind: required, field: /lineItems/*/productCode }
+    message: "Line {index} has no product code."
+    fix: Add the SKU.
+    impact: blocksLevel3
+    sources:
+      - https://inte2.epicor.com/en/products/digital-commerce/payments/ptw-credit-card-processing/understanding-levels-2-and-3/
+    examples:
+      pass: examples/MC-L3-003.pass.json
+      fail: examples/MC-L3-003.fail.json
+      passNote: Both lines have product codes.
+      failNote: Line 2 has no product code.
+
+  - id: MC-L3-004
+    title: Quantity missing or not above 0
+    requirement: Each line needs a quantity above 0 for Data Rate III.
+    rationale: Mastercard Level 3 line items need a quantity.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    appliesTo: *level3
+    check: { kind: required, field: /lineItems/*/quantity, positiveOnly: true }
+    message: "Line {index} quantity is {actual}; it must be above 0."
+    fix: Send the quantity.
+    impact: blocksLevel3
+    sources:
+      - https://inte2.epicor.com/en/products/digital-commerce/payments/ptw-credit-card-processing/understanding-levels-2-and-3/
+    examples:
+      pass: examples/MC-L3-004.pass.json
+      fail: examples/MC-L3-004.fail.json
+      passNote: Quantities are 10 and 2.
+      failNote: Line 2 quantity is 0.
+
+  - id: MC-L3-005
+    title: Unit of measure not on the Mastercard list
+    requirement: Since October 2025, Mastercard accepts only the codes on its unit-of-measure list.
+    rationale: Units outside the fixed list fail Data Rate III.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    effective: { from: 2025-10-01 }
+    appliesTo: *level3
+    check: { kind: inList, field: /lineItems/*/unitOfMeasure, list: mastercardUom, allowMissing: false }
+    message: "Line {index} unit of measure {actual} is not on the Mastercard list."
+    fix: Map to a listed code such as EAC or PCE.
+    impact: blocksLevel3
+    supersedes: [GEN-FMT-006]
+    sources:
+      - https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/online-payments/payment-methods/cards/commercialcards
+      - https://www.weaudit.com/level-3-credit-card-processing/
+      - https://navan.com/resources/glossary/level-3-data
+    examples:
+      pass: examples/MC-L3-005.pass.json
+      fail: examples/MC-L3-005.fail.json
+      passNote: Units are EAC and PCE, both on the list.
+      failNote: Line 1 unit is BX, which is not on the list.
+
+  - id: MC-L3-006
+    title: Unit price or extended amount missing
+    requirement: Each line needs its unit price and extended amount for Data Rate III.
+    rationale: Mastercard Level 3 line items need both amounts.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    appliesTo: *level3
+    check: { kind: required, fields: [/lineItems/*/unitCost, /lineItems/*/total], allowZero: true }
+    message: "Line {index} is missing {field}."
+    fix: Send both.
+    impact: blocksLevel3
+    sources:
+      - https://inte2.epicor.com/en/products/digital-commerce/payments/ptw-credit-card-processing/understanding-levels-2-and-3/
+    examples:
+      pass: examples/MC-L3-006.pass.json
+      fail: examples/MC-L3-006.fail.json
+      passNote: Both lines have unit prices and totals.
+      failNote: Line 2 has no unit price.
+
+  - id: MC-L3-007
+    title: Debit or credit indicator missing
+    requirement: Each line should state whether it is a debit or a credit.
+    rationale: Mastercard Level 3 line items carry a debit or credit indicator.
+    level: L3
+    severity: warning
+    confidence: processor-doc
+    appliesTo: *level3
+    check: { kind: required, field: /lineItems/*/debitCreditIndicator }
+    message: "Line {index} has no debit or credit indicator."
+    fix: Send `debit` or `credit`.
+    impact: blocksLevel3
+    sources:
+      - https://inte2.epicor.com/en/products/digital-commerce/payments/ptw-credit-card-processing/understanding-levels-2-and-3/
+    examples:
+      pass: examples/MC-L3-007.pass.json
+      fail: examples/MC-L3-007.fail.json
+      passNote: Both lines say debit.
+      failNote: Line 2 has no indicator.
+
+  - id: MC-L3-008
+    title: Line tax indicator, discount indicator or tax type missing
+    requirement: One large processor requires a line tax indicator, a discount indicator when a line has a discount, and a tax type code when a line has tax.
+    rationale: Required by J.P. Morgan for Mastercard Level 3; a warning elsewhere.
+    level: L3
+    severity: warning
+    confidence: processor-doc
+    profiles: [jpmorgan]
+    appliesTo: *level3
+    check: { kind: custom, check: MastercardLineIndicators }
+    message: "Line {index} is missing {field}."
+    fix: Send the indicators.
+    impact: blocksLevel3
+    sources:
+      - https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/online-payments/payment-methods/cards/commercialcards
+    examples:
+      pass: examples/MC-L3-008.pass.json
+      fail: examples/MC-L3-008.fail.json
+      passNote: Both lines carry the tax indicator, discount indicator and tax type.
+      failNote: Line 1 has tax but no tax type code.
+
+  - id: MC-L3-009
+    title: Ship-to postal code missing
+    requirement: One large processor requires the ship-to postal code for Mastercard Level 3.
+    rationale: Required by J.P. Morgan; a warning elsewhere.
+    level: L3
+    severity: warning
+    confidence: processor-doc
+    profiles: [jpmorgan]
+    appliesTo: *level3
+    check: { kind: required, field: /shipping/toPostalCode }
+    message: The ship-to postal code is missing.
+    fix: Send it when goods ship.
+    impact: blocksLevel3
+    sources:
+      - https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/online-payments/payment-methods/cards/commercialcards
+    examples:
+      pass: examples/MC-L3-009.pass.json
+      fail: examples/MC-L3-009.fail.json
+      passNote: The ship-to postal code is 33431.
+      failNote: The ship-to postal code is missing.
+
+  - id: MC-FMT-001
+    title: Amount longer than 9 digits
+    requirement: Amount fields hold 9 digits; longer values are truncated from the right at one large processor.
+    rationale: A truncated amount no longer matches the invoice.
+    level: general
+    severity: warning
+    confidence: processor-doc
+    profiles: [jpmorgan]
+    check: { kind: custom, check: AmountDigits }
+    message: "{field} is {actual}, which is {length} digits in minor units; at most {max} fit."
+    fix: Check the value; it may be truncated.
+    impact: truncation
+    sources:
+      - https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/online-payments/payment-methods/cards/commercialcards
+    examples:
+      pass: examples/MC-FMT-001.pass.json
+      fail: examples/MC-FMT-001.fail.json
+      passNote: 280.36 is 5 digits in minor units.
+      failNote: 12345678.90 is 10 digits in minor units.

@@ -1,0 +1,7 @@
+<Project>
+  <!-- Exposes the project and docs URLs to code through assembly metadata. -->
+  <ItemGroup>
+    <AssemblyMetadata Include="L3LintProjectUrl" Value="$(L3LintProjectUrl)" />
+    <AssemblyMetadata Include="L3LintDocsUrl" Value="$(L3LintDocsUrl)" />
+  </ItemGroup>
+</Project>

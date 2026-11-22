@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://brimatt16219.github.io/l3lint/schemas/csvmap.schema.json",
+  "title": "l3lint CSV column map",
+  "description": "Maps CSV columns to canonical fields. Rows that share the groupBy column form one transaction; transaction-level values must agree across those rows.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "groupBy", "transaction", "lineItems"],
+  "properties": {
+    "format": { "const": "csv" },
+    "delimiter": { "type": "string", "minLength": 1, "maxLength": 1 },
+    "groupBy": { "type": "string", "minLength": 1, "description": "Column whose value identifies the transaction, for example the invoice number." },
+    "amountUnits": { "enum": ["major", "minor"], "description": "Whether amount columns hold major units (12.50) or minor units (1250). Default major." },
+    "transaction": {
+      "type": "object",
+      "propertyNames": {
+        "enum": [
+          "id", "amount", "currency", "transactionDate", "channel",
+          "card.brand", "card.product", "card.productCode", "card.isFederalGovernment", "card.last4",
+          "merchant.mcc", "merchant.name", "merchant.country", "merchant.taxId",
+          "customer.reference", "order.purchaseOrderNumber", "order.invoiceNumber", "order.orderDate",
+          "tax.amount", "tax.indicator", "tax.rate", "tax.exemptionId",
+          "amounts.discount", "amounts.freight", "amounts.duty", "amounts.shippingTax", "amounts.handling",
+          "shipping.fromPostalCode", "shipping.toPostalCode", "shipping.toCountry",
+          "billing.postalCode", "amex.requestorName", "amex.adviceText"
+        ]
+      },
+      "additionalProperties": { "$ref": "#/$defs/source" }
+    },
+    "lineItems": {
+      "type": "object",
+      "propertyNames": {
+        "enum": [
+          "sequence", "description", "productCode", "commodityCode", "commodityScheme", "quantity",
+          "unitOfMeasure", "unitCost", "discountAmount", "discountIndicator", "taxAmount", "taxRate",
+          "taxable", "taxTypeCode", "amountIncludesTax", "total", "debitCreditIndicator", "detailIndicator"
+        ]
+      },
+      "additionalProperties": { "$ref": "#/$defs/source" }
+    }
+  },
+  "$defs": {
+    "scalar": { "type": ["string", "number", "boolean"] },
+    "source": {
+      "oneOf": [
+        { "type": "string", "minLength": 1, "description": "Column name." },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["const"],
+          "properties": { "const": { "$ref": "#/$defs/scalar" } }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["from"],
+          "properties": {
+            "from": { "type": "string", "minLength": 1 },
+            "map": { "type": "object", "additionalProperties": { "$ref": "#/$defs/scalar" } },
+            "default": { "$ref": "#/$defs/scalar" }
+          }
+        }
+      ]
+    }
+  }
+}

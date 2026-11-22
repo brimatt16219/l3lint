@@ -1,0 +1,6 @@
+description: "Line 1 product code PRD-OVERFLOW-4171 has 17 characters; the maximum is 12."
+operator: field-too-long
+context: { brand: visa, cardProduct: business, mcc: "5085", asOf: 2026-10-19 }
+expect:
+  findings:
+    - { ruleId: GEN-FMT-006, path: /lineItems/0/productCode, severity: warning }

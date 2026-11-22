@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83212",
+  "amount": 229.83,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "fleet",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Summit Lab Products",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77148"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77148",
+    "invoiceNumber": "INV-83212"
+  },
+  "tax": {
+    "amount": 16.76,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "PRD-OVERFLOW-8783",
+      "commodityCode": "39131711",
+      "commodityScheme": "unspsc",
+      "quantity": 4,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 1.48,
+      "taxAmount": 2.32,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 28.12,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "taxAmount": 14.44,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 175.00,
+      "detailIndicator": "Y"
+    }
+  ]
+}

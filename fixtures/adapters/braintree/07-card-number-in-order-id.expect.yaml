@@ -1,0 +1,9 @@
+description: The public Mastercard test card number 5555 5555 5555 4444 was typed into the free-text order ID. It is masked before mapping and reported at the invoice number it maps to.
+format: braintree
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19, defaultCurrency: USD }
+canonical: 07-card-number-in-order-id.canonical.json
+expect:
+  findings:
+    - { ruleId: GEN-PCI-001, path: /order/invoiceNumber }
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/duty }

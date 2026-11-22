@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-62748",
+  "amount": 2164.61,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "purchasing",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Northbay Office Works",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-75692"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-75692",
+    "invoiceNumber": "INV-62748"
+  },
+  "tax": {
+    "amount": 121.97,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "quantity": 18,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 6.66,
+      "taxAmount": 7.59,
+      "total": 126.54
+    },
+    {
+      "sequence": 2,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 4,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 0.00,
+      "taxAmount": 11.74,
+      "total": 195.60
+    },
+    {
+      "sequence": 3,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 15,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 32.70,
+      "taxAmount": 17.66,
+      "total": 294.30
+    },
+    {
+      "sequence": 4,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "quantity": 2,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 0.00,
+      "taxAmount": 1.14,
+      "total": 19.00
+    },
+    {
+      "sequence": 5,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 10,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 18.30,
+      "taxAmount": 9.88,
+      "total": 164.70
+    },
+    {
+      "sequence": 6,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "quantity": 13,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 0.00,
+      "taxAmount": 11.12,
+      "total": 185.25
+    },
+    {
+      "sequence": 7,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 18,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 22.50,
+      "taxAmount": 12.15,
+      "total": 202.50
+    },
+    {
+      "sequence": 8,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 22,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 0.00,
+      "taxAmount": 50.69,
+      "total": 844.80
+    }
+  ]
+}

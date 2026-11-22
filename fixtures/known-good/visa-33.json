@@ -1,0 +1,158 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-77696",
+  "amount": 3385.00,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "purchasing",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-65184"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-65184",
+    "invoiceNumber": "INV-77696"
+  },
+  "tax": {
+    "amount": 153.49,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 4,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 3.66,
+      "taxAmount": 3.30,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 69.54,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "commodityScheme": "unspsc",
+      "quantity": 2,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 4.36,
+      "taxAmount": 1.86,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 39.24,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 0.00,
+      "taxAmount": 16.26,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 342.30,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 17,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 6.72,
+      "taxAmount": 2.87,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 60.43,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 16,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "taxAmount": 67.64,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 1424.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 6,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 17.78,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 374.40,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 7,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 16,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 102.40,
+      "taxAmount": 43.78,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 921.60,
+      "detailIndicator": "Y"
+    }
+  ]
+}

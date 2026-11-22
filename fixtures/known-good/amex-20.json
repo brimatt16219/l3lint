@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-87607",
+  "amount": 2299.61,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "purchasing",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Harborview Facility Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-72103"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-72103",
+    "invoiceNumber": "INV-87607"
+  },
+  "tax": {
+    "amount": 149.46,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "amex": {
+    "requestorName": "Jordan Ellis",
+    "adviceText": [
+      "PO-72103 supplies order",
+      "Requested by Jordan Ellis"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 5,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 16.00,
+      "taxAmount": 21.28,
+      "total": 304.00
+    },
+    {
+      "sequence": 2,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 19,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 0.00,
+      "taxAmount": 65.04,
+      "total": 929.10
+    },
+    {
+      "sequence": 3,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "quantity": 5,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 0.00,
+      "taxAmount": 4.99,
+      "total": 71.25
+    },
+    {
+      "sequence": 4,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "quantity": 20,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 13.50,
+      "taxAmount": 8.51,
+      "total": 121.50
+    },
+    {
+      "sequence": 5,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 8,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 0.00,
+      "taxAmount": 21.50,
+      "total": 307.20
+    },
+    {
+      "sequence": 6,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "quantity": 18,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 21.42,
+      "taxAmount": 13.49,
+      "total": 192.78
+    },
+    {
+      "sequence": 7,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 15,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 5.93,
+      "taxAmount": 3.73,
+      "total": 53.32
+    },
+    {
+      "sequence": 8,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "quantity": 10,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 10.92,
+      "total": 156.00
+    }
+  ]
+}

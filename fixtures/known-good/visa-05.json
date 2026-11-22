@@ -1,0 +1,158 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-76212",
+  "amount": 692.48,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "purchasing",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Harborview Facility Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-64148"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-64148",
+    "invoiceNumber": "INV-76212"
+  },
+  "tax": {
+    "amount": 37.92,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "75201",
+    "toPostalCode": "75231",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "75231"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "commodityScheme": "unspsc",
+      "quantity": 2,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 2.60,
+      "taxAmount": 2.96,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 49.40,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 3,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 0.00,
+      "taxAmount": 11.52,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 192.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "commodityScheme": "unspsc",
+      "quantity": 6,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 0.00,
+      "taxAmount": 5.13,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 85.50,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "taxAmount": 5.00,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 83.30,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 16,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 20.00,
+      "taxAmount": 10.80,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 180.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 6,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 3,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 1.19,
+      "taxAmount": 0.64,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 10.66,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 7,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 2,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 1.87,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 31.20,
+      "detailIndicator": "Y"
+    }
+  ]
+}

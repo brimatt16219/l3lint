@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-76318",
+  "amount": 840.50,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "business",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-64222"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-64222",
+    "invoiceNumber": "INV-76318"
+  },
+  "tax": {
+    "amount": 63.30,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "75201",
+    "toPostalCode": "75231",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "75231"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 2.59,
+      "taxAmount": 4.06,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 49.21,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 22,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 40.26,
+      "taxAmount": 29.89,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 362.34,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 0.00,
+      "taxAmount": 22.18,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 268.80,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 22,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 7.17,
+      "taxRate": 0.0825,
+      "taxable": true,
+      "total": 86.90,
+      "detailIndicator": "Y"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-64444",
+  "amount": 1167.57,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "purchasing",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Gulfside Medical Supply",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-76876"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-76876",
+    "invoiceNumber": "INV-64444"
+  },
+  "tax": {
+    "amount": 87.84,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "75201",
+    "toPostalCode": "75231",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "75231"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "quantity": 17,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 3.57,
+      "taxAmount": 5.60,
+      "total": 67.83
+    },
+    {
+      "sequence": 2,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "quantity": 18,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 12.15,
+      "taxAmount": 9.02,
+      "total": 109.35
+    },
+    {
+      "sequence": 3,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "quantity": 15,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 14.25,
+      "taxAmount": 10.58,
+      "total": 128.25
+    },
+    {
+      "sequence": 4,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "quantity": 17,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "taxAmount": 16.69,
+      "total": 202.30
+    },
+    {
+      "sequence": 5,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 13,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 0.00,
+      "taxAmount": 23.38,
+      "total": 283.40
+    },
+    {
+      "sequence": 6,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "quantity": 18,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 0.00,
+      "taxAmount": 10.99,
+      "total": 133.20
+    },
+    {
+      "sequence": 7,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "quantity": 10,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 15.60,
+      "taxAmount": 11.58,
+      "total": 140.40
+    }
+  ]
+}

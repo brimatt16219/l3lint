@@ -1,0 +1,27 @@
+# Adyen enhanced scheme data (Level 2 and 3) limits (retrieved 2026-10-25).
+profile:
+  id: adyen
+  title: Adyen
+  description: Adyen caps line descriptions at 26 characters and units of measure at 3.
+  sources:
+    - https://docs.adyen.com/payment-methods/cards/enhanced-scheme-data/l2-l3
+    - https://docs.adyen.com/api-explorer/Checkout/71/post/payments
+limits:
+  descriptionMax:
+    value: 26
+    source: https://docs.adyen.com/payment-methods/cards/enhanced-scheme-data/l2-l3
+  productCodeMax:
+    value: 12
+    source: https://docs.adyen.com/api-explorer/Checkout/71/post/payments
+  commodityCodeMax:
+    value: 12
+    source: https://docs.adyen.com/api-explorer/Checkout/71/post/payments
+  unitOfMeasureMax:
+    value: 3
+    source: https://docs.adyen.com/api-explorer/Checkout/71/post/payments
+  customerReferenceMax:
+    value: 25
+    source: https://docs.adyen.com/payment-methods/cards/enhanced-scheme-data/l2-l3
+  postalCodeMax:
+    value: 10
+    source: https://docs.adyen.com/payment-methods/cards/enhanced-scheme-data/l2-l3

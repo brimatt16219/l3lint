@@ -1,0 +1,7 @@
+description: Line 1 sends only productSku, which is used as the product code with an Ambiguous note; line 2 sends both, and productCode wins. Which field reaches the network is processor specific (unconfirmed).
+format: cybersource
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 06-product-sku.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

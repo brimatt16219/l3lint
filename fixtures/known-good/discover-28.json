@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-63331",
+  "amount": 124208,
+  "currency": "JPY",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "business",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5047",
+    "name": "Ridgeline Industrial Co",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-76099"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-76099",
+    "invoiceNumber": "INV-63331"
+  },
+  "tax": {
+    "amount": 8126,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0,
+    "freight": 0,
+    "duty": 0
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 20,
+      "unitOfMeasure": "BX",
+      "unitCost": 1830,
+      "discountAmount": 1830,
+      "taxAmount": 2434,
+      "total": 34770
+    },
+    {
+      "sequence": 2,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 12,
+      "unitOfMeasure": "CT",
+      "unitCost": 4890,
+      "discountAmount": 5868,
+      "taxAmount": 3697,
+      "total": 52812
+    },
+    {
+      "sequence": 3,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "quantity": 20,
+      "unitOfMeasure": "PK",
+      "unitCost": 1425,
+      "discountAmount": 0,
+      "taxAmount": 1995,
+      "total": 28500
+    }
+  ]
+}

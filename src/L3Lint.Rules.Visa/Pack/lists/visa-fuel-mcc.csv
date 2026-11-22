@@ -1,0 +1,10 @@
+# Fuel MCCs exempt from the Visa Level 2 tax range check; purchasing cards at these MCCs needed a customer code instead.
+# sources: https://developer.paypal.com/braintree/docs/reference/general/level-2-and-3-processing/required-fields/dotnet/
+#          https://docs.stripe.com/payments/payment-line-items
+# retrieved: 2026-10-25
+mcc,note
+4468,Marinas and marine service
+5499,Miscellaneous food stores
+5541,Service stations
+5542,Automated fuel dispensers
+5983,Fuel dealers

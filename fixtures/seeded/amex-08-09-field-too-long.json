@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-84431",
+  "amount": 885.40,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "corporate",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-77999"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-77999",
+    "invoiceNumber": "INV-84431"
+  },
+  "tax": {
+    "amount": 67.47,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "amex": {
+    "requestorName": "Sam Rivera",
+    "adviceText": [
+      "PO-77999 supplies order",
+      "Requested by Sam Rivera"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Safety glasses clear lens",
+      "productCode": "PRD-OVERFLOW-1309",
+      "commodityCode": "46181802",
+      "quantity": 22,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 4.62,
+      "taxAmount": 7.24,
+      "total": 87.78
+    },
+    {
+      "sequence": 2,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 24,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "taxAmount": 36.23,
+      "total": 439.20
+    },
+    {
+      "sequence": 3,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 11,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 3.58,
+      "total": 43.45
+    },
+    {
+      "sequence": 4,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 22,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 27.50,
+      "taxAmount": 20.42,
+      "total": 247.50
+    }
+  ]
+}

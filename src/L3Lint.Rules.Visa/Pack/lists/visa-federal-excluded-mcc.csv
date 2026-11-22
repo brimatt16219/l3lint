@@ -1,0 +1,15 @@
+# MCCs where federal government corporate and purchasing cards are excluded from Visa Product 3 (medical services),
+# per Stripe's public payment line items guide.
+# source: https://docs.stripe.com/payments/payment-line-items
+# retrieved: 2026-10-25
+mcc,note
+8011,Doctors and physicians
+8021,Dentists and orthodontists
+8031,Osteopaths
+8041,Chiropractors
+8042,Optometrists and ophthalmologists
+8043,Opticians and optical goods
+8046,Podiatrists
+8050,Nursing and personal care facilities
+8062,Hospitals
+8071,Medical and dental laboratories

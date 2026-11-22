@@ -1,0 +1,36 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/L3Lint.Adapters/L3Lint.Adapters.csproj" />
+    <Project Path="src/L3Lint.Cli/L3Lint.Cli.csproj" />
+    <Project Path="src/L3Lint.Core/L3Lint.Core.csproj" />
+    <Project Path="src/L3Lint.Hosting/L3Lint.Hosting.csproj" />
+    <Project Path="src/L3Lint.Mcp/L3Lint.Mcp.csproj" />
+    <Project Path="src/L3Lint.Reporting/L3Lint.Reporting.csproj" />
+    <Project Path="src/L3Lint.Rules.Amex/L3Lint.Rules.Amex.csproj" />
+    <Project Path="src/L3Lint.Rules.Discover/L3Lint.Rules.Discover.csproj" />
+    <Project Path="src/L3Lint.Rules.General/L3Lint.Rules.General.csproj" />
+    <Project Path="src/L3Lint.Rules.Mastercard/L3Lint.Rules.Mastercard.csproj" />
+    <Project Path="src/L3Lint.Rules.Visa/L3Lint.Rules.Visa.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/L3Lint.Adapters.Tests/L3Lint.Adapters.Tests.csproj" />
+    <Project Path="tests/L3Lint.Architecture.Tests/L3Lint.Architecture.Tests.csproj" />
+    <Project Path="tests/L3Lint.Benchmarks/L3Lint.Benchmarks.csproj" />
+    <Project Path="tests/L3Lint.Cli.Tests/L3Lint.Cli.Tests.csproj" />
+    <Project Path="tests/L3Lint.Core.Tests/L3Lint.Core.Tests.csproj" />
+    <Project Path="tests/L3Lint.Corpus.Tests/L3Lint.Corpus.Tests.csproj" />
+    <Project Path="tests/L3Lint.Fuzz/L3Lint.Fuzz.csproj" />
+    <Project Path="tests/L3Lint.Fuzz.Tests/L3Lint.Fuzz.Tests.csproj" />
+    <Project Path="tests/L3Lint.Mcp.Tests/L3Lint.Mcp.Tests.csproj" />
+    <Project Path="tests/L3Lint.Performance/L3Lint.Performance.csproj" />
+    <Project Path="tests/L3Lint.Reporting.Tests/L3Lint.Reporting.Tests.csproj" />
+    <Project Path="tests/L3Lint.Rules.Tests/L3Lint.Rules.Tests.csproj" />
+    <Project Path="tests/L3Lint.Security.Tests/L3Lint.Security.Tests.csproj" />
+  </Folder>
+  <Folder Name="/tools/">
+    <Project Path="tools/L3Lint.AgentEval/L3Lint.AgentEval.csproj" />
+    <Project Path="tools/L3Lint.DocsGen/L3Lint.DocsGen.csproj" />
+    <Project Path="tools/L3Lint.FixtureGen/L3Lint.FixtureGen.csproj" />
+    <Project Path="tools/L3Lint.PackManifest/L3Lint.PackManifest.csproj" />
+  </Folder>
+</Solution>

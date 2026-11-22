@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-64497",
+  "amount": 1903.71,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "business",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5047",
+    "name": "Summit Lab Products",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-76913"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-76913",
+    "invoiceNumber": "INV-64497"
+  },
+  "tax": {
+    "amount": 106.90,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 20,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 3.95,
+      "taxAmount": 4.50,
+      "total": 75.05
+    },
+    {
+      "sequence": 2,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "quantity": 12,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "taxAmount": 64.08,
+      "total": 1068.00
+    },
+    {
+      "sequence": 3,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "quantity": 7,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 0.00,
+      "taxAmount": 1.76,
+      "total": 29.40
+    },
+    {
+      "sequence": 4,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 8,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 17.44,
+      "taxAmount": 9.42,
+      "total": 156.96
+    },
+    {
+      "sequence": 5,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "quantity": 6,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 15.60,
+      "taxAmount": 8.42,
+      "total": 140.40
+    },
+    {
+      "sequence": 6,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "quantity": 20,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 18.72,
+      "total": 312.00
+    }
+  ]
+}

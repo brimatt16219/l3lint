@@ -1,0 +1,8 @@
+description: The same sale in Adyen's legacy flat additionalData keys, with string values, lines numbered from 1 in the key, a ddMMyy order date and an alpha-3 destination country that maps to US.
+format: adyen
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 02-legacy-additional-data.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/discount }

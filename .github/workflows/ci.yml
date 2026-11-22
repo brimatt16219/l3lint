@@ -1,0 +1,140 @@
+# Pull request gate (Test and delivery tab, "Pull request workflow"). The release workflow calls it too.
+# Third-party actions are pinned by full commit SHA.
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_call:
+
+permissions:
+  contents: read
+
+env:
+  DOTNET_NOLOGO: "true"
+  DOTNET_CLI_TELEMETRY_OPTOUT: "true"
+  ContinuousIntegrationBuild: "true"
+
+jobs:
+  build-test:
+    name: Build and test (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          global-json-file: global.json
+      - name: Restore with locked dependencies
+        run: dotnet restore L3Lint.slnx --locked-mode
+      - name: Build with warnings as errors
+        run: dotnet build L3Lint.slnx -c Release --no-restore
+      - name: Check formatting
+        run: dotnet format L3Lint.slnx --verify-no-changes --no-restore
+      - name: Test (unit, rule examples, properties, corpus, determinism, adapters, conformance, CLI, MCP)
+        run: dotnet test --solution L3Lint.slnx -c Release --no-build
+      - name: Latency targets (US-08, US-09), run alone so nothing else shares the CPU
+        run: dotnet run --project tests/L3Lint.Performance -c Release --no-build
+      - name: Check generated files are current
+        shell: bash
+        run: |
+          dotnet run --project tools/L3Lint.PackManifest -c Release --no-build -- --check
+          dotnet run --project tools/L3Lint.FixtureGen -c Release --no-build -- examples --check
+          dotnet run --project tools/L3Lint.FixtureGen -c Release --no-build -- samples --check
+          dotnet run --project tools/L3Lint.FixtureGen -c Release --no-build -- corpus --check
+
+  coverage:
+    name: Coverage gate (90% in Core and packs)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          global-json-file: global.json
+      - run: dotnet tool restore
+      - run: dotnet restore L3Lint.slnx --locked-mode
+      - run: dotnet build L3Lint.slnx -c Debug --no-restore
+      - name: Collect coverage from every test project
+        shell: bash
+        run: |
+          for project in tests/*.Tests/*.Tests.csproj; do
+            name=$(basename "$project" .csproj)
+            dotnet test --project "$project" --no-build --coverlet --coverlet-output-format cobertura \
+              --coverlet-file-prefix "$name" --results-directory TestResults/coverage
+          done
+      - name: Merge and enforce
+        shell: bash
+        run: |
+          dotnet tool run reportgenerator -reports:"TestResults/coverage/*.cobertura.*.xml" -targetdir:TestResults/report -reporttypes:"JsonSummary;MarkdownSummaryGithub"
+          cat TestResults/report/SummaryGithub.md >> "$GITHUB_STEP_SUMMARY"
+          failed=0
+          for assembly in L3Lint.Core L3Lint.Rules.General L3Lint.Rules.Visa L3Lint.Rules.Mastercard L3Lint.Rules.Amex L3Lint.Rules.Discover; do
+            coverage=$(jq -r --arg name "$assembly" '.coverage.assemblies[] | select(.name == $name) | .coverage' TestResults/report/Summary.json)
+            echo "$assembly line coverage: $coverage%"
+            if [ -z "$coverage" ] || awk -v c="$coverage" 'BEGIN { exit !(c < 90) }'; then
+              echo "::error title=coverage::$assembly line coverage is ${coverage:-missing}%, below 90%"
+              failed=1
+            fi
+          done
+          exit $failed
+
+  benchmarks:
+    name: Short benchmark run
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          global-json-file: global.json
+      - run: dotnet restore L3Lint.slnx --locked-mode
+      - name: Run the short benchmark job
+        run: dotnet run --project tests/L3Lint.Benchmarks -c Release -- --filter "*" --job short --exporters json
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: benchmarks
+          path: BenchmarkDotNet.Artifacts/results
+
+  self-lint:
+    name: Lint the repository's own fixtures with the freshly built Action
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          global-json-file: global.json
+      - name: Pack the tool into a local feed
+        run: dotnet pack src/L3Lint.Cli -c Release -o "$RUNNER_TEMP/feed"
+      - name: Read the version the Action installs
+        id: version
+        shell: bash
+        run: echo "version=$(tr -d '[:space:]' < action/VERSION)" >> "$GITHUB_OUTPUT"
+      - uses: ./action
+        with:
+          paths: |
+            fixtures/known-good/**/*.json
+            fixtures/canonical/*/valid/*.json
+          fail-on: error
+          version: ${{ steps.version.outputs.version }}
+          tool-source: ${{ runner.temp }}/feed
+          sarif-file: l3lint.sarif
+
+  docs:
+    name: Docs build (fails on a rule without a page)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          global-json-file: global.json
+      - run: dotnet tool restore
+      - name: Generated reference pages are current and complete
+        run: dotnet run --project tools/L3Lint.DocsGen -c Release -- all --check
+      - name: Build the site with warnings as errors
+        run: dotnet tool run docfx docs/docfx.json --warningsAsErrors

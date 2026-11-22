@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites name="l3lint" tests="5" failures="1" errors="1">
+  <testsuite name="invoices/INV-20417.stripe.json" tests="1" failures="1" errors="0">
+    <testcase name="INV-20417">
+      <failure message="VISA-L3-004: Line 2 has no commodity code; Visa needs one on every line for Product 3." type="VISA-L3-004">Path: /amount_details/line_items/1/payment_method_options/card/commodity_code
+Canonical path: /lineItems/1/commodityCode
+Location: line 31, column 9
+Expected: 8-digit commodity code
+Fix: Add the most specific 8-digit UNSPSC code for this item.
+Rule: https://brimatt16219.github.io/l3lint/rules/VISA-L3-004.html</failure>
+      <system-out>Likely tier: below Product 3 (blocked by 1 error)
+warning GEN-DQ-004 /metadata/customer_reference: "111111" at /customer/reference looks like filler, not the buyer's reference.
+  Fix: Ask the buyer for their real reference.</system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="invoices/batch 2.ndjson" tests="2" failures="0" errors="0">
+    <testcase name="Transaction 2">
+      <system-out>Likely tier: Data Rate III (meets the documented requirement)
+information GEN-DQ-001 /lineItems/0/description: Line 1 description "A|B &lt;C&gt;" is a placeholder; use *real* text.
+  Fix: Use the real product or service name.</system-out>
+    </testcase>
+    <testcase name="INV-3">
+      <system-out>Likely tier: Product 3 (meets the documented requirement)</system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="invoices/broken.json" tests="1" failures="0" errors="1">
+    <testcase name="read input, line 3">
+      <error message="invoices/broken.json is not valid JSON: a value is missing after the comma." type="Malformed">invoices/broken.json is not valid JSON: a value is missing after the comma.</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="Batch findings" tests="1" failures="0" errors="0">
+    <testcase name="all transactions">
+      <system-out>warning GEN-DQ-007 /lineItems/0/description: "A|B &lt;C&gt;" appears at /lineItems/0/description on 2 of 2 transactions (100%).
+  Transaction: Transaction 2 in invoices/batch 2.ndjson
+  Fix: Pull line data from the invoice, not a template.</system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

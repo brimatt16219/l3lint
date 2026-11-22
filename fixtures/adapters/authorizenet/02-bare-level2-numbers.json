@@ -1,0 +1,13 @@
+{
+  "transactionRequest": {
+    "transactionType": "authCaptureTransaction",
+    "amount": 612.45,
+    "currencyCode": "USD",
+    "order": { "invoiceNumber": "INV-90215" },
+    "tax": { "amount": 41.95 },
+    "shipping": { "amount": 20.50 },
+    "taxExempt": false,
+    "poNumber": "PO66710",
+    "shipTo": { "zip": "30303", "country": "US" }
+  }
+}

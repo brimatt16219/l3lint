@@ -1,0 +1,504 @@
+# l3lint general rule pack: rules that apply to every brand.
+# Source of truth for the 23 GEN rules in the spec's rule catalog (Card brand rules tab). Each rule names its
+# sources; the design notes for each rule are in docs/dev/RULE-DESIGN.md.
+pack:
+  id: l3lint.rules.general
+  version: 1.0.0
+  brand: general
+  publishedOn: 2026-10-25
+  title: General rules (all brands)
+  description: Safety, format, arithmetic, eligibility and data quality rules that apply whatever the card brand.
+  lists:
+    placeholders: lists/placeholders.csv
+
+rules:
+  # GEN-PCI-001. Policy rule; masking always runs, even when this rule is disabled (ADR-0004, ADR-0023).
+  - id: GEN-PCI-001
+    title: Card number in the payload
+    requirement: No value may be a card number. Send only the last four digits in card.last4.
+    rationale: A card number puts the payload, and everyone who handles it, in PCI DSS scope. l3lint masks it before any other stage sees it.
+    level: general
+    severity: error
+    confidence: policy
+    check: { kind: custom, check: CardNumber }
+    message: "A card number was found at {field} and masked as {masked}."
+    fix: Remove the card number; send only the last four digits in card.last4.
+    impact: hygiene
+    sources:
+      - https://www.pcisecuritystandards.org/standards/pci-dss/
+      - https://www.iso.org/standard/70484.html
+    notes: Values in code fields (product code, commodity code, sequence) are reported as warnings, because any random 16-digit code passes the Luhn check about one time in ten.
+    examples:
+      pass: examples/GEN-PCI-001.pass.json
+      fail: examples/GEN-PCI-001.fail.json
+      passNote: The description is a real item name.
+      failNote: The first line's description holds the public test card number 4111 1111 1111 1111.
+
+  - id: GEN-FMT-001
+    title: Payload does not match the canonical schema
+    requirement: The payload must match the canonical JSON Schema (schema v1).
+    rationale: A field with the wrong type or name cannot be checked, so every rule that needs it is skipped.
+    level: general
+    severity: error
+    confidence: policy
+    check: { kind: custom, check: Schema }
+    message: "{detail}"
+    fix: Correct the field named in the path.
+    impact: hygiene
+    sources:
+      - https://json-schema.org/draft/2020-12/json-schema-core
+    examples:
+      pass: examples/GEN-FMT-001.pass.json
+      fail: examples/GEN-FMT-001.fail.json
+      passNote: Every field has the type the schema expects.
+      failNote: The first line's quantity is the text "ten" instead of a number.
+
+  - id: GEN-FMT-002
+    title: Currency missing or not ISO 4217
+    requirement: The currency must be an active ISO 4217 alpha-3 code such as USD.
+    rationale: The currency sets the number of decimals every amount may carry and drives the arithmetic checks.
+    level: general
+    severity: error
+    confidence: policy
+    check: { kind: custom, check: Currency }
+    message: "Currency {actual} is not an ISO 4217 code."
+    messages:
+      missing: The currency is missing.
+    fix: Send a 3-letter code such as USD.
+    impact: hygiene
+    sources:
+      - https://www.iso.org/iso-4217-currency-codes.html
+    examples:
+      pass: examples/GEN-FMT-002.pass.json
+      fail: examples/GEN-FMT-002.fail.json
+      passNote: The currency is USD.
+      failNote: The currency is "usd", which is not an ISO 4217 code because codes are uppercase.
+
+  - id: GEN-FMT-003
+    title: Amount not positive, or more decimals than the currency allows
+    requirement: The amount must be above 0, and no amount may have more decimals than the currency exponent. Unit cost is exempt.
+    rationale: Gateways reject or round amounts with extra decimals, which breaks line-item arithmetic.
+    level: general
+    severity: error
+    confidence: policy
+    check: { kind: custom, check: AmountPrecision }
+    message: "{field} is {actual}, which has more decimals than {currency} allows."
+    messages:
+      notPositive: "The transaction amount is {actual}; it must be above 0."
+    fix: Round to the currency exponent before sending.
+    impact: hygiene
+    sources:
+      - https://www.iso.org/iso-4217-currency-codes.html
+      - https://developer.paypal.com/braintree/docs/reference/general/level-2-and-3-processing/required-fields/dotnet/
+    examples:
+      pass: examples/GEN-FMT-003.pass.json
+      fail: examples/GEN-FMT-003.fail.json
+      passNote: Every amount has at most 2 decimals for USD.
+      failNote: The freight is 15.005 USD, which has 3 decimals.
+
+  - id: GEN-FMT-004
+    title: Descriptive text has unsupported characters
+    requirement: Descriptions and advice text should use only letters, digits, space, apostrophe, period and hyphen.
+    rationale: Some brands print other characters as spaces, which garbles the line on the buyer's statement.
+    level: general
+    severity: warning
+    confidence: processor-doc
+    check:
+      kind: pattern
+      fields: [/lineItems/*/description, /amex/adviceText/*]
+      regex: "^[A-Za-z0-9 '.-]*$"
+    message: "Text at {field} has characters some brands print as spaces: {actual}"
+    fix: Replace them; some brands print them as spaces.
+    impact: truncation
+    sources:
+      - https://developer.paypal.com/braintree/docs/reference/general/level-2-and-3-processing/required-fields/dotnet/
+    examples:
+      pass: examples/GEN-FMT-004.pass.json
+      fail: examples/GEN-FMT-004.fail.json
+      passNote: The descriptions use only letters, digits and spaces.
+      failNote: The first line's description contains an ampersand.
+
+  - id: GEN-FMT-005
+    title: Too many line items
+    requirement: A transaction may not hold more line items than the brand or processor allows (998 by default).
+    rationale: Processors reject or truncate transactions above their line-item limit.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    check: { kind: maxCount, collection: /lineItems, max: 998, profileKey: maxLineItems }
+    message: "The transaction has {count} line items; at most {max} are allowed."
+    fix: Consolidate lines or split the invoice.
+    impact: blocksLevel3
+    sources:
+      - https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/online-payments/payment-methods/cards/commercialcards
+      - https://docs.stripe.com/payments/payment-line-items
+    examples:
+      pass: examples/GEN-FMT-005.pass.json
+      fail: examples/GEN-FMT-005.fail.json
+      passNote: The transaction has 2 line items.
+      failNote: The transaction has 999 line items, over the default limit of 998.
+
+  - id: GEN-FMT-006
+    title: Field longer than the brand or processor maximum
+    requirement: Each field must fit the maximum length in the canonical field dictionary, or the selected processor profile.
+    rationale: Longer values are truncated in transit, so the buyer sees a cut-off reference or description.
+    level: general
+    severity: warning
+    confidence: processor-doc
+    check:
+      kind: maxLength
+      limits:
+        - { field: /id, max: 64 }
+        - { field: /card/productCode, max: 3 }
+        - { field: /merchant/taxId, max: 15, profileKey: merchantTaxIdMax }
+        - { field: /customer/reference, max: 25, profileKey: customerReferenceMax }
+        - { field: /order/purchaseOrderNumber, max: 25, profileKey: purchaseOrderNumberMax }
+        - { field: /order/invoiceNumber, max: 25, profileKey: invoiceNumberMax }
+        - { field: /shipping/fromPostalCode, max: 10, profileKey: postalCodeMax }
+        - { field: /shipping/toPostalCode, max: 10, profileKey: postalCodeMax }
+        - { field: /billing/postalCode, max: 10, profileKey: postalCodeMax }
+        - { field: /amex/requestorName, max: 40, profileKey: requestorNameMax }
+        - { field: /lineItems/*/productCode, max: 12, profileKey: productCodeMax }
+        - { field: /lineItems/*/commodityCode, max: 12, profileKey: commodityCodeMax }
+        - { field: /lineItems/*/unitOfMeasure, max: 12, profileKey: unitOfMeasureMax }
+        - { field: /lineItems/*/description, profileKey: descriptionMax }
+        - { field: /lineItems/*/taxTypeCode, profileKey: taxTypeCodeMax }
+    message: "{field} is {length} characters; the maximum is {max}."
+    fix: Shorten it; otherwise it is truncated.
+    impact: truncation
+    sources:
+      - https://docs.stripe.com/payments/payment-line-items
+      - https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/online-payments/payment-methods/cards/commercialcards
+    notes: Default maxima come from the canonical field dictionary; a processor profile can set its own limit for each field.
+    examples:
+      pass: examples/GEN-FMT-006.pass.json
+      fail: examples/GEN-FMT-006.fail.json
+      passNote: The customer reference is 8 characters.
+      failNote: The customer reference is 30 characters, over the maximum of 25.
+
+  - id: GEN-FMT-007
+    title: Line sequence numbers missing, duplicated or not contiguous
+    requirement: Lines must be numbered 1, 2, 3 in order, with no gaps or repeats.
+    rationale: Processors use the sequence number to keep line items in order; a gap or repeat can drop or reorder lines.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    check: { kind: custom, check: Sequence }
+    message: "Line {index} has sequence {actual}; it should be {expected}."
+    messages:
+      missing: "Line {index} has no sequence number; it should be {expected}."
+    fix: Number lines 1, 2, 3 in order.
+    impact: blocksLevel3
+    sources:
+      - https://community.developer.cybersource.com/t5/Integration-and-Testing/Submitting-Level-2-Data/m-p/60293
+    examples:
+      pass: examples/GEN-FMT-007.pass.json
+      fail: examples/GEN-FMT-007.fail.json
+      passNote: Lines are numbered 1 and 2.
+      failNote: The second line is numbered 3, leaving a gap.
+
+  - id: GEN-ARITH-001
+    title: Line total does not match quantity times unit cost less discount
+    requirement: "Each line total must equal round(quantity x unit cost) - line discount (+ line tax when the total includes tax), within the line tolerance."
+    rationale: Visa's quality review and several gateways reject line items whose math does not reconcile.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    check: { kind: custom, check: LineTotal }
+    message: "Line {index} total is {reported}; quantity, unit cost and discount give {expected} (difference {difference})."
+    fix: Recompute the line total.
+    impact: blocksLevel3
+    sources:
+      - https://inte2.epicor.com/en/products/digital-commerce/payments/ptw-credit-card-processing/understanding-levels-2-and-3/
+      - https://curbstone.com/new-data-requirements-cedp/
+      - https://docs.stripe.com/payments/payment-line-items
+    notes: Derived totals (for example Stripe, which sends no line total) are skipped instead of trivially passing.
+    examples:
+      pass: examples/GEN-ARITH-001.pass.json
+      fail: examples/GEN-ARITH-001.fail.json
+      passNote: 10 x 12.50 - 5.00 = 120.00 matches the reported total.
+      failNote: The first line reports 125.00, but 10 x 12.50 - 5.00 = 120.00 (the discount was forgotten).
+
+  - id: GEN-ARITH-002
+    title: Transaction amount does not match the line totals and summary amounts
+    requirement: "The amount must equal the sum of line totals (less included line tax) + tax + freight + duty + shipping tax - header discount, within the total tolerance."
+    rationale: A total that does not reconcile is one of the patterns Visa's validation rejects.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    check: { kind: custom, check: TransactionTotal }
+    message: "The amount is {reported}; lines and summary amounts add up to {expected} (difference {difference})."
+    messages:
+      lineCause: "The amount is {reported}; lines and summary amounts add up to {expected} (difference {difference}). A line total is likely wrong; fix that first."
+      handling: "The amount is {reported}; lines and summary amounts add up to {expected} (difference {difference}). Handling is not part of the formula."
+    fix: Recompute the amount, or fix the line or summary values.
+    impact: blocksLevel3
+    sources:
+      - https://developer.paypal.com/braintree/docs/reference/general/level-2-and-3-processing/required-fields/dotnet/
+      - https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/online-payments/payment-methods/cards/commercialcards
+      - https://curbstone.com/new-data-requirements-cedp/
+    examples:
+      pass: examples/GEN-ARITH-002.pass.json
+      fail: examples/GEN-ARITH-002.fail.json
+      passNote: 248.00 + 17.36 + 15.00 = 280.36 matches the amount.
+      failNote: The amount is 290.36, but lines and summary amounts add up to 280.36.
+
+  - id: GEN-ARITH-003
+    title: Header tax differs from the sum of line taxes
+    requirement: When any line carries tax, the header tax must equal the sum of line taxes within the total tolerance.
+    rationale: Inconsistent tax suggests one of the two was not computed from the invoice.
+    level: L3
+    severity: warning
+    confidence: processor-doc
+    check: { kind: custom, check: TaxConsistency }
+    message: "Header tax is {reported}, but the line taxes add up to {expected}."
+    fix: Make header tax the sum of line taxes.
+    impact: riskVisaValidation
+    sources:
+      - https://developer.paypal.com/braintree/docs/reference/general/level-2-and-3-processing/required-fields/dotnet/
+      - https://curbstone.com/new-data-requirements-cedp/
+    examples:
+      pass: examples/GEN-ARITH-003.pass.json
+      fail: examples/GEN-ARITH-003.fail.json
+      passNote: Line taxes 8.40 + 8.96 = 17.36 match the header tax.
+      failNote: Header tax is 20.00, but line taxes add up to 17.36.
+
+  - id: GEN-ARITH-004
+    title: Negative quantity or unit cost on a debit line
+    requirement: Debit lines carry positive quantities and unit costs; returns are credit lines with positive values.
+    rationale: Negative values on a debit line are read as a charge, which inverts the arithmetic.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    check: { kind: custom, check: NegativeDebitLine }
+    message: "Line {index} is a debit line with a negative value at {field}: {actual}."
+    fix: Mark returns as credit lines with positive values.
+    impact: blocksLevel3
+    sources:
+      - https://inte2.epicor.com/en/products/digital-commerce/payments/ptw-credit-card-processing/understanding-levels-2-and-3/
+      - https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/online-payments/payment-methods/cards/commercialcards
+    examples:
+      pass: examples/GEN-ARITH-004.pass.json
+      fail: examples/GEN-ARITH-004.fail.json
+      passNote: Every debit line has a positive quantity and unit cost.
+      failNote: The second line has quantity -2 but no credit indicator.
+
+  - id: GEN-ARITH-005
+    title: Discount counted twice
+    requirement: A discount belongs at the header or on the lines, not both.
+    rationale: When the header discount equals the sum of line discounts, the same discount is likely subtracted twice.
+    level: L3
+    severity: warning
+    confidence: processor-doc
+    check: { kind: custom, check: DoubleDiscount }
+    message: "The header discount {reported} equals the sum of line discounts, so it is likely counted twice."
+    fix: Send the discount at one level only.
+    impact: riskVisaValidation
+    sources:
+      - https://curbstone.com/new-data-requirements-cedp/
+      - https://inte2.epicor.com/en/products/digital-commerce/payments/ptw-credit-card-processing/understanding-levels-2-and-3/
+    examples:
+      pass: examples/GEN-ARITH-005.pass.json
+      fail: examples/GEN-ARITH-005.fail.json
+      passNote: The discount is sent only on the line; the header discount is 0.
+      failNote: The header discount 5.00 repeats the 5.00 line discount.
+
+  - id: GEN-ELIG-001
+    title: Consumer card
+    requirement: Enhanced data earns a rate only on commercial cards.
+    rationale: Brands pay enhanced-data rates for business, corporate, purchasing and fleet cards, never for consumer cards.
+    level: general
+    severity: information
+    confidence: processor-doc
+    check: { kind: inList, field: /card/product, values: [consumer], mode: deny }
+    message: This is a consumer card, so no enhanced-data rate is available.
+    fix: None; enhanced data earns no rate on consumer cards.
+    impact: noBenefit
+    supersedes: [VISA-ELIG-001]
+    sources:
+      - https://docs.stripe.com/payments/payment-line-items
+    examples:
+      pass: examples/GEN-ELIG-001.pass.json
+      fail: examples/GEN-ELIG-001.fail.json
+      passNote: The card is a purchasing card.
+      failNote: The card product is consumer.
+
+  - id: GEN-ELIG-002
+    title: Card product unknown
+    requirement: Send the card product so eligibility checks can run.
+    rationale: Without the card product l3lint cannot tell whether an enhanced-data rate is possible.
+    level: general
+    severity: information
+    confidence: policy
+    check: { kind: required, field: /card/product }
+    message: The card product is unknown, so eligibility checks cannot run.
+    fix: Pass card.product to enable eligibility checks.
+    impact: hygiene
+    sources:
+      - https://docs.stripe.com/payments/payment-line-items
+    examples:
+      pass: examples/GEN-ELIG-002.pass.json
+      fail: examples/GEN-ELIG-002.fail.json
+      passNote: The card product is purchasing.
+      failNote: The payload has no card product.
+
+  - id: GEN-DQ-001
+    title: Placeholder description
+    requirement: Each line description should name the real product or service.
+    rationale: Visa rejects generic descriptions such as "Item" or "N/A"; other brands pass them through to the buyer's statement unchanged.
+    level: L3
+    severity: warning
+    confidence: inferred
+    check: { kind: custom, check: PlaceholderDescription }
+    message: "Line {index} description \"{actual}\" is a placeholder, not an item name."
+    fix: Use the real product or service name.
+    impact: riskVisaValidation
+    sources:
+      - https://www.versapay.com/cedp
+      - https://merchantcostconsulting.com/lower-credit-card-processing-fees/how-to-qualify-cedp-rates/
+      - https://finix.com/resources/blogs/visa-level-2-3-programs-changing-cedp
+    examples:
+      pass: examples/GEN-DQ-001.pass.json
+      fail: examples/GEN-DQ-001.fail.json
+      passNote: The descriptions name real items.
+      failNote: The second line's description is "Item 2".
+
+  - id: GEN-DQ-002
+    title: Description is the merchant name
+    requirement: A line description should describe the item, not the seller.
+    rationale: A merchant name as description is filler; Visa names it among the descriptions it rejects.
+    level: L3
+    severity: warning
+    confidence: inferred
+    check: { kind: custom, check: MerchantNameDescription }
+    message: "Line {index} description \"{actual}\" is the merchant name."
+    fix: Describe the item, not the seller.
+    impact: riskVisaValidation
+    sources:
+      - https://merchantcostconsulting.com/lower-credit-card-processing-fees/how-to-qualify-cedp-rates/
+      - https://finix.com/resources/blogs/visa-level-2-3-programs-changing-cedp
+    notes: Matching uses normalized text and a Jaro-Winkler similarity of at least 0.92 (inferred threshold).
+    examples:
+      pass: examples/GEN-DQ-002.pass.json
+      fail: examples/GEN-DQ-002.fail.json
+      passNote: The descriptions differ from the merchant name.
+      failNote: The first line's description is "Gulfside Medical Supply Inc", the merchant name.
+
+  - id: GEN-DQ-003
+    title: Placeholder product code or unit
+    requirement: Product codes and units of measure should be real values, not zeros or filler.
+    rationale: Zeros and filler in required fields are among the patterns Visa now rejects.
+    level: L3
+    severity: warning
+    confidence: inferred
+    check: { kind: custom, check: PlaceholderCode }
+    message: "Line {index} has a placeholder value at {field}: \"{actual}\"."
+    fix: Send the real SKU and unit.
+    impact: riskVisaValidation
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+    examples:
+      pass: examples/GEN-DQ-003.pass.json
+      fail: examples/GEN-DQ-003.fail.json
+      passNote: Product codes and units are real values.
+      failNote: The first line's product code is "000".
+
+  - id: GEN-DQ-004
+    title: Filler customer code or PO
+    requirement: The customer code and purchase order number should be the buyer's real reference.
+    rationale: Values such as 123456 are typed to get past a required field and do not help the buyer reconcile.
+    level: L2
+    severity: warning
+    confidence: inferred
+    check: { kind: custom, check: FillerReference }
+    message: "\"{actual}\" at {field} looks like filler, not the buyer's reference."
+    fix: Ask the buyer for their real reference.
+    impact: riskVisaValidation
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+    examples:
+      pass: examples/GEN-DQ-004.pass.json
+      fail: examples/GEN-DQ-004.fail.json
+      passNote: The customer reference is PO-77812.
+      failNote: The customer reference is 111111.
+
+  - id: GEN-DQ-005
+    title: One-line invoice that mirrors the total
+    requirement: Line items should be the invoice's real lines, not one line restating the total.
+    rationale: A single line of quantity 1 equal to the amount is the auto-filled pattern that CEDP flags.
+    level: L3
+    severity: warning
+    confidence: inferred
+    check: { kind: custom, check: OneLineInvoice }
+    message: The only line has quantity 1 and restates the transaction amount, which looks auto-filled.
+    fix: Send the invoice's real lines.
+    impact: riskVisaValidation
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+      - https://www.versapay.com/cedp
+    examples:
+      pass: examples/GEN-DQ-005.pass.json
+      fail: examples/GEN-DQ-005.fail.json
+      passNote: The invoice has 2 real lines.
+      failNote: One line of quantity 1 whose total equals the amount less tax and freight.
+
+  - id: GEN-DQ-006
+    title: Generic or malformed commodity code
+    requirement: Commodity codes should be specific 8-digit UNSPSC codes.
+    rationale: Segment-level or zero codes say nothing about the item, and Visa's review treats them as filler.
+    level: L3
+    severity: warning
+    confidence: inferred
+    check: { kind: custom, check: CommodityCodeShape }
+    message: "Line {index} commodity code {actual} looks generic or malformed: {detail}."
+    fix: Use the most specific 8-digit UNSPSC code.
+    impact: riskVisaValidation
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+      - https://docs.stripe.com/payments/payment-line-items
+    notes: The check is structural only; l3lint does not ship the UNSPSC code list.
+    examples:
+      pass: examples/GEN-DQ-006.pass.json
+      fail: examples/GEN-DQ-006.fail.json
+      passNote: The codes 42132203 and 42131606 are specific UNSPSC commodities.
+      failNote: The first line's code 42000000 names a whole segment.
+
+  - id: GEN-DQ-007
+    title: Same description or product code across most of a batch
+    requirement: Across a batch, line data should vary as real invoices do.
+    rationale: One value on most transactions in a run shows line data copied from a template, which CEDP flags.
+    level: L3
+    severity: warning
+    confidence: inferred
+    check: { kind: custom, check: StaticBatchData }
+    message: "\"{actual}\" appears at {field} on {count} of {transactions} transactions ({share})."
+    fix: Pull line data from the invoice, not a template.
+    impact: riskVisaValidation
+    sources:
+      - https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program
+      - https://curbstone.com/new-data-requirements-cedp/
+    notes: Thresholds (at least 20 transactions, 80% share) are inferred and configurable under rules.batch.
+    examples:
+      pass: examples/GEN-DQ-007.pass.json
+      fail: examples/GEN-DQ-007.fail.json
+      passNote: Linted alone, one transaction is below the minimum batch size of 20.
+      failNote: Rule tests lint this file 20 times in one run, so its description appears on every transaction.
+
+  - id: GEN-DQ-008
+    title: Duplicate lines in one transaction
+    requirement: Each line should be distinct, or the duplicates confirmed as separate items.
+    rationale: Identical lines often come from a double submit or a merge bug.
+    level: L3
+    severity: information
+    confidence: inferred
+    check: { kind: custom, check: DuplicateLines }
+    message: "Line {index} repeats line {first}: same description, product code, quantity and unit cost."
+    fix: Merge them or confirm they are separate.
+    impact: riskVisaValidation
+    sources:
+      - https://curbstone.com/new-data-requirements-cedp/
+    examples:
+      pass: examples/GEN-DQ-008.pass.json
+      fail: examples/GEN-DQ-008.fail.json
+      passNote: The two lines differ.
+      failNote: The second line repeats the first.

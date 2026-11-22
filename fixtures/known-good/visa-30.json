@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-77537",
+  "amount": 2317.42,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "corporate",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-65073"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-65073",
+    "invoiceNumber": "INV-77537"
+  },
+  "tax": {
+    "amount": 150.13,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "commodityScheme": "unspsc",
+      "quantity": 23,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 7.76,
+      "taxAmount": 10.32,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 147.49,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "commodityScheme": "unspsc",
+      "quantity": 8,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 0.00,
+      "taxAmount": 4.14,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 59.20,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 21,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 186.90,
+      "taxAmount": 117.75,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 1682.10,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 4,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 0.00,
+      "taxAmount": 17.92,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 256.00,
+      "detailIndicator": "Y"
+    }
+  ]
+}

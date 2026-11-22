@@ -1,0 +1,8 @@
+description: Yen amounts in the structured object; with exponent 0 the minor units are already whole yen.
+format: adyen
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 04-jpy-zero-decimals.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/discount }

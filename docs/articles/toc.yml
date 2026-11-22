@@ -1,0 +1,48 @@
+- name: Start here
+  items:
+  - name: Getting started
+    href: getting-started.md
+  - name: Installation
+    href: installation.md
+- name: Use l3lint
+  items:
+  - name: Using the CLI
+    href: cli.md
+  - name: Configuration
+    href: configuration.md
+  - name: Output formats and exit codes
+    href: output-formats.md
+  - name: Fixes
+    href: fixes.md
+  - name: Cost estimates
+    href: cost-estimates.md
+- name: Understand the results
+  items:
+  - name: Rules, severity and confidence
+    href: rules.md
+  - name: Likely tiers
+    href: likely-tiers.md
+  - name: Processor profiles
+    href: processor-profiles.md
+- name: Inputs
+  items:
+  - name: Adapters and field mappings
+    href: adapters.md
+  - name: CSV input
+    href: csv-input.md
+- name: Integrations
+  items:
+  - name: MCP server
+    href: mcp-server.md
+  - name: GitHub Action
+    href: github-action.md
+  - name: .NET library
+    href: library.md
+- name: Extend and trust
+  items:
+  - name: Writing rule packs
+    href: rule-pack-authoring.md
+  - name: Privacy and security
+    href: privacy-and-security.md
+  - name: Limitations
+    href: limitations.md

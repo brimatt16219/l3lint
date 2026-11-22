@@ -1,0 +1,5 @@
+description: "GEN-FMT-006 pass example: the rule must not fire."
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19, only: GEN-FMT-006 }
+expect:
+  findings: []
+  absent: [GEN-FMT-006]

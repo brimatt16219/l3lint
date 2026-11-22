@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-63119",
+  "amount": 1330.64,
+  "currency": "EUR",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "business",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Harborview Facility Supply",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-75951"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-75951",
+    "invoiceNumber": "INV-63119"
+  },
+  "tax": {
+    "amount": 99.70,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "quantity": 4,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 5.20,
+      "taxAmount": 8.15,
+      "total": 98.80
+    },
+    {
+      "sequence": 2,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 3,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 0.00,
+      "taxAmount": 5.40,
+      "total": 65.40
+    },
+    {
+      "sequence": 3,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "quantity": 3,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 1.26,
+      "taxAmount": 0.94,
+      "total": 11.34
+    },
+    {
+      "sequence": 4,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 6,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 10.98,
+      "taxAmount": 8.15,
+      "total": 98.82
+    },
+    {
+      "sequence": 5,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "quantity": 20,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 25.74,
+      "total": 312.00
+    },
+    {
+      "sequence": 6,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 18,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 69.12,
+      "taxAmount": 51.32,
+      "total": 622.08
+    }
+  ]
+}

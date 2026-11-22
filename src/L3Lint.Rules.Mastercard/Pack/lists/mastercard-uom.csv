@@ -1,0 +1,37 @@
+# Mastercard unit-of-measure codes accepted for Level 3 line items, as published by J.P. Morgan and listed in the
+# l3lint spec (Card brand rules, "Unit-of-measure code list"). MC-L3-005 rejects any other value.
+# source: https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/online-payments/payment-methods/cards/commercialcards
+# retrieved: 2026-10-25
+code,meaning
+ACR,Acre
+ARE,Are
+CLT,Centiliter
+CMT,Centimeter
+EAC,Each
+FOT,Foot
+GLI,Gallon (US and GB)
+ONZ,Ounce (US and GB)
+PTI,Pint (US and GB)
+QTI,Quart (US and GB)
+GRM,Gram
+HAR,Hectare
+INH,Inch
+KGM,Kilogram
+KMT,Kilometer
+LTR,Liter
+MTR,Meter
+NMI,Mile
+MLI,Milliliter
+MMT,Millimeter
+PCE,Piece
+LBR,Pound
+CMK,Square centimeter
+MTK,Square meter
+MMK,Square millimeter
+FTK,Square foot
+INK,Square inch
+KMK,Square kilometer
+MIK,Square mile
+YDK,Square yard
+TNE,Ton
+YRD,Yard

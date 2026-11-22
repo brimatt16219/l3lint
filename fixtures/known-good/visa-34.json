@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-77749",
+  "amount": 1621.23,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "corporate",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-65221"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-65221",
+    "invoiceNumber": "INV-77749"
+  },
+  "tax": {
+    "amount": 91.21,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "commodityScheme": "unspsc",
+      "quantity": 6,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 4.28,
+      "taxAmount": 4.87,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 81.22,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "commodityScheme": "unspsc",
+      "quantity": 1,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 0.00,
+      "taxAmount": 0.41,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 6.75,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "commodityScheme": "unspsc",
+      "quantity": 4,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "taxAmount": 2.86,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 47.60,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 2,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 1.87,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 31.20,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 20,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 128.00,
+      "taxAmount": 69.12,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 1152.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 6,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 11,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "taxAmount": 12.08,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 201.30,
+      "detailIndicator": "Y"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+description: The public Visa test card number 4012 8888 8888 1881 was typed into the free-text payment reference, which maps to the invoice number.
+format: checkoutcom
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 07-card-number-in-reference.canonical.json
+expect:
+  findings:
+    - { ruleId: GEN-PCI-001, path: /order/invoiceNumber }
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

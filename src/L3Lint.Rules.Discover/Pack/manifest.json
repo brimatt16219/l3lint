@@ -1,0 +1,14 @@
+{
+  "pack": "l3lint.rules.discover",
+  "version": "1.0.0",
+  "algorithm": "sha256",
+  "files": {
+    "discover.rules.yaml": "2bef647de00faf27f3c6e54e765331574c2f496b80f471277376783874bee988",
+    "examples/DISC-ELIG-001.fail.json": "71007707867405b3a89bdaa9e56ba379ba548d2d5ebf27ae1a37f056d304efce",
+    "examples/DISC-ELIG-001.pass.json": "dc7b21775956aa910edb74448f6c4a2a9cac9f7a8ca047b716943bb7bfa4a9bb",
+    "examples/DISC-FMT-001.fail.json": "bc781901f95f55bec2d9112a94d04343ab04b3f4599ba8670e429c2b52076729",
+    "examples/DISC-FMT-001.pass.json": "71007707867405b3a89bdaa9e56ba379ba548d2d5ebf27ae1a37f056d304efce",
+    "examples/DISC-L2-001.fail.json": "b4c66fea81d85e5a4783f2e0fb6005afb84afd3f7b6ed9d22f826132672e1a54",
+    "examples/DISC-L2-001.pass.json": "71007707867405b3a89bdaa9e56ba379ba548d2d5ebf27ae1a37f056d304efce"
+  }
+}

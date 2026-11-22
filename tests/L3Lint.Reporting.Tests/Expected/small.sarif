@@ -1,0 +1,323 @@
+{
+  "$schema": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/errata01/os/schemas/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "l3lint",
+          "version": "1.0.0",
+          "informationUri": "https://github.com/brimatt16219/l3lint",
+          "rules": [
+            {
+              "id": "GEN-DQ-001",
+              "name": "GEN-DQ-001",
+              "shortDescription": {
+                "text": "GEN-DQ-001"
+              },
+              "fullDescription": {
+                "text": "GEN-DQ-001"
+              },
+              "help": {
+                "text": "Fix: Use the real product or service name.",
+                "markdown": "**Fix:** Use the real product or service name.\n\n[Rule reference](https://brimatt16219.github.io/l3lint/rules/GEN-DQ-001.html)"
+              },
+              "helpUri": "https://brimatt16219.github.io/l3lint/rules/GEN-DQ-001.html",
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "properties": {
+                "tags": [
+                  "general",
+                  "inferred"
+                ]
+              }
+            },
+            {
+              "id": "GEN-DQ-004",
+              "name": "Filler customer code or PO",
+              "shortDescription": {
+                "text": "Filler customer code or PO"
+              },
+              "fullDescription": {
+                "text": "The customer code and purchase order number should be the buyer's real reference."
+              },
+              "help": {
+                "text": "The customer code and purchase order number should be the buyer's real reference.\n\nFix: Ask the buyer for their real reference.\n\nRule reference: https://brimatt16219.github.io/l3lint/rules/GEN-DQ-004.html",
+                "markdown": "The customer code and purchase order number should be the buyer's real reference.\n\n**Fix:** Ask the buyer for their real reference.\n\n[Rule reference](https://brimatt16219.github.io/l3lint/rules/GEN-DQ-004.html)"
+              },
+              "helpUri": "https://brimatt16219.github.io/l3lint/rules/GEN-DQ-004.html",
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "general",
+                  "L2",
+                  "inferred"
+                ]
+              }
+            },
+            {
+              "id": "GEN-DQ-007",
+              "name": "Same description or product code across most of a batch",
+              "shortDescription": {
+                "text": "Same description or product code across most of a batch"
+              },
+              "fullDescription": {
+                "text": "Across a batch, line data should vary as real invoices do."
+              },
+              "help": {
+                "text": "Across a batch, line data should vary as real invoices do.\n\nFix: Pull line data from the invoice, not a template.\n\nRule reference: https://brimatt16219.github.io/l3lint/rules/GEN-DQ-007.html",
+                "markdown": "Across a batch, line data should vary as real invoices do.\n\n**Fix:** Pull line data from the invoice, not a template.\n\n[Rule reference](https://brimatt16219.github.io/l3lint/rules/GEN-DQ-007.html)"
+              },
+              "helpUri": "https://brimatt16219.github.io/l3lint/rules/GEN-DQ-007.html",
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "general",
+                  "L3",
+                  "inferred"
+                ]
+              }
+            },
+            {
+              "id": "VISA-L3-004",
+              "name": "Commodity code is required for Product 3",
+              "shortDescription": {
+                "text": "Commodity code is required for Product 3"
+              },
+              "fullDescription": {
+                "text": "Each line needs a commodity code, usually an 8-digit UNSPSC code, for Product 3."
+              },
+              "help": {
+                "text": "Each line needs a commodity code, usually an 8-digit UNSPSC code, for Product 3.\n\nWhy: The commodity code is one of the 12 Product 3 fields; it classifies what was bought.\n\nFix: Add the most specific 8-digit UNSPSC code for this item.\n\nRule reference: https://brimatt16219.github.io/l3lint/rules/VISA-L3-004.html",
+                "markdown": "Each line needs a commodity code, usually an 8-digit UNSPSC code, for Product 3.\n\n**Why:** The commodity code is one of the 12 Product 3 fields; it classifies what was bought.\n\n**Fix:** Add the most specific 8-digit UNSPSC code for this item.\n\n[Rule reference](https://brimatt16219.github.io/l3lint/rules/VISA-L3-004.html)"
+              },
+              "helpUri": "https://brimatt16219.github.io/l3lint/rules/VISA-L3-004.html",
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "visa",
+                  "L3",
+                  "processor-doc"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": false,
+          "exitCode": 2,
+          "toolExecutionNotifications": [
+            {
+              "locations": [
+                {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "invoices/broken.json",
+                      "uriBaseId": "%SRCROOT%"
+                    },
+                    "region": {
+                      "startLine": 3
+                    }
+                  }
+                }
+              ],
+              "message": {
+                "text": "invoices/broken.json is not valid JSON: a value is missing after the comma."
+              },
+              "level": "error"
+            }
+          ]
+        }
+      ],
+      "automationDetails": {
+        "id": "l3lint/3f9a1c2b7d4e"
+      },
+      "columnKind": "utf16CodeUnits",
+      "results": [
+        {
+          "ruleId": "GEN-DQ-004",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "\"111111\" at /customer/reference looks like filler, not the buyer's reference. Fix: Ask the buyer for their real reference."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "invoices/INV-20417.stripe.json",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 27
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "/metadata/customer_reference"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "l3lint/v1": "ae6d5f1209bfa743b0e52aa645833118675c90f9b8678c91bdedbd4b8f09ec73"
+          },
+          "properties": {
+            "transactionIndex": 0,
+            "transactionId": "INV-20417",
+            "canonicalPath": "/customer/reference",
+            "expected": null,
+            "actual": "111111",
+            "confidence": "inferred",
+            "sources": [
+              "https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program"
+            ],
+            "impact": "riskVisaValidation"
+          }
+        },
+        {
+          "ruleId": "VISA-L3-004",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Line 2 has no commodity code; Visa needs one on every line for Product 3. Fix: Add the most specific 8-digit UNSPSC code for this item."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "invoices/INV-20417.stripe.json",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 31,
+                  "startColumn": 9
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "/amount_details/line_items/1/payment_method_options/card/commodity_code"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "l3lint/v1": "02f1780e0d1ce79560be013a287bde46f6e1d5caf7d0321b114a9a00985a04be"
+          },
+          "properties": {
+            "transactionIndex": 0,
+            "transactionId": "INV-20417",
+            "canonicalPath": "/lineItems/1/commodityCode",
+            "expected": "8-digit commodity code",
+            "actual": null,
+            "confidence": "processor-doc",
+            "sources": [
+              "https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program"
+            ],
+            "impact": "blocksLevel3"
+          }
+        },
+        {
+          "ruleId": "GEN-DQ-001",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Line 1 description \"A|B <C>\" is a placeholder; use *real* text. Fix: Use the real product or service name."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "invoices/batch%202.ndjson",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 120
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "/lineItems/0/description"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "l3lint/v1": "80826be7a92c77ac35f3a72a4fe2b261d37d6ca0980385d9c2263d37d786f2d1"
+          },
+          "properties": {
+            "transactionIndex": 1,
+            "canonicalPath": "/lineItems/0/description",
+            "expected": null,
+            "actual": "A|B <C>",
+            "confidence": "inferred",
+            "sources": [
+              "https://www.versapay.com/cedp"
+            ],
+            "impact": "riskVisaValidation"
+          }
+        },
+        {
+          "ruleId": "GEN-DQ-007",
+          "ruleIndex": 2,
+          "level": "warning",
+          "message": {
+            "text": "\"A|B <C>\" appears at /lineItems/0/description on 2 of 2 transactions (100%). Fix: Pull line data from the invoice, not a template."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "invoices/batch%202.ndjson",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 120
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "/lineItems/0/description"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "l3lint/v1": "7d2fb015bf886caed0b71b0cfd0b566fe567cdd865698385a8b5064ebb6104f2"
+          },
+          "properties": {
+            "transactionIndex": 1,
+            "canonicalPath": "/lineItems/0/description",
+            "expected": null,
+            "actual": "A|B <C>",
+            "confidence": "inferred",
+            "sources": [
+              "https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program"
+            ],
+            "impact": "riskVisaValidation"
+          }
+        }
+      ],
+      "properties": {
+        "rulePacks": {
+          "l3lint.rules.general": "1.0.0",
+          "l3lint.rules.mastercard": "1.0.0",
+          "l3lint.rules.visa": "1.0.0"
+        },
+        "profile": "generic"
+      }
+    }
+  ]
+}

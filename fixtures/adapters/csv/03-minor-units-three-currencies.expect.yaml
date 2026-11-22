@@ -1,0 +1,9 @@
+description: amountUnits minor with three invoices in USD (exponent 2), JPY (exponent 0) and BHD (exponent 3). Each row's currency sets how its amount columns are divided; quantities are not amounts and stay as sent.
+format: csv
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 03-minor-units-three-currencies.canonical.json
+expect:
+  findings:
+    - { transaction: 0, ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { transaction: 1, ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { transaction: 2, ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

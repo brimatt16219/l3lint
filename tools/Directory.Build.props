@@ -1,0 +1,12 @@
+<Project>
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+
+  <!-- Developer tools: never packed or shipped. -->
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <!-- Needed so the build can enforce IDE0005 (unused usings); public test members need no XML docs. -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+</Project>

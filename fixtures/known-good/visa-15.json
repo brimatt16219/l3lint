@@ -1,0 +1,158 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-76742",
+  "amount": 3259.03,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "purchasing",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Northbay Office Works",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-64518"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-64518",
+    "invoiceNumber": "INV-76742"
+  },
+  "tax": {
+    "amount": 183.91,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "commodityScheme": "unspsc",
+      "quantity": 9,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 6.41,
+      "taxAmount": 7.31,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 121.84,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "commodityScheme": "unspsc",
+      "quantity": 13,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 0.00,
+      "taxAmount": 29.95,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 499.20,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "commodityScheme": "unspsc",
+      "quantity": 11,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 0.00,
+      "taxAmount": 14.39,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 239.80,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 22,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 0.00,
+      "taxAmount": 84.48,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 1408.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "commodityScheme": "unspsc",
+      "quantity": 12,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 58.68,
+      "taxAmount": 31.69,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 528.12,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 6,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "commodityScheme": "unspsc",
+      "quantity": 20,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 0.00,
+      "taxAmount": 11.40,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 190.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 7,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 22,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 8.69,
+      "taxAmount": 4.69,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 78.21,
+      "detailIndicator": "Y"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-62642",
+  "amount": 2900.57,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "purchasing",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Harborview Facility Supply",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-75618"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-75618",
+    "invoiceNumber": "INV-62642"
+  },
+  "tax": {
+    "amount": 130.86,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 13,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 11.90,
+      "taxAmount": 10.74,
+      "total": 226.00
+    },
+    {
+      "sequence": 2,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "quantity": 11,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 13.09,
+      "taxAmount": 5.60,
+      "total": 117.81
+    },
+    {
+      "sequence": 3,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "quantity": 16,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 41.60,
+      "taxAmount": 17.78,
+      "total": 374.40
+    },
+    {
+      "sequence": 4,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 8,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 0.00,
+      "taxAmount": 14.59,
+      "total": 307.20
+    },
+    {
+      "sequence": 5,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 1,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.40,
+      "taxAmount": 0.17,
+      "total": 3.55
+    },
+    {
+      "sequence": 6,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "quantity": 17,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 0.00,
+      "taxAmount": 11.51,
+      "total": 242.25
+    },
+    {
+      "sequence": 7,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "quantity": 14,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "taxAmount": 59.19,
+      "total": 1246.00
+    },
+    {
+      "sequence": 8,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 19,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "taxAmount": 11.28,
+      "total": 237.50
+    }
+  ]
+}

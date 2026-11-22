@@ -1,0 +1,70 @@
+# l3lint Discover rule pack. Discover offers no Level 2 or Level 3 pricing, so these rules check format and limits
+# and say that no rate benefit applies. Source of truth for the 3 DISC rules in the spec's rule catalog.
+pack:
+  id: l3lint.rules.discover
+  version: 1.0.0
+  brand: discover
+  publishedOn: 2026-10-25
+  title: Discover
+  description: Discover format and limit checks; no enhanced-data rate exists.
+
+rules:
+  - id: DISC-ELIG-001
+    title: No Discover Level 2 or 3 rate
+    requirement: Discover has no Level 2 or Level 3 pricing; line items are accepted and passed through.
+    rationale: The data still reaches the buyer, but no rate benefit applies.
+    level: general
+    severity: information
+    confidence: processor-doc
+    check: { kind: custom, check: NoRateProgram }
+    message: Discover has no Level 2 or Level 3 rate, so enhanced data earns no lower rate.
+    fix: None; no Level 2 or 3 rate exists.
+    impact: noBenefit
+    sources:
+      - https://experienceleague.adobe.com/en/docs/commerce-merchant-services/payment-services/reporting/levels-card-payment-transactions
+      - https://www.paypal.com/us/cshelp/article/paypal-advanced-checkout---what-are-level-2-and-3-card-payment-transactions-help984
+    examples:
+      pass: examples/DISC-ELIG-001.pass.json
+      fail: examples/DISC-ELIG-001.fail.json
+      passNote: A Visa transaction, so the Discover pack does not run.
+      failNote: Any Discover transaction reports this note.
+
+  - id: DISC-FMT-001
+    title: More than 98 line items
+    requirement: Discover transactions may hold at most 98 line items at one large processor.
+    rationale: More lines cause an error at that processor.
+    level: L3
+    severity: error
+    confidence: processor-doc
+    profiles: [jpmorgan]
+    check: { kind: maxCount, collection: /lineItems, max: 98 }
+    message: "The transaction has {count} line items; Discover accepts at most {max}."
+    fix: Consolidate lines.
+    impact: blocksLevel3
+    sources:
+      - https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/online-payments/payment-methods/cards/commercialcards
+    examples:
+      pass: examples/DISC-FMT-001.pass.json
+      fail: examples/DISC-FMT-001.fail.json
+      passNote: Two line items.
+      failNote: 99 line items.
+
+  - id: DISC-L2-001
+    title: Taxable flag missing
+    requirement: One large processor marks the taxable flag as required for Discover Level 2.
+    rationale: Required by J.P. Morgan; every other Discover Level 2 field is optional there.
+    level: L2
+    severity: warning
+    confidence: processor-doc
+    profiles: [jpmorgan]
+    check: { kind: required, field: /tax/indicator }
+    message: The tax indicator is missing.
+    fix: Send `tax.indicator`.
+    impact: blocksLevel2
+    sources:
+      - https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/online-payments/payment-methods/cards/commercialcards
+    examples:
+      pass: examples/DISC-L2-001.pass.json
+      fail: examples/DISC-L2-001.fail.json
+      passNote: The indicator is taxable.
+      failNote: The indicator is missing.

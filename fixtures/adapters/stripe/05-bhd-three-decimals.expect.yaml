@@ -1,0 +1,11 @@
+description: Bahraini dinar has three decimal places (ISO 4217 exponent 3), so 19204 fils is 19.204 BHD.
+format: stripe
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 05-bhd-three-decimals.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-009, path: /lineItems/1/discountAmount }
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/discount }
+    - { ruleId: VISA-L3-011, path: /amounts/duty }
+    - { ruleId: VISA-L3-013, path: /shipping/toCountry }

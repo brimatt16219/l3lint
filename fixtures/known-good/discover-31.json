@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-63490",
+  "amount": 1083.11,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "purchasing",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5047",
+    "name": "Northbay Office Works",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-76210"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-76210",
+    "invoiceNumber": "INV-63490"
+  },
+  "tax": {
+    "amount": 48.67,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "quantity": 18,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 8.55,
+      "taxAmount": 7.72,
+      "total": 162.45
+    },
+    {
+      "sequence": 2,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "quantity": 11,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "taxAmount": 6.22,
+      "total": 130.90
+    },
+    {
+      "sequence": 3,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 4,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 25.60,
+      "taxAmount": 10.94,
+      "total": 230.40
+    },
+    {
+      "sequence": 4,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "quantity": 23,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 9.66,
+      "taxAmount": 4.13,
+      "total": 86.94
+    },
+    {
+      "sequence": 5,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "quantity": 7,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 18.20,
+      "taxAmount": 7.78,
+      "total": 163.80
+    },
+    {
+      "sequence": 6,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 20,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "taxAmount": 11.88,
+      "total": 250.00
+    }
+  ]
+}

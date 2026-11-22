@@ -1,0 +1,5 @@
+description: "GEN-ARITH-001 fail example: the rule must fire."
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19, only: GEN-ARITH-001 }
+expect:
+  findings:
+    - { ruleId: GEN-ARITH-001, path: "*" }

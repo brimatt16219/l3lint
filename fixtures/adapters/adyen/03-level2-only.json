@@ -1,0 +1,15 @@
+{
+  "amount": { "currency": "USD", "value": 61620 },
+  "reference": "INV-70452",
+  "paymentMethod": { "type": "scheme", "storedPaymentMethodId": "PM-STORED-3H8W" },
+  "merchantAccount": "ExampleMerchantL3",
+  "enhancedSchemeData": {
+    "levelTwoThree": {
+      "customerReferenceNumber": "PO-31877",
+      "totalTaxAmount": 4120,
+      "freightAmount": 0,
+      "dutyAmount": 0,
+      "destination": { "postalCode": "98101", "countryCode": "US" }
+    }
+  }
+}

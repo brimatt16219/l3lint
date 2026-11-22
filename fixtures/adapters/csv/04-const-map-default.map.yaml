@@ -1,0 +1,25 @@
+format: csv
+groupBy: invoice
+transaction:
+  id: invoice
+  amount: total
+  currency: { const: USD }
+  card.brand: { const: visa }
+  customer.reference: customer_ref
+  tax.amount: { from: tax, default: 0 }
+  tax.indicator: { from: tax_status, map: { T: taxable, E: exempt }, default: taxable }
+  amounts.discount: { const: 0 }
+  amounts.freight: { from: freight, default: 0 }
+  amounts.duty: { const: 0 }
+  shipping.fromPostalCode: { const: "64105" }
+  shipping.toPostalCode: ship_to
+  shipping.toCountry: { const: US }
+lineItems:
+  description: item
+  productCode: sku
+  commodityCode: unspsc
+  quantity: qty
+  unitOfMeasure: { from: uom, default: EA }
+  unitCost: unit_price
+  discountAmount: { from: line_discount, default: 0 }
+  total: line_total

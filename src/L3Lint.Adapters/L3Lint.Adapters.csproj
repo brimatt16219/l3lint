@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>L3Lint.Adapters</RootNamespace>
+    <PackageId>L3Lint.Adapters</PackageId>
+    <Description>l3lint input adapters for Stripe, Adyen, Braintree, Cybersource, Authorize.net and Checkout.com request bodies, plus CSV with a YAML column map.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\L3Lint.Core\L3Lint.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Data\iso3166.csv" LogicalName="L3Lint.Adapters.Data.iso3166.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="L3Lint.Adapters.Tests" />
+    <InternalsVisibleTo Include="L3Lint.Rules.Tests" />
+    <InternalsVisibleTo Include="L3Lint.Benchmarks" />
+    <InternalsVisibleTo Include="L3Lint.Fuzz" />
+    <InternalsVisibleTo Include="L3Lint.FixtureGen" />
+  </ItemGroup>
+
+</Project>

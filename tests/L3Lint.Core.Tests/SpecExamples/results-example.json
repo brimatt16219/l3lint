@@ -1,0 +1,39 @@
+{
+  "tool": { "name": "l3lint", "version": "1.0.0" },
+  "rulePacks": { "l3lint.rules.general": "1.2.0", "l3lint.rules.visa": "1.2.0" },
+  "asOf": "2026-10-19",
+  "inputs": [
+    { "path": "invoices/INV-20417.stripe.json", "format": "stripe", "sha256": "9f2c...", "transactions": 1 }
+  ],
+  "transactions": [
+    {
+      "index": 0,
+      "input": 0,
+      "id": "INV-20417",
+      "brand": "visa",
+      "cardProduct": "purchasing",
+      "likelyTier": { "best": "product3", "likely": "belowProduct3", "status": "blocked" },
+      "findings": [
+        {
+          "ruleId": "VISA-L3-004",
+          "severity": "error",
+          "impact": "blocksLevel3",
+          "path": {
+            "canonical": "/lineItems/1/commodityCode",
+            "source": "/amount_details/line_items/1/payment_method_options/card/commodity_code"
+          },
+          "location": { "line": 31, "column": 9 },
+          "message": "Line 2 has no commodity code; Visa needs one on every line for Product 3.",
+          "expected": "8-digit commodity code",
+          "actual": null,
+          "fix": "Add the most specific 8-digit UNSPSC code for this item.",
+          "patch": null,
+          "confidence": "processor-doc",
+          "sources": ["https://blog.payroc.com/what-you-need-to-know-about-visas-new-cedp-program"]
+        }
+      ]
+    }
+  ],
+  "summary": { "transactions": 1, "errors": 1, "warnings": 1, "information": 0, "byRule": { "VISA-L3-004": 1, "GEN-DQ-004": 1 } },
+  "exitCode": 1
+}

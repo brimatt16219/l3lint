@@ -1,0 +1,11 @@
+description: Yen has no minor unit (ISO 4217 exponent 0), so Stripe's integers are already whole yen and are not divided by 100.
+format: stripe
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 04-jpy-zero-decimals.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-009, path: /lineItems/0/discountAmount }
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/discount }
+    - { ruleId: VISA-L3-011, path: /amounts/duty }
+    - { ruleId: VISA-L3-013, path: /shipping/toCountry }

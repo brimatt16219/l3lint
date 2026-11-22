@@ -1,0 +1,10 @@
+description: The public Visa test card number sits in the free-text item cell of row 2. The CSV adapter masks the cell before mapping and reports it with the cell's line and column; the masked text then also fails the description checks.
+format: csv
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 05-card-number-in-cell.canonical.json
+expect:
+  findings:
+    - { transaction: 0, ruleId: GEN-FMT-004, path: /lineItems/0/description }
+    - { transaction: 0, ruleId: GEN-PCI-001, path: /lineItems/0/description }
+    - { transaction: 0, ruleId: VISA-DQ-001, path: /lineItems/0/description }
+    - { transaction: 0, ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

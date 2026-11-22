@@ -1,0 +1,12 @@
+description: The public Visa test card number 4111 1111 1111 1111 was typed into the free-text customer reference; it is masked before mapping and reported at the canonical path.
+format: stripe
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 07-card-number-in-reference.canonical.json
+expect:
+  findings:
+    - { ruleId: GEN-PCI-001, path: /customer/reference }
+    - { ruleId: VISA-L3-009, path: /lineItems/1/discountAmount }
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/discount }
+    - { ruleId: VISA-L3-011, path: /amounts/duty }
+    - { ruleId: VISA-L3-013, path: /shipping/toCountry }

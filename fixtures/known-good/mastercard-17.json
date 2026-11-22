@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-82148",
+  "amount": 250.85,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "corporate",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-68292"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-68292",
+    "invoiceNumber": "INV-82148"
+  },
+  "tax": {
+    "amount": 10.36,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 2,
+      "unitOfMeasure": "PCE",
+      "unitCost": 64.00,
+      "discountAmount": 6.40,
+      "discountIndicator": true,
+      "taxAmount": 5.78,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 121.60,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "commodityScheme": "unspsc",
+      "quantity": 9,
+      "unitOfMeasure": "EAC",
+      "unitCost": 11.90,
+      "discountAmount": 10.71,
+      "discountIndicator": true,
+      "taxAmount": 4.58,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 96.39,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

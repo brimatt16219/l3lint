@@ -1,0 +1,10 @@
+# MCCs that Mastercard Level 3 (Data Rate III) excludes in addition to the Level 2 list, per Stripe's public guide.
+# source: https://docs.stripe.com/payments/payment-line-items
+# retrieved: 2026-10-25
+mcc,note
+4468,Marinas and marine service
+5499,Miscellaneous food stores
+5541,Service stations
+5542,Automated fuel dispensers
+5983,Fuel dealers
+8398,Charitable and social service organizations

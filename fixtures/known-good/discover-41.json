@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-64020",
+  "amount": 2691.89,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "purchasing",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Summit Lab Products",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-76580"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-76580",
+    "invoiceNumber": "INV-64020"
+  },
+  "tax": {
+    "amount": 151.83,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 9.95,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "quantity": 18,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 14.04,
+      "taxAmount": 16.01,
+      "total": 266.76
+    },
+    {
+      "sequence": 2,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 11,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 2.61,
+      "total": 43.45
+    },
+    {
+      "sequence": 3,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 13,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 83.20,
+      "taxAmount": 44.93,
+      "total": 748.80
+    },
+    {
+      "sequence": 4,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "quantity": 10,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 0.00,
+      "taxAmount": 5.70,
+      "total": 95.00
+    },
+    {
+      "sequence": 5,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 24,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 43.92,
+      "taxAmount": 23.72,
+      "total": 395.28
+    },
+    {
+      "sequence": 6,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 12,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 0.00,
+      "taxAmount": 27.65,
+      "total": 460.80
+    },
+    {
+      "sequence": 7,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "quantity": 12,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 8.88,
+      "taxAmount": 4.80,
+      "total": 79.92
+    },
+    {
+      "sequence": 8,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 9,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 0.00,
+      "taxAmount": 26.41,
+      "total": 440.10
+    }
+  ]
+}

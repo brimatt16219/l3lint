@@ -1,0 +1,5 @@
+description: "VISA-ELIG-003 pass example: the rule must not fire."
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19, only: VISA-ELIG-003 }
+expect:
+  findings: []
+  absent: [VISA-ELIG-003]

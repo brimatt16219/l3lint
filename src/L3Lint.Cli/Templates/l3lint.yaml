@@ -1,0 +1,22 @@
+# l3lint configuration. Flags on the command line win over values in the payload,
+# which win over this file. Reference: https://brimatt16219.github.io/l3lint/articles/configuration.html
+version: 1
+
+# Defaults used when the payload and the command line are silent.
+context:
+  merchantCountry: US
+  processor: generic
+
+inputs:
+  format: auto
+
+rules:
+  # Rule IDs or globs to skip, for example VISA-DQ-*.
+  disable: []
+  # Per-rule severity overrides, for example GEN-DQ-007: error.
+  severity: {}
+
+output:
+  failOn: error
+  formats:
+    - text

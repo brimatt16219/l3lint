@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "1.0",
+  "amount": 437.25,
+  "currency": "USD",
+  "customer": { "reference": "PO-20931" },
+  "order": { "invoiceNumber": "INV-44017" },
+  "tax": { "amount": 27.25, "indicator": "taxable" }
+}

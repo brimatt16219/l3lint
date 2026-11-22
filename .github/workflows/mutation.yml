@@ -1,0 +1,49 @@
+# Weekly mutation testing (Test and delivery tab: Stryker.NET on Core and the rule packs, mutation score at
+# least 80%, checked weekly). Each target runs in project mode from a test project that references it directly
+# (docs/dev/mutation-testing.md). A score under 80% fails the job. Third-party actions are pinned by full commit SHA.
+name: mutation
+
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  DOTNET_NOLOGO: "true"
+  DOTNET_CLI_TELEMETRY_OPTOUT: "true"
+
+jobs:
+  stryker:
+    name: Mutation score (${{ matrix.target }})
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { target: L3Lint.Core, tests: tests/L3Lint.Core.Tests, config: stryker-config.json }
+          - { target: L3Lint.Rules.General, tests: tests/L3Lint.Rules.Tests, config: stryker-packs.json }
+          - { target: L3Lint.Rules.Visa, tests: tests/L3Lint.Rules.Tests, config: stryker-packs.json }
+          - { target: L3Lint.Rules.Mastercard, tests: tests/L3Lint.Rules.Tests, config: stryker-packs.json }
+          - { target: L3Lint.Rules.Amex, tests: tests/L3Lint.Rules.Tests, config: stryker-packs.json }
+          - { target: L3Lint.Rules.Discover, tests: tests/L3Lint.Rules.Tests, config: stryker-packs.json }
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          global-json-file: global.json
+      - run: dotnet tool restore
+      - run: dotnet restore L3Lint.slnx --locked-mode
+      - name: Run Stryker
+        working-directory: ${{ matrix.tests }}
+        run: >
+          dotnet stryker --config-file ../../${{ matrix.config }} --project ${{ matrix.target }}.csproj
+          --output "${{ github.workspace }}/StrykerOutput/${{ matrix.target }}" --skip-version-check
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: always()
+        with:
+          name: stryker-${{ matrix.target }}
+          path: StrykerOutput/${{ matrix.target }}

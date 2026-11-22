@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-62589",
+  "amount": 854.29,
+  "currency": "EUR",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "purchasing",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5111",
+    "name": "Ridgeline Industrial Co",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-75581"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-75581",
+    "invoiceNumber": "INV-62589"
+  },
+  "tax": {
+    "amount": 65.11,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 15,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 16.35,
+      "taxAmount": 25.63,
+      "total": 310.65
+    },
+    {
+      "sequence": 2,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "quantity": 18,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 0.00,
+      "taxAmount": 14.11,
+      "total": 171.00
+    },
+    {
+      "sequence": 3,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 15,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 27.45,
+      "taxAmount": 20.38,
+      "total": 247.05
+    },
+    {
+      "sequence": 4,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "quantity": 16,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 6.72,
+      "taxAmount": 4.99,
+      "total": 60.48
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+format: csv
+delimiter: ","
+groupBy: invoice_number
+transaction:
+  id: invoice_number
+  amount: invoice_total
+  currency: { const: USD }
+  card.brand: card_brand
+  card.product: { const: purchasing }
+  merchant.mcc: { const: "5047" }
+  merchant.name: { const: Example Medical Supply }
+  customer.reference: po_number
+  tax.amount: tax_total
+  tax.indicator: { from: taxable_flag, map: { Y: taxable, N: exempt } }
+  amounts.freight: { from: freight, default: 0 }
+lineItems:
+  description: item_description
+  productCode: sku
+  commodityCode: unspsc
+  quantity: qty
+  unitOfMeasure: uom
+  unitCost: unit_price
+  discountAmount: { from: line_discount, default: 0 }
+  total: line_total

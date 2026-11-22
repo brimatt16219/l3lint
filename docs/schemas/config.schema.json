@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://brimatt16219.github.io/l3lint/schemas/config.schema.json",
+  "title": "l3lint configuration (.l3lint.yaml)",
+  "description": "Team defaults so CI and laptops lint the same way. Unknown keys are errors. Relative paths resolve from the folder that holds the file.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "version": { "const": 1, "description": "Config schema version." },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Defaults used when the payload and the command line are silent.",
+      "properties": {
+        "brand": { "enum": ["auto", "visa", "mastercard", "amex", "discover", "all"], "default": "auto", "description": "Card brand used when the payload has no card.brand and --brand is not given. all lints every transaction against every brand; auto uses only the payload." },
+        "cardProduct": { "enum": ["consumer", "business", "corporate", "purchasing", "fleet", "commercialPrepaid"], "description": "Card product used when the payload has no card.product and --card-product is not given." },
+        "mcc": { "type": "string", "pattern": "^[0-9]{4}$", "description": "Merchant category code used when the payload has no merchant.mcc and --mcc is not given." },
+        "merchantCountry": { "type": "string", "pattern": "^[A-Z]{2}$", "default": "US", "description": "Merchant country (ISO 3166-1 alpha-2) used when the payload has no merchant.country and --merchant-country is not given." },
+        "processor": { "type": "string", "minLength": 1, "default": "generic", "description": "Profile name, or a path to a profile YAML file. --processor overrides it." },
+        "strictProfiles": { "type": "boolean", "default": false, "description": "Run single-processor rules at their catalog severity under every profile, as --strict-profiles does." }
+      }
+    },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "How input files are read.",
+      "properties": {
+        "format": { "enum": ["auto", "canonical", "stripe", "adyen", "braintree", "cybersource", "authorizenet", "checkoutcom", "csv"], "default": "auto", "description": "Input format. auto detects it from the payload. --format overrides it." },
+        "defaultCurrency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$",
+          "description": "ISO 4217 currency for payloads that carry none, such as Braintree requests (ADR-0056)."
+        },
+        "csvMap": { "type": "string", "minLength": 1, "description": "Column map for CSV input, relative to this file's folder. --map overrides it." },
+        "limits": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Hard input limits. An input over a limit is an input error (exit code 2); the other inputs are still linted.",
+          "properties": {
+            "maxFileBytes": { "type": "integer", "minimum": 1, "maximum": 2147483647, "default": 26214400, "description": "Largest input in bytes (25 MB by default). For .ndjson and .jsonl files the limit applies to each record." },
+            "maxLineItems": { "type": "integer", "minimum": 1, "maximum": 2147483647, "default": 1000, "description": "Most line items one transaction may carry." },
+            "maxJsonDepth": { "type": "integer", "minimum": 2, "maximum": 1000, "default": 64, "description": "Deepest JSON nesting allowed." }
+          }
+        }
+      }
+    },
+    "rules": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Which rules run, their severities and the data quality settings.",
+      "properties": {
+        "only": { "$ref": "#/$defs/ruleSelectors", "description": "Run only these rules (IDs or globs such as VISA-DQ-*). --only replaces this list." },
+        "disable": { "$ref": "#/$defs/ruleSelectors", "description": "Rules to skip (IDs or globs). --disable adds to this list." },
+        "severity": {
+          "type": "object",
+          "propertyNames": { "pattern": "^[A-Z0-9*?-]+$" },
+          "additionalProperties": { "enum": ["error", "warning", "information"] },
+          "description": "Severity per rule ID or glob, for example GEN-DQ-007: error. A --severity flag for the same key wins."
+        },
+        "placeholders": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Edits to the placeholder description list that GEN-DQ-001 and VISA-DQ-001 use.",
+          "properties": {
+            "add": { "type": "array", "items": { "type": "string", "minLength": 1 }, "description": "Terms to treat as placeholder descriptions, in addition to the shipped list." },
+            "remove": { "type": "array", "items": { "type": "string", "minLength": 1 }, "description": "Shipped terms to stop treating as placeholder descriptions." }
+          }
+        },
+        "batch": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Thresholds for the batch rule GEN-DQ-007.",
+          "properties": {
+            "minTransactions": { "type": "integer", "minimum": 2, "maximum": 2147483647, "default": 20, "description": "Fewest transactions in one run before GEN-DQ-007 is checked." },
+            "sameValueShare": { "type": "number", "exclusiveMinimum": 0, "maximum": 1, "default": 0.8, "description": "Share of the run's transactions that must carry the same description or product code for GEN-DQ-007 to fire." }
+          }
+        }
+      }
+    },
+    "arithmetic": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Tolerance and rounding for the arithmetic rules.",
+      "properties": {
+        "lineTolerance": { "type": "number", "minimum": 0, "description": "Largest accepted difference between a reported and an expected line total, in major units. Default: 1 minor unit of the transaction currency (0.01 for USD)." },
+        "totalTolerance": { "type": "number", "minimum": 0, "description": "Largest accepted difference for the transaction total and the header tax, in major units. Default: 1 minor unit of the transaction currency." },
+        "toleranceMode": { "enum": ["strict", "accumulated"], "default": "strict", "description": "strict uses totalTolerance as given. accumulated uses the larger of totalTolerance and 1 minor unit per line, capped at 5 minor units." },
+        "rounding": { "enum": ["awayFromZero", "toEven"], "default": "awayFromZero", "description": "How a midpoint rounds when quantity times unit cost is rounded to the currency exponent." }
+      }
+    },
+    "pci": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Card-number handling.",
+      "properties": {
+        "strict": { "type": "boolean", "default": false, "description": "Stop instead of masking when a card number is found, as --strict-pci does." },
+        "allowFields": { "type": "array", "items": { "type": "string", "pattern": "^(/[A-Za-z0-9*]+)+$" }, "description": "Canonical JSON Pointers (* matches any line index) exempt from card-number detection. Add a path only after a person confirms its values are not card numbers." }
+      }
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Default outputs and the failing threshold.",
+      "properties": {
+        "failOn": { "enum": ["error", "warning", "information", "none"], "default": "error", "description": "Lowest severity that sets exit code 1. --fail-on overrides it." },
+        "formats": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^(text|json|sarif|junit|markdown)(=.+)?$" },
+          "default": ["text"],
+          "description": "Outputs to write, each kind or kind=path, for example sarif=artifacts/l3lint.sarif. Paths resolve from this file's folder. Any --output flag replaces the whole list."
+        },
+        "maxFindings": { "type": "integer", "minimum": 0, "maximum": 2147483647, "description": "Most findings to print. The summary still counts every finding. No limit when absent." }
+      }
+    },
+    "rates": { "type": "string", "minLength": 1, "description": "Rate table YAML for cost estimates, relative to this file's folder. --rates overrides it." }
+  },
+  "$defs": {
+    "ruleSelectors": { "type": "array", "items": { "type": "string", "pattern": "^[A-Z0-9*?-]+$" } }
+  }
+}

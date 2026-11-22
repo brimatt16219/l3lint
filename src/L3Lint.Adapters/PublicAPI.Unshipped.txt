@@ -1,0 +1,52 @@
+#nullable enable
+L3Lint.Adapters.AdyenAdapter
+L3Lint.Adapters.AdyenAdapter.AdyenAdapter() -> void
+L3Lint.Adapters.AdyenAdapter.Detect(L3Lint.Core.Input.RawDocument! document) -> double
+L3Lint.Adapters.AdyenAdapter.Kind.get -> L3Lint.Core.Input.InputKind
+L3Lint.Adapters.AdyenAdapter.Map(L3Lint.Core.Input.RawDocument! document, L3Lint.Core.Adapters.AdapterOptions! options) -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Adapters.AdapterResult!>!
+L3Lint.Adapters.AdyenAdapter.Name.get -> string!
+L3Lint.Adapters.AdyenAdapter.ToCanonicalPointer(string! sourcePointer) -> string?
+L3Lint.Adapters.AuthorizeNetAdapter
+L3Lint.Adapters.AuthorizeNetAdapter.AuthorizeNetAdapter() -> void
+L3Lint.Adapters.AuthorizeNetAdapter.Detect(L3Lint.Core.Input.RawDocument! document) -> double
+L3Lint.Adapters.AuthorizeNetAdapter.Kind.get -> L3Lint.Core.Input.InputKind
+L3Lint.Adapters.AuthorizeNetAdapter.Map(L3Lint.Core.Input.RawDocument! document, L3Lint.Core.Adapters.AdapterOptions! options) -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Adapters.AdapterResult!>!
+L3Lint.Adapters.AuthorizeNetAdapter.Name.get -> string!
+L3Lint.Adapters.AuthorizeNetAdapter.ToCanonicalPointer(string! sourcePointer) -> string?
+L3Lint.Adapters.BraintreeAdapter
+L3Lint.Adapters.BraintreeAdapter.BraintreeAdapter() -> void
+L3Lint.Adapters.BraintreeAdapter.Detect(L3Lint.Core.Input.RawDocument! document) -> double
+L3Lint.Adapters.BraintreeAdapter.Kind.get -> L3Lint.Core.Input.InputKind
+L3Lint.Adapters.BraintreeAdapter.Map(L3Lint.Core.Input.RawDocument! document, L3Lint.Core.Adapters.AdapterOptions! options) -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Adapters.AdapterResult!>!
+L3Lint.Adapters.BraintreeAdapter.Name.get -> string!
+L3Lint.Adapters.BraintreeAdapter.ToCanonicalPointer(string! sourcePointer) -> string?
+L3Lint.Adapters.CheckoutComAdapter
+L3Lint.Adapters.CheckoutComAdapter.CheckoutComAdapter() -> void
+L3Lint.Adapters.CheckoutComAdapter.Detect(L3Lint.Core.Input.RawDocument! document) -> double
+L3Lint.Adapters.CheckoutComAdapter.Kind.get -> L3Lint.Core.Input.InputKind
+L3Lint.Adapters.CheckoutComAdapter.Map(L3Lint.Core.Input.RawDocument! document, L3Lint.Core.Adapters.AdapterOptions! options) -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Adapters.AdapterResult!>!
+L3Lint.Adapters.CheckoutComAdapter.Name.get -> string!
+L3Lint.Adapters.CheckoutComAdapter.ToCanonicalPointer(string! sourcePointer) -> string?
+L3Lint.Adapters.CsvAdapter
+L3Lint.Adapters.CsvAdapter.CsvAdapter() -> void
+L3Lint.Adapters.CsvAdapter.Detect(L3Lint.Core.Input.RawDocument! document) -> double
+L3Lint.Adapters.CsvAdapter.Kind.get -> L3Lint.Core.Input.InputKind
+L3Lint.Adapters.CsvAdapter.Map(L3Lint.Core.Input.RawDocument! document, L3Lint.Core.Adapters.AdapterOptions! options) -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Adapters.AdapterResult!>!
+L3Lint.Adapters.CsvAdapter.Name.get -> string!
+L3Lint.Adapters.CsvAdapter.ToCanonicalPointer(string! sourcePointer) -> string?
+L3Lint.Adapters.CybersourceAdapter
+L3Lint.Adapters.CybersourceAdapter.CybersourceAdapter() -> void
+L3Lint.Adapters.CybersourceAdapter.Detect(L3Lint.Core.Input.RawDocument! document) -> double
+L3Lint.Adapters.CybersourceAdapter.Kind.get -> L3Lint.Core.Input.InputKind
+L3Lint.Adapters.CybersourceAdapter.Map(L3Lint.Core.Input.RawDocument! document, L3Lint.Core.Adapters.AdapterOptions! options) -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Adapters.AdapterResult!>!
+L3Lint.Adapters.CybersourceAdapter.Name.get -> string!
+L3Lint.Adapters.CybersourceAdapter.ToCanonicalPointer(string! sourcePointer) -> string?
+L3Lint.Adapters.StandardAdapters
+L3Lint.Adapters.StripeAdapter
+L3Lint.Adapters.StripeAdapter.Detect(L3Lint.Core.Input.RawDocument! document) -> double
+L3Lint.Adapters.StripeAdapter.Kind.get -> L3Lint.Core.Input.InputKind
+L3Lint.Adapters.StripeAdapter.Map(L3Lint.Core.Input.RawDocument! document, L3Lint.Core.Adapters.AdapterOptions! options) -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Adapters.AdapterResult!>!
+L3Lint.Adapters.StripeAdapter.Name.get -> string!
+L3Lint.Adapters.StripeAdapter.StripeAdapter() -> void
+L3Lint.Adapters.StripeAdapter.ToCanonicalPointer(string! sourcePointer) -> string?
+static L3Lint.Adapters.StandardAdapters.All.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Adapters.IPayloadAdapter!>!

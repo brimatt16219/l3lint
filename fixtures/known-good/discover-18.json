@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-62801",
+  "amount": 250140,
+  "currency": "JPY",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "corporate",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Summit Lab Products",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-75729"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-75729",
+    "invoiceNumber": "INV-62801"
+  },
+  "tax": {
+    "amount": 18988,
+    "indicator": "taxable",
+    "rate": 0.0825
+  },
+  "amounts": {
+    "discount": 0,
+    "freight": 995,
+    "duty": 0
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "quantity": 13,
+      "unitOfMeasure": "RL",
+      "unitCost": 395,
+      "discountAmount": 257,
+      "taxAmount": 402,
+      "total": 4878
+    },
+    {
+      "sequence": 2,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "quantity": 7,
+      "unitOfMeasure": "EA",
+      "unitCost": 1190,
+      "discountAmount": 833,
+      "taxAmount": 619,
+      "total": 7497
+    },
+    {
+      "sequence": 3,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 22,
+      "unitOfMeasure": "GL",
+      "unitCost": 2180,
+      "discountAmount": 0,
+      "taxAmount": 3957,
+      "total": 47960
+    },
+    {
+      "sequence": 4,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "quantity": 5,
+      "unitOfMeasure": "BX",
+      "unitCost": 2600,
+      "discountAmount": 1300,
+      "taxAmount": 965,
+      "total": 11700
+    },
+    {
+      "sequence": 5,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "quantity": 8,
+      "unitOfMeasure": "BX",
+      "unitCost": 1830,
+      "discountAmount": 0,
+      "taxAmount": 1208,
+      "total": 14640
+    },
+    {
+      "sequence": 6,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 24,
+      "unitOfMeasure": "CT",
+      "unitCost": 4890,
+      "discountAmount": 0,
+      "taxAmount": 9682,
+      "total": 117360
+    },
+    {
+      "sequence": 7,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "quantity": 13,
+      "unitOfMeasure": "PK",
+      "unitCost": 1425,
+      "discountAmount": 1853,
+      "taxAmount": 1375,
+      "total": 16672
+    },
+    {
+      "sequence": 8,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "quantity": 14,
+      "unitOfMeasure": "DZ",
+      "unitCost": 675,
+      "discountAmount": 0,
+      "taxAmount": 780,
+      "total": 9450
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://brimatt16219.github.io/l3lint/schemas/profile.schema.json",
+  "title": "l3lint processor profile",
+  "description": "Limits and rule toggles for one processor or gateway. Every limit cites the public page it comes from.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["profile"],
+  "properties": {
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "sources"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+        "title": { "type": "string", "minLength": 1 },
+        "description": { "type": "string" },
+        "sources": { "type": "array", "items": { "type": "string", "pattern": "^https://" } }
+      }
+    },
+    "limits": {
+      "type": "object",
+      "propertyNames": {
+        "enum": [
+          "maxLineItems", "amexForwardedLineItems", "descriptionMax", "productCodeMax", "commodityCodeMax",
+          "unitOfMeasureMax", "customerReferenceMax", "purchaseOrderNumberMax", "invoiceNumberMax",
+          "merchantTaxIdMax", "postalCodeMax", "requestorNameMax", "taxTypeCodeMax"
+        ]
+      },
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["value", "source"],
+        "properties": {
+          "value": { "type": "integer", "minimum": 0 },
+          "source": { "type": "string", "pattern": "^https://" },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "rules": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "disable": { "type": "array", "items": { "type": "string", "pattern": "^[A-Z0-9*?-]+$" } },
+        "severity": {
+          "type": "object",
+          "additionalProperties": { "enum": ["error", "warning", "information"] }
+        }
+      }
+    }
+  }
+}

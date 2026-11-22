@@ -1,0 +1,57 @@
+{
+  "createTransactionRequest": {
+    "merchantAuthentication": { "name": "test-api-login", "transactionKey": "test-transaction-key" },
+    "refId": "ref-50311",
+    "transactionRequest": {
+      "transactionType": "authCaptureTransaction",
+      "amount": "280.36",
+      "currencyCode": "USD",
+      "payment": {
+        "opaqueData": { "dataDescriptor": "COMMON.ACCEPT.INAPP.PAYMENT", "dataValue": "test-opaque-payment-token" }
+      },
+      "order": { "invoiceNumber": "INV-50311", "description": "Medical supplies", "purchaseOrderDateUTC": "2026-10-14" },
+      "lineItems": {
+        "lineItem": [
+          {
+            "itemId": "1",
+            "name": "Nitrile gloves L box",
+            "description": "Box of large nitrile exam gloves",
+            "quantity": "10",
+            "unitPrice": "12.50",
+            "taxable": "true",
+            "unitOfMeasure": "BX",
+            "taxAmount": "8.40",
+            "totalAmount": "120.00",
+            "commodityCode": "42132203",
+            "productCode": "GLV-NL-100",
+            "discountAmount": "5.00"
+          },
+          {
+            "itemId": "2",
+            "name": "Isolation gown blue case",
+            "description": "Case of blue isolation gowns",
+            "quantity": "2",
+            "unitPrice": "64.00",
+            "taxable": "true",
+            "unitOfMeasure": "CA",
+            "taxAmount": "8.96",
+            "totalAmount": "128.00",
+            "commodityCode": "42131606",
+            "productCode": "GWN-IS-B50",
+            "discountAmount": "0.00"
+          }
+        ]
+      },
+      "tax": { "amount": "17.36", "name": "Sales tax", "description": "State sales tax" },
+      "duty": { "amount": "0.00", "name": "Duty", "description": "No duty" },
+      "shipping": { "amount": "15.00", "name": "Ground", "description": "Ground freight" },
+      "taxExempt": "false",
+      "poNumber": "PO48820",
+      "billTo": { "firstName": "Accounts", "lastName": "Payable", "company": "Example Clinic", "address": "1 Test Plaza", "city": "Testville", "state": "FL", "zip": "33431", "country": "US" },
+      "shipTo": { "firstName": "Receiving", "lastName": "Dock", "company": "Example Clinic", "address": "1 Test Plaza", "city": "Testville", "state": "FL", "zip": "33431", "country": "USA" },
+      "shipFrom": { "zip": "33602", "country": "US" },
+      "purchaseLevel": "3",
+      "discount": { "amount": "0.00", "name": "None", "description": "No order discount" }
+    }
+  }
+}

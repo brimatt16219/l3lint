@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-76901",
+  "amount": 1852.08,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "fleet",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5198",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-64629"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-64629",
+    "invoiceNumber": "INV-76901"
+  },
+  "tax": {
+    "amount": 103.56,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "commodityScheme": "unspsc",
+      "quantity": 12,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 5.70,
+      "taxAmount": 6.50,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 108.30,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "commodityScheme": "unspsc",
+      "quantity": 24,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 52.32,
+      "taxAmount": 28.25,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 470.88,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Ballpoint pen black dozen",
+      "productCode": "PEN-BLK-DZ",
+      "commodityCode": "44121704",
+      "commodityScheme": "unspsc",
+      "quantity": 2,
+      "unitOfMeasure": "DZ",
+      "unitCost": 6.75,
+      "discountAmount": 0.00,
+      "taxAmount": 0.81,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 13.50,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "commodityScheme": "unspsc",
+      "quantity": 23,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 88.32,
+      "taxAmount": 47.69,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 794.88,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "commodityScheme": "unspsc",
+      "quantity": 1,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 1.19,
+      "taxAmount": 0.64,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 10.71,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 6,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "commodityScheme": "unspsc",
+      "quantity": 23,
+      "unitOfMeasure": "PK",
+      "unitCost": 14.25,
+      "discountAmount": 0.00,
+      "taxAmount": 19.67,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 327.75,
+      "detailIndicator": "Y"
+    }
+  ]
+}

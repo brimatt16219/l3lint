@@ -1,0 +1,812 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://brimatt16219.github.io/l3lint/schemas/rulepack.schema.json",
+  "title": "l3lint rule pack",
+  "description": "A versioned bundle of rules for one brand (or all brands for the general pack). Packs are data only: the custom check kind names a check compiled into the tool.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pack",
+    "rules"
+  ],
+  "properties": {
+    "pack": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "version",
+        "brand",
+        "publishedOn"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(\\.[a-z0-9-]+)+$"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "brand": {
+          "enum": [
+            "general",
+            "visa",
+            "mastercard",
+            "amex",
+            "discover"
+          ]
+        },
+        "publishedOn": {
+          "$ref": "#/$defs/date"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "lists": {
+          "type": "object",
+          "description": "Named lists used by inList checks and MCC applicability. A value is a relative CSV path, or an object with the path and the list's verification status.",
+          "additionalProperties": {
+            "oneOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "path"
+                ],
+                "properties": {
+                  "path": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "status": {
+                    "enum": [
+                      "complete",
+                      "partial"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/rule"
+      }
+    }
+  },
+  "patternProperties": {
+    "^x-": {
+      "description": "Author helpers such as YAML anchors for shared applicability gates; ignored by the loader."
+    }
+  },
+  "$defs": {
+    "date": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "pointer": {
+      "type": "string",
+      "pattern": "^(/[A-Za-z0-9*]+)+$"
+    },
+    "ruleId": {
+      "type": "string",
+      "pattern": "^(GEN|VISA|MC|AMEX|DISC)-[A-Z0-9]+-[0-9]{3}$"
+    },
+    "cardProduct": {
+      "enum": [
+        "consumer",
+        "business",
+        "corporate",
+        "purchasing",
+        "fleet",
+        "commercialPrepaid",
+        "unknown"
+      ]
+    },
+    "listRefs": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        }
+      ]
+    },
+    "scalar": {
+      "type": [
+        "string",
+        "number",
+        "boolean"
+      ]
+    },
+    "condition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "field"
+      ],
+      "properties": {
+        "field": {
+          "$ref": "#/$defs/pointer"
+        },
+        "equals": {
+          "$ref": "#/$defs/scalar"
+        },
+        "notEquals": {
+          "$ref": "#/$defs/scalar"
+        },
+        "in": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/scalar"
+          },
+          "minItems": 1
+        },
+        "notIn": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/scalar"
+          },
+          "minItems": 1
+        },
+        "inList": {
+          "type": "string",
+          "minLength": 1
+        },
+        "present": {
+          "type": "boolean"
+        },
+        "greaterThan": {
+          "type": "number"
+        },
+        "lessThan": {
+          "type": "number"
+        }
+      },
+      "minProperties": 2,
+      "maxProperties": 2
+    },
+    "rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "level",
+        "severity",
+        "confidence",
+        "check",
+        "message",
+        "fix",
+        "impact",
+        "sources"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/ruleId"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "requirement": {
+          "type": "string"
+        },
+        "rationale": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "level": {
+          "enum": [
+            "general",
+            "L2",
+            "L3"
+          ]
+        },
+        "severity": {
+          "enum": [
+            "error",
+            "warning",
+            "information"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "public-brand",
+            "processor-doc",
+            "inferred",
+            "policy"
+          ]
+        },
+        "effective": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "from": {
+              "$ref": "#/$defs/date"
+            },
+            "until": {
+              "$ref": "#/$defs/date"
+            }
+          }
+        },
+        "appliesTo": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "cardProducts": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/cardProduct"
+              },
+              "minItems": 1
+            },
+            "mccIn": {
+              "$ref": "#/$defs/listRefs"
+            },
+            "mccNotIn": {
+              "$ref": "#/$defs/listRefs"
+            },
+            "when": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/condition"
+              },
+              "minItems": 1
+            },
+            "unless": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/condition"
+              },
+              "minItems": 1
+            }
+          }
+        },
+        "profiles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "supersedes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ruleId"
+          },
+          "minItems": 1
+        },
+        "check": {
+          "$ref": "#/$defs/check"
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "messages": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "fix": {
+          "type": "string",
+          "minLength": 1
+        },
+        "impact": {
+          "enum": [
+            "blocksLevel3",
+            "blocksLevel2",
+            "riskVisaValidation",
+            "truncation",
+            "noBenefit",
+            "hygiene"
+          ]
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^https://"
+          },
+          "minItems": 1
+        },
+        "examples": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "pass",
+            "fail"
+          ],
+          "properties": {
+            "pass": {
+              "type": "string",
+              "minLength": 1
+            },
+            "fail": {
+              "type": "string",
+              "minLength": 1
+            },
+            "passNote": {
+              "type": "string"
+            },
+            "failNote": {
+              "type": "string"
+            },
+            "context": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "asOf": {
+                  "$ref": "#/$defs/date"
+                },
+                "processor": {
+                  "type": "string"
+                },
+                "strictProfiles": {
+                  "type": "boolean"
+                },
+                "rates": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "check": {
+      "type": "object",
+      "required": [
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "required",
+            "maxLength",
+            "pattern",
+            "range",
+            "inList",
+            "ratio",
+            "maxCount",
+            "anyOf",
+            "custom"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "required"
+              }
+            }
+          },
+          "then": {
+            "additionalProperties": false,
+            "properties": {
+              "kind": true,
+              "field": {
+                "$ref": "#/$defs/pointer"
+              },
+              "fields": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/pointer"
+                },
+                "minItems": 1
+              },
+              "allowZero": {
+                "type": "boolean"
+              },
+              "positiveOnly": {
+                "type": "boolean"
+              },
+              "report": {
+                "enum": [
+                  "each",
+                  "once"
+                ]
+              }
+            },
+            "oneOf": [
+              {
+                "required": [
+                  "field"
+                ]
+              },
+              {
+                "required": [
+                  "fields"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "maxLength"
+              }
+            }
+          },
+          "then": {
+            "additionalProperties": false,
+            "properties": {
+              "kind": true,
+              "field": {
+                "$ref": "#/$defs/pointer"
+              },
+              "max": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "profileKey": {
+                "type": "string"
+              },
+              "limits": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "field"
+                  ],
+                  "properties": {
+                    "field": {
+                      "$ref": "#/$defs/pointer"
+                    },
+                    "max": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "profileKey": {
+                      "type": "string"
+                    },
+                    "brands": {
+                      "type": "array",
+                      "items": {
+                        "enum": [
+                          "visa",
+                          "mastercard",
+                          "amex",
+                          "discover"
+                        ]
+                      },
+                      "minItems": 1
+                    }
+                  },
+                  "anyOf": [
+                    {
+                      "required": [
+                        "max"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "profileKey"
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "oneOf": [
+              {
+                "required": [
+                  "field"
+                ],
+                "anyOf": [
+                  {
+                    "required": [
+                      "max"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "profileKey"
+                    ]
+                  }
+                ]
+              },
+              {
+                "required": [
+                  "limits"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "pattern"
+              }
+            }
+          },
+          "then": {
+            "additionalProperties": false,
+            "required": [
+              "regex"
+            ],
+            "properties": {
+              "kind": true,
+              "field": {
+                "$ref": "#/$defs/pointer"
+              },
+              "fields": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/pointer"
+                },
+                "minItems": 1
+              },
+              "regex": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "oneOf": [
+              {
+                "required": [
+                  "field"
+                ]
+              },
+              {
+                "required": [
+                  "fields"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "range"
+              }
+            }
+          },
+          "then": {
+            "additionalProperties": false,
+            "required": [
+              "field"
+            ],
+            "properties": {
+              "kind": true,
+              "field": {
+                "$ref": "#/$defs/pointer"
+              },
+              "min": {
+                "type": "number"
+              },
+              "max": {
+                "type": "number"
+              },
+              "exclusive": {
+                "type": "boolean"
+              }
+            },
+            "anyOf": [
+              {
+                "required": [
+                  "min"
+                ]
+              },
+              {
+                "required": [
+                  "max"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "inList"
+              }
+            }
+          },
+          "then": {
+            "additionalProperties": false,
+            "required": [
+              "field"
+            ],
+            "properties": {
+              "kind": true,
+              "field": {
+                "$ref": "#/$defs/pointer"
+              },
+              "list": {
+                "$ref": "#/$defs/listRefs"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "caseInsensitive": {
+                "type": "boolean"
+              },
+              "mode": {
+                "enum": [
+                  "allow",
+                  "deny"
+                ]
+              },
+              "allowMissing": {
+                "type": "boolean"
+              }
+            },
+            "oneOf": [
+              {
+                "required": [
+                  "list"
+                ]
+              },
+              {
+                "required": [
+                  "values"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "ratio"
+              }
+            }
+          },
+          "then": {
+            "additionalProperties": false,
+            "required": [
+              "numerator",
+              "denominator",
+              "min",
+              "max"
+            ],
+            "properties": {
+              "kind": true,
+              "numerator": {
+                "$ref": "#/$defs/pointer"
+              },
+              "denominator": {
+                "$ref": "#/$defs/pointer"
+              },
+              "min": {
+                "type": "number"
+              },
+              "max": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "maxCount"
+              }
+            }
+          },
+          "then": {
+            "additionalProperties": false,
+            "required": [
+              "collection"
+            ],
+            "properties": {
+              "kind": true,
+              "collection": {
+                "$ref": "#/$defs/pointer"
+              },
+              "max": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "profileKey": {
+                "type": "string"
+              }
+            },
+            "anyOf": [
+              {
+                "required": [
+                  "max"
+                ]
+              },
+              {
+                "required": [
+                  "profileKey"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "anyOf"
+              }
+            }
+          },
+          "then": {
+            "additionalProperties": false,
+            "required": [
+              "fields"
+            ],
+            "properties": {
+              "kind": true,
+              "fields": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/pointer"
+                },
+                "minItems": 2
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "custom"
+              }
+            }
+          },
+          "then": {
+            "additionalProperties": false,
+            "required": [
+              "check"
+            ],
+            "properties": {
+              "kind": true,
+              "check": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9]*$"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-83208",
+  "amount": 895.32,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "mastercard",
+    "product": "purchasing",
+    "last4": "4444"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-69032"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-69032",
+    "invoiceNumber": "INV-83208"
+  },
+  "tax": {
+    "amount": 58.57,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "75201",
+    "toPostalCode": "75231",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "75231"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "commodityScheme": "unspsc",
+      "quantity": 3,
+      "unitOfMeasure": "PCE",
+      "unitCost": 14.25,
+      "discountAmount": 2.14,
+      "discountIndicator": true,
+      "taxAmount": 2.84,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 40.61,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 2,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 18,
+      "unitOfMeasure": "EAC",
+      "unitCost": 12.50,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 15.75,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 225.00,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 3,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "commodityScheme": "unspsc",
+      "quantity": 12,
+      "unitOfMeasure": "GLI",
+      "unitCost": 21.80,
+      "discountAmount": 26.16,
+      "discountIndicator": true,
+      "taxAmount": 16.48,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 235.44,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 4,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "commodityScheme": "unspsc",
+      "quantity": 6,
+      "unitOfMeasure": "PCE",
+      "unitCost": 7.40,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 3.11,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 44.40,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 5,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "commodityScheme": "unspsc",
+      "quantity": 17,
+      "unitOfMeasure": "EAC",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 14.16,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 202.30,
+      "debitCreditIndicator": "debit"
+    },
+    {
+      "sequence": 6,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 1,
+      "unitOfMeasure": "EAC",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "discountIndicator": false,
+      "taxAmount": 6.23,
+      "taxRate": 0.07,
+      "taxable": true,
+      "taxTypeCode": "01",
+      "total": 89.00,
+      "debitCreditIndicator": "debit"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+format: csv
+groupBy: invoice
+transaction:
+  id: invoice
+  amount: total
+  currency: { const: USD }
+  customer.reference: customer_ref
+  tax.amount: tax
+  tax.indicator: { const: taxable }
+  amounts.discount: { const: 0 }
+  amounts.freight: { const: 0 }
+  amounts.duty: { const: 0 }
+lineItems:
+  sequence: line_no
+  description: item
+  productCode: sku
+  commodityCode: unspsc
+  quantity: qty
+  unitOfMeasure: uom
+  unitCost: unit_price
+  discountAmount: { const: 0 }
+  taxAmount: line_tax
+  total: line_total
+  debitCreditIndicator: { from: line_type, map: { D: debit, C: credit } }

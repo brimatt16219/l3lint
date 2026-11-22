@@ -1,0 +1,8 @@
+description: "Line 2 quantity is zero."
+operator: zero-required
+context: { brand: visa, cardProduct: purchasing, mcc: "5111", asOf: 2026-10-19 }
+expect:
+  exitCode: 1
+  findings:
+    - { ruleId: VISA-L3-005, path: /lineItems/1/quantity, severity: error }
+    - { ruleId: GEN-ARITH-001, path: /lineItems/1/total, severity: error }

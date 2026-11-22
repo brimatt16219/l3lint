@@ -1,0 +1,36 @@
+# Build output
+bin/
+obj/
+artifacts/
+publish/
+
+# Test and coverage output
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+coverage.cobertura.xml
+BenchmarkDotNet.Artifacts/
+StrykerOutput/
+fuzz-findings/
+*.received.*
+
+# Docs build output
+docs/_site/
+docs/api/*.yml
+docs/api/.manifest
+docs/obj/
+
+# IDE and OS files
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.swp
+.DS_Store
+Thumbs.db
+
+# Local tool state
+.dotnet/
+*.log

@@ -1,0 +1,34 @@
+# Authorize.net createTransactionRequest limits for Level 2, 3 and CEDP (retrieved 2026-10-25).
+profile:
+  id: authorizenet
+  title: Authorize.net
+  description: Authorize.net accepts up to 30 line items; item names hold 31 characters and invoice numbers 20.
+  sources:
+    - https://developer.authorize.net/api/reference/index.html
+    - https://api.authorize.net/xml/v1/schema/AnetApiSchema.xsd
+limits:
+  maxLineItems:
+    value: 30
+    source: https://developer.authorize.net/api/reference/index.html
+  descriptionMax:
+    value: 31
+    source: https://api.authorize.net/xml/v1/schema/AnetApiSchema.xsd
+    note: The line item name; the separate description holds 255.
+  commodityCodeMax:
+    value: 12
+    source: https://api.authorize.net/xml/v1/schema/AnetApiSchema.xsd
+  unitOfMeasureMax:
+    value: 12
+    source: https://api.authorize.net/xml/v1/schema/AnetApiSchema.xsd
+  invoiceNumberMax:
+    value: 20
+    source: https://developer.authorize.net/api/reference/index.html
+  customerReferenceMax:
+    value: 25
+    source: https://developer.authorize.net/api/reference/index.html
+  purchaseOrderNumberMax:
+    value: 25
+    source: https://developer.authorize.net/api/reference/index.html
+  postalCodeMax:
+    value: 20
+    source: https://api.authorize.net/xml/v1/schema/AnetApiSchema.xsd

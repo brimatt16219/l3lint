@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0",
+  "amount": 540.00,
+  "currency": "USD",
+  "customer": { "reference": "PO-77105" },
+  "order": { "invoiceNumber": "INV-61204" },
+  "tax": { "amount": 35.00, "indicator": "taxable" },
+  "amounts": { "freight": 25.00 },
+  "shipping": { "fromPostalCode": "60601", "toPostalCode": "60614" }
+}

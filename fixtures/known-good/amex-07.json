@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-86918",
+  "amount": 2584.65,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "amex",
+    "product": "corporate",
+    "last4": "0005"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Gulfside Medical Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-71622"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-71622",
+    "invoiceNumber": "INV-86918"
+  },
+  "tax": {
+    "amount": 145.45,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 15.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "75201",
+    "toPostalCode": "75231",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "75231"
+  },
+  "amex": {
+    "requestorName": "Jordan Ellis",
+    "adviceText": [
+      "PO-71622 supplies order",
+      "Requested by Jordan Ellis"
+    ]
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "quantity": 7,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 7.63,
+      "taxAmount": 8.70,
+      "total": 144.97
+    },
+    {
+      "sequence": 2,
+      "description": "LED tube light 4 ft",
+      "productCode": "LED-T8-4FT",
+      "commodityCode": "39101628",
+      "quantity": 17,
+      "unitOfMeasure": "EA",
+      "unitCost": 11.90,
+      "discountAmount": 0.00,
+      "taxAmount": 12.14,
+      "total": 202.30
+    },
+    {
+      "sequence": 3,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "quantity": 5,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 2.10,
+      "taxAmount": 1.13,
+      "total": 18.90
+    },
+    {
+      "sequence": 4,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "quantity": 17,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 0.00,
+      "taxAmount": 90.78,
+      "total": 1513.00
+    },
+    {
+      "sequence": 5,
+      "description": "Copy paper letter 10 ream",
+      "productCode": "PPR-LTR-10R",
+      "commodityCode": "14111507",
+      "quantity": 7,
+      "unitOfMeasure": "CT",
+      "unitCost": 48.90,
+      "discountAmount": 34.23,
+      "taxAmount": 18.48,
+      "total": 308.07
+    },
+    {
+      "sequence": 6,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "quantity": 6,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 23.04,
+      "taxAmount": 12.44,
+      "total": 207.36
+    },
+    {
+      "sequence": 7,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "quantity": 4,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 0.00,
+      "taxAmount": 1.78,
+      "total": 29.60
+    }
+  ]
+}

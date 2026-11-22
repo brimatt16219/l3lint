@@ -1,0 +1,5 @@
+description: "DISC-ELIG-001 fail example: the rule must fire."
+context: { brand: discover, cardProduct: corporate, mcc: "5047", asOf: 2026-10-19, only: DISC-ELIG-001 }
+expect:
+  findings:
+    - { ruleId: DISC-ELIG-001, path: "*" }

@@ -1,0 +1,5 @@
+description: "AMEX-L2-002 fail example: the rule must fire."
+context: { brand: amex, cardProduct: corporate, mcc: "5047", asOf: 2026-10-19, only: AMEX-L2-002 }
+expect:
+  findings:
+    - { ruleId: AMEX-L2-002, path: "*" }

@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-76106",
+  "amount": 1454.27,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "purchasing",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5943",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-64074"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-64074",
+    "invoiceNumber": "INV-76106"
+  },
+  "tax": {
+    "amount": 65.95,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "98101",
+    "toPostalCode": "98109",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "98109"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "commodityScheme": "unspsc",
+      "quantity": 15,
+      "unitOfMeasure": "BX",
+      "unitCost": 12.50,
+      "discountAmount": 9.38,
+      "taxAmount": 8.46,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 178.12,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Toner cartridge black 26X",
+      "productCode": "TNR-BLK-26X",
+      "commodityCode": "44103103",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "EA",
+      "unitCost": 89.00,
+      "discountAmount": 124.60,
+      "taxAmount": 53.27,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 1121.40,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "commodityScheme": "unspsc",
+      "quantity": 12,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 0.00,
+      "taxAmount": 4.22,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 88.80,
+      "detailIndicator": "Y"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+description: Row 2's quantity is the word ten, row 3's line total has a letter O for a zero, and the tax status X is not in the value map, so it passes through and is not a tax indicator. Each is one GEN-FMT-001 finding.
+format: csv
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 06-invalid-cells.canonical.json
+expect:
+  findings:
+    - { transaction: 0, ruleId: GEN-FMT-001, path: /lineItems/0/quantity }
+    - { transaction: 0, ruleId: GEN-FMT-001, path: /lineItems/1/total }
+    - { transaction: 0, ruleId: GEN-FMT-001, path: /tax/indicator }
+    - { transaction: 0, ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

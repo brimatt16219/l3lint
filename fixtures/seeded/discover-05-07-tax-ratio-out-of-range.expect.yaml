@@ -1,0 +1,6 @@
+description: "Tax is 37.5% of the amount; line taxes and the amount were rebalanced. discover has no tax ratio rule, so none may fire."
+operator: tax-ratio-out-of-range
+context: { brand: discover, cardProduct: corporate, mcc: "5085", asOf: 2026-10-19 }
+expect:
+  findings: []
+  absent: [GEN-ARITH-002, GEN-ARITH-003, VISA-L2-001, MC-L2-001]

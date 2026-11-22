@@ -1,0 +1,5 @@
+description: "DISC-FMT-001 pass example: the rule must not fire."
+context: { brand: discover, cardProduct: corporate, mcc: "5047", asOf: 2026-10-19, only: DISC-FMT-001 }
+expect:
+  findings: []
+  absent: [DISC-FMT-001]

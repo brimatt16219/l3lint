@@ -1,0 +1,11 @@
+description: The public Visa test card number was pasted into the first line's free-text description. It is masked to its last four digits; the masked text then also fails the description character and placeholder checks.
+format: adyen
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 07-card-number-in-description.canonical.json
+expect:
+  findings:
+    - { ruleId: GEN-FMT-004, path: /lineItems/0/description }
+    - { ruleId: GEN-PCI-001, path: /lineItems/0/description }
+    - { ruleId: VISA-DQ-001, path: /lineItems/0/description }
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/discount }

@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-76371",
+  "amount": 899.38,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "purchasing",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5047",
+    "name": "Harborview Facility Supply",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-64259"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-64259",
+    "invoiceNumber": "INV-76371"
+  },
+  "tax": {
+    "amount": 49.65,
+    "indicator": "taxable",
+    "rate": 0.06
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "75201",
+    "toPostalCode": "75231",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "75231"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "commodityScheme": "unspsc",
+      "quantity": 4,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 1.90,
+      "taxAmount": 2.17,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 36.10,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 7,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 10.92,
+      "taxAmount": 5.90,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 98.28,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 15,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 3.56,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 59.25,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 11,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 70.40,
+      "taxAmount": 38.02,
+      "taxRate": 0.06,
+      "taxable": true,
+      "total": 633.60,
+      "detailIndicator": "Y"
+    }
+  ]
+}

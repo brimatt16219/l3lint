@@ -1,0 +1,5 @@
+#nullable enable
+L3Lint.Rules.Amex.AmexRulePack
+L3Lint.Rules.Amex.AmexRulePack.AmexRulePack() -> void
+override L3Lint.Rules.Amex.AmexRulePack.CustomChecks.get -> System.Collections.Generic.IReadOnlyList<L3Lint.Core.Rules.ICustomCheck!>!
+override L3Lint.Rules.Amex.AmexRulePack.TierPolicy.get -> L3Lint.Core.Tiers.ITierPolicy!

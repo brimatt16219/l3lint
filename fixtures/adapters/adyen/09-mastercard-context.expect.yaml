@@ -1,0 +1,14 @@
+description: The structured Level 3 request linted as a Mastercard purchasing card. Adyen carries no line tax, so no tax type code is expected, but the line tax indicator, the debit indicator and the merchant tax ID cannot be sent.
+format: adyen
+context: { brand: mastercard, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 09-mastercard-context.canonical.json
+expect:
+  findings:
+    - { ruleId: MC-L2-004, path: /merchant/taxId }
+    - { ruleId: MC-L3-005, path: /lineItems/0/unitOfMeasure }
+    - { ruleId: MC-L3-005, path: /lineItems/1/unitOfMeasure }
+    - { ruleId: MC-L3-007, path: /lineItems/0/debitCreditIndicator }
+    - { ruleId: MC-L3-007, path: /lineItems/1/debitCreditIndicator }
+    - { ruleId: MC-L3-008, path: /lineItems/0/taxable }
+    - { ruleId: MC-L3-008, path: /lineItems/0/discountIndicator }
+    - { ruleId: MC-L3-008, path: /lineItems/1/taxable }

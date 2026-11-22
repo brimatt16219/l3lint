@@ -1,0 +1,33 @@
+{
+  "amount": 19204,
+  "currency": "bhd",
+  "payment_method": "pm_card_visa",
+  "payment_details": {
+    "customer_reference": "PO-BH-0412",
+    "order_reference": "INV-BH-7733"
+  },
+  "amount_details": {
+    "shipping": { "amount": 1500, "from_postal_code": "1001", "to_postal_code": "317" },
+    "line_items": [
+      {
+        "product_code": "CBL-TIE-BK",
+        "product_name": "Cable ties black pack",
+        "unit_cost": 2750,
+        "quantity": 5,
+        "discount_amount": 250,
+        "tax": { "total_tax_amount": 660 },
+        "unit_of_measure": "PK",
+        "payment_method_options": { "card": { "commodity_code": "39121704" } }
+      },
+      {
+        "product_code": "ETP-RL-19",
+        "product_name": "Electrical tape roll",
+        "unit_cost": 1125,
+        "quantity": 3,
+        "tax": { "total_tax_amount": 169 },
+        "unit_of_measure": "RL",
+        "payment_method_options": { "card": { "commodity_code": "31201502" } }
+      }
+    ]
+  }
+}

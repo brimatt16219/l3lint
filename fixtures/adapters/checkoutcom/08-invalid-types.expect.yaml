@@ -1,0 +1,10 @@
+description: The amount has a decimal point although Checkout.com takes whole minor units, the shipping amount is a string and item 1 sets tax_exempt to the text "no". Each is one GEN-FMT-001 finding.
+format: checkoutcom
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 08-invalid-types.canonical.json
+expect:
+  findings:
+    - { ruleId: GEN-FMT-001, path: /amount }
+    - { ruleId: GEN-FMT-001, path: /amounts/freight }
+    - { ruleId: GEN-FMT-001, path: /lineItems/0/taxable }
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

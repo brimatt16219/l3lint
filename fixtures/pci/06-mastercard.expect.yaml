@@ -1,0 +1,5 @@
+description: "A public test card number in a commodity code, a code field. It must be masked in every output format."
+context: { brand: mastercard, cardProduct: purchasing, mcc: "5198", asOf: 2026-10-19 }
+expect:
+  findings:
+    - { ruleId: GEN-PCI-001, path: /lineItems/0/commodityCode, severity: warning }

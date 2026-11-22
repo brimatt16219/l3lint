@@ -1,0 +1,7 @@
+description: Line 1 has no name, so its description is used; line 2 has no productCode, so its productSKU is used. Both fallbacks add Ambiguous notes.
+format: authorizenet
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 05-description-and-sku-fallback.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

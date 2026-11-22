@@ -1,0 +1,6 @@
+description: "Line 3 unit QQQ; visa keeps no unit list, so no rule may fire for it."
+operator: unlisted-unit
+context: { brand: visa, cardProduct: corporate, mcc: "5198", asOf: 2026-10-19 }
+expect:
+  findings: []
+  absent: [MC-L3-005, AMEX-L3-001, GEN-FMT-001]

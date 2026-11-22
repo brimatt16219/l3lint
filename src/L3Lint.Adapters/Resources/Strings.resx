@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AdapterNeedsCsv" xml:space="preserve">
+    <value>The {0} adapter reads CSV files. Use a JSON adapter for JSON input.</value>
+  </data>
+  <data name="AdapterNeedsJson" xml:space="preserve">
+    <value>The {0} adapter reads JSON documents. Use --format csv with a column map for CSV input.</value>
+  </data>
+  <data name="CsvCellLabel" xml:space="preserve">
+    <value>row {0}, column {1} ({2})</value>
+  </data>
+  <data name="CsvColumnMissing" xml:space="preserve">
+    <value>The CSV map {0} names the column "{1}" at {2}, but the file has no column with that name.</value>
+  </data>
+  <data name="CsvDefaultUsed" xml:space="preserve">
+    <value>{0} is empty, so the map's default for {1} was used.</value>
+  </data>
+  <data name="CsvIgnoredColumn" xml:space="preserve">
+    <value>Column {0} ({1}) is not in the CSV map and was ignored.</value>
+  </data>
+  <data name="CsvMalformed" xml:space="preserve">
+    <value>The CSV file is not well-formed near line {0}.</value>
+  </data>
+  <data name="CsvMapEmpty" xml:space="preserve">
+    <value>The CSV map {0} is empty.</value>
+  </data>
+  <data name="CsvMapInvalidYaml" xml:space="preserve">
+    <value>The CSV map {0} is not valid YAML at line {1}, column {2}: {3}</value>
+  </data>
+  <data name="CsvMapInvalid" xml:space="preserve">
+    <value>The CSV map {0} is not valid: {1}</value>
+  </data>
+  <data name="CsvMapMissing" xml:space="preserve">
+    <value>CSV input needs a column map. Pass one with --map.</value>
+  </data>
+  <data name="CsvNoHeader" xml:space="preserve">
+    <value>The CSV file has no header row.</value>
+  </data>
+  <data name="CsvRowLabel" xml:space="preserve">
+    <value>row {0}</value>
+  </data>
+  <data name="CsvRowsDisagree" xml:space="preserve">
+    <value>Rows {0} and {1} of transaction {2} disagree on {3}; the value is left out until the rows agree.</value>
+  </data>
+  <data name="CsvRowsLabel" xml:space="preserve">
+    <value>rows {0} to {1}</value>
+  </data>
+  <data name="DefaultMapName" xml:space="preserve">
+    <value>the column map</value>
+  </data>
+  <data name="ExpectArray" xml:space="preserve">
+    <value>an array</value>
+  </data>
+  <data name="ExpectBoolean" xml:space="preserve">
+    <value>true or false (Y, N, yes, no, 1 and 0 are also accepted)</value>
+  </data>
+  <data name="ExpectDateDayMonthYear" xml:space="preserve">
+    <value>a date in the form ddMMyy</value>
+  </data>
+  <data name="ExpectDate" xml:space="preserve">
+    <value>a date in the form yyyy-MM-dd</value>
+  </data>
+  <data name="ExpectDebitCredit" xml:space="preserve">
+    <value>debit or credit</value>
+  </data>
+  <data name="ExpectDecimal" xml:space="preserve">
+    <value>a decimal number, sent as a number or as text such as "12.50"</value>
+  </data>
+  <data name="ExpectEnum" xml:space="preserve">
+    <value>one of {0}</value>
+  </data>
+  <data name="ExpectFlag" xml:space="preserve">
+    <value>true or false</value>
+  </data>
+  <data name="ExpectInteger" xml:space="preserve">
+    <value>a whole number</value>
+  </data>
+  <data name="ExpectMinorUnitsText" xml:space="preserve">
+    <value>text holding a whole number of minor units, such as "1250" for 12.50</value>
+  </data>
+  <data name="ExpectMinorUnits" xml:space="preserve">
+    <value>a whole number of minor units, such as 1250 for 12.50</value>
+  </data>
+  <data name="ExpectNumber" xml:space="preserve">
+    <value>a number such as 12.50</value>
+  </data>
+  <data name="ExpectObject" xml:space="preserve">
+    <value>an object</value>
+  </data>
+  <data name="ExpectText" xml:space="preserve">
+    <value>text</value>
+  </data>
+  <data name="ExpectWholeNumberText" xml:space="preserve">
+    <value>text holding a whole number, such as "2"</value>
+  </data>
+  <data name="ExpectWholeNumber" xml:space="preserve">
+    <value>a whole number</value>
+  </data>
+  <data name="ExpectYesNo" xml:space="preserve">
+    <value>true, false, Y or N</value>
+  </data>
+  <data name="InvalidContainer" xml:space="preserve">
+    <value>{0} must be an object or an array; the fields inside it were not read.</value>
+  </data>
+  <data name="InvalidValue" xml:space="preserve">
+    <value>{0} must be {1}.</value>
+  </data>
+  <data name="NoteAdyenBothForms" xml:space="preserve">
+    <value>The payload has both enhancedSchemeData.levelTwoThree and legacy additionalData keys; the structured object was used and the legacy keys were not read.</value>
+  </data>
+  <data name="NoteAdyenLineGap" xml:space="preserve">
+    <value>The legacy itemDetailLine numbers are not 1, 2, 3 and so on without gaps; lines were read in number order.</value>
+  </data>
+  <data name="NoteCodeOverSku" xml:space="preserve">
+    <value>{0} and {1} both hold a value and they differ; {0} was used as the product code.</value>
+  </data>
+  <data name="NoteCountryNotCode" xml:space="preserve">
+    <value>The country at {0} is not an ISO 3166 alpha-2 or alpha-3 code; it was copied as sent.</value>
+  </data>
+  <data name="NoteCsvCurrencyAssumed" xml:space="preserve">
+    <value>Transaction {0} has no ISO 4217 currency, so amounts in minor units were converted with {1} decimal places.</value>
+  </data>
+  <data name="NoteCurrencyDefaulted" xml:space="preserve">
+    <value>{0} does not carry a currency, so the default currency {1} from the options was used.</value>
+  </data>
+  <data name="NoteCurrencyMissingAssumed" xml:space="preserve">
+    <value>No currency was sent, so amounts in minor units were converted with {0} decimal places.</value>
+  </data>
+  <data name="NoteCurrencyUnknownAssumed" xml:space="preserve">
+    <value>The currency "{0}" is not an ISO 4217 code, so amounts in minor units were converted with {1} decimal places.</value>
+  </data>
+  <data name="NoteDerivedLineTotals" xml:space="preserve">
+    <value>Stripe sends no line totals, so each line total was computed as quantity times unit cost minus the line discount.</value>
+  </data>
+  <data name="NoteDerivedTaxFromLines" xml:space="preserve">
+    <value>No order-level tax amount was sent, so the tax amount is the sum of the line tax amounts.</value>
+  </data>
+  <data name="NoteDerivedTaxIndicator" xml:space="preserve">
+    <value>{0} has no tax indicator field; the sale was marked taxable because the tax amount is above 0.</value>
+  </data>
+  <data name="NoteDutyOutsideAmount" xml:space="preserve">
+    <value>{0} does not add duty to the payment amount, but l3lint's total formula does; the transaction total check may report the duty as a difference.</value>
+  </data>
+  <data name="NoteExemptWithTax" xml:space="preserve">
+    <value>{1} marks the {0} sale as tax exempt, but a tax amount above 0 was sent; the sale was mapped as exempt.</value>
+  </data>
+  <data name="NoteIgnoredField" xml:space="preserve">
+    <value>{0} has no canonical field and was ignored.</value>
+  </data>
+  <data name="NoteItemDescriptionUsed" xml:space="preserve">
+    <value>{0} has no item name, so the description at {1} was used.</value>
+  </data>
+  <data name="NoteShippingTaxOutsideAmount" xml:space="preserve">
+    <value>{0} does not add shipping tax to the payment amount, but l3lint's total formula does; the transaction total check may report the shipping tax as a difference.</value>
+  </data>
+  <data name="NoteSkuUsed" xml:space="preserve">
+    <value>{0} has no product code, so the SKU at {1} was used.</value>
+  </data>
+  <data name="NoteTaxableWithoutTax" xml:space="preserve">
+    <value>{1} says the {0} sale is not tax exempt, but no tax above 0 was sent; the sale was mapped as taxable.</value>
+  </data>
+</root>

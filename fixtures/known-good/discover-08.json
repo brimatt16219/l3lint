@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-62271",
+  "amount": 140582,
+  "currency": "JPY",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "discover",
+    "product": "purchasing",
+    "last4": "1117"
+  },
+  "merchant": {
+    "mcc": "5085",
+    "name": "Summit Lab Products",
+    "country": "US"
+  },
+  "customer": {
+    "reference": "PO-75359"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-75359",
+    "invoiceNumber": "INV-62271"
+  },
+  "tax": {
+    "amount": 6307,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0,
+    "freight": 1500,
+    "duty": 0
+  },
+  "shipping": {
+    "fromPostalCode": "33602",
+    "toPostalCode": "33431",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "33431"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Nitrile exam gloves L 100",
+      "productCode": "GLV-NTR-L100",
+      "commodityCode": "42132203",
+      "quantity": 4,
+      "unitOfMeasure": "BX",
+      "unitCost": 1250,
+      "discountAmount": 250,
+      "taxAmount": 226,
+      "total": 4750
+    },
+    {
+      "sequence": 2,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "quantity": 20,
+      "unitOfMeasure": "CA",
+      "unitCost": 6400,
+      "discountAmount": 12800,
+      "taxAmount": 5472,
+      "total": 115200
+    },
+    {
+      "sequence": 3,
+      "description": "Packing tape clear 6 rolls",
+      "productCode": "TPE-PCK-6R",
+      "commodityCode": "31201610",
+      "quantity": 9,
+      "unitOfMeasure": "PK",
+      "unitCost": 1425,
+      "discountAmount": 0,
+      "taxAmount": 609,
+      "total": 12825
+    }
+  ]
+}

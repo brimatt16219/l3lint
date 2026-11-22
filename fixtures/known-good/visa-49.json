@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-78544",
+  "amount": 1689.41,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "purchasing",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5047",
+    "name": "Ridgeline Industrial Co",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-65776"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-65776",
+    "invoiceNumber": "INV-78544"
+  },
+  "tax": {
+    "amount": 109.06,
+    "indicator": "taxable",
+    "rate": 0.07
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 22.50,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "60601",
+    "toPostalCode": "60616",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "60616"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Hand sanitizer gallon",
+      "productCode": "SAN-HND-1GL",
+      "commodityCode": "53131626",
+      "commodityScheme": "unspsc",
+      "quantity": 16,
+      "unitOfMeasure": "GL",
+      "unitCost": 21.80,
+      "discountAmount": 17.44,
+      "taxAmount": 23.20,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 331.36,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Surgical mask level 2 bx",
+      "productCode": "MSK-L2-50",
+      "commodityCode": "42131713",
+      "commodityScheme": "unspsc",
+      "quantity": 23,
+      "unitOfMeasure": "BX",
+      "unitCost": 15.60,
+      "discountAmount": 0.00,
+      "taxAmount": 25.12,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 358.80,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Shop towels roll blue",
+      "productCode": "TWL-SHP-BLU",
+      "commodityCode": "47131502",
+      "commodityScheme": "unspsc",
+      "quantity": 15,
+      "unitOfMeasure": "RL",
+      "unitCost": 3.95,
+      "discountAmount": 0.00,
+      "taxAmount": 4.15,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 59.25,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 4,
+      "description": "Leather work gloves L",
+      "productCode": "GLV-LTH-L",
+      "commodityCode": "46181504",
+      "commodityScheme": "unspsc",
+      "quantity": 14,
+      "unitOfMeasure": "EA",
+      "unitCost": 9.50,
+      "discountAmount": 13.30,
+      "taxAmount": 8.38,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 119.70,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 5,
+      "description": "Disinfectant wipes case",
+      "productCode": "WIP-DIS-CS",
+      "commodityCode": "47131829",
+      "commodityScheme": "unspsc",
+      "quantity": 4,
+      "unitOfMeasure": "CA",
+      "unitCost": 38.40,
+      "discountAmount": 15.36,
+      "taxAmount": 9.68,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 138.24,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 6,
+      "description": "Safety glasses clear lens",
+      "productCode": "SFG-CLR-01",
+      "commodityCode": "46181802",
+      "commodityScheme": "unspsc",
+      "quantity": 21,
+      "unitOfMeasure": "EA",
+      "unitCost": 4.20,
+      "discountAmount": 0.00,
+      "taxAmount": 6.17,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 88.20,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 7,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "BOX-1212-25",
+      "commodityCode": "24112404",
+      "commodityScheme": "unspsc",
+      "quantity": 3,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 0.00,
+      "taxAmount": 5.46,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 78.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 8,
+      "description": "Hex bolt M8 x 40 zinc",
+      "productCode": "BLT-M8-40Z",
+      "commodityCode": "31161501",
+      "commodityScheme": "unspsc",
+      "quantity": 21,
+      "unitOfMeasure": "BX",
+      "unitCost": 18.30,
+      "discountAmount": 0.00,
+      "taxAmount": 26.90,
+      "taxRate": 0.07,
+      "taxable": true,
+      "total": 384.30,
+      "detailIndicator": "Y"
+    }
+  ]
+}

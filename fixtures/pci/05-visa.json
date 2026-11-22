@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0",
+  "id": "INV-69212",
+  "amount": 1656.39,
+  "currency": "USD",
+  "transactionDate": "2026-10-19",
+  "channel": "cardNotPresent",
+  "card": {
+    "brand": "visa",
+    "product": "purchasing",
+    "last4": "1111"
+  },
+  "merchant": {
+    "mcc": "5065",
+    "name": "Summit Lab Products",
+    "country": "US",
+    "taxId": "12-3456789"
+  },
+  "customer": {
+    "reference": "PO-51148"
+  },
+  "order": {
+    "purchaseOrderNumber": "PO-51148",
+    "invoiceNumber": "INV-69212"
+  },
+  "tax": {
+    "amount": 75.11,
+    "indicator": "taxable",
+    "rate": 0.0475
+  },
+  "amounts": {
+    "discount": 0.00,
+    "freight": 0.00,
+    "duty": 0.00
+  },
+  "shipping": {
+    "fromPostalCode": "30303",
+    "toPostalCode": "30309",
+    "toCountry": "US"
+  },
+  "billing": {
+    "postalCode": "30309"
+  },
+  "lineItems": [
+    {
+      "sequence": 1,
+      "description": "Isolation gown blue cs 50",
+      "productCode": "GWN-ISO-BL50",
+      "commodityCode": "42131606",
+      "commodityScheme": "unspsc",
+      "quantity": 20,
+      "unitOfMeasure": "CA",
+      "unitCost": 64.00,
+      "discountAmount": 64.00,
+      "taxAmount": 57.76,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 1216.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 2,
+      "description": "Shipping box 12 in bundle",
+      "productCode": "4111111111111111",
+      "commodityCode": "24112404",
+      "commodityScheme": "unspsc",
+      "quantity": 12,
+      "unitOfMeasure": "BX",
+      "unitCost": 26.00,
+      "discountAmount": 0.00,
+      "taxAmount": 14.82,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 312.00,
+      "detailIndicator": "Y"
+    },
+    {
+      "sequence": 3,
+      "description": "Cable ties 8 in pack 100",
+      "productCode": "CTI-8IN-100",
+      "commodityCode": "39131711",
+      "commodityScheme": "unspsc",
+      "quantity": 8,
+      "unitOfMeasure": "PK",
+      "unitCost": 7.40,
+      "discountAmount": 5.92,
+      "taxAmount": 2.53,
+      "taxRate": 0.0475,
+      "taxable": true,
+      "total": 53.28,
+      "detailIndicator": "Y"
+    }
+  ]
+}

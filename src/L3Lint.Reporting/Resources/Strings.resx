@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="JunitActual" xml:space="preserve">
+    <value>Actual: {0}</value>
+  </data>
+  <data name="JunitBatchCase" xml:space="preserve">
+    <value>all transactions</value>
+  </data>
+  <data name="JunitCanonicalPath" xml:space="preserve">
+    <value>Canonical path: {0}</value>
+  </data>
+  <data name="JunitExpected" xml:space="preserve">
+    <value>Expected: {0}</value>
+  </data>
+  <data name="JunitFailureMessage" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="JunitInputErrorCase" xml:space="preserve">
+    <value>read input</value>
+  </data>
+  <data name="JunitInputErrorLine" xml:space="preserve">
+    <value>read input, line {0}</value>
+  </data>
+  <data name="JunitLocation" xml:space="preserve">
+    <value>Location: line {0}, column {1}</value>
+  </data>
+  <data name="JunitOutFinding" xml:space="preserve">
+    <value>{0} {1} {2}: {3}</value>
+  </data>
+  <data name="JunitPath" xml:space="preserve">
+    <value>Path: {0}</value>
+  </data>
+  <data name="JunitRule" xml:space="preserve">
+    <value>Rule: {0}</value>
+  </data>
+  <data name="JunitTransaction" xml:space="preserve">
+    <value>Transaction: {0} in {1}</value>
+  </data>
+  <data name="LabelAppliesTo" xml:space="preserve">
+    <value>Applies to</value>
+  </data>
+  <data name="LabelBrand" xml:space="preserve">
+    <value>Brand</value>
+  </data>
+  <data name="LabelCheck" xml:space="preserve">
+    <value>Check</value>
+  </data>
+  <data name="LabelConfidence" xml:space="preserve">
+    <value>Confidence</value>
+  </data>
+  <data name="LabelEffective" xml:space="preserve">
+    <value>Effective</value>
+  </data>
+  <data name="LabelExamples" xml:space="preserve">
+    <value>Examples</value>
+  </data>
+  <data name="LabelFailing" xml:space="preserve">
+    <value>Failing example</value>
+  </data>
+  <data name="LabelFix" xml:space="preserve">
+    <value>Fix</value>
+  </data>
+  <data name="LabelImpact" xml:space="preserve">
+    <value>Impact</value>
+  </data>
+  <data name="LabelLevel" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="LabelMessage" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="LabelNotes" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="LabelPack" xml:space="preserve">
+    <value>Pack</value>
+  </data>
+  <data name="LabelPassing" xml:space="preserve">
+    <value>Passing example</value>
+  </data>
+  <data name="LabelRequirement" xml:space="preserve">
+    <value>Requirement</value>
+  </data>
+  <data name="LabelSeverity" xml:space="preserve">
+    <value>Severity</value>
+  </data>
+  <data name="LabelSources" xml:space="preserve">
+    <value>Sources</value>
+  </data>
+  <data name="LabelSupersedes" xml:space="preserve">
+    <value>Replaces at the same path</value>
+  </data>
+  <data name="LabelWhy" xml:space="preserve">
+    <value>Why</value>
+  </data>
+  <data name="MdBestCost" xml:space="preserve">
+    <value>Best cost</value>
+  </data>
+  <data name="MdBestTier" xml:space="preserve">
+    <value>Best tier</value>
+  </data>
+  <data name="MdBrand" xml:space="preserve">
+    <value>Brand</value>
+  </data>
+  <data name="MdCleanMany" xml:space="preserve">
+    <value>{0} transactions have no findings.</value>
+  </data>
+  <data name="MdCleanOne" xml:space="preserve">
+    <value>1 transaction has no findings.</value>
+  </data>
+  <data name="MdDifference" xml:space="preserve">
+    <value>Difference</value>
+  </data>
+  <data name="MdErrors" xml:space="preserve">
+    <value>Errors</value>
+  </data>
+  <data name="MdExampleContext" xml:space="preserve">
+    <value>The examples run with {0}.</value>
+  </data>
+  <data name="MdHeading" xml:space="preserve">
+    <value>l3lint results</value>
+  </data>
+  <data name="MdInformation" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="MdInput" xml:space="preserve">
+    <value>Input</value>
+  </data>
+  <data name="MdInputErrors" xml:space="preserve">
+    <value>Input errors</value>
+  </data>
+  <data name="MdLikelyCost" xml:space="preserve">
+    <value>Likely cost</value>
+  </data>
+  <data name="MdLikelyTier" xml:space="preserve">
+    <value>Likely tier</value>
+  </data>
+  <data name="MdLine" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="MdPath" xml:space="preserve">
+    <value>Path</value>
+  </data>
+  <data name="MdProperty" xml:space="preserve">
+    <value>Property</value>
+  </data>
+  <data name="MdRule" xml:space="preserve">
+    <value>Rule</value>
+  </data>
+  <data name="MdTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="MdTransaction" xml:space="preserve">
+    <value>Transaction</value>
+  </data>
+  <data name="MdTransactionSummary" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="MdTransactions" xml:space="preserve">
+    <value>Transactions</value>
+  </data>
+  <data name="MdTruncated" xml:space="preserve">
+    <value>This summary stops here to stay under GitHub's 1 MiB job summary limit. {0} more findings are not shown; the JSON output lists every finding.</value>
+  </data>
+  <data name="MdValue" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="MdWarnings" xml:space="preserve">
+    <value>Warnings</value>
+  </data>
+  <data name="ReportInputNumber" xml:space="preserve">
+    <value>input {0}</value>
+  </data>
+  <data name="RuleAllBrands" xml:space="preserve">
+    <value>all brands</value>
+  </data>
+  <data name="RuleAppliesMccIn" xml:space="preserve">
+    <value>only when the MCC is on: {0}</value>
+  </data>
+  <data name="RuleAppliesMccNotIn" xml:space="preserve">
+    <value>skipped when the MCC is on: {0}</value>
+  </data>
+  <data name="RuleAppliesProducts" xml:space="preserve">
+    <value>card products: {0}</value>
+  </data>
+  <data name="RuleAppliesProfiles" xml:space="preserve">
+    <value>runs at {0} under profiles {1} or with --strict-profiles, otherwise as a warning</value>
+  </data>
+  <data name="RuleAppliesUnless" xml:space="preserve">
+    <value>skipped when {0}</value>
+  </data>
+  <data name="RuleAppliesWhen" xml:space="preserve">
+    <value>only when {0}</value>
+  </data>
+  <data name="RuleEffectiveAlways" xml:space="preserve">
+    <value>always</value>
+  </data>
+  <data name="RuleEffectiveFrom" xml:space="preserve">
+    <value>from {0}</value>
+  </data>
+  <data name="RuleEffectiveRange" xml:space="preserve">
+    <value>from {0} until {1}</value>
+  </data>
+  <data name="RuleEffectiveUntil" xml:space="preserve">
+    <value>until {0} (last day the rule applies)</value>
+  </data>
+  <data name="SarifResultMessage" xml:space="preserve">
+    <value>{0} Fix: {1}</value>
+  </data>
+  <data name="SarifRuleReference" xml:space="preserve">
+    <value>Rule reference</value>
+  </data>
+  <data name="SarifTruncatedDescription" xml:space="preserve">
+    <value>GitHub code scanning accepts at most 5,000 results in one upload. When a run has more findings, l3lint keeps errors first, then warnings, and leaves out the rest.</value>
+  </data>
+  <data name="SarifTruncatedFix" xml:space="preserve">
+    <value>Read the JSON output for the full list, or fix the errors first so fewer findings remain.</value>
+  </data>
+  <data name="SarifTruncatedMessage" xml:space="preserve">
+    <value>This run has {0:N0} findings, more than the {1:N0} results GitHub code scanning accepts in one upload. The {2:N0} least severe findings are left out of this SARIF file; the JSON output lists every finding.</value>
+  </data>
+  <data name="SarifTruncatedTitle" xml:space="preserve">
+    <value>Results left out for GitHub code scanning</value>
+  </data>
+  <data name="TextAsOf" xml:space="preserve">
+    <value>as of {0}</value>
+  </data>
+  <data name="TextBatchHeader" xml:space="preserve">
+    <value>Batch findings</value>
+  </data>
+  <data name="TextCandidates" xml:space="preserve">
+    <value>Candidates: {0}</value>
+  </data>
+  <data name="TextEstimateHeader" xml:space="preserve">
+    <value>Estimated, using {0} (effective {1}):</value>
+  </data>
+  <data name="TextEstimateLine" xml:space="preserve">
+    <value>{0}: likely {1} {2}, best {3} {4}, difference {5}</value>
+  </data>
+  <data name="TextFix" xml:space="preserve">
+    <value>Fix: {0}</value>
+  </data>
+  <data name="TextInputError" xml:space="preserve">
+    <value>{0}  {1}: {2}</value>
+  </data>
+  <data name="TextNoCategory" xml:space="preserve">
+    <value>no category in the rate table</value>
+  </data>
+  <data name="TextNote" xml:space="preserve">
+    <value>Note: {0}</value>
+  </data>
+  <data name="TextOmitted" xml:space="preserve">
+    <value>{0} more findings are not shown; the summary counts them.</value>
+  </data>
+  <data name="TextSource" xml:space="preserve">
+    <value>Source: {0}  ({1})</value>
+  </data>
+  <data name="TextSummary" xml:space="preserve">
+    <value>{0}. Rule packs: {1}.</value>
+  </data>
+  <data name="TextTier" xml:space="preserve">
+    <value>Likely tier:</value>
+  </data>
+  <data name="TextTierForBrand" xml:space="preserve">
+    <value>Likely tier ({0}):</value>
+  </data>
+  <data name="TextTransactionNumber" xml:space="preserve">
+    <value>Transaction {0}</value>
+  </data>
+  <data name="TierAtRisk" xml:space="preserve">
+    <value>{0} (at risk)</value>
+  </data>
+  <data name="TierBelowProduct2" xml:space="preserve">
+    <value>below Product 2</value>
+  </data>
+  <data name="TierBelowProduct3" xml:space="preserve">
+    <value>below Product 3</value>
+  </data>
+  <data name="TierBlockedMany" xml:space="preserve">
+    <value>{0} (blocked by {1} errors)</value>
+  </data>
+  <data name="TierBlockedOne" xml:space="preserve">
+    <value>{0} (blocked by {1} error)</value>
+  </data>
+  <data name="TierDataRate1" xml:space="preserve">
+    <value>Data Rate I</value>
+  </data>
+  <data name="TierDataRate2" xml:space="preserve">
+    <value>Data Rate II</value>
+  </data>
+  <data name="TierDataRate3" xml:space="preserve">
+    <value>Data Rate III</value>
+  </data>
+  <data name="TierMeets" xml:space="preserve">
+    <value>{0} (meets the documented requirement)</value>
+  </data>
+  <data name="TierNoBenefit" xml:space="preserve">
+    <value>no enhanced-data rate available</value>
+  </data>
+  <data name="TierNone" xml:space="preserve">
+    <value>no enhanced-data rate</value>
+  </data>
+  <data name="TierProduct2" xml:space="preserve">
+    <value>Product 2</value>
+  </data>
+  <data name="TierProduct3" xml:space="preserve">
+    <value>Product 3</value>
+  </data>
+  <data name="WordError" xml:space="preserve">
+    <value>error</value>
+  </data>
+  <data name="WordErrors" xml:space="preserve">
+    <value>errors</value>
+  </data>
+  <data name="WordInformation" xml:space="preserve">
+    <value>information</value>
+  </data>
+  <data name="WordInputError" xml:space="preserve">
+    <value>input error</value>
+  </data>
+  <data name="WordInputErrors" xml:space="preserve">
+    <value>input errors</value>
+  </data>
+  <data name="WordTransaction" xml:space="preserve">
+    <value>transaction</value>
+  </data>
+  <data name="WordTransactions" xml:space="preserve">
+    <value>transactions</value>
+  </data>
+  <data name="WordWarning" xml:space="preserve">
+    <value>warning</value>
+  </data>
+  <data name="WordWarnings" xml:space="preserve">
+    <value>warnings</value>
+  </data>
+</root>

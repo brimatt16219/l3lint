@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AnnotationMessage" xml:space="preserve">
+    <value>{0} Fix: {1} ({2})</value>
+  </data>
+  <data name="ArgConvertInput" xml:space="preserve">
+    <value>The payload file to convert, or - for standard input.</value>
+  </data>
+  <data name="ArgFixInput" xml:space="preserve">
+    <value>The payload file to fix, or - for standard input.</value>
+  </data>
+  <data name="ArgInputs" xml:space="preserve">
+    <value>Files, folders, globs such as fixtures/**/*.json, NDJSON files, or - for standard input.</value>
+  </data>
+  <data name="ArgRuleId" xml:space="preserve">
+    <value>A rule ID, for example VISA-L3-004.</value>
+  </data>
+  <data name="ArgSchemaName" xml:space="preserve">
+    <value>The schema to print. One of: {0}.</value>
+  </data>
+  <data name="CmdConvert" xml:space="preserve">
+    <value>Map a gateway payload to canonical JSON, with the path map.</value>
+  </data>
+  <data name="CmdExplain" xml:space="preserve">
+    <value>Show a rule's requirement, rationale, sources, confidence, dates and examples.</value>
+  </data>
+  <data name="CmdFix" xml:space="preserve">
+    <value>Print a JSON Patch of mechanical fixes, or write a patched copy.</value>
+  </data>
+  <data name="CmdInit" xml:space="preserve">
+    <value>Write .l3lint.yaml, .l3lint.lock, a sample payload and a sample GitHub workflow.</value>
+  </data>
+  <data name="CmdLint" xml:space="preserve">
+    <value>Lint payload files, folders, globs, NDJSON or standard input.</value>
+  </data>
+  <data name="CmdRules" xml:space="preserve">
+    <value>Browse rules and run every rule's examples.</value>
+  </data>
+  <data name="CmdRulesList" xml:space="preserve">
+    <value>List rules and rule packs.</value>
+  </data>
+  <data name="CmdRulesShow" xml:space="preserve">
+    <value>Show one rule's reference page.</value>
+  </data>
+  <data name="CmdRulesTest" xml:space="preserve">
+    <value>Run every rule's pass and fail examples.</value>
+  </data>
+  <data name="CmdSchema" xml:space="preserve">
+    <value>Print a JSON Schema: canonical, results, config, rulepack and others.</value>
+  </data>
+  <data name="CmdVersion" xml:space="preserve">
+    <value>Print the engine and rule pack versions.</value>
+  </data>
+  <data name="ColConfidence" xml:space="preserve">
+    <value>Confidence</value>
+  </data>
+  <data name="ColEffective" xml:space="preserve">
+    <value>Effective</value>
+  </data>
+  <data name="ColLevel" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="ColOrigin" xml:space="preserve">
+    <value>Origin</value>
+  </data>
+  <data name="ColPack" xml:space="preserve">
+    <value>Pack</value>
+  </data>
+  <data name="ColRule" xml:space="preserve">
+    <value>Rule</value>
+  </data>
+  <data name="ColRules" xml:space="preserve">
+    <value>Rules</value>
+  </data>
+  <data name="ColSeverity" xml:space="preserve">
+    <value>Severity</value>
+  </data>
+  <data name="ColSources" xml:space="preserve">
+    <value>Sources</value>
+  </data>
+  <data name="ColTitle" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="ColVersion" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="ErrorAnnotations" xml:space="preserve">
+    <value>Unknown annotation mode "{0}". Use github or none.</value>
+  </data>
+  <data name="ErrorAsOf" xml:space="preserve">
+    <value>The date "{0}" is not valid. Use YYYY-MM-DD, for example 2026-10-19.</value>
+  </data>
+  <data name="ErrorConfigMissing" xml:space="preserve">
+    <value>The config file {0} does not exist.</value>
+  </data>
+  <data name="ErrorConvertStrictPci" xml:space="preserve">
+    <value>The input holds a card number and --strict-pci is set, so nothing was converted. Remove the card number and run again.</value>
+  </data>
+  <data name="ErrorConvertTarget" xml:space="preserve">
+    <value>Cannot convert to "{0}". The only target is canonical.</value>
+  </data>
+  <data name="ErrorDryRunWrite" xml:space="preserve">
+    <value>Use either --dry-run or --write, not both.</value>
+  </data>
+  <data name="ErrorFixStrictPci" xml:space="preserve">
+    <value>The input holds a card number and --strict-pci is set, so no fixes were planned. Remove the card number and run again.</value>
+  </data>
+  <data name="ErrorInitExists" xml:space="preserve">
+    <value>These files already exist: {0}. Use --force to overwrite them.</value>
+  </data>
+  <data name="ErrorInternal" xml:space="preserve">
+    <value>Internal error {0} ({1}). Run again with --verbose for details, and report it with this ID.</value>
+  </data>
+  <data name="ErrorLogFormat" xml:space="preserve">
+    <value>Unknown log format "{0}". Use text or json.</value>
+  </data>
+  <data name="ErrorLogLevel" xml:space="preserve">
+    <value>Unknown log level "{0}". Use error, warn, info, debug or trace.</value>
+  </data>
+  <data name="ErrorOutputUnavailable" xml:space="preserve">
+    <value>The output format "{0}" is not available in this build.</value>
+  </data>
+  <data name="ErrorPrefix" xml:space="preserve">
+    <value>error: </value>
+  </data>
+  <data name="ErrorRulesBrand" xml:space="preserve">
+    <value>Unknown brand "{0}". Use general, visa, mastercard, amex or discover.</value>
+  </data>
+  <data name="ErrorRulesLevel" xml:space="preserve">
+    <value>Unknown level "{0}". Use general, L2 or L3.</value>
+  </data>
+  <data name="ErrorTemplateMissing" xml:space="preserve">
+    <value>The embedded template {0} is missing from this build.</value>
+  </data>
+  <data name="ErrorTextOrJson" xml:space="preserve">
+    <value>Unknown output "{0}". Use text or json.</value>
+  </data>
+  <data name="ErrorUnknownOption" xml:space="preserve">
+    <value>Unknown option "{0}". Run l3lint &lt;command&gt; --help to see the options. To lint a file whose name starts with a dash, write ./{0}.</value>
+  </data>
+  <data name="ErrorWriteOutput" xml:space="preserve">
+    <value>Could not write {0}: {1}</value>
+  </data>
+  <data name="ErrorWriteOverInput" xml:space="preserve">
+    <value>--write must name a new file, not the input. The fix writes a patched copy.</value>
+  </data>
+  <data name="FixHint" xml:space="preserve">
+    <value>Fix: {0}</value>
+  </data>
+  <data name="FixNeedsHuman" xml:space="preserve">
+    <value>{0} finding(s) need a person to decide:</value>
+  </data>
+  <data name="FixWritten" xml:space="preserve">
+    <value>Applied {0} patch operation(s) and wrote {1}.</value>
+  </data>
+  <data name="HintCandidates" xml:space="preserve">
+    <value>Possible formats: {0}. Pass --format to choose one.</value>
+  </data>
+  <data name="HintHelp" xml:space="preserve">
+    <value>Run l3lint --help for usage.</value>
+  </data>
+  <data name="HintRulePack" xml:space="preserve">
+    <value>Check the rule pack with l3lint rules test --rule-pack &lt;path&gt;.</value>
+  </data>
+  <data name="InitNext" xml:space="preserve">
+    <value>Next: run l3lint lint {0}</value>
+  </data>
+  <data name="InitWrote" xml:space="preserve">
+    <value>wrote {0}</value>
+  </data>
+  <data name="OptAnnotations" xml:space="preserve">
+    <value>Also print GitHub workflow annotations for findings at or above --fail-on: github or none.</value>
+  </data>
+  <data name="OptAsOf" xml:space="preserve">
+    <value>Lint against the rules in force on this date (YYYY-MM-DD). Default: the transaction date, else today.</value>
+  </data>
+  <data name="OptBrand" xml:space="preserve">
+    <value>Card brand to lint against: auto, visa, mastercard, amex, discover or all. Default: auto (reads card.brand).</value>
+  </data>
+  <data name="OptCanonicalOnly" xml:space="preserve">
+    <value>Print only the canonical JSON, one transaction per line.</value>
+  </data>
+  <data name="OptCardProduct" xml:space="preserve">
+    <value>Card product, overriding the payload: consumer, business, corporate, purchasing, fleet or commercialPrepaid.</value>
+  </data>
+  <data name="OptConfig" xml:space="preserve">
+    <value>Config file. Default: the nearest .l3lint.yaml walking up from the current folder.</value>
+  </data>
+  <data name="OptCurrency" xml:space="preserve">
+    <value>ISO 4217 currency for payloads that carry none, such as Braintree requests. Payload values win.</value>
+  </data>
+  <data name="OptDirectory" xml:space="preserve">
+    <value>Folder to write the files in. Default: the current folder.</value>
+  </data>
+  <data name="OptDisable" xml:space="preserve">
+    <value>Rule IDs or globs to skip, for example VISA-DQ-*. Repeatable.</value>
+  </data>
+  <data name="OptDryRun" xml:space="preserve">
+    <value>Print the patch without writing anything. This is the default.</value>
+  </data>
+  <data name="OptExplainOutput" xml:space="preserve">
+    <value>Output: text or json.</value>
+  </data>
+  <data name="OptFailOn" xml:space="preserve">
+    <value>Lowest severity that sets exit code 1: error, warning, information or none. Default: error.</value>
+  </data>
+  <data name="OptFixAmount" xml:space="preserve">
+    <value>Also recompute the transaction amount. Off by default because it changes what the card is charged.</value>
+  </data>
+  <data name="OptForce" xml:space="preserve">
+    <value>Overwrite files that already exist.</value>
+  </data>
+  <data name="OptFormat" xml:space="preserve">
+    <value>Input format: auto, canonical, stripe, adyen, braintree, cybersource, authorizenet, checkoutcom or csv. Default: auto.</value>
+  </data>
+  <data name="OptLogFormat" xml:space="preserve">
+    <value>Log format: text or json. Logs go to standard error.</value>
+  </data>
+  <data name="OptLogLevel" xml:space="preserve">
+    <value>Log level: error, warn, info, debug or trace. Default: warn.</value>
+  </data>
+  <data name="OptLogValues" xml:space="preserve">
+    <value>Include masked payload values in logs. Off by default.</value>
+  </data>
+  <data name="OptMap" xml:space="preserve">
+    <value>Column map for CSV input.</value>
+  </data>
+  <data name="OptMaxFindings" xml:space="preserve">
+    <value>Most findings to print. The summary still counts every finding.</value>
+  </data>
+  <data name="OptMcc" xml:space="preserve">
+    <value>Merchant category code, 4 digits, overriding the payload.</value>
+  </data>
+  <data name="OptMerchantCountry" xml:space="preserve">
+    <value>Merchant country, ISO alpha-2. Default: US.</value>
+  </data>
+  <data name="OptNoColor" xml:space="preserve">
+    <value>Turn off color. NO_COLOR also turns it off.</value>
+  </data>
+  <data name="OptOnly" xml:space="preserve">
+    <value>Run only these rule IDs or globs. Repeatable.</value>
+  </data>
+  <data name="OptOutput" xml:space="preserve">
+    <value>Output kind: text, json, sarif, junit or markdown. Use kind=path to write a file. Repeatable.</value>
+  </data>
+  <data name="OptProcessor" xml:space="preserve">
+    <value>Processor profile name or path to a profile YAML file. Default: generic.</value>
+  </data>
+  <data name="OptQuiet" xml:space="preserve">
+    <value>Print less: no progress notes and no passing results.</value>
+  </data>
+  <data name="OptRates" xml:space="preserve">
+    <value>Rate table YAML that enables cost estimates.</value>
+  </data>
+  <data name="OptRulePack" xml:space="preserve">
+    <value>Folder of a rule pack to load in addition to the embedded packs. Repeatable.</value>
+  </data>
+  <data name="OptRulesBrand" xml:space="preserve">
+    <value>Only rules for this brand: general, visa, mastercard, amex or discover.</value>
+  </data>
+  <data name="OptRulesLevel" xml:space="preserve">
+    <value>Only rules at this level: general, L2 or L3.</value>
+  </data>
+  <data name="OptRulesQuery" xml:space="preserve">
+    <value>Only rules whose ID, title or requirement contains this text.</value>
+  </data>
+  <data name="OptSeverity" xml:space="preserve">
+    <value>Severity override as RULE=level, for example GEN-DQ-007=error. Repeatable.</value>
+  </data>
+  <data name="OptStrictPci" xml:space="preserve">
+    <value>Stop when a card number is found instead of masking it.</value>
+  </data>
+  <data name="OptStrictProfiles" xml:space="preserve">
+    <value>Run single-processor rules as errors.</value>
+  </data>
+  <data name="OptTo" xml:space="preserve">
+    <value>Target format. The only target is canonical.</value>
+  </data>
+  <data name="OptVerbose" xml:space="preserve">
+    <value>Print more: settings notes and stack traces for internal errors.</value>
+  </data>
+  <data name="OptWrite" xml:space="preserve">
+    <value>Write the patched copy to this path instead of printing the patch.</value>
+  </data>
+  <data name="RootDescription" xml:space="preserve">
+    <value>l3lint lints commercial card Level 2 and Level 3 payloads against Visa, Mastercard, American Express and Discover requirements, offline.</value>
+  </data>
+  <data name="RuleUnknown" xml:space="preserve">
+    <value>No rule has the ID {0}. Run l3lint rules list to see every rule.</value>
+  </data>
+  <data name="RulesCount" xml:space="preserve">
+    <value>{0} rule(s).</value>
+  </data>
+  <data name="RulesTestFail" xml:space="preserve">
+    <value>FAIL  {0}: {1}</value>
+  </data>
+  <data name="RulesTestPass" xml:space="preserve">
+    <value>pass  {0}</value>
+  </data>
+  <data name="RulesTestSummary" xml:space="preserve">
+    <value>{0} rule(s) tested, {1} passed, {2} failed.</value>
+  </data>
+  <data name="SchemaUnknown" xml:space="preserve">
+    <value>Unknown schema "{0}". Use one of: {1}.</value>
+  </data>
+  <data name="ValueAlways" xml:space="preserve">
+    <value>always</value>
+  </data>
+  <data name="ValueOpen" xml:space="preserve">
+    <value>open</value>
+  </data>
+  <data name="VersionLine" xml:space="preserve">
+    <value>l3lint {0}</value>
+  </data>
+  <data name="WarningLogValues" xml:space="preserve">
+    <value>warning: --log-values writes masked payload values to the log. Keep these logs private.</value>
+  </data>
+</root>

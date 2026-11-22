@@ -1,0 +1,4 @@
+invoice;total;currency;customer_ref;tax;tax_flag;discount;freight;duty;ship_from;ship_to;ship_country;item;sku;unspsc;qty;uom;unit_price;line_discount;line_tax;line_total
+"INV-61377";"272.78";"USD";"PO-31104";"14.84";"T";"0.00";"9.95";"0.00";"02110";"02139";"US";"Copy paper letter case";"PPR-LTR-10";"14111507";"4";"CA";"42.00";"0.00";"10.08";"168.00"
+"INV-61377";"272.78";"USD";"PO-31104";"14.84";"T";"0.00";"9.95";"0.00";"02110";"02139";"US";"Ballpoint pens blue dozen";"PEN-BP-B12";"44121704";"6";"DZ";"9.75";"3.50";"3.26";"55.00"
+"INV-61377";"272.78";"USD";"PO-31104";"14.84";"T";"0.00";"9.95";"0.00";"02110";"02139";"US";"Stapler heavy duty";"STP-HD-01";"44121615";"1";"EA";"24.99";"0.00";"1.50";"24.99"

@@ -1,0 +1,7 @@
+description: A wrapped createTransactionRequest shaped like the "Charge a Credit Card" example, with every value quoted, two line items as an array and the Level 3 blocks in schema order.
+format: authorizenet
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 01-complete-level3.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

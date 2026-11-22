@@ -1,0 +1,14 @@
+{
+  "amount": 54000,
+  "currency": "usd",
+  "payment_method": "pm_card_visa",
+  "confirm": true,
+  "payment_details": {
+    "customer_reference": "PO-77105",
+    "order_reference": "INV-61204"
+  },
+  "amount_details": {
+    "tax": { "total_tax_amount": 3500 },
+    "shipping": { "amount": 2500, "from_postal_code": "60601", "to_postal_code": "60614" }
+  }
+}

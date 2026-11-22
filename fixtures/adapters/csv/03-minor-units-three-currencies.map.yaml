@@ -1,0 +1,27 @@
+amountUnits: minor
+format: csv
+groupBy: invoice
+transaction:
+  id: invoice
+  amount: total
+  currency: currency
+  customer.reference: customer_ref
+  order.invoiceNumber: invoice
+  tax.amount: tax
+  tax.indicator: { from: tax_flag, map: { T: taxable, E: exempt } }
+  amounts.discount: { from: discount, default: 0 }
+  amounts.freight: { from: freight, default: 0 }
+  amounts.duty: { from: duty, default: 0 }
+  shipping.fromPostalCode: ship_from
+  shipping.toPostalCode: ship_to
+  shipping.toCountry: ship_country
+lineItems:
+  description: item
+  productCode: sku
+  commodityCode: unspsc
+  quantity: qty
+  unitOfMeasure: uom
+  unitCost: unit_price
+  discountAmount: { from: line_discount, default: 0 }
+  taxAmount: line_tax
+  total: line_total

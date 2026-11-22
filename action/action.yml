@@ -1,0 +1,120 @@
+name: l3lint
+description: Lint commercial card Level 2 and Level 3 payloads before they reach production.
+author: l3lint contributors
+branding:
+  icon: check-circle
+  color: blue
+
+inputs:
+  paths:
+    description: Newline-separated globs of payload files inside the workspace, for example fixtures/payments/**/*.json.
+    required: true
+  format:
+    description: Input format (auto, canonical, stripe, adyen, braintree, cybersource, authorizenet, checkoutcom, csv). Same as --format.
+    default: auto
+  brand:
+    description: Card brand (auto, visa, mastercard, amex, discover, all). Same as --brand.
+    default: ""
+  card-product:
+    description: Card product. Same as --card-product.
+    default: ""
+  mcc:
+    description: Merchant category code, 4 digits. Same as --mcc.
+    default: ""
+  processor:
+    description: Processor profile name. Same as --processor.
+    default: ""
+  as-of:
+    description: Lint against the rules in force on this date, YYYY-MM-DD. Same as --as-of.
+    default: ""
+  config:
+    description: Config file path. Used when the file exists.
+    default: .l3lint.yaml
+  fail-on:
+    description: Lowest failing severity (error, warning, information, none).
+    default: error
+  sarif-file:
+    description: Where SARIF is written.
+    default: l3lint.sarif
+  upload-sarif:
+    description: Upload SARIF to code scanning with github/codeql-action/upload-sarif.
+    default: "true"
+  annotations:
+    description: Emit workflow command annotations, for repositories without code scanning.
+    default: "true"
+  version:
+    description: l3lint version to install. Empty means the version in this action's VERSION file.
+    default: ""
+  dotnet-version:
+    description: .NET SDK for actions/setup-dotnet.
+    default: 10.0.x
+  tool-source:
+    description: Extra NuGet source (folder or feed URL) to install the l3lint tool from, for testing a locally built package. Empty means NuGet.org only.
+    default: ""
+
+outputs:
+  errors:
+    description: Error count.
+    value: ${{ steps.lint.outputs.errors }}
+  warnings:
+    description: Warning count.
+    value: ${{ steps.lint.outputs.warnings }}
+  exit-code:
+    description: The CLI exit code.
+    value: ${{ steps.lint.outputs.exit-code }}
+  sarif-file:
+    description: Path of the written SARIF file.
+    value: ${{ steps.lint.outputs.sarif-file }}
+
+runs:
+  using: composite
+  steps:
+    # Third-party actions are pinned by full commit SHA (Architecture tab, threat table).
+    - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+      with:
+        dotnet-version: ${{ inputs.dotnet-version }}
+
+    - name: Install l3lint
+      shell: bash
+      env:
+        L3LINT_VERSION: ${{ inputs.version }}
+        L3LINT_TOOL_SOURCE: ${{ inputs.tool-source }}
+      run: |
+        version="${L3LINT_VERSION:-$(tr -d '[:space:]' < "$GITHUB_ACTION_PATH/VERSION")}"
+        tool_path="$RUNNER_TEMP/l3lint-tool"
+        args=(tool install l3lint --tool-path "$tool_path" --version "$version")
+        if [ -n "$L3LINT_TOOL_SOURCE" ]; then
+          args+=(--add-source "$L3LINT_TOOL_SOURCE")
+        fi
+        dotnet "${args[@]}"
+        echo "L3LINT_BIN=$tool_path/l3lint" >> "$GITHUB_ENV"
+
+    - id: lint
+      name: Lint payloads
+      shell: bash
+      run: bash "$GITHUB_ACTION_PATH/scripts/run.sh"
+      env:
+        L3LINT_PATHS: ${{ inputs.paths }}
+        L3LINT_FORMAT: ${{ inputs.format }}
+        L3LINT_BRAND: ${{ inputs.brand }}
+        L3LINT_CARD_PRODUCT: ${{ inputs.card-product }}
+        L3LINT_MCC: ${{ inputs.mcc }}
+        L3LINT_PROCESSOR: ${{ inputs.processor }}
+        L3LINT_AS_OF: ${{ inputs.as-of }}
+        L3LINT_CONFIG: ${{ inputs.config }}
+        L3LINT_FAIL_ON: ${{ inputs.fail-on }}
+        L3LINT_SARIF: ${{ inputs.sarif-file }}
+        L3LINT_ANNOTATIONS: ${{ inputs.annotations }}
+
+    - if: ${{ always() && inputs.upload-sarif == 'true' && steps.lint.outputs.sarif-written == 'true' }}
+      uses: github/codeql-action/upload-sarif@9b3254085494b55a0f7c4c2b3d2d52cc712ce370 # v4.39.1
+      with:
+        sarif_file: ${{ inputs.sarif-file }}
+        category: l3lint
+
+    - if: ${{ always() }}
+      name: Apply the l3lint exit code
+      shell: bash
+      env:
+        L3LINT_EXIT: ${{ steps.lint.outputs.exit-code }}
+      run: exit "${L3LINT_EXIT:-3}"

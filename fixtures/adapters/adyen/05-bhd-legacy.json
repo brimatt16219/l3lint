@@ -1,0 +1,32 @@
+{
+  "amount": { "currency": "BHD", "value": 19204 },
+  "reference": "INV-BH-7733",
+  "paymentMethod": { "type": "scheme", "storedPaymentMethodId": "PM-STORED-9B4D" },
+  "merchantAccount": "ExampleMerchantBH",
+  "additionalData": {
+    "enhancedSchemeData.customerReference": "PO-BH-0412",
+    "enhancedSchemeData.totalTaxAmount": "829",
+    "enhancedSchemeData.freightAmount": "1500",
+    "enhancedSchemeData.dutyAmount": "0",
+    "enhancedSchemeData.orderDate": "201026",
+    "enhancedSchemeData.shipFromPostalCode": "1001",
+    "enhancedSchemeData.destinationPostalCode": "317",
+    "enhancedSchemeData.destinationCountryCode": "BH",
+    "enhancedSchemeData.itemDetailLine1.description": "Cable ties black pack",
+    "enhancedSchemeData.itemDetailLine1.productCode": "CBL-TIE-BK",
+    "enhancedSchemeData.itemDetailLine1.commodityCode": "39121704",
+    "enhancedSchemeData.itemDetailLine1.quantity": "5",
+    "enhancedSchemeData.itemDetailLine1.unitOfMeasure": "PK",
+    "enhancedSchemeData.itemDetailLine1.unitPrice": "2750",
+    "enhancedSchemeData.itemDetailLine1.discountAmount": "250",
+    "enhancedSchemeData.itemDetailLine1.totalAmount": "13500",
+    "enhancedSchemeData.itemDetailLine2.description": "Electrical tape roll",
+    "enhancedSchemeData.itemDetailLine2.productCode": "ETP-RL-19",
+    "enhancedSchemeData.itemDetailLine2.commodityCode": "31201502",
+    "enhancedSchemeData.itemDetailLine2.quantity": "3",
+    "enhancedSchemeData.itemDetailLine2.unitOfMeasure": "RL",
+    "enhancedSchemeData.itemDetailLine2.unitPrice": "1125",
+    "enhancedSchemeData.itemDetailLine2.discountAmount": "0",
+    "enhancedSchemeData.itemDetailLine2.totalAmount": "3375"
+  }
+}

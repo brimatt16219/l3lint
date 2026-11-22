@@ -1,0 +1,8 @@
+description: Two debit lines and one returned item sent with kind credit. The credit line subtracts in the transaction total, so 267.00 plus 99.00 minus 60.00 plus 25.62 tax is 331.62.
+format: braintree
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19, defaultCurrency: USD }
+canonical: 05-credit-line.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }
+    - { ruleId: VISA-L3-011, path: /amounts/duty }

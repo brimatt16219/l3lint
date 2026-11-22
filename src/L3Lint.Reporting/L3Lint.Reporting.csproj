@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>L3Lint.Reporting</RootNamespace>
+    <PackageId>L3Lint.Reporting</PackageId>
+    <Description>l3lint output writers: text, JSON, SARIF 2.1.0, JUnit XML and Markdown.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\L3Lint.Core\L3Lint.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="L3Lint.Reporting.Tests" />
+    <InternalsVisibleTo Include="L3Lint.Rules.Tests" />
+    <InternalsVisibleTo Include="L3Lint.Benchmarks" />
+  </ItemGroup>
+
+</Project>

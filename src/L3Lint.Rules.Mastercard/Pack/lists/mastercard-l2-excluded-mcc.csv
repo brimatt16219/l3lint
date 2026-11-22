@@ -1,0 +1,14 @@
+# MCCs excluded from Mastercard Level 2 (Data Rate II), per Stripe's public payment line items guide.
+# source: https://docs.stripe.com/payments/payment-line-items
+# retrieved: 2026-10-25
+mcc,note
+3000-3350,Airlines
+3351-3500,Car rental
+3501-3999,Lodging
+4112,Passenger railways
+4511,Airlines and air carriers
+5812,Restaurants
+7011,Lodging
+7512,Car rental agencies
+7513,Truck and utility trailer rentals
+7519,Motor home and recreational vehicle rentals

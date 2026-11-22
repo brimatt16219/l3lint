@@ -1,0 +1,10 @@
+description: A bare transactionRequest object without the createTransactionRequest wrapper, with JSON numbers and booleans instead of quoted strings, and Level 2 data only.
+format: authorizenet
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 02-bare-level2-numbers.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-001, path: /lineItems }
+    - { ruleId: VISA-L3-011, path: /amounts/discount }
+    - { ruleId: VISA-L3-011, path: /amounts/duty }
+    - { ruleId: VISA-L3-013, path: /shipping/fromPostalCode }

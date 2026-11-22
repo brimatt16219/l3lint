@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0",
+  "amount": 612.45,
+  "currency": "USD",
+  "customer": { "reference": "PO66710" },
+  "order": { "invoiceNumber": "INV-90215" },
+  "tax": { "amount": 41.95, "indicator": "taxable" },
+  "amounts": { "freight": 20.50 },
+  "shipping": { "toPostalCode": "30303", "toCountry": "US" }
+}

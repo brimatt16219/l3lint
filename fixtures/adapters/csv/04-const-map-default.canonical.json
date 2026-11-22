@@ -1,0 +1,31 @@
+[
+  {
+    "schemaVersion": "1.0",
+    "id": "INV-65109",
+    "amount": 324.20,
+    "currency": "USD",
+    "card": { "brand": "visa" },
+    "customer": { "reference": "PO-27730" },
+    "tax": { "amount": 0, "indicator": "exempt" },
+    "amounts": { "discount": 0, "freight": 18.00, "duty": 0 },
+    "shipping": { "fromPostalCode": "64105", "toPostalCode": "66101", "toCountry": "US" },
+    "lineItems": [
+      { "sequence": 1, "description": "Bulk rice long grain", "productCode": "RCE-LG-25", "commodityCode": "50221101", "quantity": 8, "unitOfMeasure": "BG", "unitCost": 21.40, "discountAmount": 0, "total": 171.20 },
+      { "sequence": 2, "description": "Dry black beans case", "productCode": "BNS-BK-12", "commodityCode": "50221106", "quantity": 4, "unitOfMeasure": "CA", "unitCost": 33.75, "discountAmount": 0, "total": 135.00 }
+    ]
+  },
+  {
+    "schemaVersion": "1.0",
+    "id": "INV-65110",
+    "amount": 64.20,
+    "currency": "USD",
+    "card": { "brand": "visa" },
+    "customer": { "reference": "PO-27731" },
+    "tax": { "amount": 4.20, "indicator": "taxable" },
+    "amounts": { "discount": 0, "freight": 0, "duty": 0 },
+    "shipping": { "fromPostalCode": "64105", "toPostalCode": "66101", "toCountry": "US" },
+    "lineItems": [
+      { "sequence": 1, "description": "Can opener manual", "productCode": "CNO-MN-01", "commodityCode": "52151703", "quantity": 2, "unitOfMeasure": "EA", "unitCost": 30.00, "discountAmount": 0, "total": 60.00 }
+    ]
+  }
+]

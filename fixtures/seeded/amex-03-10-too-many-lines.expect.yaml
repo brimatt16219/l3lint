@@ -1,0 +1,6 @@
+description: "5 line items under the stripe profile, one more than it accepts."
+operator: too-many-lines
+context: { brand: amex, cardProduct: corporate, mcc: "5085", asOf: 2026-10-19, processor: stripe }
+expect:
+  findings:
+    - { ruleId: AMEX-FMT-002, path: /lineItems, severity: warning }

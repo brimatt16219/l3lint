@@ -1,0 +1,7 @@
+description: Yen amounts as whole numbers; exponent 0 means the minor units are already yen.
+format: checkoutcom
+context: { brand: visa, cardProduct: purchasing, mcc: "5047", asOf: 2026-10-19 }
+canonical: 04-jpy-zero-decimals.canonical.json
+expect:
+  findings:
+    - { ruleId: VISA-L3-010, path: /lineItems/0/detailIndicator }

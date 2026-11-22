@@ -1,0 +1,35 @@
+# Checkout.com payments limits for Level 2 and 3 data (retrieved 2026-10-25).
+profile:
+  id: checkoutcom
+  title: Checkout.com
+  description: Checkout.com accepts up to 50 line items for Visa and Mastercard Level 3, and 4 for American Express.
+  sources:
+    - https://www.checkout.com/docs/payments/manage-payments/submit-level-2-or-level-3-data
+    - https://raw.githubusercontent.com/checkout/checkout-sdk-net/master/src/CheckoutSdk/Payments/ProcessingSettings.cs
+limits:
+  maxLineItems:
+    value: 50
+    source: https://www.checkout.com/docs/payments/manage-payments/submit-level-2-or-level-3-data
+  amexForwardedLineItems:
+    value: 4
+    source: https://www.checkout.com/docs/payments/manage-payments/submit-level-2-or-level-3-data
+  descriptionMax:
+    value: 26
+    source: https://www.checkout.com/docs/payments/manage-payments/submit-level-2-or-level-3-data
+    note: 12 for American Express.
+  productCodeMax:
+    value: 12
+    source: https://www.checkout.com/docs/payments/manage-payments/submit-level-2-or-level-3-data
+  commodityCodeMax:
+    value: 12
+    source: https://www.checkout.com/docs/payments/manage-payments/submit-level-2-or-level-3-data
+  unitOfMeasureMax:
+    value: 12
+    source: https://www.checkout.com/docs/payments/manage-payments/submit-level-2-or-level-3-data
+  customerReferenceMax:
+    value: 15
+    source: https://raw.githubusercontent.com/checkout/checkout-sdk-net/master/src/CheckoutSdk/Payments/ProcessingSettings.cs
+    note: processing.order_id; 17 for American Express.
+  postalCodeMax:
+    value: 10
+    source: https://www.checkout.com/docs/payments/manage-payments/submit-level-2-or-level-3-data

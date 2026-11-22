@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "1.0",
+  "amount": 432.50,
+  "currency": "USD",
+  "customer": { "reference": "PO-55021" },
+  "tax": { "amount": 28.30, "indicator": "taxable" },
+  "amounts": { "freight": 12.50 },
+  "shipping": { "fromPostalCode": "75201", "toPostalCode": "75093", "toCountry": "US" }
+}

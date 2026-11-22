@@ -1,0 +1,5 @@
+description: "AMEX-FMT-002 pass example: the rule must not fire."
+context: { brand: amex, cardProduct: corporate, mcc: "5047", asOf: 2026-10-19, processor: stripe, only: AMEX-FMT-002 }
+expect:
+  findings: []
+  absent: [AMEX-FMT-002]

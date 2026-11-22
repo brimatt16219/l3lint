@@ -1,0 +1,16 @@
+{
+  "amount": "27500",
+  "paymentMethodNonce": "fake-valid-nonce",
+  "purchaseOrderNumber": "PO-JP-2210",
+  "orderId": "INV-JP-0918",
+  "taxAmount": "2400",
+  "taxExempt": false,
+  "shippingAmount": "1100.50",
+  "discountAmount": "0",
+  "shipsFromPostalCode": "150-0002",
+  "shipping": { "postalCode": "530-0001", "countryCodeAlpha2": "JP" },
+  "lineItems": [
+    { "name": "Safety goggles clear", "kind": "debit", "quantity": "12", "unitAmount": "1250", "unitOfMeasure": "EA", "totalAmount": "15000", "taxAmount": "1500", "discountAmount": "0", "productCode": "SFG-CLR-01", "commodityCode": "46181804" },
+    { "name": "Work gloves cotton pair", "kind": "debit", "quantity": "20", "unitAmount": "480", "unitOfMeasure": "PR", "totalAmount": "9000", "taxAmount": "900", "discountAmount": "600", "productCode": "WGL-CTN-02", "commodityCode": "46181504" }
+  ]
+}
