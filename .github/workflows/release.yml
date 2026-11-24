@@ -104,7 +104,9 @@ jobs:
       - name: Publish ReadyToRun single-file binary
         shell: bash
         run: |
-          dotnet publish src/L3Lint.Cli -c Release -r ${{ matrix.rid }} -p:Version=${{ needs.pack.outputs.version }} -o "artifacts/binaries/${{ matrix.rid }}"
+          # A runtime-specific publish adds runtime packs and ILLink to the restore graph, which the lock files
+          # (written without a runtime identifier) do not list. The gate and the pack job restore in locked mode.
+          dotnet publish src/L3Lint.Cli -c Release -r ${{ matrix.rid }} -p:Version=${{ needs.pack.outputs.version }} -p:RestoreLockedMode=false -o "artifacts/binaries/${{ matrix.rid }}"
           cd "artifacts/binaries/${{ matrix.rid }}"
           name="l3lint-${{ needs.pack.outputs.version }}-${{ matrix.rid }}"
           if [ -f l3lint.exe ]; then
