@@ -1,6 +1,7 @@
 # Release pipeline (Test and delivery tab, "Release workflow"), run on a vX.Y.Z tag that the owner pushes.
 # It publishes to NuGet.org, the MCP Registry, GitHub Releases and GitHub Pages, so it needs these secrets:
-# NUGET_API_KEY (push), and optionally NUGET_SIGNING_CERT (base64 PFX) and NUGET_SIGNING_PASSWORD (package signing).
+# NUGET_USER (your nuget.org profile name, for Trusted Publishing; no API key is stored), and optionally
+# NUGET_SIGNING_CERT (base64 PFX) and NUGET_SIGNING_PASSWORD (package signing).
 # Third-party actions are pinned by full commit SHA.
 name: release
 
@@ -151,9 +152,16 @@ jobs:
             artifacts/release/*.nupkg
             artifacts/release/*.zip
             artifacts/release/*.tar.gz
+      # Trusted Publishing: NuGet.org trusts this workflow, so no long-lived key is stored. The key lives one hour,
+      # so this step sits directly before the push.
+      - name: Get a short-lived NuGet API key
+        id: nuget-login
+        uses: NuGet/login@8d196754b4036150537f80ac539e15c2f1028841 # v1.2.0
+        with:
+          user: ${{ secrets.NUGET_USER }}
       - name: Push to NuGet.org
         env:
-          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+          NUGET_API_KEY: ${{ steps.nuget-login.outputs.NUGET_API_KEY }}
         run: dotnet nuget push "artifacts/release/*.nupkg" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json --skip-duplicate
       - name: Wait for NuGet.org to finish validating the MCP server package
         shell: bash
