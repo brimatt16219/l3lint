@@ -20,7 +20,14 @@ public sealed class ActionScriptTests : IDisposable
 
         // The action installs the tool; here a wrapper runs the CLI built with these tests.
         var cli = Path.Combine(AppContext.BaseDirectory, "l3lint.dll").Replace('\\', '/');
-        File.WriteAllText(Path.Combine(_root, "l3lint"), "#!/usr/bin/env bash\nexec dotnet \"" + cli + "\" \"$@\"\n");
+        var wrapper = Path.Combine(_root, "l3lint");
+        File.WriteAllText(wrapper, "#!/usr/bin/env bash\nexec dotnet \"" + cli + "\" \"$@\"\n");
+
+        // run.sh executes the wrapper directly, so on Linux and macOS it needs the execute bit (exit 126 otherwise).
+        if (!OperatingSystem.IsWindows())
+        {
+            File.SetUnixFileMode(wrapper, UnixFileMode.UserRead | UnixFileMode.UserWrite | UnixFileMode.UserExecute);
+        }
     }
 
     public void Dispose() => Directory.Delete(_root, recursive: true);
