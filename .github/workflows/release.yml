@@ -20,6 +20,10 @@ env:
 jobs:
   gate:
     uses: ./.github/workflows/ci.yml
+    # A called workflow gets no more than the caller grants; ci.yml's self-lint job uploads SARIF.
+    permissions:
+      contents: read
+      security-events: write
 
   pack:
     name: Pack packages and SBOM
